@@ -1,15 +1,15 @@
 ---
 title:
-  archive: 归档
+  archive: 文章归档
   category: 专栏
   tag: 标签
   schedule: 日程表
 menu:
   home: 首页
-  archives: 归档
+  archives: 文章归档
   categories: 专栏
   tags: 标签
-  about: 关于
+  about: 关于我
   search: 搜索
   schedule: 日程表
   sitemap: 站点地图

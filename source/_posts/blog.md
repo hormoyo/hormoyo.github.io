@@ -320,7 +320,7 @@ symbols_count_time:
 </div>
 ```
 
-里面的 `<i class="fa fa-heart"></i>  `，版权信息博主名字前面，我改了系统默认的用户图标，改成小心心了。因为hexo支持FontAwesome（就是一个全是icon的网站：https://fontawesome.com/）
+里面的 `<i class="fa fa-heart"></i>  `，版权信息博主名字前面，我改了系统默认的用户图标，改成小心心了。因为hexo支持FontAwesome（就是一个全是icon的网站：https://fontawesome.com/ ）
 ，只要在里面写网站所支持的icon名称hexo就能自动加载，所以我找了个`heart`代表小心心的icon。
 
 **实现效果图**
