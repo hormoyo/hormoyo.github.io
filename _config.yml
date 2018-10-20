@@ -111,3 +111,24 @@ search:
   field: post
   format: html
   limit: 10000
+
+# douban 豆瓣个人主页的小插件
+# 参看：https://github.com/mythsman/hexo-douban
+# 升级可以用：修改package.json内hexo-douban的版本号至最新
+# 重新安装最新版本npm install hexo-douban --save
+# 或者使用npm install hexo-douban --update --save直接更新
+douban:
+  user: mdndoudou 
+  builtin: true
+  book:
+    title: 书破万卷
+    quote: 读书当破万卷，方得世间如意
+  movie:
+    title: 观世间相
+    quote: 电影始于格里菲斯，止于基亚罗斯塔米
+  #game:
+   # title: 'This is my game title'
+   # quote: 'This is my game quote'
+  timeout: 30000 
+# user用"个人主页" ，这时候地址栏的URL大概是这样："https://www.douban.com/people/xxxxxx/"，其中的"xxxxxx"就是你的个人ID了
+# builtin为true则hexo d和hexos的时候内嵌了生成页面功能，
