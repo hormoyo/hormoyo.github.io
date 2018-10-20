@@ -163,8 +163,9 @@ NexT主题默认使用Muse模式，我采用的是Pisces模式，读者可根据
 ![你想输入的替代文字](图片名.jpg)
 ```
 
->~~注意： `xxxx`是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。~~
->现在只需要直接在括号里写上你的图片名称就行，不用加博客文件名，我看了官方文档才知道。所以多看一眼官方文档才是正经事儿。
+{% note warning %} 注意： `xxxx`是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。
+
+现在只需要直接在括号里写上你的图片名称就行，不用加博客文件名，我看了官方文档才知道。所以多看一眼官方文档才是正经事儿。 {% endnote %}
 
 5. `hexo s`，运行本地服务器，打开`http://localhost:4000/`可实时查看修改情况。
 
@@ -797,6 +798,62 @@ tages:
 ...
 - 标签n
 ```
+
+# 引用本地的文章
+
+```
+{% post_link 文章文件名（不要后缀） 文章标题（可选） %}
+```
+
+如：
+
+```
+{% post_link Hello-World %}
+```
+
+```
+{% post_link Hello-World 你好世界 %}
+```
+
+# 使用标签框
+
+使用方式
+
+```
+{% note class_name %} Content (md partial supported) {% endnote %}
+```
+
+其中，`class_name` 可以是以下列表中的一个值：
+
+- `bs-callout`
+- `default`
+- `primary`
+- `success`
+- `info`
+- `warning`
+- `danger`
+
+然后看到其他人可以给这个文本框改颜色，所以，可以在`主题配置文件`里找到的`Note tag`就行了。
+
+{% note bs-callout %} # H1标题测试
+这个是bs-callout {% endnote %}
+
+{% note default %} # 测试
+这个是default {% endnote %}
+
+{% note primary %} # 测试
+这个是 primary {% endnote %}
+
+{% note success %} 测试，这个是 success {% endnote %}
+
+{% note info %} 测试，这个是 info {% endnote %}
+
+{% note warning %} 测试，这个是 warning {% endnote %}
+
+{% note danger %} 测试，这个是 danger {% endnote %}
+
+{% note info %} 这个其实也是我在[一个很好看的博客](https://blog.dongleizhang.com/posts/32005d86/)通过F12看到他的设置发找到的文件地方。学习使用HEXO的内置标签 {% endnote %}
+
 
 # 错误解决方案
 
