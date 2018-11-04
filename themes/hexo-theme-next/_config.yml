@@ -120,8 +120,8 @@ menu:
   home: / || home
   archives: /archives/ || archive
   #photos: /photos || camera-retro
-  #books: /books || book
-  #movies: /movies || film
+  books: /books || book
+  movies: /movies || film
   #games: /games || gamepad
   about: /about/ || user
   #tags: /tags/ || tags
