@@ -56,7 +56,5 @@ description: 《财务自由之路》第二章解读，扩展可控领域的方�
 
 ---
 《财务自由之路》解读系列：
-
 {% post_link Trade-your-way-to-Financial-Freedom %}
-
 {% post_link TYWTFF-1 %}
