@@ -47,4 +47,8 @@ description: 《账务自由之路》第一章解读，你的财务状况应该�
 
 《财务自由之路》解读系列：
 {% post_link Trade-your-way-to-Financial-Freedom %}
+{% post_link TYWTFF-1 %}
 {% post_link TYWTFF-2 %}
+{% post_link TYWTFF-7 %}
+{% post_link TYWTFF-0809 %}
+{% post_link TYWTFF-10 %}
