@@ -89,3 +89,4 @@ description: 《财务自由之路》第七章解读，利用这几个方法，�
 {% post_link TYWTFF-7 %}
 {% post_link TYWTFF-0809 %}
 {% post_link TYWTFF-10 %}
+{% post_link TYWTFF-11 %}
