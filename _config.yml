@@ -129,6 +129,6 @@ douban:
   #game:
    # title: 'This is my game title'
    # quote: 'This is my game quote'
-  timeout: 30000 
+  timeout: 10000 
 # user用"个人主页" ，这时候地址栏的URL大概是这样："https://www.douban.com/people/xxxxxx/"，其中的"xxxxxx"就是你的个人ID了
 # builtin为true则hexo d和hexos的时候内嵌了生成页面功能，
