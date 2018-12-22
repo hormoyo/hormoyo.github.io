@@ -22,7 +22,7 @@ description: 艾力的这本《你一年的8760小时》在我一个读书群里
 
 书中除了以上几个概念跟时间管理有关，其余的，就当做艾力的自传了，淡淡的鸡汤味，不排斥，毕竟每个自律到极致的人，心里没点自熬鸡汤的本事，也坚持不到最后。**鸡汤可以适当喝一喝，让自己度过最煎熬的那一刻就行。**
 
-PS：附赠“盖普洛优势识别器”测试题：[点这里下载](http://hormoyo.github.io/source/_posts/39-34-gold-coin-new/发现你的优势.xls)
+PS：附赠“盖普洛优势识别器”测试题：[点这里下载](https://github.com/hormoyo/hormoyo.github.io/blob/hexo/source/_posts/39-34-gold-coin-new/%E5%8F%91%E7%8E%B0%E4%BD%A0%E7%9A%84%E4%BC%98%E5%8A%BF.xls)
 
 # 二、34枚金币
 
