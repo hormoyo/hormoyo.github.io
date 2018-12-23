@@ -4,7 +4,7 @@ date: 2018-07-23 00:05:47
 tags: 
 - 搭建博客
 categories: 「get新技能」
-photos: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532284485273&di=5c842cb99b7c393dbda865959acb101b&imgtype=0&src=http%3A%2F%2Fupload.chinaz.com%2F2015%2F1016%2F1444964380585.png
+photos:
 description: 手把手教怎么做hexo博客了解一下？
 top: true
 
@@ -22,7 +22,6 @@ top: true
 至于如何新建结合git和hexo新建博客的话，可以看这个[《Hexo+GitHub博客搭建实战》](http://wangwlj.com/2017/09/08/blog_setup/)。
 
 也可以参考我最开始学习的陈素封的教程：[《如何搭建一个独立博客——简明Github Pages与Hexo教程》](https://www.jianshu.com/p/05289a4bc8b2)。
-
 
 # 迁移开始
 ## 安装Node.js
@@ -159,6 +158,7 @@ NexT主题默认使用Muse模式，我采用的是Pisces模式，读者可根据
 3. 等待一小段时间后，再运`行hexo n "xxxx"`来生成md博文时，`/source/_posts`文件夹内除了xxxx.md文件还有一个同名的文件夹
 
 4. 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：
+
 ```
 ![你想输入的替代文字](图片名.jpg)
 ```
@@ -493,7 +493,8 @@ night bright
 具体就看自己选择了，我这里喜欢黑色的，就选了`night`。
 
 # 文章加密访问
-**实现方法**
+
+**实现方法：方法一**
 
 打开themes->next->layout->_partials->head.swig文件,在以下位置插入这样一段代码：
 
@@ -510,6 +511,71 @@ night bright
 </script>
 ```
 然后在文章里，头部多加一个`password:xxxxx`就行了。
+
+**方法二：**
+
+参考：https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md
+
+输入：
+
+```
+npm install --save hexo-blog-encrypt
+```
+
+在`_config.yml`中启用该插件:
+
+```
+# Security
+##
+encrypt:
+    enable: true
+```
+
+然后在你的文章的头部添加上对应的字段，如 password, abstract, message
+
+- password: 是该博客加密使用的密码
+- abstract: 是该博客的摘要，会显示在博客的列表页
+- message: 这个是博客查看时，密码输入框上面的描述性文字
+
+# 隐藏文章
+
+安装：
+
+```
+npm install hexo-generator-index2 --save
+$ npm uninstall hexo-generator-index --save
+```
+
+在`_config.yml`中启用该插件:
+
+```
+＃索引2发生器是否包含官方的HEXO发电机指数，默认真（包含）
+index2_include_index：真＃ defult为真
+
+＃配置index2 generator，可以是
+数组或对象index2_generator：
+   per_page： 10 
+  order_by： -date 
+  include：
+    - 类别Web ＃只包含Web分类下的文章
+  排除：
+    - tag Hexo ＃不包含标签为Hexo的文章
+```
+
+per_page：每页显示的帖子。（0 =禁用分页）
+order_by：发布订单。（默认情况下按日期降序排序）
+layout：设置布局，默认为index
+path：输出路径，如果是path，则''表示输出到根目录
+指数：首页索引与否，如果true和pathIS ''，同样以官方HEXO发电机指数
+包括：帖子过滤器包括选项
+exclude：帖子过滤器排除选项
+除了包括和排除，其它如per_page和ORDER_BY都是原有的官方首页生成器选项，不必更改。
+
+包含/排除选项格式为属性 值（注意，属性与值中间有个英文的空格），可选的属性有：
+
+- 类别：文章分类
+- 标签：文章标签
+- 路径：文章源路径
 
 # 添加社交分享
 我这里使用的是`needmoreshare2`，next主题也支持了多种，可以看配置文件里的官方链接选择。
@@ -537,9 +603,11 @@ needmoreshare2:
       position: middleRight
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Evernote
 ```
+
 更多自定义选项可以参考<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>中的相关注释，`postbottom`部分为每篇文章的转发选项，而`float`部分为博客主页的转发浮动图标。可以修改的选项包括按钮风格，位置，以及社交图标。
 
 # 修改字体颜色/大小/背景色
+
 比如说，想在文章中对某一部分的文字进行强调（改变大小，颜色），该操作具体说明如下：
 
 如果想自定义字体大小以及颜色，可以直接在 Markdown 文档中使用 html 语法：
@@ -551,6 +619,7 @@ needmoreshare2:
 <font color="#000000" size=4><span style="background-color: #ADFF2F;">这是综合起来的效果 </span></font>
 <font color="#FFFFFF" size=4><span style="background-color: #68228B;">这是综合起来的效果2 </span></font>
 ```
+
 其中#FF0000为RGB颜色代码，读者可去RGB颜色查询对照表网站查找自己喜欢的颜色。
 
 若想在RGB颜色值与十六进制颜色码之间相互转化，可查看百度。
@@ -569,6 +638,7 @@ needmoreshare2:
 <font color="#FFFFFF" size=4><span style="background-color: #68228B;">这是综合起来的效果2 </span></font>
 
 # 实现首行缩进
+
 由于markdown语法主要考虑的是英文，所以对于中文的首行缩进并不太友好，因此想要实现行缩进需要加上相应的代码，如下。
 
 在需要缩进行的开头处，先输入下面的代码，然后紧跟着输入文本即可。分号也不要漏掉。
@@ -582,6 +652,7 @@ needmoreshare2:
 ```
 
 # 添加搜索功能
+
 笔者采用的是local search。
 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：
 
@@ -595,7 +666,8 @@ search:
   field: post
   format: html
   limit: 10000
-  ```
+```
+
 编辑<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>（主题目录下），启用本地搜索功能：
 
 ```
@@ -750,6 +822,7 @@ leancloud_visitors:
   app_id: #<app_id>
   app_key: #<app_key>
 ```
+
 从设置中找到相应的id和key：
 ![获取id和key](leancloud2.jpg)
 
@@ -764,9 +837,11 @@ categories: 编程
 ```
 
 那在生成页面后，分类列表就会出现编程这个选项，他的访问路径是：
+
 ```
 */categories/编程
 ```
+
 如果我们想要把路径名和分类名分别设置，需要怎么办呢？
 
 打开根目录下的配置文件`_config.yml`，找到如下位置做更改：
@@ -775,9 +850,9 @@ categories: 编程
 # Category & Tag
 default_category: uncategorized
 category_map:
-	编程: programming
-	生活: life
-	其他: other
+编程: programming
+生活: life
+其他: other
 tag_map:
 ```
 
@@ -786,13 +861,17 @@ tag_map:
 可以提前在这里设置好一些分类，当编辑的文章填写了对应的分类名时，就会自动的按照对应的路径来访问。
 
 # 设置标签
+
 在编辑文章的时候，tags:后面是设置标签的地方，如果有多个标签的话，可以用下面两种办法来设置：
+
 ```
 tages: [标签1,标签2,...标签n]
 ```
+
 或者
+
 ```
-tages: 
+tages:
 - 标签1
 - 标签2
 ...
@@ -858,6 +937,7 @@ tages:
 # 错误解决方案
 
 ## localhost:4000 cannot get
+
 第一种可能是没安装插件，输入指令：
 
 ```
