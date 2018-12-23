@@ -65,6 +65,7 @@ tag_map:
   “更无用”的写作课-作业: wuyong-writing-work
   “更无用”的写作课-笔记: wuyong-writing-note
   读书笔记: reading-notes
+  理财: finance
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date

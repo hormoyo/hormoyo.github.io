@@ -88,10 +88,10 @@ description: “你一定要经常思考这些问题：‘这应该如何为我�
 如果你对本书感兴趣，欢迎关注我，关注：
 
 《财务自由之路》解读系列：
-{% post_link Trade-your-way-to-Financial-Freedom %}
-{% post_link TYWTFF-1 %}
-{% post_link TYWTFF-2 %}
-{% post_link TYWTFF-7 %}
-{% post_link TYWTFF-0809 %}
-{% post_link TYWTFF-10 %}
-{% post_link TYWTFF-11 %}
+{% post_link 41Trade-your-way-to-Financial-Freedom %}
+{% post_link 42TYWTFF-1 %}
+{% post_link 43TYWTFF-2 %}
+{% post_link 44TYWTFF-7 %}
+{% post_link 45TYWTFF-0809 %}
+{% post_link 46TYWTFF-10 %}
+{% post_link 47TYWTFF-11 %}

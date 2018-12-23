@@ -4,6 +4,7 @@ tags:
   - 读书笔记
   - 2018年书单
   - 书籍这么读
+  - 理财
 date: 2018-11-13 23:36:15
 categories: 「书影世界」
 photos:
@@ -62,10 +63,10 @@ description: 《财务自由之路》第二章解读，扩展可控领域的方�
 如果你对本书感兴趣，欢迎关注我，关注：
 
 《财务自由之路》解读系列：
-{% post_link Trade-your-way-to-Financial-Freedom %}
-{% post_link TYWTFF-1 %}
-{% post_link TYWTFF-2 %}
-{% post_link TYWTFF-7 %}
-{% post_link TYWTFF-0809 %}
-{% post_link TYWTFF-10 %}
-{% post_link TYWTFF-11 %}
+{% post_link 41Trade-your-way-to-Financial-Freedom %}
+{% post_link 42TYWTFF-1 %}
+{% post_link 43TYWTFF-2 %}
+{% post_link 44TYWTFF-7 %}
+{% post_link 45TYWTFF-0809 %}
+{% post_link 46TYWTFF-10 %}
+{% post_link 47TYWTFF-11 %}
