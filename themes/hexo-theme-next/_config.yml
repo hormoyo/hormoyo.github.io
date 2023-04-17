@@ -557,31 +557,33 @@ gitment:
 
 # NeedMoreShare2
 # Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
-# See: https://github.com/revir/need-more-share2
-# Also see: https://github.com/DzmVasileusky/needShareButton
+# For more information: https://github.com/revir/need-more-share2
+# git clone https://github.com/theme-next/theme-next-needmoreshare2 source/lib/needsharebutton
 # iconStyle: default | box
 # boxForm: horizontal | vertical
 # position: top / middle / bottom + Left / Center / Right
-# networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Reddit,
-#           Delicious,StumbleUpon,Pinterest,Facebook,GooglePlus,Slashdot,
-#           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
-#           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
-needmoreshare2:
+# networks:
+# Weibo | Wechat | Douban | QQZone | Twitter | Facebook | Linkedin | Mailto | Reddit | Delicious | StumbleUpon | Pinterest
+# GooglePlus | Tumblr | GoogleBookmarks | Newsvine | Evernote | Friendfeed | Vkontakte | Odnoklassniki | Mailru
+needmoreshare:
   enable: true
+  cdn:
+    js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
+    css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
   postbottom:
     enable: true
     options:
       iconStyle: box
       boxForm: horizontal
-      position: middleCenter
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Evernote
+      position: bottomCenter
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
     enable: true
     options:
       iconStyle: box
       boxForm: horizontal
       position: middleRight
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Evernote
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
