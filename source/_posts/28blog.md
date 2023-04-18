@@ -582,10 +582,19 @@ exclude：帖子过滤器排除选项
 
 将目录更改为NexT目录,cd到相关位置，然后执行以下指令：
 ```
-git clone https://github.com/theme-next/theme-next-needmoreshare2 source / lib / needsharebutton
+cd themes/next
+git clone https://github.com/theme-next/theme-next-needmoreshare2 source/lib/needsharebutton
+```
+后期需要更新的话就是通过以下命令：
+```
+cd themes/next/source/lib/needsharebutton
+git pull
 ```
 在<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>中改成：
 ```
+baidushare:
+  type: slide
+  
 needmoreshare2:
   enable: true
   postbottom:
@@ -811,6 +820,10 @@ top: true
 [Hexo个人博客站点被百度谷歌收录](https://blog.csdn.net/qq_32454537/article/details/79482914)
 
 # 添加阅读次数统计
+**2023-04-18 更新**：
+现在可以直接在主题配置文件里，找`valine`这个，将leancloud里的appid和appkey直接填上，就可以代替使用`leancloud_visitors`。
+
+（以下是更新前的，除了主题配置文件都可以用）
 注册LeanCloud账号，完成激活；点击左上角的”应用”-“创建新应用”-点击“数据”右边的齿轮–点击创建类class，类名字叫做Counter。
 ![配置leancloud数据](leancloud1.jpg)
 
@@ -933,6 +946,8 @@ tages:
 
 {% note info %} 这个其实也是我在[一个很好看的博客](https://blog.dongleizhang.com/posts/32005d86/)通过F12看到他的设置发找到的文件地方。学习使用HEXO的内置标签 {% endnote %}
 
+# hexo新增的看板娘功能
+先mark一下，方法如[链接](https://blog.csdn.net/Mculover666/article/details/99696919?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_utm_term~default-16-99696919-blog-129943166.235^v29^pc_relevant_default_base&spm=1001.2101.3001.4242.9&utm_relevant_index=19)，有空再优化下。
 
 # 错误解决方案
 

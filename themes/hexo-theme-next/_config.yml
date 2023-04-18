@@ -503,16 +503,16 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
+  appid: CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz  # your leancloud application appid
+  appkey: lvCfzqdKlX5mHzPNamk4Swqy # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
-  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+  visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
 
 
 # Support for youyan comments system.
@@ -543,8 +543,8 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+baidushare:
+  type: button
 
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
@@ -575,7 +575,7 @@ needmoreshare:
     options:
       iconStyle: box
       boxForm: horizontal
-      position: bottomCenter
+      position: top
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
     enable: true
@@ -662,12 +662,12 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors: #文章阅读次数 https://leancloud.cn git登陆
   enable: true
-  app_id: vMXTQcjbLl8PD4UxQdXuXe1I-gzGzoHsz
-  app_key: 366CR2eIcgkTCW0HwPPszYA9
+  app_id: CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz
+  app_key: lvCfzqdKlX5mHzPNamk4Swqy
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in lc counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set the `security` to `false`.
-  security: false
+  security: true
   betterPerformance: false
 
 # Another tool to show number of visitors to each article.

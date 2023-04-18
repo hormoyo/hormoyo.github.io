@@ -10,6 +10,15 @@ author: Dannii
 language: zh-CN
 timezone: Asia/Shanghai
 
+# leancloud
+leancloud_counter_security:
+  enable_sync: true
+  app_id: CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz
+  app_key: lvCfzqdKlX5mHzPNamk4Swqy
+  server_url: https://cn3rynrb.lc-cn-n1-shared.com # Required for apps from CN region, e.g. https://leancloud.cn
+  username:  # Will be asked while deploying if is left blank
+  password:  # Recommmended to be left blank. Will be asked while 
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://dannii.cc
