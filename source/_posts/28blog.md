@@ -949,6 +949,26 @@ tages:
 # hexo新增的看板娘功能
 先mark一下，方法如[链接](https://blog.csdn.net/Mculover666/article/details/99696919?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_utm_term~default-16-99696919-blog-129943166.235^v29^pc_relevant_default_base&spm=1001.2101.3001.4242.9&utm_relevant_index=19)，有空再优化下。
 
+# 在本地建立分支
+这个分支保存最全：
+https://blog.csdn.net/white_idiot/article/details/80685990
+这个补充讲分支：
+https://blog.csdn.net/shile/article/details/78714189
+
+```
+进入user.github.io文件夹,应是hexo分支
+git pull origin hexo ——本地和远端的融合
+hexo new post "new post name"  ——写新文章
+git add source
+git commit -m "xxx"
+git push origin hexo  ——备份
+hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)
+```
+用vscode 在苹果电脑上是默认安装xcode就有git（当git不存在时重新安装xcode即可。
+![](28blog/blog1.png)
+![](28blog/blog2.png)
+
+
 # 错误解决方案
 
 ## localhost:4000 cannot get
@@ -991,6 +1011,8 @@ npm audit fix
 ERROR Deployer not found : github
 ```
 先看<font color="#FFFFFF"><span style="background-color: #68228B;">主页配置文件</span></font>中`_config.yml`里`deploy`要是`type: git`，`repo`这个字段填`https://github.com/yourgit/yourgit.github.io.git
+
+**(安装豆瓣插件之后必须是全的hexo deploy)**
 
 ## 其他坑
 
