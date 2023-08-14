@@ -1,35 +1,1617 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
-
-{% block page_class %}page-post-detail{% endblock %}
 
 
-{% block content %}
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="ryTUCO30zQ" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-fan.jpg?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="《工作前5年，决定你一生的财富》说是一碗投资小白熬得鸡汤有而不为过，但花时间看了嘛，自然得收获些有用的东西，所以我就发现了小白的理财步骤，以及思想层面的进步路线。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="毕业五年攒五十万你也可以">
+<meta property="og:url" content="http://dannii.cc/2018/12/10/48fivehundredthousand/index.html">
+<meta property="og:site_name" content="Divergent">
+<meta property="og:description" content="《工作前5年，决定你一生的财富》说是一碗投资小白熬得鸡汤有而不为过，但花时间看了嘛，自然得收获些有用的东西，所以我就发现了小白的理财步骤，以及思想层面的进步路线。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-12-09T16:27:29.000Z">
+<meta property="article:modified_time" content="2023-08-14T09:52:30.359Z">
+<meta property="article:author" content="Dannii">
+<meta property="article:tag" content="2018年书单">
+<meta property="article:tag" content="书评">
+<meta property="article:tag" content="理财">
+<meta name="twitter:card" content="summary">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="Divergent" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://dannii.cc/2018/12/10/48fivehundredthousand/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>毕业五年攒五十万你也可以 | Divergent</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Divergent</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">分歧者，拥有强烈好奇心的异类</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> 首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> 文章归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+    <a href="/books" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-book"></i> 书破万卷</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movies">
+    <a href="/movies" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-film"></i> 观世间相</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> 关于我</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-留言板">
+    <a href="/guestbook" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heart"></i> 留言板</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dannii.cc/2018/12/10/48fivehundredthousand/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dannii">
+      <meta itemprop="description" content="今天，终会成为过去，唯一能留住的就是未来">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Divergent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">毕业五年攒五十万你也可以
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+        
+
+          <span class="post-time">
+
+            
+            
+            
+
+
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-10 00:27:29" itemprop="dateCreated datePublished" datetime="2018-12-10T00:27:29+08:00">2018-12-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-08-14 17:52:30" itemprop="dateModified" datetime="2023-08-14T17:52:30+08:00">2023-08-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/bookandmovie/" itemprop="url" rel="index"><span itemprop="name">「书影世界」</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/10/48fivehundredthousand/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/10/48fivehundredthousand/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/10/48fivehundredthousand/" class="leancloud_visitors" data-flag-title="毕业五年攒五十万你也可以">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">5.3k</span>
+              
+
+              
+
+              
+
+            </div>
+
+ 
+          
+
+          
+              <div class="post-description">《工作前5年，决定你一生的财富》说是一碗投资小白熬得鸡汤有而不为过，但花时间看了嘛，自然得收获些有用的东西，所以我就发现了小白的理财步骤，以及思想层面的进步路线。</div>
+          
+
+        </div>
+
+
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>推荐书籍：《工作前5年，决定你一生的财富》</p>
+</blockquote>
+<h1 id="一、人人都想要财务自由"><a href="#一、人人都想要财务自由" class="headerlink" title="一、人人都想要财务自由"></a>一、人人都想要财务自由</h1><p>自从有了互联网，我们倒是不少见到一夜暴富、或“昨天你对我爱答不理，今天我让你高攀不起”的咸鱼翻身案例，这里让人眼红的都是某个人口袋里钱多了。</p>
+<p>现在信息传递越来越方便，我们也就越来越多听到谁谁谁一年赚了几十万，或一个小白领毕业刚几年就攒下了几十万上百万，这些原本对自己来说天方夜谭的事情，都明明白白发生在眼前，于是，让我们自己也情不自禁心痒：<font color="#FF9966">那我是不是也可以像他们一样，早些离财务自由近一点？<font></p>
+<p>有个词叫做<font color="#FF9966">财务自由</font>。我想很多人都特别耳熟，甚至也曾幻想着自己某一天能达到财务自由。但可能没多少人真正理解什么是“财务自由”，有一个女孩也是，想要实现财务自由，直到有一天，她意识到财务自由的重点在“自由”而非“财务”，她的人生从月入5000到五年攒下五十万，从一个月光族成长为了理财社区的大V，写下了一本叫做《工作前5年，决定你一生的财富》的书。</p>
+<p>她就是随手记理财社区入住大V，单篇文章阅读量200万+的三公子。从2009年踏入职场，脱离了大学无忧无虑的生活，社会的真实让她意识到金钱的重要性，随即开始拿自己的生活作为试验田，看看认真对待金钱，会收获哪些不一样的果实。</p>
+<p>原本一年约期的试验，渐渐变成了五年的承诺，原本小试牛刀的好奇，变成了雄心勃勃的规划。生活，就这么在“尝试”中变得有趣起来。</p>
+<hr>
+<h1 id="二、两条逻辑线吃透理财入门"><a href="#二、两条逻辑线吃透理财入门" class="headerlink" title="二、两条逻辑线吃透理财入门"></a>二、两条逻辑线吃透理财入门</h1><p>《工作前5年，决定你一生的财富》正如三公子在前言里说的那样，是她这些年理财心得的整理。</p>
+<p>理财分为很多阶段，三公子那些年的理财心路历程正是职场小白们正在或即将经历的事情，通过她自己的经历和故事，告诉这些理财初级读者们最简单最基础的理财方式，摆脱月光，积攒下第一桶金。是一本适合于理财新手的理财借鉴指南。</p>
+<p>整本书有条明显的时间线串联，从三公子2009年初入职场开始萌发理财意识，到2014年攒下50万。书中有两条逻辑线，一条主线和一条支线：主线就是三公子理财的四个阶段，是比较清晰的理财入门路线；另一条支线则是三公子在这五年中的成长路径，她的理财意识萌发、面对投资的果断、及时反省总结、不断学习的方法和思想转变，都是这本书里最值得吸收的东西。</p>
+<p>那接下的，就从这两条逻辑线讲起，吹响驶向名为财务自由的船只号角吧！</p>
+<hr>
+<h1 id="三、主线：理财的阶段"><a href="#三、主线：理财的阶段" class="headerlink" title="三、主线：理财的阶段"></a>三、主线：理财的阶段</h1><h2 id="3-1-存钱-记账"><a href="#3-1-存钱-记账" class="headerlink" title="3.1. 存钱&amp;记账"></a>3.1. 存钱&amp;记账</h2><p>记住一句话：</p>
+<div class="note primary"><p>财务自由的第一步是尽快拥有你的第一桶金。</p></div>
+
+<p>别再拿“钱那么少怎么理”这句话做借口，理财的第一步就是存钱，就这么简单。</p>
+<p>再进一步来说，就是改变自己的消费习惯，按照这个公式：</p>
+<blockquote>
+<p>支出&#x3D;收入-储蓄</p>
+</blockquote>
+<p>而记账，就是存钱的前提，了解自己每个月都把钱花到哪儿了，才能好好整理出不必要的支出，将能攒下的钱收到自己的口袋里。</p>
+<p>拿出每个月收入的至少10%存起来，或根据实际结余情况，提高存储的百分比。</p>
+<p>这个阶段就好好的利用记账调整自己的消费结构，并且安安心心攒下每一笔可以存起来的钱，一年之后，就能看到令人惊喜的账户余额。</p>
+<h2 id="3-2-分配工资"><a href="#3-2-分配工资" class="headerlink" title="3.2. 分配工资"></a>3.2. 分配工资</h2><p>分配工资，是白领上班族最容易入手的理财入门办法。</p>
+<p>三公子经历了由最初开始理财的工资三分化：日常开支+应急资金+固定存款，到后来资产明确后的：消费账户+备用金账户+投资账户。</p>
+<p>每一个理财的人，都应该对自己的资产状况进行一个梳理，可以去网上下一个<font color="#FF9966">“资产负债表”</font>模版，了解自己现在拥有的现金、基金、等等类型的资产有多少。</p>
+<p>从三公子的两个阶段工资分配来看，有一个类型是重复的，那就是<font color="#FF9966">备用金（应急资金）</font>。起码应该为自己预留下3-6个月日常开支的资金，放到火鸡或者流动性强安全性高的投资产品里，不到万不得已不能动用。</p>
+<p><strong>而投资，只能使用闲钱。</strong></p>
+<h2 id="3-3-用第一桶金尝试投资"><a href="#3-3-用第一桶金尝试投资" class="headerlink" title="3.3. 用第一桶金尝试投资"></a>3.3. 用第一桶金尝试投资</h2><p>想要实现财务自由，光只有存钱是不行的，一旦工作没了所谓的高存款来源也就断了，所以，让“钱生钱”，每个月产生的利息能负担我们日常生活，才能叫做财务自由。</p>
+<p>通过每个月严格按照“支出&#x3D;收入-储蓄”这个公式攒钱，一年后自己的消费结构和存款都能达到一定的数额。</p>
+<p>这个时候，它就是我们进行理财第二步“钱生钱”的第一桶金。</p>
+<p>在此基础上，要懂得“复利的神奇”是建立<font color="#FF9966">时间、本金、利率</font>三个维度上。</p>
+<p>首先需要有一笔足够多的本金，然后找到合适的利率，最后是坚持下去，让时间开始它的魔法。</p>
+<p>当然，如果我们本金不多，利率也只能找到10%-12%左右的产品，那根据复利的公式，那就是——</p>
+<blockquote>
+<p>越早开始越好。</p>
+</blockquote>
+<p>这里的投资渠道很多，三公子尝试过纸黄金、入股分红、基金、股票，当然现在还有很多头部平台P2P、国债等等方式。</p>
+<p>不过，</p>
+<blockquote>
+<p>千万别尝试一个你不懂的东西。</p>
+</blockquote>
+<h2 id="3-4-开始建立自己的理财体系"><a href="#3-4-开始建立自己的理财体系" class="headerlink" title="3.4. 开始建立自己的理财体系"></a>3.4. 开始建立自己的理财体系</h2><p>经历过前三个阶段，对理财有一个最最最基本的了解，而且在实践中有了自己的思考。三公子在《工作前5年，决定你一生的财富》书中附上了她两个点击量超高的热文，分别是《工作三年理下30万》和《工作五年理下50万》，都是她每跨过一个阶段对自己过程中的经验总结。</p>
+<p>经历了攒钱大作战、盲目的纸黄金投资、短暂基金尝试以及钻研学习投身股市，能看到三公子一路从无意识到有意识刻意学习，慢慢优化自己的理财思路和路线。</p>
+<p>最后，在经历了5年理财之路，他在书的最后一部分提出小白理财最后一步，就是建立自己的理财体系。</p>
+<p>具体这个理财体系应该如何建立，则是：</p>
+<div class="note success"><ul>
+<li>继续优化最适合自己的工资分配方式</li>
+<li>白领在初期应该以提升自我能力为主，增长收入唯一来源工资，再根据情况开源节流</li>
+<li>主动学习了解投资渠道与工具</li>
+<li>只要你相信，就“低吸高放”定投指数基金，坚持不懈</li>
+</ul></div>
+
+<p>当然，每个人的理财体系都应该不断优化，通过不懈地学习，来完善最适合自己的理财体系。</p>
+<hr>
+<h1 id="四、支线：成长是不断地学习和积累"><a href="#四、支线：成长是不断地学习和积累" class="headerlink" title="四、支线：成长是不断地学习和积累"></a>四、支线：成长是不断地学习和积累</h1><p>说完干货部分，就来谈谈这本书里，另一部分让我收获颇多的地方吧。</p>
+<p>俗话说<font color="#FF9966">“成功的人千篇一律，失败的人各有不同”</font>。看过《高效人士的七个习惯》的朋友应该知道，每一个厉害的人都有一些显而易见的特征，可又有多少人愿意相信成功如此简单呢？</p>
+<h2 id="4-1-行动力"><a href="#4-1-行动力" class="headerlink" title="4.1. 行动力"></a>4.1. 行动力</h2><p>在《工作前5年，决定你一生的财富》书中，最令我惊叹的就是作者三公子的行动力和决心之强，让我特别羡慕。因为我自己是个优柔寡断又有些完美主义的人，总想让掌控一切之后再行动，却经常错失机会。</p>
+<p>都说“机会总是留个有准备的人”，这个准备，并不是说心里想了就是准备，而是需要有真正的行动。三公子就是这个真正有准备的人。</p>
+<p>从理财意识萌发，尝试网上所谓的“一周只花一百元”“省钱打卡”这些方法，即使最后发现并不管用，起码三公子想到就去做到了。理财的决心也足够坚定，没有被一两次的失败打击，以至于她这种行动力让她在接下来终于接触到正确的存钱方式，从而开启了理财的大门。</p>
+<p>我想了很久，到底什么是行动力，超强的行动力靠什么来支撑？</p>
+<p>后来想通了，</p>
+<div class="note primary"><p>超强行动力来自一个人的底气。</p></div>
+
+<p>三公子一直在说她很幸运，说幸好有一个富足的家庭，没有房子房租的压力去攒钱，第一次投资就幸运地赚到钱，这些东西是上天给她创造的好运。再加上她自己经过之前的努力积累的好运，这些都是支撑她继续研究和挑战下一个阶段的底气。</p>
+<p>而我们，普通人，不一定就恰好能拥有这些巧合的好运，我们每一次面对困难就退缩，也许就是缺那一点点“底气”。</p>
+<p>那么，如果上天没有给我们创造好运，那我们就只剩下自己努力积攒好运，其他的，需要靠我们的自信。</p>
+<p>自信怎么来？</p>
+<p>《小狗钱钱》的作者博多·舍费尔在他写给成人的理财指南《财务自由之路》里就提到过，给自己建造一本<font color="#FF9966">“成功日记”</font>，记下生活中每一件自己做过的有意义、成功、让自己自豪的事情。</p>
+<p>有过成功的事情，我们就有面对下一次成功的自信。</p>
+<p>我们都知道“坚持就是胜利”，但这句话说起来容易，做起来真的很难，难在我们都能在最开始下定“决心”，但可能不会轻易踏出第一步，即使踏出第一步，在第二步一定会有荆棘挡在前面。</p>
+<p>成功说简单，是因为路就在那里，一眼就能知道终点；成功说难，是因为这条路上阻碍我们的东西太多，这些东西并不是别的，可能是我们的一念之间——“我现在没准备好”“也许这样没用”“算了，不尝试了”。</p>
+<p>那现在，就开始积攒自己的底气和运气，用行动力开启抓住第一个机会。</p>
+<h2 id="4-2-要心中清明地去做一件事"><a href="#4-2-要心中清明地去做一件事" class="headerlink" title="4.2. 要心中清明地去做一件事"></a>4.2. 要心中清明地去做一件事</h2><p>心中清明怎么解释呢？</p>
+<div class="note success"><ul>
+<li>第一，知道自己为什么要做这件事，要一直记得自己做这件事的初衷，并且时刻提醒自己；</li>
+<li>第二，你知道自己接下来该如何去做这件事；</li>
+<li>第三，如果遇到问题，知道要去反思和总结</li>
+</ul></div>
+
+<p>在书中第一部分我感触很深的是，三公子在记账的阶段，就体现出来了心中清明。特别用心地研究每一个方式并实践，然后去分析、改善，有意识地去优化自己的消费结构，真正是<font color="#FF9966">“知道”并“做到”</font>。反观我自己，记账了好几年，但可能只是记着而已，根本没有对自己的生活习惯和消费结构产生什么影响。</p>
+<p>三公子在这点上很棒，不急不躁，在什么阶段做什么事，她是真的在一个阶段就专心研究一个东西，直到把这个东西搞透，再进行下一项。</p>
+<p>其实这也是三公子在理财过程中踩过“坑”总结出来的道理。</p>
+<h2 id="4-3-擅于总结、反思"><a href="#4-3-擅于总结、反思" class="headerlink" title="4.3. 擅于总结、反思"></a>4.3. 擅于总结、反思</h2><p>每一个人都经历过浑浑噩噩、迷迷糊糊做事的阶段，比如跟风、追潮流、不懂就做。</p>
+<p>三公子最初也是犯过这个毛病，就是她尝试纸黄金的阶段，因为朋友推荐，什么都不懂就进入投资市场，最后败北而归。</p>
+<p>但三公子好在擅于总结和反思，亏钱了，她知道去问自己这个过程中发生了什么，什么原因自己会做出这个抉择，出了问题应该如何去解决，以后可以有什么经验借鉴。</p>
+<p>所以她从失败里得出了<font color="#FF9966">“不懂的事情千万别做”</font>的道理。</p>
+<p>不就应该是这样吗？人生不如意十之八九，失败总是比成功多，但为什么有人会说“失败是成功之母”，并不是说失败的次数越多，就能兑换成功，量变并不能直接产生质变。</p>
+<p><strong>能产生质变的原因永远是我们才这些失败中，主动学习到一些东西，这些东西才是我们前往成功的垫脚石。</strong></p>
+<h2 id="4-4-好运就是时刻准备好的人抓住了机会"><a href="#4-4-好运就是时刻准备好的人抓住了机会" class="headerlink" title="4.4. 好运就是时刻准备好的人抓住了机会"></a>4.4. 好运就是时刻准备好的人抓住了机会</h2><p>三公子一直在强调自己虽然家境比较好，没有房租买房的压力，但并没有因此心安理得反而更加珍惜这些资源。</p>
+<p>的确在书中字里行间可以知道，每月无房租、买房是父母全付，是三公子能快速攒下钱的一部分原因，之前也会特别羡慕嫉妒，但摸着良心说，这些东西也只是给三公子面对生活和投资机会的时候一个底气，话说到底，还是三公子自己本身之前破釜沉舟的积累、行动力积攒起来的。</p>
+<p>所以，从不迈出第一步的人，一直就只会站在原地。</p>
+<h2 id="4-5-学习学习再学习"><a href="#4-5-学习学习再学习" class="headerlink" title="4.5. 学习学习再学习"></a>4.5. 学习学习再学习</h2><p>整本书看下来，用一句很俗的话来说就是，你会看到一个女孩子用知识武装自己的过程。</p>
+<p>有时候，大家会发现，同是理财小白，可有些人总能在一段时间突然变成了那个看上去遥不可及的人。</p>
+<p>是TA突然就变成这样了吗？并不是。</p>
+<p><font color="#FF9966">每个人都站在同一起跑线，唯一不同的是，跑起来之后，有没有给自己继续加油。</font><p></p></p>
+<p>三公子的故事中，很明显她最初跟我们一样，是一个典型的探索中小白，也踏过很多坑，犯过很多错，没有一夜之间捡到几十万。区别就在于，每个阶段，她都在不停地主动学习。</p>
+<p>因为发现自己上班后金钱很重要，所以去学很多存钱攒钱的办法，她会灵活地使用，积极地去加入一起打卡攒钱的团队，不停地优化自己的攒钱方式。</p>
+<p>因为有了纸黄金的坑，所以在进入股市前，仔细地研究股票、看书，在这五年中她推荐过一篇有关理财的书籍推荐，有数十本经典理财入口指南，我相信都是经过了仔细的学习和实践的。从她谈到股市的时候，推崇的天涯几大知名大V的帖子，字里行间蹦出来的专业词汇和对股票的自我观点，能看出她做了很多功夫。</p>
+<p>再拿出一句很俗的话：“你关注什么决定你将会成为什么”，你将时间花在什么地方，时间会给你相应的结果。</p>
+<p>成为一个终身学习者，并不难，难的是愿不愿意每天花点时间，真的在学习。</p>
+<hr>
+<h1 id="五、总之"><a href="#五、总之" class="headerlink" title="五、总之"></a>五、总之</h1><p>想要实现财务自由，真的很难，需要本金、时间、以及投资技巧。本身赚钱生存就很难了，还要腾出精力去管理这些资金，所以很难；但另一方面，也正是因为生存和赚钱很难了，我们就不能干等着通货膨胀让本来就不多的钱贬值，反正现在不改变，未来也不会好到哪儿去。</p>
+<div class="note primary"><p>“实现财务自由”不是一个愿望，而是一种态度——掌控自己生活的态度。</p></div>
+
+<p>只有会管理自己的钱，才能成为我们自由去做想做的事的底气和资本。</p>
+<p>然而，想要实现财务自由，真的很简单，只需要本金、时间以及投资技巧。</p>
+<p>我们每天都在工作，每个月都有工资拿，有如此稳定的收入，还有什么比这个更令人充满希望的呢？只需要拿出每月工资的10%-20%，就能积攒本金。</p>
+<p>我们有30年的工作时间，三十年，这么长的时间可以让我们去利用神奇的复利，还有什么比这个事实更令人期待的呢？</p>
+<p>至于投资技巧，如果你实在是懒，那就学习一个投资工具——指数基金，老老实实遵循“聪明地买和聪明地卖”原则，30年时间，一定会比你现在什么都不做，要突然多出几十几百万。</p>
+<p>说到底，各位，别光看了，还没有存款和备用金的朋友们，请参照本书支线第一点：拿出你的行动力，放下杂念，现在就开始攒钱吧；还不会使用各种投资渠道和工具的小伙伴，赶紧买上《小狗钱钱》《财务自由之路》《穷爸爸富爸爸》或者基金股票之类经典的理财入门书籍读起来咯。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+      <div>
+        
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	<i class="fa fa-heart"></i>Thanks<i class="fa fa-heart"></i>
+	<br>------感谢你这么好，还关注我 ------</br>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Dannii 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/Alipay.jpg" alt="Dannii 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Dannii</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dannii.cc/2018/12/10/48fivehundredthousand/" title="毕业五年攒五十万你也可以">http://dannii.cc/2018/12/10/48fivehundredthousand/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/2018%E5%B9%B4%E4%B9%A6%E5%8D%95/" rel="tag"><i class="fa fa-tag"></i> 2018年书单</a>
+          
+            <a href="/tags/%E4%B9%A6%E8%AF%84/" rel="tag"><i class="fa fa-tag"></i> 书评</a>
+          
+            <a href="/tags/finance/" rel="tag"><i class="fa fa-tag"></i> 理财</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/08/46TYWTFF-11/" rel="next" title="《财务自由之路》11：饲养你的“鹅”七大原则">
+                <i class="fa fa-chevron-left"></i> 《财务自由之路》11：饲养你的“鹅”七大原则
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/22/53indexfund01/" rel="prev" title="《指数基金投资指南》01全书概览">
+                《指数基金投资指南》01全书概览 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% endif %}
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODEyNC8xNDY1NA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Dannii" />
+            
+              <p class="site-author-name" itemprop="name">Dannii</p>
+              <p class="site-description motion-element" itemprop="description">今天，终会成为过去，唯一能留住的就是未来</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">103</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/notshutup" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/mujingyi" target="_blank" title="知乎"><i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/users/f6ad2277b2c0/latest_articles" target="_blank" title="简书"><i class="fa fa-fw fa-copyright"></i>简书</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:hormoyo@outlook.com" target="_blank" title="E_Mail"><i class="fa fa-fw fa-envelope"></i>E_Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%83%B3%E8%A6%81%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1"><span class="nav-text">一、人人都想要财务自由</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%A4%E6%9D%A1%E9%80%BB%E8%BE%91%E7%BA%BF%E5%90%83%E9%80%8F%E7%90%86%E8%B4%A2%E5%85%A5%E9%97%A8"><span class="nav-text">二、两条逻辑线吃透理财入门</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%BB%E7%BA%BF%EF%BC%9A%E7%90%86%E8%B4%A2%E7%9A%84%E9%98%B6%E6%AE%B5"><span class="nav-text">三、主线：理财的阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%AD%98%E9%92%B1-%E8%AE%B0%E8%B4%A6"><span class="nav-text">3.1. 存钱&amp;记账</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%88%86%E9%85%8D%E5%B7%A5%E8%B5%84"><span class="nav-text">3.2. 分配工资</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E7%94%A8%E7%AC%AC%E4%B8%80%E6%A1%B6%E9%87%91%E5%B0%9D%E8%AF%95%E6%8A%95%E8%B5%84"><span class="nav-text">3.3. 用第一桶金尝试投资</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E5%BC%80%E5%A7%8B%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%90%86%E8%B4%A2%E4%BD%93%E7%B3%BB"><span class="nav-text">3.4. 开始建立自己的理财体系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%94%AF%E7%BA%BF%EF%BC%9A%E6%88%90%E9%95%BF%E6%98%AF%E4%B8%8D%E6%96%AD%E5%9C%B0%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A7%AF%E7%B4%AF"><span class="nav-text">四、支线：成长是不断地学习和积累</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E8%A1%8C%E5%8A%A8%E5%8A%9B"><span class="nav-text">4.1. 行动力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E8%A6%81%E5%BF%83%E4%B8%AD%E6%B8%85%E6%98%8E%E5%9C%B0%E5%8E%BB%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B"><span class="nav-text">4.2. 要心中清明地去做一件事</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E6%93%85%E4%BA%8E%E6%80%BB%E7%BB%93%E3%80%81%E5%8F%8D%E6%80%9D"><span class="nav-text">4.3. 擅于总结、反思</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E5%A5%BD%E8%BF%90%E5%B0%B1%E6%98%AF%E6%97%B6%E5%88%BB%E5%87%86%E5%A4%87%E5%A5%BD%E7%9A%84%E4%BA%BA%E6%8A%93%E4%BD%8F%E4%BA%86%E6%9C%BA%E4%BC%9A"><span class="nav-text">4.4. 好运就是时刻准备好的人抓住了机会</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E5%86%8D%E5%AD%A6%E4%B9%A0"><span class="nav-text">4.5. 学习学习再学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%80%BB%E4%B9%8B"><span class="nav-text">五、总之</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dannii</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Dannii在这里一共写了</span>
+    
+    <span title="站点总字数">199k字</span>
+  
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+ <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站总访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+</div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div> 
+    
+
+    
+
+
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz',
+        appKey: 'lvCfzqdKlX5mHzPNamk4Swqy',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

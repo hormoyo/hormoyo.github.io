@@ -1,35 +1,1714 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
-
-{% block page_class %}page-post-detail{% endblock %}
 
 
-{% block content %}
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="ryTUCO30zQ" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-fan.jpg?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="说在前面最近自己工作上的项目也进入了以用户增长为目标的阶段，纯粹产品上的打磨相对少很多，以“提升产品用户增长”说白了就是提升产品流量，建立品牌认知。 更多地是要在产品运营上用力，就我个人来说，觉得在这个方面自己现在有这些问题：  不知道该如何正确理解“用户增长” 对实现提升“用户增长”的运营方式不了解 工作肯定需要跟运营和必不可分的合作，现在对运营的基本流程不够清晰 缺乏对进入期和成长期产品运营的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PM是这样理解运营的“基本方法论”——《运营之光2.0》笔记（上）">
+<meta property="og:url" content="http://dannii.cc/2018/08/05/36OM-methodology/index.html">
+<meta property="og:site_name" content="Divergent">
+<meta property="og:description" content="说在前面最近自己工作上的项目也进入了以用户增长为目标的阶段，纯粹产品上的打磨相对少很多，以“提升产品用户增长”说白了就是提升产品流量，建立品牌认知。 更多地是要在产品运营上用力，就我个人来说，觉得在这个方面自己现在有这些问题：  不知道该如何正确理解“用户增长” 对实现提升“用户增长”的运营方式不了解 工作肯定需要跟运营和必不可分的合作，现在对运营的基本流程不够清晰 缺乏对进入期和成长期产品运营的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/l/public/s29535153.jpg">
+<meta property="article:published_time" content="2018-08-05T11:41:01.000Z">
+<meta property="article:modified_time" content="2023-08-14T09:52:33.845Z">
+<meta property="article:author" content="Dannii">
+<meta property="article:tag" content="职场">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="2018年书单">
+<meta property="article:tag" content="日更">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img3.doubanio.com/view/subject/l/public/s29535153.jpg">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="Divergent" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://dannii.cc/2018/08/05/36OM-methodology/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>PM是这样理解运营的“基本方法论”——《运营之光2.0》笔记（上） | Divergent</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Divergent</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">分歧者，拥有强烈好奇心的异类</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> 首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> 文章归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+    <a href="/books" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-book"></i> 书破万卷</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movies">
+    <a href="/movies" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-film"></i> 观世间相</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> 关于我</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-留言板">
+    <a href="/guestbook" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heart"></i> 留言板</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dannii.cc/2018/08/05/36OM-methodology/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dannii">
+      <meta itemprop="description" content="今天，终会成为过去，唯一能留住的就是未来">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Divergent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PM是这样理解运营的“基本方法论”——《运营之光2.0》笔记（上）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+        
+
+          <span class="post-time">
+
+            
+            
+            
+
+
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-05 19:41:01" itemprop="dateCreated datePublished" datetime="2018-08-05T19:41:01+08:00">2018-08-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-08-14 17:52:33" itemprop="dateModified" datetime="2023-08-14T17:52:33+08:00">2023-08-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/bookandmovie/" itemprop="url" rel="index"><span itemprop="name">「书影世界」</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/05/36OM-methodology/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/05/36OM-methodology/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/08/05/36OM-methodology/" class="leancloud_visitors" data-flag-title="PM是这样理解运营的“基本方法论”——《运营之光2.0》笔记（上）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">7.9k</span>
+              
+
+              
+
+              
+
+            </div>
+
+ 
+          
+
+          
+
+        </div>
+
+
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 target="_blank" href="https://img3.doubanio.com/view/subject/l/public/s29535153.jpg" rel="gallery_cllayzk4l002mmh1c7sdhc0e3 noopener"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://img3.doubanio.com/view/subject/l/public/s29535153.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>最近自己工作上的项目也进入了以用户增长为目标的阶段，纯粹产品上的打磨相对少很多，以“提升产品用户增长”说白了就是提升产品流量，建立品牌认知。</p>
+<p>更多地是要在产品运营上用力，就我个人来说，觉得在这个方面自己现在有这些问题：</p>
+<ol>
+<li>不知道该如何正确理解“用户增长”</li>
+<li>对实现提升“用户增长”的运营方式不了解</li>
+<li>工作肯定需要跟运营和必不可分的合作，现在对运营的基本流程不够清晰</li>
+<li>缺乏对进入期和成长期产品运营的全局思考和攻略</li>
+</ol>
+<p>看书对我而言，是挺有用的一个办法，基于以上的问题，我选择了一批书，做职业技能拓展主题阅读。</p>
+<p>以下是我看《运营之光2.0》的笔记和个人操作指南。</p>
+<p>简单介绍一下作者：</p>
+<p>黄有璨，现任互联网人在线学习社区三节课（sanjieke.cn）联合创始人。其他标签就不多说了，百度也能知道。运营的本事，不从那些职业头衔来看，也是杠杠的，为什么呢？就冲他写的文章以及这本书，给他的产品和合作平台品牌带来多少曝光和知名度，就不可否认了。</p>
+<hr>
+<h1 id="正文开始"><a href="#正文开始" class="headerlink" title="正文开始"></a>正文开始</h1><p>书中判断“互联网以后是运营驱动的时代”，与之前盛行的“内容为王”差不多，其实互联网所有的工种在不同公司都是各自的驱动，并非时代所驱。如果真要说起来，那以后应该是“全才驱动的时代”，既：<strong>要会产出创意做产品，又要会运营养产品，还得学会品牌营销推销产品，而且要具备大视野的战略思维。</strong></p>
+<p>说白了，哪个时代不是这样啊？单一工种度过了它的黄金时代，到了任何一个产业成长期，需要的就不仅仅是单一工种的技能。所要做的，不外乎各自终身学习，不断往身上添加新技能和buff。</p>
+<p>黄有璨整本书是按层次递进的，从思维方式再到运营技巧手段，从内到外分享经验。</p>
+<p>在底层方法论这两章，都是职场普适的方法论，已经不局限于仅运营可用。</p>
+<p>虽然都不新鲜了，但书中实例很多，算是比较用心地在分享经验。</p>
+<p>我觉得在解决我自己工作项目那些个具体问题上，先了解一下他人对于思维方式上的想法，也是不错的入手点。毕竟，技巧永远在思维意识之后，否则容易“走火入魔”。</p>
+<p>这篇文主要说3个意识、4个底层思维、3个方法论。</p>
+<p>简称343。嗯，挺没诚意的一个简称，但内容绝对掏心掏肺，可能有些啰嗦，写的过程中穿插我个人很多理解，但保证货真价值。毕竟是我自己的“弹药库”，用自己的理解来讲述才是真的吸收，也有些地方写着写着觉得挺逗的。</p>
+<hr>
+<h1 id="3个意识"><a href="#3个意识" class="headerlink" title="3个意识"></a>3个意识</h1><h2 id="目标导向意识"><a href="#目标导向意识" class="headerlink" title="目标导向意识"></a>目标导向意识</h2><p>职场上工作分两种：纯粹的只能支持类工作，和目标导向类工作。</p>
+<p>职场上有两种人：一种是可被替代，一个是创造独特的竞争力。</p>
+<p>在很多职场技能书中应该都看到过类似的案例：</p>
+<blockquote>
+<p>小王和小李是个办公室助理，他们都是做一些他们认为是“打杂”的活，比如复印文件、统计数据、写会议报告等等，小王就是重复一天又一天做这些工作，有一天以太累了没收获为理由辞职了，小李也是重复这些工作，但从复印文件里整理出了部门最近的项目名目，和流程大纲，分析猜出最近部门的业务目标；从统计数据里发现一个可以改进的项目问题；从会议报告里看部门各个前辈的方案、最近的行动，学习到如何解决问题。最后通过数据发现项目问题，提出了可行的方案，执行后得到一个较好的结果，同比起同期的同事，小李的表现简直不能再赞了。</p>
+</blockquote>
+<p>例子是假的，过程当然没有例子讲的这么短，不过真的有这样的人存在，用处处以目标为导向的意识在处理自己的工作和生活。</p>
+<p>在我看来，培养这种意识的方法就是：</p>
+<p><strong><font color ="#FF7F00">在日常的工作中，练习这种无形的能力，随时随地刻意让自己多想一些，多问自己“这件事还可以怎么做更好”的问题。</font></strong></p>
+<h2 id="效率意识"><a href="#效率意识" class="headerlink" title="效率意识"></a>效率意识</h2><p>关键在于：投入产出比。</p>
+<p>经常将<strong>“如何在相同的成本下，让自己能产出更多的价值”</strong>记在脑中。</p>
+<p>这不止运营需要，做产品、甚至其他职业，都是通用的。不说用最小的成本，就说在相同成本下，如何让自己一次比一次产出变得更大，这就是你的价值所在。</p>
+<p>看到这个，我觉得有个误区，就是——“我必须要用多小多小的成本，做出多大多大的事儿，就是牛逼，才算成功”。</p>
+<p>其实并不是啊，像《终身成长》里说的，成长型思维认为，每个人的成就都不是一蹴而就，只要每一次比上一次产出更多，就是在成长。</p>
+<p>这个思维也能用在项目评估上，不管项目结果如何，拥有效率意识，不会只看最终的结果表面，而是从其中去寻找机会和总结经验。对于不尽人意的项目效果更佳，比如这个失败项目的经验，对你而言有价值的地方在于：过程中是如何思考控制投入产出比例，你在其中做出了怎样的努力，为什么这个努力没有得到预期的效果，关键问题出在哪里，下一次你会有怎么样的行动去优化等等。</p>
+<p>哦，突然觉得，以上思路也可以用来制作每次的晋升评审PPT演讲稿。</p>
+<p>话说回来，成长的思维在于，通过一次次不停歇地努力，去修正自己的思维方式，让其变得越来越清晰、有逻辑。</p>
+<p>说到这里，我延伸想到，所有意识都是一种思维方式的体现。书中作者给了两幅图，表示不同的意识：</p>
+<p><img src="/%E4%B9%B1.jpg" alt="1"><br><img src="/%E9%BD%90.jpg" alt="2"></p>
+<p>关于如何拥有清晰的解决问题的思维方式，下面流程化思维一节讲的更详细。</p>
+<h2 id="信仰意识"><a href="#信仰意识" class="headerlink" title="信仰意识"></a>信仰意识</h2><p>书中作者说了一句话，我觉得可以当做运营或者产品的信念之花，这句话是：</p>
+<blockquote>
+<p><font color ="#FF7F00">“在互联网的世界里，有时只有抱着一种更加开放的心态，秉持着一种「先不论我可能会得到什么回报，让我先来基于我的理解把事情做到极致」的心态，你才有可能做到很多有趣的事情。”</font></p>
+</blockquote>
+<p>现在我们会因为kpi、过程有预见的麻烦，而太有“功利性”，只做短期眼见可得利益的事情。其实要先把杂念抛一边，回归童年时心无杂念玩耍的心态，去当做一件无比热爱的玩具来玩耍。</p>
+<p>书中举了一个例子，有一次两个运营朋友A和B发生了争执，起因就是因为A在未跟B沟通的情况下，在B运营维护的微信群里发广告。这时候A的想法是“你也在我群里，我发个宣传怎么了”，B的想法是“你都没先让我在你群里打广告，就来我群里宣传，凭什么”。</p>
+<p>A就跟有些人一样，潜水不说话、一有事就话都不说往群里扔个投票链接求帮忙，多数时候惹人嫌。这种事情在我看来，就是中国人一有事儿烧香拜佛、事成了就还愿给佛造个金身，事儿不成就等下次再烧香拜佛。</p>
+<p>B的想法也不怎么样。</p>
+<p>我的感悟是：所有事情和关系都不是召之即来挥之即去的，都要花时间和金钱去培养。</p>
+<p>这里两人都是一种**<font color ="#FF7F00"> “只有……才……”</font>**的逻辑，即：</p>
+<blockquote>
+<p>只有我得到了语气的某种回报之后，才会向你提供对应的服务。</p>
+</blockquote>
+<p>但实际上，对于用户来说，刚好相反，用户是**<font color ="#FF7F00">“既然……那么……”</font>**的逻辑，即：</p>
+<blockquote>
+<p>既然你已经完成了某件让我认可的事情，那么我作为用户理应给予你肯定和回报。</p>
+</blockquote>
+<p>嗯，其实两种逻辑都是一种底层支撑：<strong>利益</strong>。不过一个是从“我”的角度利益出发，一个是以“用户”角度利益出发。顾客是上帝，所以在产品和运营工作思考上，我们得以用户利益为先。</p>
+<p>说回到刚才那个例子，广撒网到处发宣传文案或链接的运营A，既伤害了跟同行的关系，又不会从这种行为里获益。</p>
+<p>为什么呢？</p>
+<p>投放没有针对性，而且违背了投入产出比那个原则。</p>
+<p>这种时候，正确做法应该怎么样呢？</p>
+<ul>
+<li><p>一方面，像刚才说的所有事情和关系都是长期维护的，要了解你每一个参与的群“调性”和用户定位，不时刷刷存在感，搞搞互动，才不至于在做宣传的时候显得突兀；</p>
+</li>
+<li><p>另一方面，通过平日的功夫，拥有自己的“主战场”，培养出自己的“主力军”用户，需要的是针对性培养和投放政策，挑选适合的群和用户进行投放才最有效。</p>
+</li>
+</ul>
+<p>这里，我另外延伸一个话题——<strong>关于“以用户价值为中心”</strong>。</p>
+<p>创造用户价值短期内不一定会有回报，比如需要花很多力气去做用户运营、拉新等等，而消费用户价值却能很快给产品带来收入，比如插一点广告收一些费等等。</p>
+<p>前提是，唯有你创造的用户价值足够多，才经得起你消费。</p>
+<p>这让我联想到一个问题：</p>
+<blockquote>
+<p>互联网产品什么时候适合寻求商业化？</p>
+</blockquote>
+<p>那就是当你的用户足够多，提供给用户的价值经得起每一次做商业化消耗的时候，或者说不间断地创造的用户价值大大超过每一次失去的用户的时候。</p>
+<p>说到用户价值，还要再插一个关于产品与运营的关系：</p>
+<blockquote>
+<p>“产品负责界定和提供长期用户价值，运营负责创造短期用户价值 + 协助产品完善长期价值”</p>
+</blockquote>
+<p>互联网人都知道产品的生命周期可以简单归结为进入期、成长期、成熟期、饱和期、衰退期五个阶段，在不同的阶段使用的产品和运营策略都是不同的，具体的东西在本书后面几个章节有讲，现在先不多说。</p>
+<p>运营和营销是很容易弄混的东西，很多时候我们常会第一时间想到树立品牌什么的，但在初期，用户并不知道产品存在的时候，连认知都没有，就别谈品牌了。</p>
+<p>总结下来，**<font color ="#FF7F00">就是在快速发展的互联网行业，基本都处在长期价值未明确的阶段，运营多做用户运营，包括促销等手段。而成熟的、已经有明确价值的公司，营销品牌的作用要更大些。</font>**</p>
+<p>所以，可能我的项目，第一步就是多做一些能够创造短期用户价值的功能，跟运营打配合；同时去提供长期的用户价值，比如在这里找好产品的长期定位、独特性卖点等等。</p>
+<hr>
+<h1 id="4个底层思维"><a href="#4个底层思维" class="headerlink" title="4个底层思维"></a>4个底层思维</h1><p>关于4个底层思维，大致就是这样的：</p>
+<p><font color ="#FF7F00">攒个局-描绘路线-找到最短的路-行动</font></p>
+<p>以下详细讲：</p>
+<h2 id="攒局——生态化思维"><a href="#攒局——生态化思维" class="headerlink" title="攒局——生态化思维"></a>攒局——生态化思维</h2><p>作者提出的4个底层思维，概念都特别抽象，为了好理解，我都用自己觉得挺接地气的方式去解读。</p>
+<p>比如说到生态化思维，用作者在其他小节提到的一个概念来说：<strong>运营做事其实就是在攒局</strong>，</p>
+<blockquote>
+<p>“即，设计或假想出来一个最终可以拉动 N 多人一起参与一起玩一起 High 的事情，并一步步去让这个事情从假想变得落地……无论局大局小，组局成功的关键，总是在于你要能够一一界定清楚，局内各方的价值供给关系，并在其中穿针引线，优先引入某种较为稀缺的价值，从而逐步让各方间的价值供给关系从最初的假想一点点变为确立。”</p>
+</blockquote>
+<p>总结就是：界定供给关系-引入稀奇价值-建立关系</p>
+<p>说的很清楚了，拉一堆人一起做一件事儿，而且作为组织者的你，要有大局观，对你所要做的事情心里门儿清，做好各种环节上的谋划。</p>
+<p>最重要一点是，你这个局，很像组织一场贸易，本质上是利用价值交换，达成目标。将很多有不同价值的人拉到一起，提供一个机会，让他们进行交易，如果双方匹配度高，那这个局就很成功。</p>
+<h2 id="描绘路线——流程化思维"><a href="#描绘路线——流程化思维" class="headerlink" title="描绘路线——流程化思维"></a>描绘路线——流程化思维</h2><p>做事需要一定的逻辑，头脑里得有清晰的步骤。路要一步步走，而在走之前，至少得自己绘制一下路线，目的地在哪儿，从哪儿出发，路上会遇到什么，都是要在出发前想清楚的。</p>
+<p>书中作者给出关于运营活动策划前的流程步骤建议是：</p>
+<blockquote>
+<p>（1）界定清楚我想要的目标和结果；<br>（2）梳理清楚，这个问题从起始到结束的全流程是怎样的，会经历哪些主要的环节；<br>（3）在每一个环节上，我们可以做一些什么事情，给用户创造一些不同的体验，以有助于我们最终达成期望实现的结果。<br>包括，假如你做了一个活动效果不佳需要去具体分析它的原因，你应该先把整个用户参与这个活动的流程梳理出来，再从具体每一个环节的数据去看问题到底都出在哪些环节，而不是纯靠拍脑袋式地觉得「这个活动就是烂」。</p>
+</blockquote>
+<p>其实，这就是要有一个解决问题的步骤，</p>
+<p>《麦肯锡笔记思考法》中给出一个答案，分四步：</p>
+<blockquote>
+<p>第一步，找出真正的问题，是那种本质上的问题；<br>第二步，建立假设，提出针对问题暂定的解决方法；<br>第三步，验证假设；<br>第四步，总结，并以此制定行动方案。</p>
+</blockquote>
+<p>这是我见过的最简洁明了的解决问题流程，我之前写过这本书的书评——<a href="123">《一本被书名耽误的问题解决宝典》</a></p>
+<h2 id="找到最短的路——杠杆思维"><a href="#找到最短的路——杠杆思维" class="headerlink" title="找到最短的路——杠杆思维"></a>找到最短的路——杠杆思维</h2><p>在这过程中，最重要的是找到一个点，可以撬动整个局的杠杆，就能将局攒成功，又俗称“破局”。</p>
+<p>找到最短的路，才能更快的到达终点。</p>
+<p>有句话叫做：</p>
+<blockquote>
+<p><strong>“给我一个支点，我就能撬起整个地球”</strong>。</p>
+</blockquote>
+<p>我越来越体会到这句话的含义。这不只是一个哲学命题，更是一个人生智慧。到处涉猎往往一事无成，做好最重要的一件事情，却能带你走向更宽阔的世界。</p>
+<p>借用美国作家奥格·曼狄诺的一句名言：</p>
+<blockquote>
+<p>“一次只做一件事的人，才会领先于这个世界。”</p>
+</blockquote>
+<p>成功的秘诀就在于一件事。你是否能把这件事情做好，决定了你能够走多远。肯德基做好了一份食谱，成为了一家伟大的公司。乔布斯做好了一款手机，颠覆了这个时代的传播方式。</p>
+<p>所以，做一件事情，首先要确定的，就是找到最重要的那件事。</p>
+<p>怎么找到最重要的事呢？</p>
+<p>简单来说就是用前一个思维，**<font color ="#FF7F00">在分析解决问题的过程中，看到一件事，它是所有问题的来源，解决完这件事，一切都会迎刃而解。找到这个最“关键”的点之后，再寻找解决它的核心问题，一步步拆解目标，直至集中精力把这个点突破。</font>**</p>
+<p>书中举了个例子，就是作者某一次要在短时间内组织一场高端人才线下招聘会&#x2F;见面会。一没时间大量联系行业内的人，二没资金去做大规模推广，怎么做呢？</p>
+<p>他找到关键事件是“拉3～5个大佬站台”，然后递进发现怎么才能拉大佬站台呢？核心点就在“告诉大佬，我们能提供给大佬招人的机会+提升大佬个人身份和行业影响力”，最后集中资源解决这个目标。于是通过请几个大佬站台，有了这一层宣传，加上圈子里互转，整个活动就盘活了。</p>
+<p>很多时候，并不是说一个人的能力真的比其他人大多少，他的人脉有多广，而是他抓住了事情的关键，打蛇打七寸，他只需要集中精力去做好这一件事情，其他的东西，都是一环扣一环顺其自然就解决的事儿。</p>
+<p>注意，这个思维并不等同于投机取巧。</p>
+<p>所以，在做事情之前，花点时间想想最重要的事，才是第一要义。</p>
+<h2 id="行动——精细化思维"><a href="#行动——精细化思维" class="headerlink" title="行动——精细化思维"></a>行动——精细化思维</h2><p>这里提到一个<strong>“SOP”（标准化工作步骤）</strong>，百度告诉我们，就是“就是将某一事件的标准操作步骤和要求以统一的格式描述出来，用来指导和规范日常的工作”。</p>
+<p>书中拿作者曾经认识的一个微博运营做案例，此人整理了一系列发微博的excel流程手册，包括几点发微、发的内容主题、转载内容的资料链接、转发的文本规范、原创的基本方法等等。excel之详细，我觉得处女座和有强迫症的人看了会十分爽。</p>
+<p>并不是埋汰这种近乎“龟毛”的行为，反之，我很推崇这种做法，因为我也曾受益呀。</p>
+<p>曾经我有N个excel表，其中一个专门用来记录自己的项目，分类包括项目名、子项目、分类、需求归类、使用场景、问题、期望效果、跟进人、开发进度&#x2F;时间、测试进度&#x2F;时间等等等，在没有PMO专门的项目管理时候，给自己和团队节省了很多管理时间成本。除此之外，还有为新人做的产品流程指南，测试指南，每个项目上线后给运营制作的产品功能运营使用培训手册等等。</p>
+<p>一方面，标准化的工作步骤，是对自己经验的总结，在一次次的尝试后，会让自己对事情的把控度越来越高，考虑到的范围更广泛，对自己这套方法不断优化和调整，整理出来的一套可复制使用的模版方法；另一方面，太有效率，因为是经过时间的打磨和多次的优化，简洁明了可操作性强，直接扔给一个新人，也能一步步完整的做下来，对于带新人和培训，简直就是神之利器。</p>
+<hr>
+<h1 id="3个方法论"><a href="#3个方法论" class="headerlink" title="3个方法论"></a>3个方法论</h1><p>挺虚的东西，老生常谈，但有必要提一提。</p>
+<h2 id="保持对新鲜事物的敏感"><a href="#保持对新鲜事物的敏感" class="headerlink" title="保持对新鲜事物的敏感"></a>保持对新鲜事物的敏感</h2><p>我是一个双子座，对双子座很典型的描述就是“思维善变，无拘无束，对外界包罗万象的事物的永无休止的好奇心，总能第一时间知道最新最前沿的信息”，也的确是，好奇心重，特别喜欢关注一切新奇的东西。但近几年因为最热点的自媒体越来越多，出于反感，我常常就算先知道这个消息，也不太愿意故意蹭热点去发表言论，反而喜欢等它“冷”下去了、看到更多面的信息之后，再去做判断和评论。</p>
+<p>就发表主观言论这点来说，我这样做没问题，是个富有社会责任心的good girl，可以避免在公共环境下发表一切片面的影响舆论的话。但在其他方面，比如产品运营上，可能会错失良机。</p>
+<p>书中一句话，让我有点启发，是这样说的</p>
+<blockquote>
+<p>“你肯定不需要对每一个热点都疯狂去跟去追，但至少你得做到对于大部分你的用户会密切关注的热点充分熟悉和了解。”</p>
+</blockquote>
+<p>这个既不违背我的原则，又能在第一时间理智地判断工作需要，尤其是在一个拥有人们普遍认知的东西出现后，也许它就是撬动整个事情的杠杆。</p>
+<p>关于保持新鲜事物敏感性的方法——</p>
+<p>对于天生就有好奇心（比如我）的人来说，<strong>需要的是做好这些信息的分类和整理</strong>。因为这类人主动或下意识吸引来的信息已经很多了，不需要再刻意去培养，而是更多地学会整理，将之形成一个自己的资料库，说不定什么时候，就能有一个适合的idea出现。</p>
+<p>而对于平时没有这种习惯，或对信息不那么敏感的人，作者提到的方式可以一试：</p>
+<blockquote>
+<p>“我自己有一个习惯，但凡我在朋友圈、微信群等地方看到有超过 3 个人都在提一个我此前从来没听过的概念，我就一定会专门抽出来至少 30～50 分钟的时间，去把这个我从来没听说过的东西彻头彻尾搞清楚。”</p>
+</blockquote>
+<h2 id="拥有自己对于用户的洞察"><a href="#拥有自己对于用户的洞察" class="headerlink" title="拥有自己对于用户的洞察"></a>拥有自己对于用户的洞察</h2><p>这个也是老生常谈了，十个做互联网的，有九个都会提到“用户”以及跟用户有关的“体验”“需求”。</p>
+<p>不过真正做到从用户角度出发，不多。</p>
+<p>每个人都是独立的个体，都会有自己的想法嘛，就算是做用户访问，得到的答案也有可能经过主观的理解而产生本质的变化。</p>
+<p>我依旧推崇使用<font color ="#FF7F00">“通感”</font>的方法。</p>
+<p>“通感”其实是个修辞手法啊，百度正解是“就是在描述客观事物时，用形象的语言使感觉转移，将人的听觉、视觉、嗅觉、味觉、触觉等不同感觉互相沟通、交错，彼此挪移转换，将本来表示甲感觉的词语移用来表示乙感觉”。</p>
+<p>在我这里，可以简单来说是，五感替换。</p>
+<p><strong>也就是把自己变成典型的用户，置身于真实使用场景中。说真正的用户会说的话，用他的生活方式去生活，用他的角度去看待问题，在他习惯的环境里做事。体验真正的用户实际的一天。</strong></p>
+<p>说到这里我觉得这个过程很像演戏，或给一部小说人物立传，设定好这个人有什么样的性格，在哪儿生活，有什么亲人，以及哪些社会关系，他过去是做什么的，发生过什么。那他现在所有的言论、行为、思考，都是由之前设定好的性格所决定，他会说这样的话，就绝不会说那样的话，不然就是崩人设。</p>
+<p>有个词叫，<strong>人物画像</strong>。人物画像是给已知的用户群体，通过数据分析给他们打上标识.这就是设定好人设，我们要做尽可能多的人设，放在自己的用户洞察库里，有需要的时候，拿出来自己精分一下，创造条件，让自己生活在那样的环境，体会一下用户是怎么想的。</p>
+<p>话题扯回来，也就是说，自己想的不一定就是真实用户所想的，只有自己成为用户的时候，才能找到真正的问题。</p>
+<p>作为产品或运营，这点其实特别有趣啊，想一想，因为不可能只面对同一种用户，得模拟很多很多用户以及场景，就时不时要精分，变化角色，必要的时候演上一段，无意中还体验了另一种人生。</p>
+<p>想想就很刺激。</p>
+<h2 id="学会具有打动力和说服力的表述"><a href="#学会具有打动力和说服力的表述" class="headerlink" title="学会具有打动力和说服力的表述"></a>学会具有打动力和说服力的表述</h2><p>我觉得是最最最最最普通的职场技能书里都会提到的一点。</p>
+<p>这个能力，不仅限于运营，而是任何职业、任何场景都需要的。</p>
+<p>这个其实我不想多说，因为日常沟通技能书里都能学到。</p>
+<p>就简单说三个练习，提高这种能力。</p>
+<ul>
+<li>练习1：将自己看过的新闻、故事，有声有色的讲给朋友听</li>
+<li>练习2：先理清自己想说的东西的逻辑，要有理有据，然后借鉴国外书写的方式：将结论重点放前面来说，别铺！垫！太！多！</li>
+<li>练习3：吸引人，参考自媒体标题党培养</li>
+</ul>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>3个意识，就是</p>
+<ul>
+<li>目标导向，做事得有个目标</li>
+<li>投入产出比，做最有“性价比”的事儿</li>
+<li>拥有先把事情做到极致的信仰</li>
+</ul>
+<p>4个思维，就是</p>
+<ul>
+<li>生态化，要有老炮攒攒局的基本素养</li>
+<li>流程化，做事儿得有步骤和逻辑</li>
+<li>杠杆点，找到最重要的那件事，破局</li>
+<li>精细化，强大执行需要一系列可操作性强的计划和指南</li>
+</ul>
+<p>3个方法论，就是</p>
+<ul>
+<li>保持好奇心，对新鲜事物永远敏锐</li>
+<li>用户洞察，角色精分了解一下</li>
+<li>学会有效的表达，沟通欠缺技巧的，多看看书</li>
+</ul>
+<p>都看到这里了，说明你真的是个热爱学习长得又好看的人！别问我为什么，相由心生，谢谢你看到这里。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+      <div>
+        
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	<i class="fa fa-heart"></i>Thanks<i class="fa fa-heart"></i>
+	<br>------感谢你这么好，还关注我 ------</br>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Dannii 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/Alipay.jpg" alt="Dannii 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Dannii</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dannii.cc/2018/08/05/36OM-methodology/" title="PM是这样理解运营的“基本方法论”——《运营之光2.0》笔记（上）">http://dannii.cc/2018/08/05/36OM-methodology/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%81%8C%E5%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 职场</a>
+          
+            <a href="/tags/reading-notes/" rel="tag"><i class="fa fa-tag"></i> 读书笔记</a>
+          
+            <a href="/tags/2018%E5%B9%B4%E4%B9%A6%E5%8D%95/" rel="tag"><i class="fa fa-tag"></i> 2018年书单</a>
+          
+            <a href="/tags/%E6%97%A5%E6%9B%B4/" rel="tag"><i class="fa fa-tag"></i> 日更</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/05/29Trump/" rel="next" title="无语的简评——《破碎的美国：特朗普传》">
+                <i class="fa fa-chevron-left"></i> 无语的简评——《破碎的美国：特朗普传》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/11/30big-familly/" rel="prev" title="中国自此再无“贵族”">
+                中国自此再无“贵族” <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% endif %}
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODEyNC8xNDY1NA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Dannii" />
+            
+              <p class="site-author-name" itemprop="name">Dannii</p>
+              <p class="site-description motion-element" itemprop="description">今天，终会成为过去，唯一能留住的就是未来</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">103</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/notshutup" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/mujingyi" target="_blank" title="知乎"><i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/users/f6ad2277b2c0/latest_articles" target="_blank" title="简书"><i class="fa fa-fw fa-copyright"></i>简书</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:hormoyo@outlook.com" target="_blank" title="E_Mail"><i class="fa fa-fw fa-envelope"></i>E_Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B4%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-text">说在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%96%87%E5%BC%80%E5%A7%8B"><span class="nav-text">正文开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3%E4%B8%AA%E6%84%8F%E8%AF%86"><span class="nav-text">3个意识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E5%AF%BC%E5%90%91%E6%84%8F%E8%AF%86"><span class="nav-text">目标导向意识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E7%8E%87%E6%84%8F%E8%AF%86"><span class="nav-text">效率意识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E4%BB%B0%E6%84%8F%E8%AF%86"><span class="nav-text">信仰意识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E4%B8%AA%E5%BA%95%E5%B1%82%E6%80%9D%E7%BB%B4"><span class="nav-text">4个底层思维</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%92%E5%B1%80%E2%80%94%E2%80%94%E7%94%9F%E6%80%81%E5%8C%96%E6%80%9D%E7%BB%B4"><span class="nav-text">攒局——生态化思维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E7%BB%98%E8%B7%AF%E7%BA%BF%E2%80%94%E2%80%94%E6%B5%81%E7%A8%8B%E5%8C%96%E6%80%9D%E7%BB%B4"><span class="nav-text">描绘路线——流程化思维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%BE%E5%88%B0%E6%9C%80%E7%9F%AD%E7%9A%84%E8%B7%AF%E2%80%94%E2%80%94%E6%9D%A0%E6%9D%86%E6%80%9D%E7%BB%B4"><span class="nav-text">找到最短的路——杠杆思维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%8A%A8%E2%80%94%E2%80%94%E7%B2%BE%E7%BB%86%E5%8C%96%E6%80%9D%E7%BB%B4"><span class="nav-text">行动——精细化思维</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3%E4%B8%AA%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="nav-text">3个方法论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E6%8C%81%E5%AF%B9%E6%96%B0%E9%B2%9C%E4%BA%8B%E7%89%A9%E7%9A%84%E6%95%8F%E6%84%9F"><span class="nav-text">保持对新鲜事物的敏感</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%A5%E6%9C%89%E8%87%AA%E5%B7%B1%E5%AF%B9%E4%BA%8E%E7%94%A8%E6%88%B7%E7%9A%84%E6%B4%9E%E5%AF%9F"><span class="nav-text">拥有自己对于用户的洞察</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%BC%9A%E5%85%B7%E6%9C%89%E6%89%93%E5%8A%A8%E5%8A%9B%E5%92%8C%E8%AF%B4%E6%9C%8D%E5%8A%9B%E7%9A%84%E8%A1%A8%E8%BF%B0"><span class="nav-text">学会具有打动力和说服力的表述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dannii</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Dannii在这里一共写了</span>
+    
+    <span title="站点总字数">199k字</span>
+  
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+ <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站总访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+</div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div> 
+    
+
+    
+
+
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz',
+        appKey: 'lvCfzqdKlX5mHzPNamk4Swqy',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

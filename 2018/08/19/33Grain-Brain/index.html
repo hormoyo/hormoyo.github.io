@@ -1,35 +1,1580 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
-
-{% block page_class %}page-post-detail{% endblock %}
 
 
-{% block content %}
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="ryTUCO30zQ" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-fan.jpg?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="来自老母亲的关怀前几天，我刚上班的表妹告诉我，她的母上大人，在微信给她发了这么几篇文章： “经常用脑过度的人，吃这几样东西最补脑！” “冬天不减肥，夏天徒伤悲，学会这3招一周瘦10斤” “一年少吃肉，活到九十九” 我和表妹：……………… 也许朋友圈里骗众人的养生文少了，但还是有不少这类的文章，里面说的东西吧，也不是全错，有些地方还是很有科学依据，但经常能看到各家有各家说法，有说吃这个好，有说吃那个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="天哪，吃了这么多年主食，这本书却告诉我都是错的？">
+<meta property="og:url" content="http://dannii.cc/2018/08/19/33Grain-Brain/index.html">
+<meta property="og:site_name" content="Divergent">
+<meta property="og:description" content="来自老母亲的关怀前几天，我刚上班的表妹告诉我，她的母上大人，在微信给她发了这么几篇文章： “经常用脑过度的人，吃这几样东西最补脑！” “冬天不减肥，夏天徒伤悲，学会这3招一周瘦10斤” “一年少吃肉，活到九十九” 我和表妹：……………… 也许朋友圈里骗众人的养生文少了，但还是有不少这类的文章，里面说的东西吧，也不是全错，有些地方还是很有科学依据，但经常能看到各家有各家说法，有说吃这个好，有说吃那个">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534702197583&di=b16037c7b0ebee88708cf718b0af7c7c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170428%2F7048a063f19341019de98cdf1e1981a8_th.jpeg">
+<meta property="article:published_time" content="2018-08-19T15:10:09.000Z">
+<meta property="article:modified_time" content="2023-03-23T16:58:20.136Z">
+<meta property="article:author" content="Dannii">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="2018年书单">
+<meta property="article:tag" content="书评">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534702197583&di=b16037c7b0ebee88708cf718b0af7c7c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170428%2F7048a063f19341019de98cdf1e1981a8_th.jpeg">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="Divergent" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://dannii.cc/2018/08/19/33Grain-Brain/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>天哪，吃了这么多年主食，这本书却告诉我都是错的？ | Divergent</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Divergent</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">分歧者，拥有强烈好奇心的异类</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> 首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> 文章归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+    <a href="/books" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-book"></i> 书破万卷</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movies">
+    <a href="/movies" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-film"></i> 观世间相</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> 关于我</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-留言板">
+    <a href="/guestbook" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heart"></i> 留言板</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dannii.cc/2018/08/19/33Grain-Brain/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dannii">
+      <meta itemprop="description" content="今天，终会成为过去，唯一能留住的就是未来">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Divergent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">天哪，吃了这么多年主食，这本书却告诉我都是错的？
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+        
+
+          <span class="post-time">
+
+            
+            
+            
+
+
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-19 23:10:09" itemprop="dateCreated datePublished" datetime="2018-08-19T23:10:09+08:00">2018-08-19</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-03-24 00:58:20" itemprop="dateModified" datetime="2023-03-24T00:58:20+08:00">2023-03-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/bookandmovie/" itemprop="url" rel="index"><span itemprop="name">「书影世界」</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/19/33Grain-Brain/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/19/33Grain-Brain/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/08/19/33Grain-Brain/" class="leancloud_visitors" data-flag-title="天哪，吃了这么多年主食，这本书却告诉我都是错的？">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.7k</span>
+              
+
+              
+
+              
+
+            </div>
+
+ 
+          
+
+          
+
+        </div>
+
+
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 target="_blank" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534702197583&di=b16037c7b0ebee88708cf718b0af7c7c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170428%2F7048a063f19341019de98cdf1e1981a8_th.jpeg" rel="gallery_cllayzk4j002emh1c0ln55ago noopener"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534702197583&di=b16037c7b0ebee88708cf718b0af7c7c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170428%2F7048a063f19341019de98cdf1e1981a8_th.jpeg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <h1 id="来自老母亲的关怀"><a href="#来自老母亲的关怀" class="headerlink" title="来自老母亲的关怀"></a>来自老母亲的关怀</h1><p>前几天，我刚上班的表妹告诉我，她的母上大人，在微信给她发了这么几篇文章：</p>
+<p>“经常用脑过度的人，吃这几样东西最补脑！”</p>
+<p>“冬天不减肥，夏天徒伤悲，学会这3招一周瘦10斤”</p>
+<p>“一年少吃肉，活到九十九”</p>
+<p>我和表妹：………………</p>
+<p>也许朋友圈里骗众人的养生文少了，但还是有不少这类的文章，里面说的东西吧，也不是全错，有些地方还是很有科学依据，但经常能看到各家有各家说法，有说吃这个好，有说吃那个好。</p>
+<p>随着医学和研究的发展，对于人类自身的研究越来越多，以前的一些认知不断被更新和迭代，对于普通人来说，学术界研究发展太快，总能见到这个月还有的说法，下个月就被推翻或更新，怎么才能让自己活得更健康？怎么才能让自己身材保持的更好？好像没有一个标准答案。</p>
+<h1 id="吃主食损害大脑"><a href="#吃主食损害大脑" class="headerlink" title="吃主食损害大脑"></a>吃主食损害大脑</h1><p>这不，又有一个与主流学术界截然相反的观念被抛出来，就是：吃谷物主食（主要是含麸质的食物）伤害大脑。</p>
+<p>什么？！这可要吓skr人了！从小到大吃面食为主的一部分中国北方人会说：</p>
+<blockquote>
+<p>“一直都吃面食为主，现在告诉我谷物损害大脑？WTF？”</p>
+</blockquote>
+<p>这个观念来自一本书《谷物大脑》，作者是美国的一名医学博士，叫做戴维•珀尔马特。他是具有专科医师资格的执业神经科医生，也是是美国营养学院的成员。在营养对神经病症的影响这个研究领域，珀尔马特博士是世界公认的权威。</p>
+<p>这本书主要说了一个核心观点：</p>
+<p><strong>我们的身体和大脑都喜欢脂肪，而主食则是对大脑有损害的凶手，我们可以通过饮食、运动和睡眠来改善大脑的功能。</strong></p>
+<p>对于书中的观点，这里我想强调的是，最开始我也以为是指所有的主食都是伤害大脑，但经过查证，其实作者只是强调含麸质的食物，对大脑有损伤，并不是所有的主食。非麸质饮食就是不吃含大麦、小麦制成的食物比如糕点。但土豆、荞麦、玉米大豆都是不含麸质的无面筋食品。</p>
+<h1 id="麸质，彼之佳肴，我之毒药"><a href="#麸质，彼之佳肴，我之毒药" class="headerlink" title="麸质，彼之佳肴，我之毒药"></a>麸质，彼之佳肴，我之毒药</h1><p>“麸质”，以前不怎么听过，但一查发现是主食中含有的一种物质，在中国，麸质还有个更地道的名字——面筋。像烤面筋、素牛肉、素鸡肉等等，都是由麸质做成的美味佳肴。</p>
+<p>不过，彼之佳肴，我之毒药。</p>
+<p>其实在20世纪70年代开始，科学家就已经搞清楚了麸质对于大脑的影响，那就是，麸质会引起过敏，过敏本质是炎症，而炎症最终会损伤大脑功能。</p>
+<p>在人类出现的二、三百万年里，我们人类身体里的基因和饮食结构已经适应了一种饮食和生活方式，那就是打猎和采集得到的肉和水果，很少吃谷物。而当农业生产出现后，人类吃谷物越来越多，农业文明时间太短，我们的消化系统还没来得及从进化的层面做出反应。</p>
+<p>所以，我们的身体和大脑更喜欢脂肪。多种维生素需要先被脂肪溶解，然后才能被人体吸收。</p>
+<blockquote>
+<p>一定会有人跳出来说，“多吃含脂肪的？我还要减肥呢！”</p>
+</blockquote>
+<p>其实，减肥还得看具体个人啊，一般的减脂是指减掉多余的脂肪，而作者关于麸质损害大脑，大脑喜欢脂肪的说法，也并没有强调必须多吃脂肪，反而说多吃蔬菜，倒也符合正常养生建议。</p>
+<p>另外，别人都说吃的多动得少容易胖，其实还有一个原因，大部分睡得少的人，也容易胖。</p>
+<p>这是因为，对于男人来说，睡得少会刺激体内分泌一种叫“胃饥饿素”的东西，这种激素会提高人的食欲，对于女人来说，睡得少会促进另一种激素分泌，但不管是哪种激素，作用都是一样的，就是让人吃得多，结果也就是更胖。</p>
+<p>如果想要减肥，也许可以考虑改善下我们的睡眠和饮食吧。</p>
+<h1 id="四周计划"><a href="#四周计划" class="headerlink" title="四周计划"></a>四周计划</h1><p>不过这本书不是写如何减肥的，而是重在说怎么改善大脑功能。</p>
+<p>珀尔马特博士有三种建议，一个是进行24小时到72小时的禁食，再一个就是运动，另一个就是保证睡眠。</p>
+<p>关于1-3天绝食方法，我也曾在其他学术著作里看过类似的原理，也有很多人尝试过，比较可行。</p>
+<p>作者就在书中花了一章的内容来介绍了关于改善大脑功能的“四周计划”。</p>
+<p>那四周计划如何做呢？</p>
+<p>简单来说，就是：</p>
+<ul>
+<li>第一周尽量自己做饭，要减少谷物的摄取，增加蛋白质的摄入，四周之后在外面吃饭也就知道应该如何搭配最好。</li>
+<li>第二周要恢复运动，每天至少20到30分钟，如果没有整块的时间的话，三个十分钟和一个30分钟的效果是一样的。</li>
+<li>第三周是睡眠，至少要保证六个小时的睡眠，然后每天固定的时间上床。</li>
+<li>第四周呢，就是之前三周的总和，最终达到能够在外面吃饭。</li>
+</ul>
+<h1 id="“尽信书不如无书”"><a href="#“尽信书不如无书”" class="headerlink" title="“尽信书不如无书”"></a>“尽信书不如无书”</h1><p>当然，这本书的有些观点还是太过“惊世骇俗”，与传统的医学和主流研究结论不太一样，例如，强调脑对于葡萄糖和酮体的利用，但是并没有说到高酮体的危害；强调脂肪的好处，但是没有介绍脂肪代谢存在的问题。</p>
+<p>具体一点就是，关于禁食时，肝脏产生的一种叫β-羟丁酸的东西。书中除了说它可以让神经元免授阿尔茨海默病和帕金森病的侵害，有抗氧化功能，还能刺激脑细胞增生。</p>
+<p>这个说法让我很是好奇，于是花时间去考证了一番。果然收获了诸如氧化应激、自由基、生酮饮食、细胞增生、干细胞再生等等我以前基本不会接触的新概念。</p>
+<p>结果就是，这个β-羟丁酸的确是有延缓衰老的功效，但并未说到能刺激细胞增生。</p>
+<p>来自资料的原话：</p>
+<blockquote>
+<p>来自Gladstone研究所的科学家们在《科学》杂志发表一篇文章，证明这种β-羟丁酸是内源性组蛋白去乙酰化酶的阻断剂，并提出生酮饮食的作用机制可能就是通过这一途径。科学家Verdin等发现β-羟丁酸在较低浓度时可帮助保护细胞免遭“氧化应激”损害。当氧化应激发生时，机体内的某些分子会累积到有毒水平，促进衰老过程。</p>
+</blockquote>
+<p>而细胞增生，也是细胞增殖，脑细胞死亡后不可以再生，可再生的是干细胞。</p>
+<blockquote>
+<p>目前调查只有一个叫做TGFα的，能够刺激神经细胞在受损的成人大脑中增殖。TGF-α在2001年被美国国家卫生研究院（NIH）描述为：可作用于成体干细胞，从而使神经变性疾病恢复部分功能。<br>神经细胞却可以由神经干细胞分化再生，这个过程叫做“神经发生”，但是，这个神经发生只局限在海马和嗅球两个区域。</p>
+</blockquote>
+<p>所以，禁食一定程度上可以通过自我产生抗氧化的物质，但依旧无法刺激细胞增生。</p>
+<p>综上呢，书中的信息，不一定就是对的，所谓“尽信书不如无书”，多去获取多方面的信息，重点在弥补自己对于世界和自身的认知缺失，至于是否采用，就根据个人具体情况去抉择。</p>
+<p>对于接收网络上的信息，亦如上。</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://blog.sciencenet.cn/blog-41174-645105.html">http://blog.sciencenet.cn/blog-41174-645105.html</a></li>
+<li>杨宇等. “生物合成材料聚β-羟基丁酸(PHB)的研究进展.” 生命科学研究 S3(2006):61-67.</li>
+<li>付守鹏等. “β-羟丁酸对LPS诱发的帕金森病(PD)模型的神经保护作用及其机制.” 中国生理学会张锡钧基金全国青年优秀生理学学术论文综合 2015.</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+      <div>
+        
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	<i class="fa fa-heart"></i>Thanks<i class="fa fa-heart"></i>
+	<br>------感谢你这么好，还关注我 ------</br>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Dannii 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/Alipay.jpg" alt="Dannii 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Dannii</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dannii.cc/2018/08/19/33Grain-Brain/" title="天哪，吃了这么多年主食，这本书却告诉我都是错的？">http://dannii.cc/2018/08/19/33Grain-Brain/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/reading-notes/" rel="tag"><i class="fa fa-tag"></i> 读书笔记</a>
+          
+            <a href="/tags/2018%E5%B9%B4%E4%B9%A6%E5%8D%95/" rel="tag"><i class="fa fa-tag"></i> 2018年书单</a>
+          
+            <a href="/tags/%E4%B9%A6%E8%AF%84/" rel="tag"><i class="fa fa-tag"></i> 书评</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/16/34luqi/" rel="next" title="陆奇+YC中国，是坑还是美好新世界？">
+                <i class="fa fa-chevron-left"></i> 陆奇+YC中国，是坑还是美好新世界？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/05/37liyuan-K-tree/" rel="prev" title="学了那么教人如何建立知识体系的付费课程，就这个我服气！">
+                学了那么教人如何建立知识体系的付费课程，就这个我服气！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% endif %}
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODEyNC8xNDY1NA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Dannii" />
+            
+              <p class="site-author-name" itemprop="name">Dannii</p>
+              <p class="site-description motion-element" itemprop="description">今天，终会成为过去，唯一能留住的就是未来</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">103</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/notshutup" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/mujingyi" target="_blank" title="知乎"><i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/users/f6ad2277b2c0/latest_articles" target="_blank" title="简书"><i class="fa fa-fw fa-copyright"></i>简书</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:hormoyo@outlook.com" target="_blank" title="E_Mail"><i class="fa fa-fw fa-envelope"></i>E_Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E8%87%AA%E8%80%81%E6%AF%8D%E4%BA%B2%E7%9A%84%E5%85%B3%E6%80%80"><span class="nav-text">来自老母亲的关怀</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%83%E4%B8%BB%E9%A3%9F%E6%8D%9F%E5%AE%B3%E5%A4%A7%E8%84%91"><span class="nav-text">吃主食损害大脑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%BA%B8%E8%B4%A8%EF%BC%8C%E5%BD%BC%E4%B9%8B%E4%BD%B3%E8%82%B4%EF%BC%8C%E6%88%91%E4%B9%8B%E6%AF%92%E8%8D%AF"><span class="nav-text">麸质，彼之佳肴，我之毒药</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E5%91%A8%E8%AE%A1%E5%88%92"><span class="nav-text">四周计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E2%80%9C%E5%B0%BD%E4%BF%A1%E4%B9%A6%E4%B8%8D%E5%A6%82%E6%97%A0%E4%B9%A6%E2%80%9D"><span class="nav-text">“尽信书不如无书”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%9A"><span class="nav-text">参考资料：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dannii</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Dannii在这里一共写了</span>
+    
+    <span title="站点总字数">199k字</span>
+  
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+ <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站总访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+</div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div> 
+    
+
+    
+
+
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz',
+        appKey: 'lvCfzqdKlX5mHzPNamk4Swqy',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

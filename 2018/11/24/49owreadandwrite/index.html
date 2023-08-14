@@ -1,35 +1,1575 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
-
-{% block page_class %}page-post-detail{% endblock %}
 
 
-{% block content %}
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="ryTUCO30zQ" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-fan.jpg?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="别再说上班族很忙，没时间看书和写作了。今天我要公布一个方法，简单实用，没有夸张和水分，能让忙碌的上班族至少一周看完一本书，并输出一篇笔记或书评，一个月就能看4本，一年48本，输出48篇笔记或书评，你如果感兴趣请继续看下去。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="仅适合上班族的阅读写作指南">
+<meta property="og:url" content="http://dannii.cc/2018/11/24/49owreadandwrite/index.html">
+<meta property="og:site_name" content="Divergent">
+<meta property="og:description" content="别再说上班族很忙，没时间看书和写作了。今天我要公布一个方法，简单实用，没有夸张和水分，能让忙碌的上班族至少一周看完一本书，并输出一篇笔记或书评，一个月就能看4本，一年48本，输出48篇笔记或书评，你如果感兴趣请继续看下去。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-11-24T05:55:08.000Z">
+<meta property="article:modified_time" content="2023-03-23T16:58:20.204Z">
+<meta property="article:author" content="Dannii">
+<meta property="article:tag" content="阅读技巧">
+<meta property="article:tag" content="写作方法">
+<meta name="twitter:card" content="summary">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="Divergent" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://dannii.cc/2018/11/24/49owreadandwrite/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>仅适合上班族的阅读写作指南 | Divergent</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Divergent</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">分歧者，拥有强烈好奇心的异类</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> 首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> 文章归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+    <a href="/books" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-book"></i> 书破万卷</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movies">
+    <a href="/movies" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-film"></i> 观世间相</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> 关于我</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-留言板">
+    <a href="/guestbook" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heart"></i> 留言板</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dannii.cc/2018/11/24/49owreadandwrite/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dannii">
+      <meta itemprop="description" content="今天，终会成为过去，唯一能留住的就是未来">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Divergent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">仅适合上班族的阅读写作指南
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+        
+
+          <span class="post-time">
+
+            
+            
+            
+
+
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 13:55:08" itemprop="dateCreated datePublished" datetime="2018-11-24T13:55:08+08:00">2018-11-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-03-24 00:58:20" itemprop="dateModified" datetime="2023-03-24T00:58:20+08:00">2023-03-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/self-growth/" itemprop="url" rel="index"><span itemprop="name">「进化之路」</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/24/49owreadandwrite/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/24/49owreadandwrite/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/11/24/49owreadandwrite/" class="leancloud_visitors" data-flag-title="仅适合上班族的阅读写作指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.5k</span>
+              
+
+              
+
+              
+
+            </div>
+
+ 
+          
+
+          
+              <div class="post-description">别再说上班族很忙，没时间看书和写作了。今天我要公布一个方法，简单实用，没有夸张和水分，能让忙碌的上班族至少一周看完一本书，并输出一篇笔记或书评，一个月就能看4本，一年48本，输出48篇笔记或书评，你如果感兴趣请继续看下去。</div>
+          
+
+        </div>
+
+
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="写在前面的懒人目录"><a href="#写在前面的懒人目录" class="headerlink" title="写在前面的懒人目录"></a>写在前面的懒人目录</h1><p><a href="#%E4%B8%80%E3%80%81%E9%98%85%E5%89%8D%E5%AF%B9%E5%8F%B7%E5%85%A5%E5%BA%A7">一、阅前对号入座</a><br><a href="#%E4%BA%8C%E3%80%81%E4%B8%8A%E7%8F%AD%E6%97%8F%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7">二、上班族阅读技巧</a><br><a href="#%E4%B8%89%E3%80%81%E4%B8%8A%E7%8F%AD%E6%97%8F%E5%86%99%E4%BD%9C%E8%BE%93%E5%87%BA%E6%8A%80%E5%B7%A7">三、上班族写作输出技巧</a><br><a href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E8%BD%AF%E4%BB%B6">四、参考软件</a><br><a href="#%E4%BA%94%E3%80%81%E6%87%92%E4%BA%BA%E6%80%BB%E7%BB%93">五、懒人总结</a></p>
+<div class="note bs-callout"><p>别再说上班族很忙，没时间看书和写作了。</p>
+<p>今天我要公布一个方法，简单实用，没有夸张和水分，能让忙碌的上班族至少一周看完一本书，并输出一篇笔记或书评，一个月就能看4本，一年48本，输出48篇笔记或书评，你如果感兴趣请继续看下去。</p></div>
+
+<p>8月份做博客，极其高产地发布文章，我的目标是把家里现存的书籍都进行电子化知识管理，建立自己的知识库，纸质书尽量卖掉或处理。<font color =#FF9966>花了3、4个月的时间不段尝试和优化，用琢磨出来的这套方法，平均一周看3本书，输出3篇笔记或书评</font>，被公司读书打卡群的同事看到了，好奇问我怎么做到的。</p>
+<p>于是就想到借此机会，把我的方法总结一下。</p>
+<p>这里面我会高效结合使用各类APP以及电脑，把时间用到刀刃上，让人无论在何时何地都有方法看书和输出，一切以方便和顺手为主，懒癌和拖延症患者找不到任何借口退缩。如果你是APP高度使用者最好了，省去养成使用移动软件习惯的步骤。</p>
+<p>所以这篇文是纯粹的干货，很干很干，我知道我有点啰嗦，但方法并不难。关于读书的好处，工作了之后更应该多读书之类的鸡汤我就不会多说。本文的分享目的和目标读者也很明确了，你的时间这么宝贵，请先参考以下信息，先看自己是否能对号入座：</p>
+<hr>
+<h1 id="一、阅前对号入座"><a href="#一、阅前对号入座" class="headerlink" title="一、阅前对号入座"></a>一、阅前对号入座</h1><div class="note success"><h2 id="1-1-我们的目标是"><a href="#1-1-我们的目标是" class="headerlink" title="1.1. 我们的目标是"></a>1.1. 我们的目标是</h2><p>利用一切可控碎片时间阅读，并完成读书笔记或书评，实现知识管理电子化，清理非收藏类书籍，争取看完一本“扔”一本——看过的书内信息知识为自己所用。</p>
+<h2 id="1-2-针对人群"><a href="#1-2-针对人群" class="headerlink" title="1.2. 针对人群"></a>1.2. 针对人群</h2><p><font color="#FF9966">自愿、主动、喜欢阅读</font>且希望找到方法高效读书输出的人，不是这一类的，请看到这儿为止吧，本文不是为了引发读书兴趣，不然后面的内容你也会嫌麻烦。</p>
+<p>特别适用于普通朝九晚六（或者像我一样朝十晚九）的上班族，平时没时间摸鱼，上下班都坐地铁（或班车&#x2F;顺风车&#x2F;公交等），中午能抽出半小时，周六日至少有半天空闲。</p>
+<p>建议习惯笔记电子化，我下面所讲全程都是电子化管理。（纸质笔记管理其实也同理）</p>
+<h2 id="1-3-本指南备注"><a href="#1-3-本指南备注" class="headerlink" title="1.3. 本指南备注"></a>1.3. 本指南备注</h2><p>这套方法分为上班族阅读技巧和上班族写作输出技巧，按需使用。</p></div>
+
+<hr>
+<p>如果以上你都确认ok，欢迎享用本指南。</p>
+<h1 id="二、上班族阅读技巧"><a href="#二、上班族阅读技巧" class="headerlink" title="二、上班族阅读技巧"></a>二、上班族阅读技巧</h1><p>宗旨：这个阶段只阅读，轻记录，不用花太多时间在摘抄和记笔记上。后续有专门的时间安排用来整理笔记和输出。</p>
+<h2 id="2-1-准备"><a href="#2-1-准备" class="headerlink" title="2.1. 准备"></a>2.1. 准备</h2><p>把要看的书（最好是电子的，目标就是知识电子化），在各个软件里找到，或导入电子书。尽量使用可在线划线、笔记、阅读以及听书（划重点），有关软件可以见<a href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E8%BD%AF%E4%BB%B6">四、参考软件</a>。</p>
+<h2 id="2-2-大致安排"><a href="#2-2-大致安排" class="headerlink" title="2.2. 大致安排"></a>2.2. 大致安排</h2><p>根据每个上班族每天“两点一线”的情况，按时间轴规划：</p>
+<ul>
+<li>早上上班：看情况听书或通读、略读书籍</li>
+<li>中午午休：半小时详读</li>
+<li>晚上下班：同早上一样</li>
+</ul>
+<p>基本每个上班族都有这3个时间点，重点就是把分散时间充分利用起来阅读，把路上刷微博、朋友圈、打游戏替换掉，至于这三类休闲娱乐自己另外安排时间吧。</p>
+<h2 id="2-3-具体做法"><a href="#2-3-具体做法" class="headerlink" title="2.3. 具体做法"></a>2.3. 具体做法</h2><h3 id="早上上班"><a href="#早上上班" class="headerlink" title="| 早上上班 |"></a><font color =#990066>| 早上上班 |</font></h3><h4 id="车程15分钟以内，且全程“站”士——"><a href="#车程15分钟以内，且全程“站”士——" class="headerlink" title="车程15分钟以内，且全程“站”士——"></a>车程15分钟以内，且全程“站”士——</h4><p>短途只听电子书。使用软件自带的语音听书，一般十分钟匀速能听5-6页，觉得重要的地方就抽空掏出手机划线，有感触就做书签，能抽空最好写下当下的感觉&#x2F;感想，不用多，一句话就行，回头能回忆起来的那种。</p>
+<h4 id="车程30分钟以上，有机会坐着——"><a href="#车程30分钟以上，有机会坐着——" class="headerlink" title="车程30分钟以上，有机会坐着——"></a>车程30分钟以上，有机会坐着——</h4><p>半小时以上黄金时间，直接阅读比听书有效率，使用一些阅读技巧，比如<a href="/2018/11/24/50readskill/" title="这些读书技巧能让我受用终生">《这些读书技巧能让我受用终生》</a>提到过的略读、泛读等。</p>
+<p>读纸质书的话，使用书籍管理app的ocr文字识别，做摘抄，写当下的感觉。</p>
+<p>有意识通过技巧略读，在刚开始看一本书时，先通读，用mindnode导图软件，整理全书大纲脉络导图（不一定在一天内做完，一天做一点），比如我这个<a href="/2018/11/07/41Trade-your-way-to-Financial-Freedom/" title="写在《财务自由之路》开始阅读之前-全书目录式导图">《财富自由之路全书目录式导读》</a>就这么搞出来的。</p>
+<h3 id="中午"><a href="#中午" class="headerlink" title="| 中午 |"></a><font color =#990066>| 中午 |</font></h3><p>只要有半小时以内就可以，主要是抽空复习下早上读过的书（毕竟早上听书属于跳读，时间太短），这半小时午休时间可以心无旁骛看，还有时间睡10-20分钟午觉。</p>
+<p>早上略读时发现觉得很好的地方就可以在这个时间详细阅读，并且补充笔记（主要是自己的感想）。</p>
+<h3 id="下班"><a href="#下班" class="headerlink" title="| 下班 |"></a><font color =#990066>| 下班 |</font></h3><p>晚上下班的途中，方式同早上。</p>
+<hr>
+<h1 id="三、上班族写作输出技巧"><a href="#三、上班族写作输出技巧" class="headerlink" title="三、上班族写作输出技巧"></a>三、上班族写作输出技巧</h1><p>宗旨：看书是一件成本很高的事情，如果花了时间看，但没有变成自己的东西，实在浪费，所以一般看一本书，我会争取写1篇笔记、1篇书评、1篇拆书稿或讲书稿，至少完成笔记，才能物尽其用啊。针对愿意输出内容的人，利用碎片时间（大概一周）就能完成一篇完整的内容。</p>
+<p>当然，过目不忘、光靠头脑记忆就能融会贯通，或没有输出需求的小伙伴可以不用看这部分了。</p>
+<h2 id="3-1-大致安排"><a href="#3-1-大致安排" class="headerlink" title="3.1. 大致安排"></a>3.1. 大致安排</h2><ul>
+<li>晚上：整理笔记、逐步梳理整本书的脉络和核心信息</li>
+<li>周末：将每晚的成果汇总输出成一篇文章或知识库信息</li>
+</ul>
+<h2 id="3-2-具体做法"><a href="#3-2-具体做法" class="headerlink" title="3.2. 具体做法"></a>3.2. 具体做法</h2><h3 id="每天晚上"><a href="#每天晚上" class="headerlink" title="| 每天晚上 |"></a><font color =#990066>| 每天晚上 |</font></h3><p>到家后至少留半小时，翻出今天看的书，找到划线、摘抄、笔记感想，做补充，和简单的整理。</p>
+<p>重点是<font color="#FF9966"><strong>找到当天看的内容核心观点，以及记录下自己的想法</strong></font>，吸收一本书的方法可以参考<a href="/2018/09/05/37liyuan-K-tree/" title="学了那么教人如何建立知识体系的付费课程，就这个我服气！">《学了那么教人如何建立知识体系的付费课程，就这个我服气！》</a>。</p>
+<p>写一篇读书笔记或书评对于我们这种时间很分散的人来说，每天晚上的这半小时功夫，就是将工作量分散到每一天，将<font color="#FF9966"><strong>“收集资料、思考灵感、确定大纲”</strong></font>这几件准备工作放到正式下笔之前。</p>
+<p>我习惯晚上使用电脑，把白天阅读过程中的记录进行汇总。</p>
+<p>比如用scrivener活页式的写作模式，每天整理一点，慢慢将整本书的脉络和核心观点挖掘出来，分类收集书中相关有用的信息。</p>
+<p>一本书中，读者能受益的观点或概念不会太多，我们只要确定几个触动到自己的主题，通过每日零散地收集相关信息就行（比如摘抄、认同的观点、触动的句子段落、自己的感想）。</p>
+<p>或者主题简单的书籍，就直接用笔记软件或word直接整理记录，白天使用的所有软件都可以导到电脑上，进行电子化汇总。</p>
+<h3 id="每周末"><a href="#每周末" class="headerlink" title="| 每周末 |"></a><font color =#990066>| 每周末 |</font></h3><p>把每天晚上整理的“N个小块”的内容拢到一块，找到你要写的内容主干脉络，列出自己的论点、论据，适当补充些内容，然后编排文章结构。</p>
+<p>其实平日里每晚的功夫就已经在进入写作了，周末其实花半天时间，任务就是把他们优化组合整理，最后排版，成型。</p>
+<hr>
+<p>针对阅读和输出，我先列一下自己使用的各类软件以供参考：</p>
+<h1 id="四、参考软件"><a href="#四、参考软件" class="headerlink" title="四、参考软件"></a>四、参考软件</h1><div class="note info"><h2 id="4-1-在线阅读APP："><a href="#4-1-在线阅读APP：" class="headerlink" title="4.1. 在线阅读APP："></a>4.1. 在线阅读APP：</h2><p><strong>微信读书</strong>——可阅读电子书，听书（语音不错，仅可离线已购书籍内容），划线，书签，笔记（公开笔记，可以积累影响力），可发书评</p>
+<p><strong>知乎电子书</strong>——可阅读电子书，不可听书，可划线，书签，笔记，可发短评</p>
+<p><strong>百度阅读</strong>——可阅读电子书，导入电子书，听书（语音还不错，可离线），划线，书签，笔记</p>
+<p><strong>好好学习&#x2F;得到</strong>——听书专用软件</p>
+<p>舍弃kindle是因为除了逼格高，并没有太多附加功能，不喜欢。</p>
+<p>这类软件的好处是电子书能很方便做笔记和划线。</p>
+<h2 id="4-2-专门的书籍管理APP-纸质书电子笔记管理："><a href="#4-2-专门的书籍管理APP-纸质书电子笔记管理：" class="headerlink" title="4.2. 专门的书籍管理APP&#x2F;纸质书电子笔记管理："></a>4.2. 专门的书籍管理APP&#x2F;纸质书电子笔记管理：</h2><p><strong>瓣读</strong>——没有在线阅读电子书，作书库管理，扫描条形码导入书籍，笔记支持ocr文字识别转化（高级会员功能），支持上传图片，记录书籍笔记同步豆瓣账号，可发表短评同步豆瓣（我最中意这一点）。</p>
+<p><strong>晒书房</strong>——没有在线阅读电子书，作书库管理，扫描条形码导入书籍，笔记支持ocr扫描（免费功能），支持上传图片。我用来做书籍电子化管理。</p>
+<p><strong>阅记</strong>——读书进度记录软件，可以清楚明白的看自己每天的读书页数和进程。</p>
+<p>这类软件的好处是能对纸质书进行电子化摘抄及笔记。</p>
+<h2 id="4-3-导图app："><a href="#4-3-导图app：" class="headerlink" title="4.3. 导图app："></a>4.3. 导图app：</h2><p><strong>mindnode</strong>——思维导图软件，略读的时候做全书大纲导读。可导出png，多端可同步，不用会员也可以使用，方法就是手机上写完导出mindnode文稿，在电脑上可以继续编辑。以前用xmind，结果发现图一大打开太卡了。</p>
+<h2 id="4-4-输出写作软件："><a href="#4-4-输出写作软件：" class="headerlink" title="4.4. 输出写作软件："></a>4.4. 输出写作软件：</h2><p><strong>scrivener</strong>——专业的写作软件，多数作家用来写小说或论文。特色在于其活页本模式，可以收集零散的信息，不按顺序写，然后再组合梳理起来变成一篇完整的作品。适用于主题比较广，所需资料信息偏多的，比如大型论文、短长篇小说。</p>
+<p><strong>印象笔记&#x2F;有道云笔记&#x2F;简书</strong>——一般主题范围小、论点少、字数较短的文，我是直接使用这类笔记软件就写了，多端同步，几乎免费。简书除了是写作软件，也是一个公开的社区和平台，适合输出的同时愿意慢慢积累影响力的小伙伴。</p></div>
+
+<hr>
+<h1 id="五、懒人总结"><a href="#五、懒人总结" class="headerlink" title="五、懒人总结"></a>五、懒人总结</h1><p>最后做个懒人总结，方法很简单，还是老话，谁用谁知道：</p>
+<ol>
+<li>每天白天2个通勤时段，1个30分钟休息时段，充分利用时间和工具进行轻阅读</li>
+<li>将每一个趁手的阅读、笔记软件用到极致</li>
+<li>每晚半小时，将写作任务拆分到每一天</li>
+<li>每周末，只需半小时，一篇完成的文章就搞定！</li>
+</ol>
+<p>请试一试，随时跟我分享你的心得，如果你有更好的实践方法，欢迎跟我交流沟通。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+      <div>
+        
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	<i class="fa fa-heart"></i>Thanks<i class="fa fa-heart"></i>
+	<br>------感谢你这么好，还关注我 ------</br>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Dannii 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/Alipay.jpg" alt="Dannii 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Dannii</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dannii.cc/2018/11/24/49owreadandwrite/" title="仅适合上班族的阅读写作指南">http://dannii.cc/2018/11/24/49owreadandwrite/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7/" rel="tag"><i class="fa fa-tag"></i> 阅读技巧</a>
+          
+            <a href="/tags/%E5%86%99%E4%BD%9C%E6%96%B9%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 写作方法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/24/50readskill/" rel="next" title="这些读书技巧能让我受用终生">
+                <i class="fa fa-chevron-left"></i> 这些读书技巧能让我受用终生
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/25/51review-2018-11/" rel="prev" title="【月总结】2018-11">
+                【月总结】2018-11 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% endif %}
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODEyNC8xNDY1NA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Dannii" />
+            
+              <p class="site-author-name" itemprop="name">Dannii</p>
+              <p class="site-description motion-element" itemprop="description">今天，终会成为过去，唯一能留住的就是未来</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">103</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/notshutup" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/mujingyi" target="_blank" title="知乎"><i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/users/f6ad2277b2c0/latest_articles" target="_blank" title="简书"><i class="fa fa-fw fa-copyright"></i>简书</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:hormoyo@outlook.com" target="_blank" title="E_Mail"><i class="fa fa-fw fa-envelope"></i>E_Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E6%87%92%E4%BA%BA%E7%9B%AE%E5%BD%95"><span class="nav-text">写在前面的懒人目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%98%85%E5%89%8D%E5%AF%B9%E5%8F%B7%E5%85%A5%E5%BA%A7"><span class="nav-text">一、阅前对号入座</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%88%91%E4%BB%AC%E7%9A%84%E7%9B%AE%E6%A0%87%E6%98%AF"><span class="nav-text">1.1. 我们的目标是</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E9%92%88%E5%AF%B9%E4%BA%BA%E7%BE%A4"><span class="nav-text">1.2. 针对人群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%9C%AC%E6%8C%87%E5%8D%97%E5%A4%87%E6%B3%A8"><span class="nav-text">1.3. 本指南备注</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%8A%E7%8F%AD%E6%97%8F%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7"><span class="nav-text">二、上班族阅读技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%87%86%E5%A4%87"><span class="nav-text">2.1. 准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%A4%A7%E8%87%B4%E5%AE%89%E6%8E%92"><span class="nav-text">2.2. 大致安排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%85%B7%E4%BD%93%E5%81%9A%E6%B3%95"><span class="nav-text">2.3. 具体做法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A9%E4%B8%8A%E4%B8%8A%E7%8F%AD"><span class="nav-text">| 早上上班 |</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%A6%E7%A8%8B15%E5%88%86%E9%92%9F%E4%BB%A5%E5%86%85%EF%BC%8C%E4%B8%94%E5%85%A8%E7%A8%8B%E2%80%9C%E7%AB%99%E2%80%9D%E5%A3%AB%E2%80%94%E2%80%94"><span class="nav-text">车程15分钟以内，且全程“站”士——</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%A6%E7%A8%8B30%E5%88%86%E9%92%9F%E4%BB%A5%E4%B8%8A%EF%BC%8C%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%9D%90%E7%9D%80%E2%80%94%E2%80%94"><span class="nav-text">车程30分钟以上，有机会坐着——</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E5%8D%88"><span class="nav-text">| 中午 |</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E7%8F%AD"><span class="nav-text">| 下班 |</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%8A%E7%8F%AD%E6%97%8F%E5%86%99%E4%BD%9C%E8%BE%93%E5%87%BA%E6%8A%80%E5%B7%A7"><span class="nav-text">三、上班族写作输出技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%A4%A7%E8%87%B4%E5%AE%89%E6%8E%92"><span class="nav-text">3.1. 大致安排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%85%B7%E4%BD%93%E5%81%9A%E6%B3%95"><span class="nav-text">3.2. 具体做法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E5%A4%A9%E6%99%9A%E4%B8%8A"><span class="nav-text">| 每天晚上 |</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E5%91%A8%E6%9C%AB"><span class="nav-text">| 每周末 |</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E8%BD%AF%E4%BB%B6"><span class="nav-text">四、参考软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BBAPP%EF%BC%9A"><span class="nav-text">4.1. 在线阅读APP：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E4%B8%93%E9%97%A8%E7%9A%84%E4%B9%A6%E7%B1%8D%E7%AE%A1%E7%90%86APP-%E7%BA%B8%E8%B4%A8%E4%B9%A6%E7%94%B5%E5%AD%90%E7%AC%94%E8%AE%B0%E7%AE%A1%E7%90%86%EF%BC%9A"><span class="nav-text">4.2. 专门的书籍管理APP&#x2F;纸质书电子笔记管理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E5%AF%BC%E5%9B%BEapp%EF%BC%9A"><span class="nav-text">4.3. 导图app：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E8%BE%93%E5%87%BA%E5%86%99%E4%BD%9C%E8%BD%AF%E4%BB%B6%EF%BC%9A"><span class="nav-text">4.4. 输出写作软件：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%87%92%E4%BA%BA%E6%80%BB%E7%BB%93"><span class="nav-text">五、懒人总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dannii</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Dannii在这里一共写了</span>
+    
+    <span title="站点总字数">199k字</span>
+  
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+ <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站总访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+</div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div> 
+    
+
+    
+
+
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz',
+        appKey: 'lvCfzqdKlX5mHzPNamk4Swqy',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

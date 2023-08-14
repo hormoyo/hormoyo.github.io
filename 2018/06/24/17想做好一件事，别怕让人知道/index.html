@@ -1,35 +1,1530 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
-
-{% block page_class %}page-post-detail{% endblock %}
 
 
-{% block content %}
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="ryTUCO30zQ" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-fan.jpg?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1最近我只在做一件事。 自己手工制作服装，钻入各种百度贴吧、手作网站，收集资料，奋斗到凌晨把1：1服装进行原型绘制，坐一个多小时的车，去面料市场家家店选布料，然后利用服装设计课学来的知识进行尝试制作。 6月初，只会做打板的我，拿着家里做沙发套剩的边角料，开始做一个1：4的汉服上襦。起初就拿着家里1：4小人模型比尺寸，结合网上一些边边角角的教程，完成最粗糙的1：4版本。领子太歪，缝边很粗糙，丑陋的我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="想做好一件事，别怕让人知道">
+<meta property="og:url" content="http://dannii.cc/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/index.html">
+<meta property="og:site_name" content="Divergent">
+<meta property="og:description" content="1最近我只在做一件事。 自己手工制作服装，钻入各种百度贴吧、手作网站，收集资料，奋斗到凌晨把1：1服装进行原型绘制，坐一个多小时的车，去面料市场家家店选布料，然后利用服装设计课学来的知识进行尝试制作。 6月初，只会做打板的我，拿着家里做沙发套剩的边角料，开始做一个1：4的汉服上襦。起初就拿着家里1：4小人模型比尺寸，结合网上一些边边角角的教程，完成最粗糙的1：4版本。领子太歪，缝边很粗糙，丑陋的我">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/48414-4f251336b1d1145f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2018-06-24T08:38:58.000Z">
+<meta property="article:modified_time" content="2023-03-23T16:58:20.069Z">
+<meta property="article:author" content="Dannii">
+<meta property="article:tag" content="感悟">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/48414-4f251336b1d1145f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="Divergent" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://dannii.cc/2018/06/24/17想做好一件事，别怕让人知道/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>想做好一件事，别怕让人知道 | Divergent</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Divergent</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">分歧者，拥有强烈好奇心的异类</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> 首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> 文章归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+    <a href="/books" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-book"></i> 书破万卷</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movies">
+    <a href="/movies" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-film"></i> 观世间相</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> 关于我</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-留言板">
+    <a href="/guestbook" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heart"></i> 留言板</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dannii.cc/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dannii">
+      <meta itemprop="description" content="今天，终会成为过去，唯一能留住的就是未来">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Divergent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">想做好一件事，别怕让人知道
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+        
+
+          <span class="post-time">
+
+            
+            
+            
+
+
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-06-24 16:38:58" itemprop="dateCreated datePublished" datetime="2018-06-24T16:38:58+08:00">2018-06-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-03-24 00:58:20" itemprop="dateModified" datetime="2023-03-24T00:58:20+08:00">2023-03-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/self-growth/" itemprop="url" rel="index"><span itemprop="name">「进化之路」</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/" class="leancloud_visitors" data-flag-title="想做好一件事，别怕让人知道">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.1k</span>
+              
+
+              
+
+              
+
+            </div>
+
+ 
+          
+
+          
+
+        </div>
+
+
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>最近我只在做一件事。</p>
+<p>自己手工制作服装，钻入各种百度贴吧、手作网站，收集资料，奋斗到凌晨把1：1服装进行原型绘制，坐一个多小时的车，去面料市场家家店选布料，然后利用服装设计课学来的知识进行尝试制作。</p>
+<p>6月初，只会做打板的我，拿着家里做沙发套剩的边角料，开始做一个1：4的汉服上襦。起初就拿着家里1：4小人模型比尺寸，结合网上一些边边角角的教程，完成最粗糙的1：4版本。领子太歪，缝边很粗糙，丑陋的我都不敢放朋友圈，但是这是第一次自己独立完成一个作品，套在小人模型上那一刻，比我完成流水上百万的项目还有成就感！激动地就差点原地转圈了。</p>
+<p>过了一星期，工艺课上完，上次1：4的样衣完成，让我燃起做个1：2版本的斗志。经过上网查汉服资料、分析服装结构、轻打板、试缝纫，一边看着教程，一边上手做。网上没有线程的服装纸样，就自己学着贴吧前辈的建议去看史料，按马王堆墓、黄升墓的尺寸转成1：2，再结合自己1：2小模型，连猜带蒙自己画了一个看起来还行的版。不停地尝试、返工、再尝试，不知道缝了几遍、又拆了几遍，终于最初了1：2的汉服襦裙套装。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-4f251336b1d1145f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>重点是，我把从衣服制作开始、中间的过程，直到最后顺利完成，通过朋友圈、微博、twitter、facebook、instagram分享出去，让身边所有的人都知道我正在做这件事情，无论我是做的好还是坏。</p>
+<p>之前，我才不会这样。</p>
+<p>从事情一开始就“全程直播”，告诉身边所有人之后，我会不自觉地计划每天做一点，把心得和经验总结下来，不仅仅是自己一个人在玩衣服，而且也是寻找更多同样爱好和关注的人，一起玩，更用心的设计、缝制，朝着最完美的结果前进。</p>
+<p>在这些日子，更多的是找到了共鸣和鼓励。有朋友留言说他也很想学服装，但以前从来就是下不了决心，看了我的照片，也要去学；也有朋友开玩笑问什么时候开张，打几折。更多的是来自朋友的关心和鼓励，而在大家的关注下，去完成的东西，我不敢像自己玩的时候得过且过，每一次的分享，暴露出来的瑕疵，都无处可藏，可也让我的东西更接近完美。</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>古话说的好，“独乐乐不如众乐乐”。</p>
+<p>前段时间有幸跟一个百度的高级职业顾问聊天，他说到，现在有太多人光顾着向内加强修炼，却忘记了将自己的艺术与思想分享给更多的人。独乐乐不如众乐乐。</p>
+<p>另外有句话，“如果你在做一件事，快将它告诉你身边的朋友”。</p>
+<p>在最开始粗糙的成果勇敢地告诉别人，就是在直面自己的不完美和惰性。将稚嫩的作品曝光在众人面前，怀揣的是一颗忐忑不安又渴望鼓励的心，同时会收获各种人不同的反馈，赞美也好，围观也好，会给自己一种“原来我的作品也会有人关注”的感觉，从而更有信心继续下去，同时由于大家都知道，也在期待，所以小小的惰性也被克服。人生就像一个游乐场，一个人玩总是差了点什么，人多玩起来才热闹，指不定迸发出什么意想不到的火花呢。</p>
+<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>但更多时候，我们都是在自嗨。自嗨的表现为，自己默默地在做一件事，过程中绞尽脑汁、费尽苦心，可能花了很多努力，颇有心得，做完后自己也十分兴奋！但没有告诉给别人冲动，回头一想，那些心得、研究成果，只是自己的一点浅薄理解，如果现在分享出去，显得是在秀和显摆，于是总想拿出最完美的方案，惊鸿一现。可后来，再也没有后来，从来都没有最完美的时候。</p>
+<p>谁没有自嗨的时候呢？</p>
+<p>我有，很多次。</p>
+<p>记得前段时间，我想做一个独立博客。从咨询有经验的同事开始，找了上百个网络资料和教程。当初筛选那些可用教程时，就想着，太费功夫了，要找一个合适且准确的教程太难，每一个操作过程太复杂，自己建立好后一定要做一个好的新手教程，让其他想做独立博客又不知道如何入手的朋友们省点力气。</p>
+<p>从申请github账号开始，一路建立项目、翻阅百十个中英文网站学习git基础操作，去阿里云购买域名，从不知道DNS为何物，到将独立域名与git项目绑定，最复杂的还要数Hexo设置了，因为不懂代码，按官方的教程，一些细节问题根本略过，就使用npm完成Hexo的安装都不知道废了多少脑细胞，上百度查、去知乎问、找开发同事咨询，各种手段用上，才顺利解决，这里包括了N多config设置、安装、自定义等等，整个网站构架好了，该自己创建内容时，又是一大堆问题涌出来。</p>
+<p>最终这个小怪兽，还是被打败了，我顺利的建立了以自己命名的独立域名博客<a href="http://dannii.cc/">http://dannii.cc/</a>，发了几篇新的文章。</p>
+<p>但是，我仍然默默地自嗨了一把，博客建成后一个月了，我都没有告诉任何人，也没有完成制作教程的承诺。因为总想着博客刚建起来，还什么都没有，一点都不完善，人家来看什么呢。就想着等评论模块弄好了一起做教程，等站点数据统计申请好了再分享……结果，拖拖拉拉一个月，因为没人知道，就没人来看过，我也就懒懒散散不再维护文章，评论模块、站点数据统计也弄好了，却早就没了当初想分享给别人的冲动。</p>
+<p>也就失去了建立独立博客的意义。</p>
+<p>更早以前，自己有个电台广播节目，大家都说我播音声音很好听，于是开通了荔枝FM，更是每周雷打不动的上传节目。</p>
+<p>制作一期节目没有那么简单，单是稿子，因为选题的严苛，我就要用差不多1周时间挑选，更是因为从前在校广播站负责，每一个节目的后期都是自己花时间，反复录制干音、去噪、挑选音乐，每一步都按最专业的标准去做。</p>
+<p>完成后，却由于各种原因，比如怕自己普通话念的不标准啊，文章太矫情啊之类的，羞于让别人知道我有这么个电台。甚至很长一段时间没有在朋友圈说过这事，只在荔枝上收获寥寥几十人的关注。</p>
+<p>偶尔被熟知我的朋友听到，最开始还会开玩笑推脱不是自己。后来就一直是自己在玩玩，因为知道的人不多，自己也没了兴致，一周花那么大的精力去做没什么人听的节目，电台也就断了更新。</p>
+<p>后来有听过我节目的朋友聊起来，感慨好久没听到我的节目，以前还是我忠实的粉丝，每期必听，我才想起来这回事。不过也幸亏有朋友知道，自己在日常聊天时候提到过，之后还为公司和朋友公司录过一些宣传、功能音频，瞬间有种“自己还是很有用”的自豪感~</p>
+<p>忽然觉得，在我以玩票的性质做电台的时候，也是有人在认真听我的节目，如果当时，我不羞答答地藏着，而是一开始就勇敢告诉别人，那现在会是什么样呢？</p>
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>现在的社群不就是这样吗。一个人玩的开心了，就告诉所有人他在做的这个事情有多愉快，吸引来更多的人一起加入，组成了一个庞大的圈子，做起了比一个人时候更好玩的事情。比如逻辑思维那一场场霸王餐，比如趁早网的马甲线比赛。</p>
+<p>后来我慢慢明白了，为什么很多时候自己做着那么艰难，为什么总是得不到回应，真正原因在于我们不自觉地给自己竖起了一堵高墙。默默在墙里面孤独的拼着一个人的拼图，以为这领域只有自己一人；却没看大墙外面有更多的人和空间，只要打开那扇门，分享出正在做的事情，其实也是一种对自己的帮助。</p>
+<p>2个多月前报了北服的服装设计课，每周一节。起初只是出于兴趣，想用手作调节生活与工作的平衡。直到完成处女作，我发现自己在手工制作的过程中，发现了很久不曾有过的悸动，一种跟现在快节奏生活逆道而行的平静感，不再觉得生命中一点波澜就是惊涛骇浪，在汉服里发现中国浓重而典雅的美，透过手作，找到了生活中点点滴滴的乐趣，手作过程中的“心流”让浮躁的心慢慢沉下来，有时间去观察曾经认为一尘不变的每一天。在课程中认识了各式各样的人，原来我们本就可以做的更好。</p>
+<p>做了一套1：2的汉服之后，我正准备给自己做一件1：1改良襦裙，还要把自己找过的资料、跌过的坑，整理成教程，分享给更多同好的朋友。因为分享，所以我希望走出曾经默默玩耍的高墙，找到更多志同道合的朋友，人生苦短，没有个痴迷之物，如何打发这无聊的一生呢。</p>
+<p>那么，朋友，你想和我一起吗？做一件事，不要怕别人知道，大声说出来，也许我们爱好相同，可以一起做些什么好玩的。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+      <div>
+        
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	<i class="fa fa-heart"></i>Thanks<i class="fa fa-heart"></i>
+	<br>------感谢你这么好，还关注我 ------</br>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Dannii 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/Alipay.jpg" alt="Dannii 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Dannii</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dannii.cc/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/" title="想做好一件事，别怕让人知道">http://dannii.cc/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%84%9F%E6%82%9F/" rel="tag"><i class="fa fa-tag"></i> 感悟</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/24/16%E4%B8%89%E6%AD%A5%E6%95%99%E4%BD%A0%E5%81%9A%E6%B1%89%E6%9C%8D%E8%A4%B6%E8%A3%99/" rel="next" title="三步教你做汉服褶裙（超简单！）">
+                <i class="fa fa-chevron-left"></i> 三步教你做汉服褶裙（超简单！）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/24/15%E6%88%90%E4%B8%BA%E5%88%86%E6%AD%A7%E8%80%85-%E5%B9%B6%E9%9D%9E%E4%BA%BA%E4%BA%BA%E9%83%BD%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%91%BD%E4%B8%AD%E6%B3%A8%E5%AE%9A%E7%9A%84%E4%BD%BF%E5%91%BD/" rel="prev" title="成为分歧者-并非人人都只有一个命中注定的使命">
+                成为分歧者-并非人人都只有一个命中注定的使命 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% endif %}
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODEyNC8xNDY1NA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Dannii" />
+            
+              <p class="site-author-name" itemprop="name">Dannii</p>
+              <p class="site-description motion-element" itemprop="description">今天，终会成为过去，唯一能留住的就是未来</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">103</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/notshutup" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/mujingyi" target="_blank" title="知乎"><i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/users/f6ad2277b2c0/latest_articles" target="_blank" title="简书"><i class="fa fa-fw fa-copyright"></i>简书</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:hormoyo@outlook.com" target="_blank" title="E_Mail"><i class="fa fa-fw fa-envelope"></i>E_Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2"><span class="nav-text">2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3"><span class="nav-text">3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4"><span class="nav-text">4</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dannii</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Dannii在这里一共写了</span>
+    
+    <span title="站点总字数">199k字</span>
+  
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+ <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站总访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+ <span class="post-meta-divider">|</span>
+</div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div> 
+    
+
+    
+
+
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz',
+        appKey: 'lvCfzqdKlX5mHzPNamk4Swqy',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
