@@ -40,7 +40,10 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link: 
+  enable: true # Open external links in new tab
+  field: site
+  exclude: []
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -60,6 +63,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
+  pagination_dir: page
   
 # Category & Tag
 default_category: uncategorized
@@ -129,17 +133,26 @@ search:
 # 重新安装最新版本npm install hexo-douban --save
 # 或者使用npm install hexo-douban --update --save直接更新
 douban:
-  user: mdndoudou 
+  id: 1563307
   builtin: true
+  item_per_page: 10
+  meta_max_line: 4
+  customize_layout: page
   book:
+    path: books/index.html
     title: 书破万卷
     quote: 读书当破万卷，方得世间如意
+    option:
   movie:
+    path: movies/index.html
     title: 观世间相
     quote: 电影始于格里菲斯，止于基亚罗斯塔米
+    option:
   #game:
    # title: 'This is my game title'
    # quote: 'This is my game quote'
   timeout: 10000 
 # user用"个人主页" ，这时候地址栏的URL大概是这样："https://www.douban.com/people/xxxxxx/"，其中的"xxxxxx"就是你的个人ID了
-# builtin为true则hexo d和hexos的时候内嵌了生成页面功能，
+# id获取的一个已知的办法是：访问“我的豆瓣“时，点击用户头像另存为时，会显示默认文件名如ul2374908-5。中间数字2374908即为豆瓣数字ID。
+# builtin为true则hexo d和hexos的时候内嵌了生成页面功能，否则使用hexo douban指令
+# option: 该页面额外的 Front-matter 配置，参考Hexo 文档。无特别需要，留空即可。
