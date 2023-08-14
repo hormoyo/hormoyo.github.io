@@ -3,7 +3,6 @@ title: WOOP思维教你鸡汤的正确饮用方式
 tags:
   - 书评
   - 2018年书单
-  - 书籍这么读
 date: 2018-11-30 23:44:16
 categories: 「书影世界」
 photos:

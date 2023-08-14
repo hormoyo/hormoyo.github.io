@@ -4,7 +4,6 @@ date: 2018-08-04 12:00:21
 tags:
 - 书评
 - 2018年书单
-- 书籍这样读
 - 职场
 categories: 「书影世界」
 photos: https://img1.doubanio.com/view/subject/l/public/s29602088.jpg

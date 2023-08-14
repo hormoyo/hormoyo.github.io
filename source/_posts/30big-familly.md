@@ -3,7 +3,6 @@ title: 中国自此再无“贵族”
 date: 2018-08-11 17:50:01
 tags:
 - 书评
-- 书籍这样读
 - 2018年书单
 categories: 「书影世界」
 photos: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533991243868&di=50d05ed5d42de375d82374c3b08498e4&imgtype=0&src=http%3A%2F%2Fwww.qulishi.com%2FUploadFile%2F20151026152115751.jpg

@@ -1,7 +1,8 @@
 ---
 title: 饭饭而谈 | 一首印度的诗：《悉达多》 
 tags:
-  - 阅读笔记
+  - 读书笔记
+  - 2023年书单
 date: 2023-08-03 14:17:24
 categories: 「书影世界」
 photos: https://weread-1258476243.file.myqcloud.com/weread/cover/34/YueWen_25803783/t7_YueWen_25803783.jpg

@@ -5,7 +5,6 @@ tags:
 - 读书笔记
 - 2018年书单
 - 职场
-- 书籍这样读
 - 日更
 categories: 「书影世界」
 photos: https://img3.doubanio.com/view/subject/l/public/s29535153.jpg
