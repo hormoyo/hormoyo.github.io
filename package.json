@@ -19,6 +19,7 @@
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.1.1",
     "hexo-renderer-stylus": "^0.3.1",
+    "hexo-renderer-swig": "^2.0.0",
     "hexo-server": "^0.2.0",
     "hexo-symbols-count-time": "^0.4.4",
     "hexo-wordcount": "^6.0.1"

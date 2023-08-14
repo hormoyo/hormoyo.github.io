@@ -971,6 +971,26 @@ hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)
 
 # 错误解决方案
 
+## hexo g之后index网页报错
+具体报错如下：
+
+```
+{% extends '_layout.swig' %} {% import '_macro/post.swig' as post_template %} {% import '_macro/sidebar.swig' as sidebar_template %} {% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %} {% block page_class %} {% if is_home() %}page-home{% endif -%} {% endblock %} {% block content %}
+{% for post in page.posts %} {{ post_template.render(post, true) }} {% endfor %}
+{% include '_partials/pagination.swig' %} {% endblock %} {% block sidebar %} {{ sidebar_template.render(false) }} {% endblock %}
+```
+
+问题描述：换完主题后打开站点就成这样了。
+
+原因：hexo缺少了一个包（swig）。
+
+解决方案：在hexo博客根目录下打开终端，输入以下命令安装swig即可：
+`
+npm i hexo-renderer-swig
+`
+
+安装完后，再hexo g，接着hexo s即可。
+
 ## localhost:4000 cannot get
 
 第一种可能是没安装插件，输入指令：
