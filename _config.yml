@@ -46,6 +46,9 @@ external_link:
   exclude: []
 filename_case: 0
 render_drafts: false
+marked:
+  prependRoot: true
+  postAsset: true
 post_asset_folder: true
 relative_link: false
 future: true

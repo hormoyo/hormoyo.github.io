@@ -768,7 +768,7 @@ top: true
 
 ![访问量](fangwen.jpg)
 
-**具体实现方法 **
+**具体实现方法**
 
 打开`\themes\next\layout\partials\footer.swig`文件,在`copyright`前加上这句话： 
 
@@ -965,8 +965,26 @@ git push origin hexo  ——备份
 hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)
 ```
 用vscode 在苹果电脑上是默认安装xcode就有git（当git不存在时重新安装xcode即可。
-![](28blog/blog1.png)
-![](28blog/blog2.png)
+![](blog1.png)
+{% asset_img blog1.png 这是图片 %}
+![](./28blog/blog2.png)
+
+# 升级HEXO和next
+查看hexo的依赖：npm outdated
+使用指令更新，将更新wanted与current不一致的依赖
+也可以使用npm-check-updates更新所有依赖
+```
+//安装
+npm install -g npm-check-updates
+//查看要更新依赖
+ncu
+//更新依赖 这里只更新package.json文件至最新版本
+ncu -u
+//安装依赖
+npm i
+```
+
+不清除旧版本主题的办法：
 
 
 # 错误解决方案
@@ -985,11 +1003,13 @@ hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)
 原因：hexo缺少了一个包（swig）。
 
 解决方案：在hexo博客根目录下打开终端，输入以下命令安装swig即可：
-`
-npm i hexo-renderer-swig
-`
+`npm i hexo-renderer-swig`
 
 安装完后，再hexo g，接着hexo s即可。
+
+## 查看所有hexo插件
+
+`npm ls --depth 0`
 
 ## localhost:4000 cannot get
 
