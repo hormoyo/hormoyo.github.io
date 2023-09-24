@@ -971,7 +971,7 @@ hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)
 
 # 升级HEXO和next
 查看hexo的依赖：npm outdated
-使用指令更新，将更新wanted与current不一致的依赖
+使用指令更新npm update，将更新wanted与current不一致的依赖
 也可以使用npm-check-updates更新所有依赖
 ```
 //安装
@@ -984,7 +984,15 @@ ncu -u
 npm i
 ```
 
-不清除旧版本主题的办法：
+不清除旧版本主题的办法：使用备用主题config.next.yml
+
+更新next的办法：https://theme-next.js.org/docs/third-party-services/官方指南随时更新。
+更新hexo的办法：
+```
+npm i hexo-cli -g
+npm update
+```
+
 
 
 # 错误解决方案

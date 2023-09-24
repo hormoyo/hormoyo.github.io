@@ -6,7 +6,7 @@ date: 2019-02-24 00:15:51
 categories: 「随手记」
 photos:
 top:
-description:
+description: 随记
 ---
 这周两天的同事午餐时间，都谈到了一个事：好多诗的字拼音念法被改了。
 

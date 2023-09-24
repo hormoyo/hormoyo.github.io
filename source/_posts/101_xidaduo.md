@@ -5,7 +5,7 @@ tags:
   - 2023年书单
 date: 2023-08-03 14:17:24
 categories: 「书影世界」
-photos: https://weread-1258476243.file.myqcloud.com/weread/cover/34/YueWen_25803783/t7_YueWen_25803783.jpg
+photos:
 top:
 description: 适合听的一本书，当作繁忙生活中一个不算太严肃的文学小说读物。
 ---

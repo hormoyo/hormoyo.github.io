@@ -99,7 +99,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-next
+theme: next
+# hexo-theme-next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -111,7 +112,7 @@ deploy:
 #统计字数
 symbols_count_time:
   symbols: true 
-  time: false 
+  time: true 
   total_symbols: true 
   total_time: false
 
@@ -129,6 +130,7 @@ search:
   field: post
   format: html
   limit: 10000
+  content: true
 
 # douban 豆瓣个人主页的小插件
 # 参看：https://github.com/mythsman/hexo-douban
