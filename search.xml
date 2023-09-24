@@ -353,7 +353,12 @@
 <h1 id="升级HEXO和next"><a href="#升级HEXO和next" class="headerlink" title="升级HEXO和next"></a>升级HEXO和next</h1><p>查看hexo的依赖：npm outdated<br>使用指令更新npm update，将更新wanted与current不一致的依赖<br>也可以使用npm-check-updates更新所有依赖</p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">//</span>安装</span><br><span class="line">npm install -g npm-check-updates</span><br><span class="line"><span class="regexp">//</span>查看要更新依赖</span><br><span class="line">ncu</span><br><span class="line"><span class="regexp">//</span>更新依赖 这里只更新package.json文件至最新版本</span><br><span class="line">ncu -u</span><br><span class="line"><span class="regexp">//</span>安装依赖</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
-<p>不清除旧版本主题的办法：</p>
+<p>不清除旧版本主题的办法：使用备用主题config.next.yml</p>
+<p>更新next的办法：<a href="https://theme-next.js.org/docs/third-party-services/%E5%AE%98%E6%96%B9%E6%8C%87%E5%8D%97%E9%9A%8F%E6%97%B6%E6%9B%B4%E6%96%B0%E3%80%82">https://theme-next.js.org/docs/third-party-services/官方指南随时更新。</a><br>更新hexo的办法：</p>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> i hexo-cli -g</span><br><span class="line"><span class="built_in">npm</span> update</span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="错误解决方案"><a href="#错误解决方案" class="headerlink" title="错误解决方案"></a>错误解决方案</h1><h2 id="hexo-g之后index网页报错"><a href="#hexo-g之后index网页报错" class="headerlink" title="hexo g之后index网页报错"></a>hexo g之后index网页报错</h2><p>具体报错如下：</p>
 <figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">extends</span></span> &#x27;_layout.swig&#x27; %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name">import</span> &#x27;_macro/post.swig&#x27; <span class="keyword">as</span> post_template %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name">import</span> &#x27;_macro/sidebar.swig&#x27; <span class="keyword">as</span> sidebar_template %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> title %&#125;</span><span class="template-variable">&#123;&#123; config.title &#125;&#125;</span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.index_with_subtitle and config.subtitle %&#125;</span><span class="language-xml"> - </span><span class="template-variable">&#123;&#123;config.subtitle &#125;&#125;</span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> page_class %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> is_home() %&#125;</span><span class="language-xml">page-home</span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> -%&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> content %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> post <span class="keyword">in</span> page.posts %&#125;</span><span class="language-xml"> </span><span class="template-variable">&#123;&#123; post_template.render(post, true) &#125;&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">include</span></span> &#x27;_partials/pagination.swig&#x27; %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> sidebar %&#125;</span><span class="language-xml"> </span><span class="template-variable">&#123;&#123; sidebar_template.render(false) &#125;&#125;</span><span class="language-xml"> </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -440,7 +445,7 @@
   </entry>
   <entry>
     <title>每周小结 | 面对脆弱的环境，如何掌控生活和内心平静</title>
-    <url>/2023/08/13/2023W32/</url>
+    <url>/2023/08/13/102_2023W32/</url>
     <content><![CDATA[<p>现在外部环境并不太好的情况下，你会选择如何掌控生活和内心的平静？<br>1、沉下心来，耐心等待机会——但好难哦，对于完全未知的未来特别急躁，还怎么可能沉下心？<br>2、更加自律、克制自己的欲望，好好学习上进努力——说的容易，如果能自律，就不是现在这个样子了<br>3、抓住机会，投资理财——经济好的时候都没有暴富，经济不好的时候能保住钱包就不错了，想peach吃呢<br>4、算了，摊牌吧，躺平了——怎么可能，心里那点不甘心别人不说自己没点b数吗？</p>
 <p>这一两个月我也一直有这些困惑，我的困惑是我不够耐心，也很焦躁，恰好最近读到了几本关于认知与心灵的书，以及几个关于人脑科学与自律的视频，从这些信息身上，我得到了一些启发和方向。</p>
 <p>虽然不至于帮助我解决“未来应该怎么办”这类抽象又宏大的问题，至少在日常生活中，令我减少了很多自我内耗，去在当下感受让自己更加舒适。</p>
@@ -495,7 +500,7 @@
   </entry>
   <entry>
     <title>饭饭而谈 | 一首印度的诗：《悉达多》</title>
-    <url>/2023/08/03/xidaduo/</url>
+    <url>/2023/08/03/101_xidaduo/</url>
     <content><![CDATA[<blockquote>
 <p>[!abstract] 悉达多</p>
 <ul>
@@ -618,7 +623,7 @@
 </blockquote>
 <p>如果你第一次没有得到，生活会给你另一次机会，直到你得到自己想要的。</p>
 <p>像ted主人公经历了第一次婚姻没有得到她想要的，于是给了她第二次第三次，直到她得到“与自己结婚，成为完整的自己”。</p>
-<p><img src="/0.jpg"></p>
+<p><img src="/2019/05/07/98ted7/0.jpg"></p>
 <hr>
 <p>分享卓别林的一首诗<br>《当我开始爱自己》</p>
 <p>当我真正开始爱自己，<br>我才认识到，所有的痛苦和情感的折磨，<br>都只是提醒我：活着，不要违背自己的本心。<br>今天我明白了，这叫做<br>『真实』。<br>当我真正开始爱自己，<br>我才懂得，把自己的愿望强加于人，<br>是多么的无礼，就算我知道，时机并不成熟，<br>那人也还没有做好准备，<br>就算那个人就是我自己，<br>今天我明白了，这叫做<br>『尊重』。<br>当我开始爱自己，<br>我不再渴求不同的人生，<br>我知道任何发生在我身边的事情，<br>都是对我成长的邀请。<br>如今，我称之为<br>『成熟』。<br>当我开始真正爱自己，<br>我才明白，我其实一直都在正确的时间，<br>正确的地方，发生的一切都恰如其分。<br>由此我得以平静。<br>今天我明白了，这叫做<br>『自信』。</p>
@@ -654,7 +659,7 @@
 <li>第二页，尝试后得到的好处</li>
 <li>第三页，不做这件事带来的后果</li>
 </ol>
-<p><img src="/0.jpg"></p>
+<p><img src="/2019/05/07/97ted6/0.jpg"></p>
 ]]></content>
       <categories>
         <category>「书影世界」</category>
@@ -776,12 +781,12 @@
 <h1 id="2、工薪族，长期有耐心"><a href="#2、工薪族，长期有耐心" class="headerlink" title="2、工薪族，长期有耐心"></a>2、工薪族，长期有耐心</h1><p>作为每个月有固定收入的白领，没有现成一大笔闲置资金，就安安心心地定投吧。</p>
 <p>指数估值在哪儿查？<br>我有几个途径：</p>
 <p>微信小程序——基金豆的“指数估值小助手”，且慢的“且慢指数估值”</p>
-<p><img src="/%E4%BC%B0%E5%80%BC%E5%B0%8F%E7%A8%8B%E5%BA%8F.jpg"></p>
+<p><img src="/2019/03/12/91stockplan/%E4%BC%B0%E5%80%BC%E5%B0%8F%E7%A8%8B%E5%BA%8F.jpg"></p>
 <p>公众号——“定投十年赚十倍”银行螺丝钉的公众号，每晚公布他关注的标的估值</p>
 <p>APP——雪球，天天基金，里面都有基金估值模块</p>
 <p>这些途径的估值阈值不一定相同，安全谨慎下限的不同而已，择一选择，选择后，坚定地按照价投策略十六字方针执行，就妥了。</p>
 <h1 id="3、熊市装死，牛市知足"><a href="#3、熊市装死，牛市知足" class="headerlink" title="3、熊市装死，牛市知足"></a>3、熊市装死，牛市知足</h1><p>价值投资策略里，可以选择定期定额，也可以定期不定额。我之前一直选择定期定额，但在2018年下旬遇上难得的低估五星级投资机会，那时候不懂，还傻傻地定额每个月3000这样投，现在想起来亏死我了——又低估又连跌，多么好的捡便宜货攒份额的机会啊！！——可惜那时候还没学习到价投的概念，只在12月份加大了一次金额。所以在低估的时候，越低估越多投，相反，估值越高定投额度得越少。</p>
-<p>定期不定额具体每个月需要投多少钱需要一个公式算，如果觉得麻烦，那就粗暴一点，越跌每次定投金额就多一些。想要精确点，每次定期不定额投资金额，就按照这个公式：<br><img src="/%E5%85%AC%E5%BC%8F.jpg"><br>进入低估的市盈率就是标的估值的最小阈值。</p>
+<p>定期不定额具体每个月需要投多少钱需要一个公式算，如果觉得麻烦，那就粗暴一点，越跌每次定投金额就多一些。想要精确点，每次定期不定额投资金额，就按照这个公式：<br><img src="/2019/03/12/91stockplan/%E5%85%AC%E5%BC%8F.jpg"><br>进入低估的市盈率就是标的估值的最小阈值。</p>
 <h1 id="4、止盈目标也要看纪律"><a href="#4、止盈目标也要看纪律" class="headerlink" title="4、止盈目标也要看纪律"></a>4、止盈目标也要看纪律</h1><p>熊市的时候纪律很简单，买低估的指数，买买买，定时买，至于浮亏？装死别看。</p>
 <p>牛市刚来的时候，别慌张，我知道应该有跟我一样的小伙伴，看到本来-20%的收益率一下子变成20%有点措手不及，是该赶紧拿了就走？还是等它再涨涨？还是趁牛市刚开始再投一笔把之前没攒的份额攒足？</p>
 <p>最不能做的就是看着牛市来了周线九连阳就想多定投点，把份额攒回来。错了，这恰恰是在追涨。</p>
@@ -881,7 +886,7 @@
 <p>最容易错的高考第一题啊。</p>
 <p>不过这样改了，把原有的押韵改没了，令人伤心，中国诗歌除了意境，还有不就是那平平仄仄平平仄的韵脚组合吗？</p>
 <p>虽然古音和今天早已不同，但强行把原本合辙押韵的读音改没了，感觉贺知章和杜牧的棺材板都快压不住了。</p>
-<p><img src="/%E6%8B%BC%E9%9F%B3.jpg"></p>
+<p><img src="/2019/02/24/88pinyin/%E6%8B%BC%E9%9F%B3.jpg"></p>
 <p>因为读错的人太多，以至于要把诗原来的读法改掉，真的是第一次听说。</p>
 <p>对于文字和文传承的敬意，一点都没看到。因为这些“少数服从多数”的理由，更是无稽之谈。</p>
 <p>之前去苏州，听了苏州话的评弹，听了用苏州话唱的诗，真的是太美了！江南婉约柔美，烟雨朦胧的感觉从这些音调里体现的淋漓尽致。</p>
@@ -1095,7 +1100,7 @@
 <h1 id="一、旅行最好的就是遇见美好"><a href="#一、旅行最好的就是遇见美好" class="headerlink" title="一、旅行最好的就是遇见美好"></a>一、旅行最好的就是遇见美好</h1><p>今天到了甘孜，嗯～时隔差不多十年，又再一次回到这边打卡。真是随手一拍都是美景。</p>
 <p>坐在车里，翻过二郎山，穿过十公里的隧道，刚惊叹完中国基建的流弊，一出隧道，就有一种天空被撕开的错觉。从雅安的阴沉沉突然变成阳光普照，太阳太大，风也太大，伸手出去盲拍几下，却也意外得到一张不用p图不用滤镜的照片。</p>
 <p>尤其爱那无意中舞入镜头的芦苇。</p>
-<p><img src="/%E9%A3%8E%E6%99%AF.jpg"></p>
+<p><img src="/2019/02/01/79travel/%E9%A3%8E%E6%99%AF.jpg"></p>
 <h1 id="二、联想到的“真理”"><a href="#二、联想到的“真理”" class="headerlink" title="二、联想到的“真理”"></a>二、联想到的“真理”</h1><p>我并没独自一人来过这边，但要带父母旅行过年，就提前做了做计划，自觉这过半的行程下来，颇为舒适和安逸。</p>
 <p>时间安排刚刚好，不紧不慢，一直顺路，实现阶段短途自驾，沿途经过想去的地方，父母既不会太累又十分尽兴。</p>
 <p>经历了刚好错峰的惬意，以及错峰获得的半价景区费用，每次出来几乎不会被酒店高价房价宰的幸运。</p>
@@ -1166,7 +1171,7 @@
     <title>被衣服穿的人</title>
     <url>/2019/01/28/76clothing/</url>
     <content><![CDATA[<p>不知道有没有人跟我一样，会被衣服“穿”。</p>
-<p><img src="/%E8%A1%A3%E6%9C%8D.jpg"></p>
+<p><img src="/2019/01/28/76clothing/%E8%A1%A3%E6%9C%8D.jpg"></p>
 <p>比如，当穿上很酷的衣服时，就感觉整个人变成了cool girl，走路都不自觉的拽起来，走出“六亲不认”的步伐。晚上回家，走在昏暗的路灯下，戴上耳机，好嘛，那就是我一个人的舞池，脸上面无表情，心里已经嗨成老狗。只有微微摇摆的身体能泄露我内心的狂喜。</p>
 <p>又比如，当穿上很淑女的衣服，从穿上衣服站到镜子前那一刻开始，整个人就如伊丽莎白女王附体，走路抬头挺胸，下巴微抬，无形的背背佳让身子挺拔起来。一定要目不斜视，看到好看的少年少女也必须克制，眼角偷瞄已经是极限。记住，自己是个公主，很傲娇的那种！</p>
 <p>哎～穿上不同衣服就变身不同人格，戏精本精了。但不同的是，本人不演，内心戏十足。</p>
@@ -1187,7 +1192,7 @@
 <p>之前写过<a href="https://www.jianshu.com/p/60169f84dcfe">《2018年阅读&amp;写作总结-半年完成31本书》</a>和<a href="https://www.jianshu.com/p/ea3261ad68b9">《仅适合上班族的阅读写作指南》</a>，简单记录了自己阅读的方式。</p>
 <p>这几天也在整理之前的阅读技巧。</p>
 <p>之前学习了SQ3R阅读法，放出导图：</p>
-<p><img src="/75.png"></p>
+<p><img src="/2019/01/26/75sq3r/75.png"></p>
 ]]></content>
       <categories>
         <category>「书影世界」</category>
@@ -1832,7 +1837,7 @@
     <url>/2018/12/23/58-2018readandwriting/</url>
     <content><![CDATA[<p>在2018年还剩最后9天的时候，做一个阅读和写作输出上的总结吧~</p>
 <h1 id="一、阅读总结"><a href="#一、阅读总结" class="headerlink" title="一、阅读总结"></a>一、阅读总结</h1><h2 id="1-1-完成情况"><a href="#1-1-完成情况" class="headerlink" title="1.1. 完成情况"></a>1.1. 完成情况</h2><p>2018年从下半年开始，半年总共完成31本书：</p>
-<p><img src="/2018%E5%B9%B4%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95.png" alt="2018年书单"></p>
+<p><img src="/2018/12/23/58-2018readandwriting/2018%E5%B9%B4%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95.png" alt="2018年书单"></p>
 <p>总体来说从5月份开始培养起规律性地阅读习惯后，基本保证每个月都有进行阅读，并输出书评或文章，具体看下面<a href="#%E4%BA%8C%E3%80%81%E5%86%99%E4%BD%9C%E6%80%BB%E7%BB%93">二、写作总结</a>的部分。</p>
 <p>今年刚换了工作，在了解到工作有季节性变化的特色前，这半年多是在调整最适合自己的阅读、输出方式，所以31本算及格，不过也要夸赞下自己，在繁忙的工作中抽出了时间进行阅读。</p>
 <h2 id="1-2-原计划"><a href="#1-2-原计划" class="headerlink" title="1.2. 原计划"></a>1.2. 原计划</h2><p>年初本来没有给自己设定书单，5月份在简书上开始进行一堂写作课，计划的是看完6本写作有关的书籍；后来工作业务重心发生改变，需要及时补充“能量”，又给自己添加了4本职场管理相关的书籍。组成了2个主题阅读。</p>
@@ -1855,7 +1860,7 @@
 <p>现在终于是明确了：</p>
 <div class="note info"><p>哪怕目的不是为了成为“专家”，既然定了一个目标，就一定要完成，哪怕中途因为其他事情分散了注意力，也要记得回头继续结束掉；或者为了正常进入下一个项目，就加快自己完成当前目标的进度，提高效率吧。</p></div>
 
-<h1 id="二、写作总结"><a href="#二、写作总结" class="headerlink" title="二、写作总结"></a>二、写作总结</h1><h2 id="2-1-完成情况"><a href="#2-1-完成情况" class="headerlink" title="2.1. 完成情况"></a>2.1. 完成情况</h2><p><img src="/2018%E5%B9%B4%E5%86%99%E4%BD%9C%E6%B8%85%E5%8D%95.png" alt="2018年写作"></p>
+<h1 id="二、写作总结"><a href="#二、写作总结" class="headerlink" title="二、写作总结"></a>二、写作总结</h1><h2 id="2-1-完成情况"><a href="#2-1-完成情况" class="headerlink" title="2.1. 完成情况"></a>2.1. 完成情况</h2><p><img src="/2018/12/23/58-2018readandwriting/2018%E5%B9%B4%E5%86%99%E4%BD%9C%E6%B8%85%E5%8D%95.png" alt="2018年写作"></p>
 <h3 id="书评——10篇，完成"><a href="#书评——10篇，完成" class="headerlink" title="书评——10篇，完成"></a>书评——10篇，完成</h3><a href="/2018/08/04/35McKinsey-The-method-of-thinking/" title="一本被书名耽误的问题解决宝典——《麦肯锡笔记思考法》">一本被书名耽误的问题解决宝典——《麦肯锡笔记思考法》</a>
 <p><a href="https://www.jianshu.com/p/f1ed502d5760">普通员工如何拥有决断力</a><br><a href="https://www.jianshu.com/p/da8665a12c59">知识体系届的“新华字典”</a><br><a href="https://www.jianshu.com/p/a2343329a2af">遇到这三种奇葩同事，如何攻略？</a></p>
 <a href="/2018/09/05/37liyuan-K-tree/" title="学了那么教人如何建立知识体系的付费课程，就这个我服气！">学了那么教人如何建立知识体系的付费课程，就这个我服气！</a>
@@ -2768,12 +2773,12 @@
 <p>诸如以上的错觉。</p>
 <p>并不是说没做啥事儿，时间就过去了，而是原本有很多计划工作，忙着忙着突然回过神，发现原来时间已经过了这么快啊。</p>
 <p>越到年底，回顾这一年的工作项目，就越有种焦急感——回顾下来发现自己好像只做了一两个有价值的项目——这样可不行，在当下“BAT某家都明话称不招80后”，感觉自己也快到被嫌弃年纪大的时候了。丧气满满。</p>
-<p><img src="/%E4%B8%A7.gif" alt="丧"></p>
+<p><img src="/2018/11/25/51review-2018-11/%E4%B8%A7.gif" alt="丧"></p>
 <p>不过！丧也没办法，开心一点咯，人间不值得。</p>
-<p><img src="/%E4%BA%BA%E9%97%B4%E4%B8%8D%E5%80%BC%E5%BE%97.jpg" alt="人间不值得"></p>
+<p><img src="/2018/11/25/51review-2018-11/%E4%BA%BA%E9%97%B4%E4%B8%8D%E5%80%BC%E5%BE%97.jpg" alt="人间不值得"></p>
 <p>值得的是赶紧沉淀自己的工作方法论，明确在岗位上的角色和目标，有机会就争取，多点野心多点行动。</p>
 <p>当什么佛系少女，想想未来带花园游泳池的大别墅、躺着都有钱入账的每个夜晚、随时可以飞到米兰买衣服的周末、想去就去的欧洲展览和博物馆，现在要当猫系少女！最好是威风凛凛的猎豹好吗！不然未来只能是“母老虎”，还是个“纸”的咯。</p>
-<p><img src="/%E6%96%97%E5%BF%97%E6%BB%A1%E6%BB%A1.gif" alt="斗志满满"></p>
+<p><img src="/2018/11/25/51review-2018-11/%E6%96%97%E5%BF%97%E6%BB%A1%E6%BB%A1.gif" alt="斗志满满"></p>
 <hr>
 <h1 id="二、阅读"><a href="#二、阅读" class="headerlink" title="二、阅读"></a>二、阅读</h1><h2 id="2-1-本月阅读"><a href="#2-1-本月阅读" class="headerlink" title="2.1. 本月阅读"></a>2.1. 本月阅读</h2><div class="note primary"><h3 id="进行中"><a href="#进行中" class="headerlink" title="| 进行中 |"></a>| 进行中 |</h3><ul>
 <li>《财务自由之路》 45%</li>
@@ -2800,18 +2805,18 @@
 </ul></div>
 
 <p>PS：两个连载计划，简直是我自己给自己挖的坑……QAQ</p>
-<p><img src="/%E5%93%AD%E5%94%A7%E5%94%A7.gif" alt="哭唧唧"></p>
+<p><img src="/2018/11/25/51review-2018-11/%E5%93%AD%E5%94%A7%E5%94%A7.gif" alt="哭唧唧"></p>
 <h2 id="3-2-总结"><a href="#3-2-总结" class="headerlink" title="3.2. 总结"></a>3.2. 总结</h2><p>虽然本月没有阅读很多书，但输出了<a href="/2018/11/24/49owreadandwrite/" title="仅适合上班族的阅读写作指南">仅适合上班族的阅读写作指南</a>，作为自己这几个月来优化“挤时间阅读”方法的总结和记录。</p>
 <hr>
 <h1 id="四、双十一-学习搭配"><a href="#四、双十一-学习搭配" class="headerlink" title="四、双十一&amp;学习搭配"></a>四、双十一&amp;学习搭配</h1><p>呀，还是说到这个话题了。对，这个月有双十一，所以，又是剁手月，总共大概干出去4K，不过都是换季用品，一年2次罢了。</p>
 <p>记得去年双十一买的基本都是美妆用品，今年都是鞋服，原因就是10月底突然迷上学习服装搭配了，可能是在互联网公司待久了，穿衣也不会注意太多，可突然某一天发现，衣品这个东西呀，很是得培养起来，不一样要穿很贵很贵的，但起码得有自己的特色，让人看起来舒服，自己也会自信一些。</p>
 <p>衣品这个东西呀，就跟看一个女人的一双手一样，是细节，都是长期浸淫的效果。</p>
 <p>于是！兴奋地在网上找了一堆APP，把家里的衣服趁换季都拿出来拍了一遍，上传到APP里。</p>
-<p><img src="/%E5%85%B4%E5%A5%8B.gif" alt="兴奋"></p>
+<p><img src="/2018/11/25/51review-2018-11/%E5%85%B4%E5%A5%8B.gif" alt="兴奋"></p>
 <p>因为可以当电子衣柜，作为一个“永远觉得衣柜里缺一件衣服”的女生，不整理衣柜才不知道自己有辣么多辣么多衣服！没有必要都买新的，得学会搭配（这才是省钱之道呀）。</p>
 <p>无意之间激发了自己在线拼图搭配的动力，哈哈。</p>
 <p>看看最近的成果，没有风格，献丑了：</p>
-<p><img src="/%E6%90%AD%E9%85%8D1.JPG" alt="搭配1"><br><img src="/%E6%90%AD%E9%85%8D2.JPG" alt="搭配2"><br><img src="/%E6%90%AD%E9%85%8D3.JPG" alt="搭配3"></p>
+<p><img src="/2018/11/25/51review-2018-11/%E6%90%AD%E9%85%8D1.JPG" alt="搭配1"><br><img src="/2018/11/25/51review-2018-11/%E6%90%AD%E9%85%8D2.JPG" alt="搭配2"><br><img src="/2018/11/25/51review-2018-11/%E6%90%AD%E9%85%8D3.JPG" alt="搭配3"></p>
 <hr>
 <h1 id="五、大龄少女的感悟"><a href="#五、大龄少女的感悟" class="headerlink" title="五、大龄少女的感悟"></a>五、大龄少女的感悟</h1><p>现在也是奔三的路上，前段时间在“什么年龄干什么事儿”这个话题上思考了一阵。刚巧年少时同龄的闺蜜这个月初生了个天蝎男宝宝，送去祝福，回头却感觉心里空落落的。</p>
 <p>对哦，那堆好朋友里，记得以前上学时猜一定单身贵族到底、结婚最晚的，反而早早第一个结了婚生了娃，其他人也陆陆续续结束了单身生活，连最后一个——喏，11月初生娃那位——也晋升了身份。</p>
@@ -2825,7 +2830,7 @@
 <p>我希望，可以慢慢变得强大而美丽，不怕哪一天“青春”这个资本慢慢花光，自身的优秀就足以有勇气面对整个世界，可以自信地继续活着，对爱情仍怀希望，自由地选择结婚还是单身。遇到何时的结婚对象和恰当的时候，是因为自愿；只要自己不想，还能大声对外面说自己现在很好，你们管不着。</p>
 <p>所以，自身的能力强大、有足够的经济基础，才是大龄少女对外面say no的底气吧！</p>
 <p>哎，我也是为赚钱这件事操碎了心，想了以上这么大一堆借口和理由作动力，money真是一个好东西！</p>
-<p><img src="/%E7%82%B9%E8%B5%9E.gif" alt="点赞"></p>
+<p><img src="/2018/11/25/51review-2018-11/%E7%82%B9%E8%B5%9E.gif" alt="点赞"></p>
 ]]></content>
       <categories>
         <category>「这就是生活」</category>
@@ -3112,7 +3117,7 @@
 </blockquote>
 <p>最近开始了《财务自由之路》的共读，刚好微信读书抽中了一个月的无限卡哈哈，于是愉快地把书放到书架。</p>
 <p>今天工作抽空看了一章，基于习惯，先看了下目录，发现这本书囊括很多方面啊，章节超多，从理论到实践统统涉及了。喜欢边看边梳理脑图，也是为了带着问题阅读，所以在开始正式阅读前整理出来一个全书目录式的导图。像书中作者说的：“你一定要经常思考这些问题：‘这应该如何为我所用？我如何快速采取行动？’记住：仅靠读书不会使人发财。掌握书面知识是远远不够的，知识运用于实践，才能获得真正的力量。”</p>
-<p>希望以下导图对即将开始阅读的姐们们提供灵感。<br><img src="/%E8%84%91%E5%9B%BE.jpg" alt="财务自由之路导图"></p>
+<p>希望以下导图对即将开始阅读的姐们们提供灵感。<br><img src="/2018/11/07/41Trade-your-way-to-Financial-Freedom/%E8%84%91%E5%9B%BE.jpg" alt="财务自由之路导图"></p>
 <p>下面有文字版。</p>
 <hr>
 <h1 id="一、正文"><a href="#一、正文" class="headerlink" title="一、正文"></a>一、正文</h1><p>全书十多个章节，看起来多，其实也是有脉络的。</p>
@@ -3173,16 +3178,16 @@
 <p>相比起8月的郁闷，10月真是一个让人开心的月份。</p>
 <p>第一个是8月的项目上线，效果非常明显，有一种艰辛耕种终于收获的满足感。</p>
 <p>第二个是10月份有了明确的第四季度项目规划，我真的很喜欢跟人讨论的氛围，会异常干劲十足。</p>
-<p><img src="/%E5%BC%80%E5%BF%83.gif" alt="开心"></p>
+<p><img src="/2018/11/05/40review-2018-10/%E5%BC%80%E5%BF%83.gif" alt="开心"></p>
 <p>人际上，因为一次聚会酒后的聊天，突然很感谢自己有这么一种运气，遇到的同事都很好很好。自己离那些办公室政治纷争很远，也许有，但可能有人为我挡了，或者因为粗神经，没有发现。工作以来，遇到三个leader，现在想起来，我真的是很好运，他们都是温柔的师傅，教会我最好的工作思维方式，为我挡下那些看不见的纷争。工作上，遇到一位就足够幸福了吧。</p>
-<p><img src="/%E8%B0%A2%E8%B0%A2%E5%B8%88%E5%82%85.gif" alt="谢谢师傅"></p>
+<p><img src="/2018/11/05/40review-2018-10/%E8%B0%A2%E8%B0%A2%E5%B8%88%E5%82%85.gif" alt="谢谢师傅"></p>
 <p>10月的年中会，作为BU“文化激励委员会”的成员（哈哈哈哈，别问我这是什么，我也说不准），参与组织了首次跨夜团建活动，细节不说，感觉就是又回到大学学生会的赶脚，别说，这么多年没折腾，现在折腾一下还挺有趣，累是累，但貌似可以在BU冒个泡，还是挺好玩。</p>
 <p>在年中会惯常的餐前发言里，BU大BOSS的发言，让我触动最大。BOSS就是BOSS，关于业务和未来的思考，深度和高度一下子就不一般了。BOSS温润如玉的气质，一本正经地从国家政策经济变化说到自己出差中的思考。总结下来，给我最大的感受就是，他生活工作里一直处于思考的状态，出差看到小吃店，会想临近的两家为什么会有一家顾客多，另一家顾客少，用户体验有什么差别，甚至自己是体验一下，如果是自己会怎么经营。</p>
-<p><img src="/carry.gif" alt="carry全场的boss"></p>
+<p><img src="/2018/11/05/40review-2018-10/carry.gif" alt="carry全场的boss"></p>
 <p>这也许就是活在“觉知”中，对生活中一些事情，保持绝对敏锐的观察。反观自己，还没有将观察形成习惯，想想原因，可能是因为生活中那些“一层不变”的东西太多了，失去了本应该有的好奇和探索欲望。</p>
 <p>那么大一个BOSS，工作繁忙，却对身边的一点一滴充满好奇，才会发现普通人很难发现的东西。</p>
 <p>特别让我有启发的是，老大对于经济、政治政策变化的关注。作为女生，天生在对政治上的兴趣就比男生少一点，但现在越来越认识到，对于国家政策变化反应的速度，很大程度上决定了自己的视野宽广程度。</p>
-<p><img src="/%E7%9C%BC%E7%95%8C.gif" alt="眼界"></p>
+<p><img src="/2018/11/05/40review-2018-10/%E7%9C%BC%E7%95%8C.gif" alt="眼界"></p>
 <p>另一个就是，发现这个公司对于员工自身总结的方法论很重视，他们希望看到的不仅是结果，还是你能够自证其说。这件事你完成的过程和结果，是否与你对这件事情的认知统一。对事情有一套自我方法论，因为这些思考过程，所以得出某个结论，去做了，从而实现了现在的这个结果，即使结果并不是完美的。</p>
 <h1 id="二、阅读-写作"><a href="#二、阅读-写作" class="headerlink" title="二、阅读&amp;写作"></a>二、阅读&amp;写作</h1><h2 id="2-1-本月阅读"><a href="#2-1-本月阅读" class="headerlink" title="2.1. 本月阅读"></a>2.1. 本月阅读</h2><p>这个其实自己要检讨，10月份的阅读份并没有完成。</p>
 <p>但看书并不是追求数量嘛，我有对于闲时和忙时的安排，很明显，这几个月是“忙时”，可以将阅读和写作份额按照比例分配到其他月份。</p>
@@ -3235,10 +3240,10 @@
   <entry>
     <title>34枚金币和鸡汤书写作方法</title>
     <url>/2018/10/09/39-34-gold-coin-new/</url>
-    <content><![CDATA[<p><img src="/%E5%B0%81%E9%9D%A2.jpg" alt="封面图"></p>
+    <content><![CDATA[<p><img src="/2018/10/09/39-34-gold-coin-new/%E5%B0%81%E9%9D%A2.jpg" alt="封面图"></p>
 <p>艾力的这本《你一年的8760小时》在我一个读书群里被推荐过很多次，但因为之前也看过很多时间管理的书籍，觉得自己这方面能力还不错，也就没兴趣看这本书。前段时间在群里看到一位书友po了书中艾力自己的时间计划表格，看到密密麻麻的一大片，有点惊到了，所以就花了中午的时间在微信上看了这本书。</p>
 <p>在这里把核心的内容记录一下，顺便分享下我get到写这类书的写作结构方法。</p>
-<h1 id="一、书中几个硬核概念"><a href="#一、书中几个硬核概念" class="headerlink" title="一、书中几个硬核概念"></a>一、书中几个硬核概念</h1><p><img src="/%E9%87%91%E5%B8%81.png" alt="本书涉及的几个硬核概念"></p>
+<h1 id="一、书中几个硬核概念"><a href="#一、书中几个硬核概念" class="headerlink" title="一、书中几个硬核概念"></a>一、书中几个硬核概念</h1><p><img src="/2018/10/09/39-34-gold-coin-new/%E9%87%91%E5%B8%81.png" alt="本书涉及的几个硬核概念"></p>
 <p>书中除了以上几个概念跟时间管理有关，其余的，就当做艾力的自传了，淡淡的鸡汤味，不排斥，毕竟每个自律到极致的人，心里没点自熬鸡汤的本事，也坚持不到最后。<strong>鸡汤可以适当喝一喝，让自己度过最煎熬的那一刻就行。</strong></p>
 <p>PS：附赠“盖普洛优势识别器”测试题：<a href="https://github.com/hormoyo/hormoyo.github.io/blob/hexo/source/_posts/39-34-gold-coin-new/%E5%8F%91%E7%8E%B0%E4%BD%A0%E7%9A%84%E4%BC%98%E5%8A%BF.xls?raw=true">点这里下载</a></p>
 <h1 id="二、34枚金币"><a href="#二、34枚金币" class="headerlink" title="二、34枚金币"></a>二、34枚金币</h1><p>这里主要介绍下艾力这本书的主要主题：34枚金币时间管理法。</p>
@@ -3297,13 +3302,13 @@
   <entry>
     <title>「月总结」2018-08</title>
     <url>/2018/09/05/38review-2018-08/</url>
-    <content><![CDATA[<p><img src="/%E5%A4%B4%E5%9B%BE.jpg" alt="头图"></p>
+    <content><![CDATA[<p><img src="/2018/09/05/38review-2018-08/%E5%A4%B4%E5%9B%BE.jpg" alt="头图"></p>
 <p>Photo By trunklog.com</p>
 <h1 id="一、工作"><a href="#一、工作" class="headerlink" title="一、工作"></a>一、工作</h1><p>从我的滴答清单日历表上看，8月份是两个项目占据了几乎整个月的时间。</p>
 <p>还好，下旬上线了，上线后一周看数据，效果还是很明显的。其中一个项目在上个月也提到了，就是前期花费了不少功夫跟人沟通对接，连我的FE小伙伴都说明明只是接入，最后却简直像在做破解。</p>
 <span id="more"></span>
 
-<p><img src="/%E6%97%A0%E8%AF%AD.gif" alt="尴尬而不失礼貌地笑"></p>
+<p><img src="/2018/09/05/38review-2018-08/%E6%97%A0%E8%AF%AD.gif" alt="尴尬而不失礼貌地笑"></p>
 <p>上个月看书和整理思绪还是有好处了，现在渐渐下意识用上运营思维，对接下来的工作进行筹划。</p>
 <p>经验就是——</p>
 <blockquote>
@@ -3344,7 +3349,7 @@
 <li><a href="http://dannii.cc/2018/09/05/liyuan-K-tree">学了那么教人如何建立知识体系的付费课程，就这个我服气！</a></li>
 </ul>
 <h2 id="总结回顾"><a href="#总结回顾" class="headerlink" title="总结回顾"></a>总结回顾</h2><h3 id="求表扬-And-立个flag"><a href="#求表扬-And-立个flag" class="headerlink" title="求表扬 And 立个flag"></a>求表扬 And 立个flag</h3><p>这个月真的是奶牛上身！极其高产，公众号的关注者都有点不太习惯。</p>
-<p><img src="/%E5%A5%B8%E7%AC%91.gif" alt="奸笑"></p>
+<p><img src="/2018/09/05/38review-2018-08/%E5%A5%B8%E7%AC%91.gif" alt="奸笑"></p>
 <p>其实在月初开始使用scrivener来组织文稿，效率很高，在上个月总结里也提到过，基本上平时想到只言片语或者零散的结构，就在上面记下来，周末只要组织语言写出来就行。有点像大纲跟正文的关系，所以看到我工作日每周一、三、五发送文章，不要以为我在摸鱼！那是因为周末辛苦攒好了一周的稿子，定时群发的！</p>
 <p>其中呢，有两个连载计划：</p>
 <ul>
@@ -3357,7 +3362,7 @@
 <p>太生硬。</p>
 <p>所以，我在想，<strong>读书是件很费时间和精力的事情，如果我读完一本书，没有产出比投入时间更有价值的东西，那太亏了！</strong>反正了花时间写东西了，框架、大纲、内容都差不多，那写作形式上，我希望能更吸引人，让人感觉不出来是我在“推销”或者“自言自语记录”一本书。</p>
 <p>回头发个愿望帖，保佑我一定要把这两个连载系列善终啦！</p>
-<p><img src="/%E8%B6%85%E8%B6%8A.gif" alt="超越锦鲤"></p>
+<p><img src="/2018/09/05/38review-2018-08/%E8%B6%85%E8%B6%8A.gif" alt="超越锦鲤"></p>
 <h3 id="上月问题追踪"><a href="#上月问题追踪" class="headerlink" title="上月问题追踪"></a>上月问题追踪</h3><p>上个月的问题是：</p>
 <blockquote>
 <p>同时阅读多本书，笔记整理起来会很散，太麻烦了，而且没有及时输出笔记，浪费了阅读成本</p>
@@ -3393,7 +3398,7 @@
 <p>第二天中午由于太饿了，点了一家云南菜……168元……168……168……</p>
 <p>然后……</p>
 <p>撑到胃疼了……</p>
-<p><img src="/%E6%89%B6%E9%A2%9D.gif" alt="扶额"></p>
+<p><img src="/2018/09/05/38review-2018-08/%E6%89%B6%E9%A2%9D.gif" alt="扶额"></p>
 <p>事实证明，禁食是可以的，但还有注意后续动作。</p>
 <p>别暴饮暴食，否则后果自负。</p>
 <h1 id="四、有史以来最快的一次搬家"><a href="#四、有史以来最快的一次搬家" class="headerlink" title="四、有史以来最快的一次搬家"></a>四、有史以来最快的一次搬家</h1><p>8月21日，临近下班，突然接到中介电话，很凶巴巴地说我们违约了，限我们两天之内搬出去，否则他们会过来清理我们的东西。</p>
@@ -3407,10 +3412,10 @@
 <p>当天晚上，下载各种租房软件，用1个小时圈地图，定标准，在58上11、12点打电话给我爱我家、链家这些经纪人打电话约看房。这里真的蛮感谢现在这个房子的经纪人，凌晨了，还回电话过来告诉我们房源信息，老负责了。</p>
 <p>第二天上午，直接奔目标圈地附近，找那个经纪人，1个小时在店里选房源看图，因为我养了3只猫，只能自己租个2居室，再找室友。可惜2居室太少，在网上看好的一些环境特别好的小区没房了。最后定了一个离地铁很算近，小区不新不旧的房源，下午就去看了。看了3套，就把第一个看的房定下来，客厅挺大，主子们可以随便跑，主要是主卧还有一个几乎有主卧一般大的小厅，可以当做书房。当下就拍板要它了！</p>
 <p>就是比以前贵了50%，肉疼，而且还没找到室友。</p>
-<p><img src="/%E5%93%AD%E5%94%A7%E5%94%A7.gif" alt="哭唧唧"></p>
+<p><img src="/2018/09/05/38review-2018-08/%E5%93%AD%E5%94%A7%E5%94%A7.gif" alt="哭唧唧"></p>
 <p>晚上回来打包到凌晨2、3点，预约搬家公司，周后一天，火速搬进新房子。</p>
 <p>天哪，来北京4年多，换过3个地方，这次真的是特别迅速的经历，到现在我还有点懵，因为家里还没收拾整齐。</p>
-<p><img src="/%E6%87%B5%E9%80%BC.gif" alt="懵逼"></p>
+<p><img src="/2018/09/05/38review-2018-08/%E6%87%B5%E9%80%BC.gif" alt="懵逼"></p>
 <p>嗯，不过事后想了想，是福不是祸，是祸躲不过，换个角度想，也能算因祸得福，那房子住了两年，虽然离中心很近，但当时租的急，毕竟是老居民楼，装修也一般，现在这个房子离公司近了些，客厅大，环境好很多了，下个楼还时不时能看到帅气的外国小哥哥牵着条帅气的狗，嗯，因祸得福。</p>
 <h1 id="五、一些启发"><a href="#五、一些启发" class="headerlink" title="五、一些启发"></a>五、一些启发</h1><p>第一个，就是在工作的时候，参加一个新产品的说明会，看主讲人进行宣讲的时候的一些想法。</p>
 <p><strong>如何第一时间让人了解你的产品是什么？</strong></p>
@@ -3725,7 +3730,7 @@
 <p>哦，突然觉得，以上思路也可以用来制作每次的晋升评审PPT演讲稿。</p>
 <p>话说回来，成长的思维在于，通过一次次不停歇地努力，去修正自己的思维方式，让其变得越来越清晰、有逻辑。</p>
 <p>说到这里，我延伸想到，所有意识都是一种思维方式的体现。书中作者给了两幅图，表示不同的意识：</p>
-<p><img src="/%E4%B9%B1.jpg" alt="1"><br><img src="/%E9%BD%90.jpg" alt="2"></p>
+<p><img src="/2018/08/05/36OM-methodology/%E4%B9%B1.jpg" alt="1"><br><img src="/2018/08/05/36OM-methodology/%E9%BD%90.jpg" alt="2"></p>
 <p>关于如何拥有清晰的解决问题的思维方式，下面流程化思维一节讲的更详细。</p>
 <h2 id="信仰意识"><a href="#信仰意识" class="headerlink" title="信仰意识"></a>信仰意识</h2><p>书中作者说了一句话，我觉得可以当做运营或者产品的信念之花，这句话是：</p>
 <blockquote>
@@ -3883,8 +3888,8 @@
       <tags>
         <tag>职场</tag>
         <tag>读书笔记</tag>
-        <tag>2018年书单</tag>
         <tag>日更</tag>
+        <tag>2018年书单</tag>
       </tags>
   </entry>
   <entry>
@@ -3931,7 +3936,7 @@
 </blockquote>
 <p>《麦肯锡笔记思考法》告诉我们，任何工作，都是为了“解决问题”。刚好，《麦肯锡笔记思考法》就是解决“如何拥有一个正确、完善的思考方法”的那把钥匙。从全球最知名的管理咨询公司麦肯锡出来的大岛祥誉，写下了这本《麦肯锡笔记思考法》，可不是教读者怎么记笔记这么简单。用他在书中前言里的话来说，麦肯锡流笔记术“是为了解决问题，将笔记作为思考的工具和解决问题的工具”。</p>
 <p>《麦肯锡笔记思考法》全书分为四章，给我印象最深的有以下三点：一是，告诉读者真正的笔记应该怎么用——不是为了记录过去，二是创造更好的未来；二是，如何用笔记去解决问题——解决问题的4个步骤；三是，笔记整理和成果表达的工具箱——除了在笔记上，随时随地可以用到的工具。</p>
-<p><img src="/mindmap.png" alt="全书思维导图"></p>
+<p><img src="/2018/08/04/35McKinsey-The-method-of-thinking/mindmap.png" alt="全书思维导图"></p>
 <h1 id="笔记不是为了记录过去，而是为了创建更好的未来"><a href="#笔记不是为了记录过去，而是为了创建更好的未来" class="headerlink" title="笔记不是为了记录过去，而是为了创建更好的未来"></a>笔记不是为了记录过去，而是为了创建更好的未来</h1><p>这是书中某一章的小标题，看到这个标题我很兴奋，感觉这个已经体现了《麦肯锡笔记思考法》的与众不同之处。</p>
 <p>很多人都有使用笔记的习惯，但很多人只是单纯地使用笔记而已，使用笔记本成了目的，却没有将笔记和解决问题、整理思路、寻找新发现等行为结合起来。</p>
 <blockquote>
@@ -4020,8 +4025,8 @@
       <tags>
         <tag>职场</tag>
         <tag>读书笔记</tag>
-        <tag>2018年书单</tag>
         <tag>日更</tag>
+        <tag>2018年书单</tag>
       </tags>
   </entry>
   <entry>
@@ -4030,7 +4035,7 @@
     <content><![CDATA[<blockquote>
 <p>《“更无用”的写作课》笔记合集：<a href="http://dannii.cc/tags/wuyong-writing-note/">点这里（更新中）</a><br>《“更无用”的写作课》作业合集：<a href="http://dannii.cc/tags/wuyong-writing-work/">点这里（更新中）</a></p>
 </blockquote>
-<h1 id="第十一课笔记-塑造让人难忘的角色：把角色当成恋人-、对手和孩子"><a href="#第十一课笔记-塑造让人难忘的角色：把角色当成恋人-、对手和孩子" class="headerlink" title="第十一课笔记 塑造让人难忘的角色：把角色当成恋人 、对手和孩子"></a><center>第十一课笔记 <br>塑造让人难忘的角色：把角色当成恋人 、对手和孩子</br></center></h1><p><img src="/%E9%9A%BE%E5%BF%98%E7%9A%84%E4%BA%BA%E7%89%A9.PNG" alt="第十一课脑图"></p>
+<h1 id="第十一课笔记-塑造让人难忘的角色：把角色当成恋人-、对手和孩子"><a href="#第十一课笔记-塑造让人难忘的角色：把角色当成恋人-、对手和孩子" class="headerlink" title="第十一课笔记 塑造让人难忘的角色：把角色当成恋人 、对手和孩子"></a><center>第十一课笔记 <br>塑造让人难忘的角色：把角色当成恋人 、对手和孩子</br></center></h1><p><img src="/2018/08/01/31creating-unforgettable-characters/%E9%9A%BE%E5%BF%98%E7%9A%84%E4%BA%BA%E7%89%A9.PNG" alt="第十一课脑图"></p>
 <p>只总结脑图就是个搬运工，以下是我结合本课的重点，以及课外学习加料得出的笔记，跟大家一起分享、学习。</p>
 <p>这一课，我总结下来一个核心观点就是：</p>
 <p><code>小说与故事不同，人物是小说中最重要的存在，整部小说都围绕着人物的发展、成长，来与读者的感觉贴合在一起，从人物的身上感觉到真实、喜怒哀乐，通过人物来体会另一种人生</code></p>
@@ -4050,7 +4055,7 @@
 <p>说到这里，就不得不提到“人物成长弧线”这个东西，这是《这样写出好故事》的作者贝尔和日本推理大师大泽在昌都提到过的塑造“圆型人物”的方法。</p>
 <p>人物一定都不是突然间就变了，一个人本来是以杀人为乐，却突然因为一件什么事儿就一心向佛，这样太假了。每个人物都有自己的核心理念，想要转变最核心的理念，只会是由你设置的情节，一层层从外面瓦解，最后到达最深处，这样才自然，而且合理。</p>
 <p>如下图，就一目了然。</p>
-<p><img src="/%E8%A7%92%E8%89%B2%E8%BD%AC%E5%8F%98.jpg" alt="角色转变"></p>
+<p><img src="/2018/08/01/31creating-unforgettable-characters/%E8%A7%92%E8%89%B2%E8%BD%AC%E5%8F%98.jpg" alt="角色转变"></p>
 <p>关于记录角色转变最简单的办法，就是做一张表，涵盖故事中主要的情节，在每个关键时刻，描述下角色的内心世界。</p>
 <h2 id="写小说过程中"><a href="#写小说过程中" class="headerlink" title="写小说过程中"></a>写小说过程中</h2><p>人物原型设定之后，要让读者相信人物就是应该这么做，就是如此真实，要让读者跟着人物一起嬉笑怒骂，那就应该不浮于表面的苍白描述，要在细节处，比如相貌、情绪、心理、肢体等等能够体现人物当下状态的时刻，不惜笔墨去详细刻画。</p>
 <p>我觉得这无关文笔，只要将自己当做这个角色，那这个角色当下是以什么情绪在说话、以什么姿态在行走、以什么心理在思考，统统用这个人物应该有的样子，真实坦白地描述出来。这个时候的细节描写不是啰嗦，而是展现自己对于生活细致入微的观察结果。</p>
@@ -4082,7 +4087,7 @@
 <p>其实现在想来，这种超负荷的计划，其实可以避免。唯一的变数就是对于项目的预估用时，无法预估在其中由于项目难度的错判，导致的时间超纲，千万不要怕麻烦别人，一定要在前期将各方涉及到的关系人统统确认，再开始进行。</p>
 <p>比如这个月有个项目，从6月底有想法，到7月初开始做，用差不多两周的时间多方确认技术方案，第一次由于沟通出问题，信息方给的资料信息不全，到发现时，一方开发已经基本结束，另一边才发现还需要其他部门的支持，导致再次拉一堆人紧急确认，虽然最终还是搞定，过程中那种“终于完成了……啊？什么？！这样不对，实现不了？……”的反转，真的是很让人心累。</p>
 <p>还有就是，总觉得麻烦了自己的项目成员，但从来没有进行过类似的请客之类的，心里感激但总是害羞，作为女生，去请一大群人吃饭，不知道该以什么名义。看到其他同事以这样的方式维系关系，自己却有些无所适从。</p>
-<p><img src="/%E6%97%A0%E5%A5%88.jpg"></p>
+<p><img src="/2018/07/30/27review-2018-07/%E6%97%A0%E5%A5%88.jpg"></p>
 <hr>
 <h1 id="二、阅读-写作"><a href="#二、阅读-写作" class="headerlink" title="二、阅读&amp;写作"></a><center>二、阅读&amp;写作</center></h1><h2 id="课程测评：好好学习平台"><a href="#课程测评：好好学习平台" class="headerlink" title="课程测评：好好学习平台"></a>课程测评：好好学习平台</h2><ul>
 <li>《从0到1打造超级社群》</li>
@@ -4309,7 +4314,7 @@
     <content><![CDATA[<p>就在前段时间，一则新闻震惊了全国的人，一名中科院博士生被昔日高中同学赴京千里追杀，凶手锒铛入狱后，警方审讯，凶手称两年前同学会上，被害者的一些话，让他两年来过得不舒服。</p>
 <p>原来凶手高中毕业考入川大，自己觉得是清华北大的料，便退学复读，次年考入西安交大硕博连读，后沉溺游戏，多科被挂，勉强本科毕业，在重庆游走求职。被害者在同学会上知道后，规劝他，希望他重扬奋斗精神。据凶手的同学讲，很多人将其手机拉黑，都不愿与其来往。被害者一番好意，想拉同学一把，没想到惹来杀身之祸。</p>
 <p>这则新闻一出，引发了网络众人的热烈讨论，知乎上基本都在围绕“如何避免生活中的垃圾人”来回答。但我却很难过，因为很少有人去关注凶手的心理。在我看来，凶手在犯罪前就一直是典型的固定思维缺点的受害者，明明手里攥着一副好牌，硬生生被自己打烂了。想要用不断想证明自己的聪明和天赋，但却接受不了失败，觉得失败就是人生中不可饶恕的污点，不会从失败中学习和纠正错误。在经历失败后，固定型思维者尝试修复自己的自尊，就去责备他人或者找借口，把自己失败的责任推到别人的身上。不幸的是，被害者刚好这时充当了他修复自尊的借口。</p>
-<p><img src="/toutu.jpg"></p>
+<p><img src="/2018/07/28/23mindset/toutu.jpg"></p>
 <p>“固定型思维”这个概念出自心理学博士卡罗尔·德韦克的《终身成长》，与之对应的就是成长型思维。</p>
 <p>当然，并不是说拥有固定型思维者就是犯罪的摇篮，只是上述案例中凶手心理十分极端，又刚好命中了固定型思维的N个缺点，本来可以及时识别自己的思维模式，从而杜绝走到如今这一步。</p>
 <p>在书中对固定型思维的定义就是</p>
@@ -4398,6 +4403,72 @@
         <tag>成长</tag>
         <tag>2018年书单</tag>
         <tag>书评</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三步教你做汉服褶裙（超简单！）</title>
+    <url>/2018/06/24/16%E4%B8%89%E6%AD%A5%E6%95%99%E4%BD%A0%E5%81%9A%E6%B1%89%E6%9C%8D%E8%A4%B6%E8%A3%99/</url>
+    <content><![CDATA[<blockquote>
+<p>第一步：裁布<br>第二布：捏褶<br>第三步：缝合</p>
+</blockquote>
+<p>对不起！!!我标题党了！以上三步就能做出条裙子，只能靠想了！我还用熬夜捏褶吗？！</p>
+<p><strong>不过既然你看了，我也得厚道点真正教你做一条褶裙。以下真货来了，请注意。</strong></p>
+<h1 id="前言：为什么是做褶裙？"><a href="#前言：为什么是做褶裙？" class="headerlink" title="前言：为什么是做褶裙？"></a>前言：为什么是做褶裙？</h1><p>当然是因为褶裙相对于其他来说简单啦！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-6d22b6530190f4d6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>其实说白了就是一个裙片，穿的时候是围合一圈半，如下图示：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-404c0019858bcb4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>话说咱们的祖先就是聪明，把原始社会一片树叶的想法，用上各种舒服漂亮的布料，往腰上一系，穿戴方便、脱下更方便~</p>
+<p>另外，现代褶裙，也可以叫百褶裙，是裙子里比较简单的，计算好褶子的长度，加上自己的腰围，只要一块布，就可以轻松做出属于自己的褶裙啦！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-5846735c0a49c948.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><blockquote>
+<p>材料：布料</p>
+</blockquote>
+<blockquote>
+<p>所需工具：缝纫机或手缝、剪刀、尺子</p>
+</blockquote>
+<h1 id="一、用什么面料"><a href="#一、用什么面料" class="headerlink" title="一、用什么面料"></a>一、用什么面料</h1><p>无论是汉服还是现代日常褶裙，用料真是太多了！这里以汉服为例，一般汉服里裙子多为棉、纱罗、真丝等等。考虑到成本问题，咱们还是不拿真丝轻易做实验了，现在穿的话，一片式汉服也可以用好看的雪纺、或者薄棉麻，要有垂感、飘逸的感觉。</p>
+<p>所以，面料现在选用单层不透的雪纺也挺合适的，花样和色款都挺多。</p>
+<h1 id="二、裁布"><a href="#二、裁布" class="headerlink" title="二、裁布"></a>二、裁布</h1><p>回到一片式的汉服褶裙上，选完面料，最重要一步就是计算你要买多长的布！</p>
+<p>现在的布一幅基本是90cm<del>150cm，幅宽是什么意思呢？就是一匹布宽度在买的时候是固定的90cm</del>150cm，你要告诉卖家的是你要买多少米，比如买一米150cm幅宽的布，得到的布就是100cm*150cm。我们裁剪的时候都是以布的纵向来裁，术语就是裁经向线，面料是有布边的，与布边平行的纱线方向就是经向：<br><img src="http://upload-images.jianshu.io/upload_images/48414-aafee1da19d7a1cb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>一般汉服一片式褶裙，就按经向裁也行，需要3~3.5米的布就够了。</p>
+<h1 id="三、捏褶"><a href="#三、捏褶" class="headerlink" title="三、捏褶"></a>三、捏褶</h1><p>需要的数据有：</p>
+<ul>
+<li>腰围</li>
+<li>裙身及地长度</li>
+<li>褶子量及个数</li>
+</ul>
+<p>首先，做一个汉服褶裙，需围合一周半，也就是说裙头（裙腰）是我们的腰围1.5倍（或更多），所以知道腰围就知道我们的裙头需要多长；</p>
+<p>第二，汉服褶裙需要及地，所以就需要量从腰到脚跟的数据，作为裙长；</p>
+<p>第三，最重要的当然是褶子，褶子决定了你下摆的波浪有多少个，才能做出那种腰身细、下摆宽大褶皱的效果，另外褶子也是计算布量的一部分。一般的裙褶多为顺褶，也就是这样的：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-73bdf1738368b8df.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>一个褶子，包括露出的褶子部分，和被捏合在地下的布量，所以我们说褶宽指的是这两个部分。</p>
+<p>裙腰也就是露出褶子宽*褶子数。你可以决定你想要的褶宽和露出褶子宽。</p>
+<p>我琢磨了个公式，可以快速算出褶子数和裙腰来，大家可以调整褶宽数据来得到符合自己的裙腰。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-3849e7033c59991c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="四、缝褶"><a href="#四、缝褶" class="headerlink" title="四、缝褶"></a>四、缝褶</h1><p>在缝之前，新手最好用珠针把捏的褶别起来，一边缝一边拆，这样不容易缝错缝歪，像我这样：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-a0752a1cf7dd951e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>然后拆一个缝一个。</p>
+<h1 id="五、做腰"><a href="#五、做腰" class="headerlink" title="五、做腰"></a>五、做腰</h1><p>腰可以宽一点7~10cm左右，裁一片宽16cm（对折7cm宽，加两边1cm作缝），长比捏完褶后的裙头长一点的布条。</p>
+<p>对折熨烫，把两面布料折边，底下的那面比上面长一点：<br><img src="http://upload-images.jianshu.io/upload_images/48414-3e2859d4c85f3b83.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>缝的时候把折边短的，面对面贴着裙正面，按折线缝制，然后把底下长的那边翻到另一面，继续在刚才裙正面的缝线，再缝一遍，刚好能把底下长出的裙腰缝合。</p>
+<p>做的时候忘拍过程，拿一个网上的图演示:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-2b8835bf8aff5dae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-65acf7eec99b4923.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>把裙头包在腰里，缝合。做完是这样：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-3f25bb8f720bff5c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="六、制作系带"><a href="#六、制作系带" class="headerlink" title="六、制作系带"></a>六、制作系带</h1><p>系带约1.5米长，反面三边只缝两边，一头那边做留口，翻到正面。<br><img src="http://upload-images.jianshu.io/upload_images/48414-8ddc4202369a4856.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>把系带缝在裙腰两头，</p>
+<h1 id="七、把裙子卷起包边、熨烫"><a href="#七、把裙子卷起包边、熨烫" class="headerlink" title="七、把裙子卷起包边、熨烫"></a>七、把裙子卷起包边、熨烫</h1><p>就是把裙子缝合的边折起来包边，不让毛边露出来，整理细节，熨烫所有的褶子。</p>
+<p>完成啦~如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-339e924c4ae3cd2c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="福利预告："><a href="#福利预告：" class="headerlink" title="福利预告："></a>福利预告：</h1><p>汉服褶裙是入手最简单的，不过考虑到日常穿着问题~下次我再出一个日常褶裙（腰用松紧带那种）教程！保证随时随地都可以穿哦！</p>
+]]></content>
+      <categories>
+        <category>「你好，手工艺」</category>
+      </categories>
+      <tags>
+        <tag>想做汉服系列</tag>
+        <tag>服装教程</tag>
       </tags>
   </entry>
   <entry>
@@ -4494,98 +4565,6 @@
       </tags>
   </entry>
   <entry>
-    <title>三步教你做汉服褶裙（超简单！）</title>
-    <url>/2018/06/24/16%E4%B8%89%E6%AD%A5%E6%95%99%E4%BD%A0%E5%81%9A%E6%B1%89%E6%9C%8D%E8%A4%B6%E8%A3%99/</url>
-    <content><![CDATA[<blockquote>
-<p>第一步：裁布<br>第二布：捏褶<br>第三步：缝合</p>
-</blockquote>
-<p>对不起！!!我标题党了！以上三步就能做出条裙子，只能靠想了！我还用熬夜捏褶吗？！</p>
-<p><strong>不过既然你看了，我也得厚道点真正教你做一条褶裙。以下真货来了，请注意。</strong></p>
-<h1 id="前言：为什么是做褶裙？"><a href="#前言：为什么是做褶裙？" class="headerlink" title="前言：为什么是做褶裙？"></a>前言：为什么是做褶裙？</h1><p>当然是因为褶裙相对于其他来说简单啦！</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-6d22b6530190f4d6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>其实说白了就是一个裙片，穿的时候是围合一圈半，如下图示：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-404c0019858bcb4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>话说咱们的祖先就是聪明，把原始社会一片树叶的想法，用上各种舒服漂亮的布料，往腰上一系，穿戴方便、脱下更方便~</p>
-<p>另外，现代褶裙，也可以叫百褶裙，是裙子里比较简单的，计算好褶子的长度，加上自己的腰围，只要一块布，就可以轻松做出属于自己的褶裙啦！</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-5846735c0a49c948.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><blockquote>
-<p>材料：布料</p>
-</blockquote>
-<blockquote>
-<p>所需工具：缝纫机或手缝、剪刀、尺子</p>
-</blockquote>
-<h1 id="一、用什么面料"><a href="#一、用什么面料" class="headerlink" title="一、用什么面料"></a>一、用什么面料</h1><p>无论是汉服还是现代日常褶裙，用料真是太多了！这里以汉服为例，一般汉服里裙子多为棉、纱罗、真丝等等。考虑到成本问题，咱们还是不拿真丝轻易做实验了，现在穿的话，一片式汉服也可以用好看的雪纺、或者薄棉麻，要有垂感、飘逸的感觉。</p>
-<p>所以，面料现在选用单层不透的雪纺也挺合适的，花样和色款都挺多。</p>
-<h1 id="二、裁布"><a href="#二、裁布" class="headerlink" title="二、裁布"></a>二、裁布</h1><p>回到一片式的汉服褶裙上，选完面料，最重要一步就是计算你要买多长的布！</p>
-<p>现在的布一幅基本是90cm<del>150cm，幅宽是什么意思呢？就是一匹布宽度在买的时候是固定的90cm</del>150cm，你要告诉卖家的是你要买多少米，比如买一米150cm幅宽的布，得到的布就是100cm*150cm。我们裁剪的时候都是以布的纵向来裁，术语就是裁经向线，面料是有布边的，与布边平行的纱线方向就是经向：<br><img src="http://upload-images.jianshu.io/upload_images/48414-aafee1da19d7a1cb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>一般汉服一片式褶裙，就按经向裁也行，需要3~3.5米的布就够了。</p>
-<h1 id="三、捏褶"><a href="#三、捏褶" class="headerlink" title="三、捏褶"></a>三、捏褶</h1><p>需要的数据有：</p>
-<ul>
-<li>腰围</li>
-<li>裙身及地长度</li>
-<li>褶子量及个数</li>
-</ul>
-<p>首先，做一个汉服褶裙，需围合一周半，也就是说裙头（裙腰）是我们的腰围1.5倍（或更多），所以知道腰围就知道我们的裙头需要多长；</p>
-<p>第二，汉服褶裙需要及地，所以就需要量从腰到脚跟的数据，作为裙长；</p>
-<p>第三，最重要的当然是褶子，褶子决定了你下摆的波浪有多少个，才能做出那种腰身细、下摆宽大褶皱的效果，另外褶子也是计算布量的一部分。一般的裙褶多为顺褶，也就是这样的：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-73bdf1738368b8df.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>一个褶子，包括露出的褶子部分，和被捏合在地下的布量，所以我们说褶宽指的是这两个部分。</p>
-<p>裙腰也就是露出褶子宽*褶子数。你可以决定你想要的褶宽和露出褶子宽。</p>
-<p>我琢磨了个公式，可以快速算出褶子数和裙腰来，大家可以调整褶宽数据来得到符合自己的裙腰。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-3849e7033c59991c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h1 id="四、缝褶"><a href="#四、缝褶" class="headerlink" title="四、缝褶"></a>四、缝褶</h1><p>在缝之前，新手最好用珠针把捏的褶别起来，一边缝一边拆，这样不容易缝错缝歪，像我这样：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-a0752a1cf7dd951e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>然后拆一个缝一个。</p>
-<h1 id="五、做腰"><a href="#五、做腰" class="headerlink" title="五、做腰"></a>五、做腰</h1><p>腰可以宽一点7~10cm左右，裁一片宽16cm（对折7cm宽，加两边1cm作缝），长比捏完褶后的裙头长一点的布条。</p>
-<p>对折熨烫，把两面布料折边，底下的那面比上面长一点：<br><img src="http://upload-images.jianshu.io/upload_images/48414-3e2859d4c85f3b83.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>缝的时候把折边短的，面对面贴着裙正面，按折线缝制，然后把底下长的那边翻到另一面，继续在刚才裙正面的缝线，再缝一遍，刚好能把底下长出的裙腰缝合。</p>
-<p>做的时候忘拍过程，拿一个网上的图演示:</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-2b8835bf8aff5dae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-65acf7eec99b4923.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>把裙头包在腰里，缝合。做完是这样：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-3f25bb8f720bff5c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h1 id="六、制作系带"><a href="#六、制作系带" class="headerlink" title="六、制作系带"></a>六、制作系带</h1><p>系带约1.5米长，反面三边只缝两边，一头那边做留口，翻到正面。<br><img src="http://upload-images.jianshu.io/upload_images/48414-8ddc4202369a4856.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>把系带缝在裙腰两头，</p>
-<h1 id="七、把裙子卷起包边、熨烫"><a href="#七、把裙子卷起包边、熨烫" class="headerlink" title="七、把裙子卷起包边、熨烫"></a>七、把裙子卷起包边、熨烫</h1><p>就是把裙子缝合的边折起来包边，不让毛边露出来，整理细节，熨烫所有的褶子。</p>
-<p>完成啦~如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-339e924c4ae3cd2c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h1 id="福利预告："><a href="#福利预告：" class="headerlink" title="福利预告："></a>福利预告：</h1><p>汉服褶裙是入手最简单的，不过考虑到日常穿着问题~下次我再出一个日常褶裙（腰用松紧带那种）教程！保证随时随地都可以穿哦！</p>
-]]></content>
-      <categories>
-        <category>「你好，手工艺」</category>
-      </categories>
-      <tags>
-        <tag>想做汉服系列</tag>
-        <tag>服装教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我们心里都住着另一个自己</title>
-    <url>/2018/06/24/18another-me/</url>
-    <content><![CDATA[<p>这是我的第4个手作故事</p>
-<p>面对世界，我们都是双子座。外面一个我，里面一个我。</p>
-<p>有的外表是个汉子，内心住着一个穿蕾丝蓬蓬裙的小公举；</p>
-<p>有的长相凶神恶煞，内心却是个温柔细腻的憨厚大白；</p>
-<p>有的瘦骨嶙峋，内心如饕餮降世，牛肠马肚；</p>
-<p>有时候，人到底是什么样，不能从外表看出。</p>
-<p>我们做的娃娃，一窥内心。</p>
-<p><img src="/1.jpg"><br><img src="/2.jpg"></p>
-<p>▲活在中国的宫廷风（一个蒙古妹子做的）</p>
-<p><img src="/3.jpg"><br><img src="/4.jpg"></p>
-<p>▲内心住着的是二次元布偶人物（另一个妹纸做的）</p>
-<p><img src="/5.jpg"><br><img src="/6.jpg"></p>
-<p>▲活在现代的仙风道骨（我做哒）</p>
-<p>那你呢？心里住着什么样的你？</p>
-]]></content>
-      <categories>
-        <category>「你好，手工艺」</category>
-      </categories>
-      <tags>
-        <tag>想做衣服系列</tag>
-        <tag>娃衣</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>认识到这个真相，轻而易举地拥有富足</title>
     <url>/2018/06/24/19be-what-we-want-to-be/</url>
     <content><![CDATA[<blockquote>
@@ -4661,6 +4640,32 @@
       </categories>
       <tags>
         <tag>感悟</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们心里都住着另一个自己</title>
+    <url>/2018/06/24/18another-me/</url>
+    <content><![CDATA[<p>这是我的第4个手作故事</p>
+<p>面对世界，我们都是双子座。外面一个我，里面一个我。</p>
+<p>有的外表是个汉子，内心住着一个穿蕾丝蓬蓬裙的小公举；</p>
+<p>有的长相凶神恶煞，内心却是个温柔细腻的憨厚大白；</p>
+<p>有的瘦骨嶙峋，内心如饕餮降世，牛肠马肚；</p>
+<p>有时候，人到底是什么样，不能从外表看出。</p>
+<p>我们做的娃娃，一窥内心。</p>
+<p><img src="/2018/06/24/18another-me/1.jpg"><br><img src="/2018/06/24/18another-me/2.jpg"></p>
+<p>▲活在中国的宫廷风（一个蒙古妹子做的）</p>
+<p><img src="/2018/06/24/18another-me/3.jpg"><br><img src="/2018/06/24/18another-me/4.jpg"></p>
+<p>▲内心住着的是二次元布偶人物（另一个妹纸做的）</p>
+<p><img src="/2018/06/24/18another-me/5.jpg"><br><img src="/2018/06/24/18another-me/6.jpg"></p>
+<p>▲活在现代的仙风道骨（我做哒）</p>
+<p>那你呢？心里住着什么样的你？</p>
+]]></content>
+      <categories>
+        <category>「你好，手工艺」</category>
+      </categories>
+      <tags>
+        <tag>想做衣服系列</tag>
+        <tag>娃衣</tag>
       </tags>
   </entry>
   <entry>
@@ -4772,6 +4777,79 @@
       </tags>
   </entry>
   <entry>
+    <title>“想到就去做到”-战胜拖延症的力量你也可以拥有</title>
+    <url>/2018/06/24/21do%20it%20now/</url>
+    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>拖延症，这个恶毒的妖怪，让人一空下来，空虚感就如同潮水般涌来，填满整个身体，全身就像被灌了铅似的，黏在椅子上不想起来，不想做任何事情，虽然明明知道有好多重要的事要做，却总打不起精神。曾美名其曰，没有动力。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-d83d40a23dfd8268.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>可是，这么逃避，依然会有不同的事情向自己奔来，继续压得人喘不过气。</p>
+<p>此刻想到就去做到，是个特别强大的力量。</p>
+<p>如果觉得自己有顽固的拖延症，那说明你还未开发出自己“想到就去做到”的潜能。</p>
+<p>怎么开发这种力量？请好好看看命运安排在你身边的人。所有遇到的人都不是偶然，自己带着课题来到这个世界上，从生到死都是一种学习，那么身边的人，就是学习的一部分，无论好于坏。</p>
+<p>我拖延症晚期这么久，才突然发现自己身边居然有这么多行动力超强的人！他们有的在事业上风生水起，有的在生活中情调满满，有的活出了自己想要的样子，每一个我都好喜欢。</p>
+<p>#2<br>第一个是在李欣频课程上认识的笑笑生，同时也是我服装设计课的同班同学。</p>
+<p>之前一次聊天，得知她今年的主题是分享，分享一切美好的事物。</p>
+<p>结果不出几天，就看到她开启了简书，打理起了公众号，在群里活跃分享。几乎每隔一天就会产出高质量的文章，并且真的一步步分享着她所认为有趣的东西。<br><img src="http://upload-images.jianshu.io/upload_images/48414-661d2e0a1d708dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>小小的身体，蕴含巨大能量，居然能轻松跑完半马，所以她分享了好些健身方法；</p>
+<p>想要减肥，那就号召大家一起进群打卡，推荐各类健身软件；</p>
+<p>喜欢画画，就跟大家一起每天打卡画一幅小画，每天几分钟，一年积攒下来画工也会长进一大步。</p>
+<p>短短一段时间，就能看见她勤奋又活跃地做了好多事情，在工作之余，每天都在运营维系着微信群，跟各种人互动，汇报自己的梦想进程。这种力量，让我深为感动。</p>
+<p>她曾是一只产品汪，也做过新媒体，深知大众兴趣G点与如何将自己的兴趣与他人需求完美结合，创造出爆款信息。她的身上，除了“想到就去做到”这种能力，还有创建自我品牌的潜在力量。</p>
+<p>我将她当作学习的对象，总结方法如下：</p>
+<blockquote>
+<ol>
+<li>快速执行，想到就立马去做，宇宙汇给你意想不到的回报。</li>
+<li>占据一个自己所在领域最专业的平台，比如写作在简书，不用担心初期很粗糙，去做，不要害怕。</li>
+<li>内容很重要，第一当然要从自己喜爱的方面着手，第二不要愁每天都没有新的原创感悟，不是说分享就必须写长篇大论的心得，也可以通过各种整理进行分享，比如参加完秋叶老师的课，整理出PPT精华笔记，也是一种利人利己的事情。</li>
+<li>多写大家都在关注和热衷的事情，在热点中随时建立自己的思考，并且阐述出来。</li>
+<li>标题很重要，作为运营，深知一篇文章内容优秀的同时，一个吸睛的标题必不可少。要让人好奇、关键主题词要突出（比如健身、PPT等）、有一定悬念让你想要点进去的欲望。</li>
+<li>宣传、分享，不能自己一个人自嗨，自己有任何目标，一定在主页、微信、群里跟朋友们汇报，将每一次的文章分享到同频率的地方，让更多人了解和理解自己，收获鼓励，作为自己继续的动力。</li>
+<li>跟不同领域、不同年龄层次的人多交流，会收获到更多不一样的视野。</li>
+</ol>
+</blockquote>
+<p>#3</p>
+<p>第二个是通过学长认识的妹子小懒。流浪画家，现在建立了自己的画室，每周2天通过教授油画来获取收入，同时通过青旅轻松回收画室成本。不得不说，她是我见过艺术与商业结合的很不错的女生。</p>
+<p>初见小懒，瘦瘦弱弱，穿着波西米亚民族风格的衣裙，不拘小节地直接圈坐在画室地上，画室到处都是完成的画板、颜料、笔刷。她不是那种一见人就爽朗开怀大笑似的自来熟女汉子，而是有点慢热，做起事来看似漫不经心，时间长了，才会暴露本性跟你说点重口味、小段子。</p>
+<p>其实才是个刚毕业差不多一年的女生，这也是我佩服的地方。</p>
+<p>生活与经历可谓丰富多彩。因为大学专业是设计，所以大二就开始各种兼职、揽私活赚钱，还给儿童刊物画了插画，一有了钱就全国各地到处旅游，潇洒的不能再让人羡慕了！我真是大呼，谁说艺术生就是费钱，看这专业学的，就是快速来钱的本事啊。</p>
+<p>喜欢倒卖小玩意儿，她曾调侃自己从小特别抠，特喜欢倒卖些小东西赚钱，这份率真和小机灵简直就是萌的不行。</p>
+<p>后来毕业觉得上学时工作的够多了，而且发现自由职业也能养活自己，索性就当起了流浪画家。教油画、毕加索抽象画、书签包包手绘，还有印度海娜纹身！丰富多彩，有滋有味。</p>
+<p>起初辗转在三个地方，一周不同时候去授课教人油画，后来还经历了租四合院办艺栈却被合伙人坑惨的事，一路说来尽是跌宕起伏。还好，现在终于有了自己的画室，每天过着玩着两只小猫，和着恋人琴声画画的日子。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-2c0fc5e1c2606928.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>不过别以为别人表面上的惬意和轻松就是一切，她从来都是时时刻刻想着如何开拓新的课程、找到新的收入渠道，从来就不会认为艺术只是曲高和寡。那小心思细到一瞧见市面上新的课程就在想自己能不能开发，天天琢磨着去学点新的东西。对任何事情都怀有强烈的好奇心和求知欲望，像所有创业者一样，她看任何事情都能与自己的事业联系到一起。</p>
+<p>在她身上，我学到的是有关金钱的课题。一直以来都认为艺术谈到钱就是俗，正如大家一提到艺术家就联想到吃糠喝粥一贫如洗的形象，国内不像国外有很多机会去通过艺术赚钱，但也不是我们想象的那样清苦。艺术自然是要成为一种生活方式，无关名利，可每一次创作都有明确的目的，西方艺术家之所以摆脱匠人身份，就是将创作变成研究，并不是每一次都是凭灵感，而是靠思维。创作可以是冲动的，但思维一定是清晰的，每一步都知道自己在做什么。创作之后，如何推广，也是有明确的目的和步骤。</p>
+<p>这菇凉给我最大的力量就是，遵从自己的内心，接受自己本来的样子，想到就去做，艺术是有价的，曲高和寡才是阳春白雪，而且原来艺术可以这样玩。</p>
+<p>在她这里，我看到了很多对在校大学生或自由职业者有启发的点：</p>
+<blockquote>
+<ol>
+<li>如果你是大学生，请彻底利用好四年大学时光。我一直倡导大学生多体验、多尝试。无论你是什么专业，务必在大学四年里，将自己的一两个兴趣变成技能，如果你不是生活无忧钱财充足的人，请一定要尝试着将技能变现，各种办法进行尝试，找到你的主专长，另外也可以作为第二专长副业。</li>
+<li>既然是金钱课题，那就要重新定义一下有关金钱的观念，无论是大学生还是自由职业者，金钱对于每个人都很重要，这无需置疑，金钱不是邪恶也不是善良的，它没有属性。不要耻于承认自己对于金钱的向往，它是人在肉身世界里维持存活的一个手段，就像为了活下去，要吃东西要睡觉一样，这是一件很正常的追求。</li>
+<li>如果你是自由职业者，对于自由的概念，请改成：能够自由地拒绝自己不喜欢做的事情。首先，自由的前提是，要锻炼强大的自制力，才能让自己从早上温暖的被窝里醒来，开始一天的工作；需要学会适合自己的时间管理，才不会天天一事无成或忙的跟狗似的穷忙；还要逼迫自己去花时间冥想，清晰自己到底想要成为的样子和拥有的生活，只有心中有用清晰的画面或者感觉，你就可以安心地去做事情，所有需要的资源、人、机会，宇宙会为你准备好。真的，可以试一试。</li>
+<li>生活中会突然遇到很多意想不到的事情，请以开放的心态去迎接。就像你突然被毫无所知的专业录取，你突然1、2个月没有了收入，请相信，这自有安排。你需要做的只是，继续做你计划好的事情，不要因此而焦虑、烦躁、拖延。生命还有那么长，想一想10年20年以后的自己，会因为现在的这点问题收到多大的影响吗？如果能解决，那还愁什么；如果不能解决，更不用愁——反正愁了也没用。</li>
+</ol>
+</blockquote>
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>虽然我还在学习中，“想到就去做到”的力量也影响着我。</p>
+<p>在笑笑生的身上学到的，我开始摆脱自嗨的状态，重新开始每天写日记，记录每一天的心情感悟；重新开启去年的每日千字文项目，立志要将自己2016年的计划都一一达成。</p>
+<p>写自己刚兴趣的东西，并且能给大家带去美好的感受，所以写了《凭什么一个70岁老女人都能撩动小鲜肉》，介绍一个美的女人和电影里搭配棒棒的衣服，很开心被推荐上首页；</p>
+<p>关照内心，写《原力觉醒的心路历程——2016年半年复盘》，收获了一大堆同频率的朋友；</p>
+<p>专注热点，刚好看了大鱼，在里面感受到了来自灵性的力量，写了《大鱼海棠 我为这份幼稚买单》；</p>
+<p>关于事业，自己决定做手作工坊，晒出的很多手作作品，收到朋友们的支持和赞赏，也成为了自己继续的动力。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-bbbdfdef2c64024c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在小懒身上学到的，我因此完成了2016年其中一个目标：做一次公开分享会。在上周日，举办了一场关于草木扎染的分享体验课，在与陌生朋友的互动中，有一次体验到了中国传统文化的魅力，那种与自然和天地融合的感觉，通过一次次布于染料的结合，创造出了一系列随机又美妙的图案。</p>
+<p>紧接着，开通了微店，我想要更多人了解和认同手作的意义，绘画和陶艺是艺术品，手作也是。它并不是单纯的裁缝工艺，而是身与心的冥想，就像音乐治疗一样，手作也有治愈的作用。在那个完成作品的时空里，没有别人，只有自己，这个时候，你有时间去想自己是什么人，想做什么，去思考那些跟世俗无关的，更接近生命本源的东西，或者只是纯粹感受那当下的宁静。</p>
+<p>一种动手去创作的事，都是在这个躁动的社会中，一点属于自己的时间。手作创造美，因创造而遇见温暖的你。</p>
+<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>“想到就去做到”，力量并不神秘，立马去做，之后的事情就交给宇宙帮你处理。而你只需要去做，并且关照内心就好。</p>
+<p>我都能办到，你也行！希望看这篇文章的你，停下手中的事，想想身边的人，他们身上有什么是你值得学习的力量吧。</p>
+<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>这篇文章也是我2016年计划，<strong>「写100个令我感动的故事」</strong> 和 <strong>【在身边的人身上挖掘365件有趣的事情】</strong>进度之一。<br>到目前为止：<br>写了2个令我感动的故事，剩余98个。<br>写了10件有趣的事情，剩余355件。</p>
+]]></content>
+      <categories>
+        <category>「进化之路」</category>
+      </categories>
+      <tags>
+        <tag>感悟</tag>
+        <tag>拖延症</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>原力觉醒的心路历程——2016年半年复盘</title>
     <url>/2018/06/24/22half-a-year-in-2016/</url>
     <content><![CDATA[<h3 id="一-动荡的一年，保本保命"><a href="#一-动荡的一年，保本保命" class="headerlink" title="一 动荡的一年，保本保命"></a>一 动荡的一年，保本保命</h3><p>终于舍得来写这篇复盘了。</p>
@@ -4858,79 +4936,6 @@
       </tags>
   </entry>
   <entry>
-    <title>“想到就去做到”-战胜拖延症的力量你也可以拥有</title>
-    <url>/2018/06/24/21do%20it%20now/</url>
-    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>拖延症，这个恶毒的妖怪，让人一空下来，空虚感就如同潮水般涌来，填满整个身体，全身就像被灌了铅似的，黏在椅子上不想起来，不想做任何事情，虽然明明知道有好多重要的事要做，却总打不起精神。曾美名其曰，没有动力。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-d83d40a23dfd8268.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>可是，这么逃避，依然会有不同的事情向自己奔来，继续压得人喘不过气。</p>
-<p>此刻想到就去做到，是个特别强大的力量。</p>
-<p>如果觉得自己有顽固的拖延症，那说明你还未开发出自己“想到就去做到”的潜能。</p>
-<p>怎么开发这种力量？请好好看看命运安排在你身边的人。所有遇到的人都不是偶然，自己带着课题来到这个世界上，从生到死都是一种学习，那么身边的人，就是学习的一部分，无论好于坏。</p>
-<p>我拖延症晚期这么久，才突然发现自己身边居然有这么多行动力超强的人！他们有的在事业上风生水起，有的在生活中情调满满，有的活出了自己想要的样子，每一个我都好喜欢。</p>
-<p>#2<br>第一个是在李欣频课程上认识的笑笑生，同时也是我服装设计课的同班同学。</p>
-<p>之前一次聊天，得知她今年的主题是分享，分享一切美好的事物。</p>
-<p>结果不出几天，就看到她开启了简书，打理起了公众号，在群里活跃分享。几乎每隔一天就会产出高质量的文章，并且真的一步步分享着她所认为有趣的东西。<br><img src="http://upload-images.jianshu.io/upload_images/48414-661d2e0a1d708dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>小小的身体，蕴含巨大能量，居然能轻松跑完半马，所以她分享了好些健身方法；</p>
-<p>想要减肥，那就号召大家一起进群打卡，推荐各类健身软件；</p>
-<p>喜欢画画，就跟大家一起每天打卡画一幅小画，每天几分钟，一年积攒下来画工也会长进一大步。</p>
-<p>短短一段时间，就能看见她勤奋又活跃地做了好多事情，在工作之余，每天都在运营维系着微信群，跟各种人互动，汇报自己的梦想进程。这种力量，让我深为感动。</p>
-<p>她曾是一只产品汪，也做过新媒体，深知大众兴趣G点与如何将自己的兴趣与他人需求完美结合，创造出爆款信息。她的身上，除了“想到就去做到”这种能力，还有创建自我品牌的潜在力量。</p>
-<p>我将她当作学习的对象，总结方法如下：</p>
-<blockquote>
-<ol>
-<li>快速执行，想到就立马去做，宇宙汇给你意想不到的回报。</li>
-<li>占据一个自己所在领域最专业的平台，比如写作在简书，不用担心初期很粗糙，去做，不要害怕。</li>
-<li>内容很重要，第一当然要从自己喜爱的方面着手，第二不要愁每天都没有新的原创感悟，不是说分享就必须写长篇大论的心得，也可以通过各种整理进行分享，比如参加完秋叶老师的课，整理出PPT精华笔记，也是一种利人利己的事情。</li>
-<li>多写大家都在关注和热衷的事情，在热点中随时建立自己的思考，并且阐述出来。</li>
-<li>标题很重要，作为运营，深知一篇文章内容优秀的同时，一个吸睛的标题必不可少。要让人好奇、关键主题词要突出（比如健身、PPT等）、有一定悬念让你想要点进去的欲望。</li>
-<li>宣传、分享，不能自己一个人自嗨，自己有任何目标，一定在主页、微信、群里跟朋友们汇报，将每一次的文章分享到同频率的地方，让更多人了解和理解自己，收获鼓励，作为自己继续的动力。</li>
-<li>跟不同领域、不同年龄层次的人多交流，会收获到更多不一样的视野。</li>
-</ol>
-</blockquote>
-<p>#3</p>
-<p>第二个是通过学长认识的妹子小懒。流浪画家，现在建立了自己的画室，每周2天通过教授油画来获取收入，同时通过青旅轻松回收画室成本。不得不说，她是我见过艺术与商业结合的很不错的女生。</p>
-<p>初见小懒，瘦瘦弱弱，穿着波西米亚民族风格的衣裙，不拘小节地直接圈坐在画室地上，画室到处都是完成的画板、颜料、笔刷。她不是那种一见人就爽朗开怀大笑似的自来熟女汉子，而是有点慢热，做起事来看似漫不经心，时间长了，才会暴露本性跟你说点重口味、小段子。</p>
-<p>其实才是个刚毕业差不多一年的女生，这也是我佩服的地方。</p>
-<p>生活与经历可谓丰富多彩。因为大学专业是设计，所以大二就开始各种兼职、揽私活赚钱，还给儿童刊物画了插画，一有了钱就全国各地到处旅游，潇洒的不能再让人羡慕了！我真是大呼，谁说艺术生就是费钱，看这专业学的，就是快速来钱的本事啊。</p>
-<p>喜欢倒卖小玩意儿，她曾调侃自己从小特别抠，特喜欢倒卖些小东西赚钱，这份率真和小机灵简直就是萌的不行。</p>
-<p>后来毕业觉得上学时工作的够多了，而且发现自由职业也能养活自己，索性就当起了流浪画家。教油画、毕加索抽象画、书签包包手绘，还有印度海娜纹身！丰富多彩，有滋有味。</p>
-<p>起初辗转在三个地方，一周不同时候去授课教人油画，后来还经历了租四合院办艺栈却被合伙人坑惨的事，一路说来尽是跌宕起伏。还好，现在终于有了自己的画室，每天过着玩着两只小猫，和着恋人琴声画画的日子。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-2c0fc5e1c2606928.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>不过别以为别人表面上的惬意和轻松就是一切，她从来都是时时刻刻想着如何开拓新的课程、找到新的收入渠道，从来就不会认为艺术只是曲高和寡。那小心思细到一瞧见市面上新的课程就在想自己能不能开发，天天琢磨着去学点新的东西。对任何事情都怀有强烈的好奇心和求知欲望，像所有创业者一样，她看任何事情都能与自己的事业联系到一起。</p>
-<p>在她身上，我学到的是有关金钱的课题。一直以来都认为艺术谈到钱就是俗，正如大家一提到艺术家就联想到吃糠喝粥一贫如洗的形象，国内不像国外有很多机会去通过艺术赚钱，但也不是我们想象的那样清苦。艺术自然是要成为一种生活方式，无关名利，可每一次创作都有明确的目的，西方艺术家之所以摆脱匠人身份，就是将创作变成研究，并不是每一次都是凭灵感，而是靠思维。创作可以是冲动的，但思维一定是清晰的，每一步都知道自己在做什么。创作之后，如何推广，也是有明确的目的和步骤。</p>
-<p>这菇凉给我最大的力量就是，遵从自己的内心，接受自己本来的样子，想到就去做，艺术是有价的，曲高和寡才是阳春白雪，而且原来艺术可以这样玩。</p>
-<p>在她这里，我看到了很多对在校大学生或自由职业者有启发的点：</p>
-<blockquote>
-<ol>
-<li>如果你是大学生，请彻底利用好四年大学时光。我一直倡导大学生多体验、多尝试。无论你是什么专业，务必在大学四年里，将自己的一两个兴趣变成技能，如果你不是生活无忧钱财充足的人，请一定要尝试着将技能变现，各种办法进行尝试，找到你的主专长，另外也可以作为第二专长副业。</li>
-<li>既然是金钱课题，那就要重新定义一下有关金钱的观念，无论是大学生还是自由职业者，金钱对于每个人都很重要，这无需置疑，金钱不是邪恶也不是善良的，它没有属性。不要耻于承认自己对于金钱的向往，它是人在肉身世界里维持存活的一个手段，就像为了活下去，要吃东西要睡觉一样，这是一件很正常的追求。</li>
-<li>如果你是自由职业者，对于自由的概念，请改成：能够自由地拒绝自己不喜欢做的事情。首先，自由的前提是，要锻炼强大的自制力，才能让自己从早上温暖的被窝里醒来，开始一天的工作；需要学会适合自己的时间管理，才不会天天一事无成或忙的跟狗似的穷忙；还要逼迫自己去花时间冥想，清晰自己到底想要成为的样子和拥有的生活，只有心中有用清晰的画面或者感觉，你就可以安心地去做事情，所有需要的资源、人、机会，宇宙会为你准备好。真的，可以试一试。</li>
-<li>生活中会突然遇到很多意想不到的事情，请以开放的心态去迎接。就像你突然被毫无所知的专业录取，你突然1、2个月没有了收入，请相信，这自有安排。你需要做的只是，继续做你计划好的事情，不要因此而焦虑、烦躁、拖延。生命还有那么长，想一想10年20年以后的自己，会因为现在的这点问题收到多大的影响吗？如果能解决，那还愁什么；如果不能解决，更不用愁——反正愁了也没用。</li>
-</ol>
-</blockquote>
-<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>虽然我还在学习中，“想到就去做到”的力量也影响着我。</p>
-<p>在笑笑生的身上学到的，我开始摆脱自嗨的状态，重新开始每天写日记，记录每一天的心情感悟；重新开启去年的每日千字文项目，立志要将自己2016年的计划都一一达成。</p>
-<p>写自己刚兴趣的东西，并且能给大家带去美好的感受，所以写了《凭什么一个70岁老女人都能撩动小鲜肉》，介绍一个美的女人和电影里搭配棒棒的衣服，很开心被推荐上首页；</p>
-<p>关照内心，写《原力觉醒的心路历程——2016年半年复盘》，收获了一大堆同频率的朋友；</p>
-<p>专注热点，刚好看了大鱼，在里面感受到了来自灵性的力量，写了《大鱼海棠 我为这份幼稚买单》；</p>
-<p>关于事业，自己决定做手作工坊，晒出的很多手作作品，收到朋友们的支持和赞赏，也成为了自己继续的动力。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-bbbdfdef2c64024c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>在小懒身上学到的，我因此完成了2016年其中一个目标：做一次公开分享会。在上周日，举办了一场关于草木扎染的分享体验课，在与陌生朋友的互动中，有一次体验到了中国传统文化的魅力，那种与自然和天地融合的感觉，通过一次次布于染料的结合，创造出了一系列随机又美妙的图案。</p>
-<p>紧接着，开通了微店，我想要更多人了解和认同手作的意义，绘画和陶艺是艺术品，手作也是。它并不是单纯的裁缝工艺，而是身与心的冥想，就像音乐治疗一样，手作也有治愈的作用。在那个完成作品的时空里，没有别人，只有自己，这个时候，你有时间去想自己是什么人，想做什么，去思考那些跟世俗无关的，更接近生命本源的东西，或者只是纯粹感受那当下的宁静。</p>
-<p>一种动手去创作的事，都是在这个躁动的社会中，一点属于自己的时间。手作创造美，因创造而遇见温暖的你。</p>
-<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>“想到就去做到”，力量并不神秘，立马去做，之后的事情就交给宇宙帮你处理。而你只需要去做，并且关照内心就好。</p>
-<p>我都能办到，你也行！希望看这篇文章的你，停下手中的事，想想身边的人，他们身上有什么是你值得学习的力量吧。</p>
-<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>这篇文章也是我2016年计划，<strong>「写100个令我感动的故事」</strong> 和 <strong>【在身边的人身上挖掘365件有趣的事情】</strong>进度之一。<br>到目前为止：<br>写了2个令我感动的故事，剩余98个。<br>写了10件有趣的事情，剩余355件。</p>
-]]></content>
-      <categories>
-        <category>「进化之路」</category>
-      </categories>
-      <tags>
-        <tag>感悟</tag>
-        <tag>拖延症</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>想做汉服的必看——汉服下裙结构图制作</title>
     <url>/2017/12/23/10hanfu-zhequn/</url>
     <content><![CDATA[<h2 id="普通褶裙"><a href="#普通褶裙" class="headerlink" title="普通褶裙"></a>普通褶裙</h2><p>就是我们通常说的一片式褶裙做法，以下只是示意图，非专业裁剪图哦。</p>
@@ -4938,7 +4943,7 @@
 <p>![](下裙 1.jpg)</p>
 <p>![](下裙 2.jpg)</p>
 <p>![](下裙 3.jpg)</p>
-<h2 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h2><p>另外分享一个我总结的褶子计算公式：<br><img src="/%E5%85%AC%E5%BC%8F1.png"><br><img src="/%E5%85%AC%E5%BC%8F2.png"></p>
+<h2 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h2><p>另外分享一个我总结的褶子计算公式：<br><img src="/2017/12/23/10hanfu-zhequn/%E5%85%AC%E5%BC%8F1.png"><br><img src="/2017/12/23/10hanfu-zhequn/%E5%85%AC%E5%BC%8F2.png"></p>
 ]]></content>
       <categories>
         <category>「你好，手工艺」</category>
@@ -4954,12 +4959,27 @@
 <p>服装结构图简单来说，就是告诉你这件衣服是怎么组成的，应该剪成哪几部分布料。</p>
 <p>今天，给大家分享一下汉服基本交领上襦的结构图，全是饭饭心血啊，无论是花费大量时间上网收集资料，还是根据自己经验改良，希望给各位想做汉服的亲们一点帮助。</p>
 <p>这么全的，可能就是全网独家哦！</p>
-<h1 id="科普衣制"><a href="#科普衣制" class="headerlink" title="科普衣制"></a>科普衣制</h1><p><img src="/%E7%A7%91%E6%99%AE1.jpg" alt="图片来源：宋军移民"></p>
-<h1 id="结构图"><a href="#结构图" class="headerlink" title="结构图"></a>结构图</h1><h2 id="一-平面结构图"><a href="#一-平面结构图" class="headerlink" title="一 平面结构图"></a>一 平面结构图</h2><p>下图是我根据史料和网络资料总结的结构图，<br><img src="/%E5%BD%A2%E5%88%B6.jpg"></p>
-<p>明代上襦参照图。以上裁剪法为现代很多人习惯使用的一种方法，若要严格按明代款式裁制，可参考下图，在挖领部位仿照裁剪。<br><img src="/%E6%98%8E%E4%BB%A3.jpg"></p>
+<h1 id="科普衣制"><a href="#科普衣制" class="headerlink" title="科普衣制"></a>科普衣制</h1><p><img src="/2017/12/23/11hanfu-jiaoling/%E7%A7%91%E6%99%AE1.jpg" alt="图片来源：宋军移民"></p>
+<h1 id="结构图"><a href="#结构图" class="headerlink" title="结构图"></a>结构图</h1><h2 id="一-平面结构图"><a href="#一-平面结构图" class="headerlink" title="一 平面结构图"></a>一 平面结构图</h2><p>下图是我根据史料和网络资料总结的结构图，<br><img src="/2017/12/23/11hanfu-jiaoling/%E5%BD%A2%E5%88%B6.jpg"></p>
+<p>明代上襦参照图。以上裁剪法为现代很多人习惯使用的一种方法，若要严格按明代款式裁制，可参考下图，在挖领部位仿照裁剪。<br><img src="/2017/12/23/11hanfu-jiaoling/%E6%98%8E%E4%BB%A3.jpg"></p>
 <h2 id="二-排布"><a href="#二-排布" class="headerlink" title="二 排布"></a>二 排布</h2><h3 id="不做接袖的排布图。"><a href="#不做接袖的排布图。" class="headerlink" title="不做接袖的排布图。"></a>不做接袖的排布图。</h3><p>布幅宽大于（汉服通袖长度+中缝缝头2+2个袖口缝头6至10），可以不做接袖。如果少量差一点点，不想做接袖的话，可以接一个袖缘。</p>
-<p>当然，即使布幅足够，也建议做接袖，一是为了保持传统的裁剪方式，二是为了节省更多布料，达到节俭和环保的目的。<br><img src="/%E4%B8%8D%E6%8E%A5%E8%A2%96.jpg" alt="来源：网络"></p>
-<h3 id="做接袖的排布图"><a href="#做接袖的排布图" class="headerlink" title="做接袖的排布图"></a>做接袖的排布图</h3><p>窄袖或者直袖的袖口大致在16——30之间，自己根据需要确定。<br><img src="/%E6%8E%A5%E8%A2%96.jpg" alt="来源：网络"></p>
+<p>当然，即使布幅足够，也建议做接袖，一是为了保持传统的裁剪方式，二是为了节省更多布料，达到节俭和环保的目的。<br><img src="/2017/12/23/11hanfu-jiaoling/%E4%B8%8D%E6%8E%A5%E8%A2%96.jpg" alt="来源：网络"></p>
+<h3 id="做接袖的排布图"><a href="#做接袖的排布图" class="headerlink" title="做接袖的排布图"></a>做接袖的排布图</h3><p>窄袖或者直袖的袖口大致在16——30之间，自己根据需要确定。<br><img src="/2017/12/23/11hanfu-jiaoling/%E6%8E%A5%E8%A2%96.jpg" alt="来源：网络"></p>
+]]></content>
+      <categories>
+        <category>「你好，手工艺」</category>
+      </categories>
+      <tags>
+        <tag>想做汉服系列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>想做汉服的必看——汉服半臂结构图制作</title>
+    <url>/2017/12/23/13hanfu-banbi/</url>
+    <content><![CDATA[<h1 id="半臂样式"><a href="#半臂样式" class="headerlink" title="半臂样式"></a>半臂样式</h1><p>半臂是最像我们日常的短袖了，在领方面，分为对襟和交领，交领跟长袖的一样，对襟就是今天我说的这个。</p>
+<h1 id="结构图"><a href="#结构图" class="headerlink" title="结构图"></a>结构图</h1><p><img src="http://img.hb.aicdn.com/7c1a6532a2f7bd42486cebc96c1da78cfb57902ec361-w7VT4V_fw658" alt="来源：网络"></p>
+<p>领缘跟交领的做法一样，长度比衣领长个10cm左右，宽10-15cm自定。</p>
+<p>实际操作之后，发现途中33cm的袖笼宽有点略大，如果只是做单层不用这么大。</p>
 ]]></content>
       <categories>
         <category>「你好，手工艺」</category>
@@ -4977,34 +4997,19 @@
 <p>汉服，全称是“汉民族传统服饰”，又称汉衣冠、汉装、华服，是从黄帝即位到公元17世纪中叶（明末清初），在汉族的主要居住区，以“华夏－汉”文化为背景和主导思想，以华夏礼仪文化为中心，通过自然演化而形成的具有独特汉民族风貌性格，明显区别于其他民族的传统服装和配饰体系，是中国“衣冠上国”、“礼仪之邦”、“锦绣中华”、赛里斯国的体现，承载了汉族的染织绣等杰出工艺和美学，传承了30多项中国非物质文化遗产以及受保护的中国工艺美术。</p>
 </blockquote>
 <p>——摘自百度百科</p>
-<h1 id="汉服简介"><a href="#汉服简介" class="headerlink" title="汉服简介"></a>汉服简介</h1><p><img src="/1.jpg"><br><img src="/2.jpg"><br><img src="/3.jpg"><br><img src="/4.jpg"><br><img src="/5.jpg"><br><img src="/6.jpg"><br><img src="/7.jpg"><br><img src="/8.jpg"></p>
+<h1 id="汉服简介"><a href="#汉服简介" class="headerlink" title="汉服简介"></a>汉服简介</h1><p><img src="/2017/12/23/12hanfu-introduce/1.jpg"><br><img src="/2017/12/23/12hanfu-introduce/2.jpg"><br><img src="/2017/12/23/12hanfu-introduce/3.jpg"><br><img src="/2017/12/23/12hanfu-introduce/4.jpg"><br><img src="/2017/12/23/12hanfu-introduce/5.jpg"><br><img src="/2017/12/23/12hanfu-introduce/6.jpg"><br><img src="/2017/12/23/12hanfu-introduce/7.jpg"><br><img src="/2017/12/23/12hanfu-introduce/8.jpg"></p>
 <h1 id="汉服样式图例"><a href="#汉服样式图例" class="headerlink" title="汉服样式图例"></a>汉服样式图例</h1><h2 id="1-齐腰襦裙"><a href="#1-齐腰襦裙" class="headerlink" title="1.齐腰襦裙"></a>1.齐腰襦裙</h2><p>中腰对襟襦裙汉族传统民族服装（汉服）的一种，对襟襦裙为襦裙的一类，其上襦为直领，衣襟呈对称状，故称对襟襦裙。款式穿着时温婉端庄。千姿百态，美不胜收，长裙与上襦和披帛相配一体，尽显汉家女子俏丽绰约丰姿，极富诗意的美与韵律。</p>
 <p>以下分为对襟半臂及普通对襟襦裙：</p>
-<p>![对襟襦裙 Q版](对襟襦裙 Q版.jpg)<br><img src="/%E5%AF%B9%E8%A5%9F%E5%8D%8A%E8%87%82.jpg" alt="对襟半臂"><br><img src="/%E6%99%AE%E9%80%9A%E5%AF%B9%E8%A5%9F.jpg" alt="普通对襟"></p>
+<p>![对襟襦裙 Q版](对襟襦裙 Q版.jpg)<br><img src="/2017/12/23/12hanfu-introduce/%E5%AF%B9%E8%A5%9F%E5%8D%8A%E8%87%82.jpg" alt="对襟半臂"><br><img src="/2017/12/23/12hanfu-introduce/%E6%99%AE%E9%80%9A%E5%AF%B9%E8%A5%9F.jpg" alt="普通对襟"></p>
 <p>对襟和交领的区别只是在上衣。</p>
-<p>![交领襦裙 Q版](交领襦裙 Q版.jpg)<br>![交领襦裙 半臂 Q版](交领襦裙 半臂 Q版.jpg)<br><img src="/%E4%BA%A4%E9%A2%86%E8%A5%A6%E8%A3%99.jpg" alt="交领襦裙"></p>
+<p>![交领襦裙 Q版](交领襦裙 Q版.jpg)<br>![交领襦裙 半臂 Q版](交领襦裙 半臂 Q版.jpg)<br><img src="/2017/12/23/12hanfu-introduce/%E4%BA%A4%E9%A2%86%E8%A5%A6%E8%A3%99.jpg" alt="交领襦裙"></p>
 <h3 id="2-齐胸襦裙"><a href="#2-齐胸襦裙" class="headerlink" title="2.齐胸襦裙"></a>2.齐胸襦裙</h3><p>齐胸襦裙汉族传统民族服饰（汉服）的一种，齐胸襦裙旧称高腰襦裙。是隋唐五代时期特有的一种女子襦裙装束，款式穿着时大气不失灵动之美。千姿百态，美不胜收。长裙与短襦和披帛相配一体，尽显盛唐女子雍容华贵的绰约丰姿，极富诗意的美与韵律。</p>
-<p>![齐胸襦裙 Q版](齐胸襦裙 Q版.jpg)<br>![齐胸襦裙 半臂 Q版](齐胸襦裙 半臂 Q版.jpg)<br><img src="/%E9%BD%90%E8%83%B8%E8%A5%A6%E8%A3%99.jpg" alt="齐胸襦裙"></p>
+<p>![齐胸襦裙 Q版](齐胸襦裙 Q版.jpg)<br>![齐胸襦裙 半臂 Q版](齐胸襦裙 半臂 Q版.jpg)<br><img src="/2017/12/23/12hanfu-introduce/%E9%BD%90%E8%83%B8%E8%A5%A6%E8%A3%99.jpg" alt="齐胸襦裙"></p>
 <h3 id="3-袄裙"><a href="#3-袄裙" class="headerlink" title="3.袄裙"></a>3.袄裙</h3><p>袄裙其实跟以上2种襦裙一样，区别在于上衣较厚，不扎在裙里。<br>袄有夹层，可絮绒；衫为单层。</p>
 <p>![袄裙 1](袄裙 1.jpg)<br>![袄裙 2](袄裙 2.jpg)<br>![袄裙 3](袄裙 3.jpg)</p>
 <h3 id="4-褙子"><a href="#4-褙子" class="headerlink" title="4.褙子"></a>4.褙子</h3><p>褙子是汉服款式的一种,对襟,两侧从腋下起不缝合,多罩在其他衣服外面穿着。在宋、明时最为盛行。不施袗钮，腰间用勒帛系束，男女均可服用。后世多有沿革。 “《宋史·舆服志》云，妇人大衣长裙、女子在室者及众妾皆褙子。”款式穿着时庄重自然。娉婷婉约，美不胜收，长裙与褙子相配一体，高雅不浅俗尽显大宋女子风范。</p>
-<p>![褙子 Q版](褙子 Q版.jpg)<br><img src="/%E8%A4%99%E5%AD%90.jpg" alt="褙子"></p>
-<h3 id="5-曲裾"><a href="#5-曲裾" class="headerlink" title="5.曲裾"></a>5.曲裾</h3><p><img src="/%E6%9B%B2%E8%A3%BE1.jpg" alt="曲裾 1"><br><img src="/%E6%9B%B2%E8%A3%BE2.jpg" alt="曲裾 2"></p>
-]]></content>
-      <categories>
-        <category>「你好，手工艺」</category>
-      </categories>
-      <tags>
-        <tag>想做汉服系列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>想做汉服的必看——汉服半臂结构图制作</title>
-    <url>/2017/12/23/13hanfu-banbi/</url>
-    <content><![CDATA[<h1 id="半臂样式"><a href="#半臂样式" class="headerlink" title="半臂样式"></a>半臂样式</h1><p>半臂是最像我们日常的短袖了，在领方面，分为对襟和交领，交领跟长袖的一样，对襟就是今天我说的这个。</p>
-<h1 id="结构图"><a href="#结构图" class="headerlink" title="结构图"></a>结构图</h1><p><img src="http://img.hb.aicdn.com/7c1a6532a2f7bd42486cebc96c1da78cfb57902ec361-w7VT4V_fw658" alt="来源：网络"></p>
-<p>领缘跟交领的做法一样，长度比衣领长个10cm左右，宽10-15cm自定。</p>
-<p>实际操作之后，发现途中33cm的袖笼宽有点略大，如果只是做单层不用这么大。</p>
+<p>![褙子 Q版](褙子 Q版.jpg)<br><img src="/2017/12/23/12hanfu-introduce/%E8%A4%99%E5%AD%90.jpg" alt="褙子"></p>
+<h3 id="5-曲裾"><a href="#5-曲裾" class="headerlink" title="5.曲裾"></a>5.曲裾</h3><p><img src="/2017/12/23/12hanfu-introduce/%E6%9B%B2%E8%A3%BE1.jpg" alt="曲裾 1"><br><img src="/2017/12/23/12hanfu-introduce/%E6%9B%B2%E8%A3%BE2.jpg" alt="曲裾 2"></p>
 ]]></content>
       <categories>
         <category>「你好，手工艺」</category>
