@@ -315,8 +315,8 @@
 <p>至于为什么要用git和hexo，而不是傻瓜式用博客网站？可能应为我内心有个geek怪兽吧！</p>
 <p>16年的时候，无意中看到一个RD同事的博客，才了解到Hexo是一个快速、简洁且高效的博客框架，又有搭建个人博客的想法，便动手尝试了。</p>
 <p>因为因为我之前就已经配置过所有的设置，只是这次换电脑，所以需要在新电脑上做迁移，以及做一些优化工作。</p>
-<p>至于如何新建结合git和hexo新建博客的话，可以看这个<a target="_blank" rel="noopener" href="http://wangwlj.com/2017/09/08/blog_setup/">《Hexo+GitHub博客搭建实战》</a>。</p>
-<p>也可以参考我最开始学习的陈素封的教程：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/05289a4bc8b2">《如何搭建一个独立博客——简明Github Pages与Hexo教程》</a>。</p>
+<p>至于如何新建结合git和hexo新建博客的话，可以看这个<span class="exturl" data-url="aHR0cDovL3dhbmd3bGouY29tLzIwMTcvMDkvMDgvYmxvZ19zZXR1cC8=">《Hexo+GitHub博客搭建实战》<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>也可以参考我最开始学习的陈素封的教程：<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8wNTI4OWE0YmM4YjI=">《如何搭建一个独立博客——简明Github Pages与Hexo教程》<i class="fa fa-external-link-alt"></i></span>。</p>
 <h1 id="迁移开始"><a href="#迁移开始" class="headerlink" title="迁移开始"></a>迁移开始</h1><h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>去Node.js官网下载相应的安装包，一路安装即可。</p>
 <h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Mac下安装Xcode就自带Git。（Windows可以去官网）</p>
 <h2 id="添加SSH-Keys"><a href="#添加SSH-Keys" class="headerlink" title="添加SSH Keys"></a>添加SSH Keys</h2><p>Github 添加 SSH Keys<br>首先在本地创建 SSH Keys，（直接用Mac的终端，或者Windows的找到git-git bash）</p>
@@ -344,7 +344,7 @@
 <p>关于hexo的测试连接localhost:4000有时候出现看不了的情况，可参考最后面的错误解决方案。</p>
 <h2 id="部署发布文章"><a href="#部署发布文章" class="headerlink" title="部署发布文章"></a>部署发布文章</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo clean   <span class="regexp">//</span> 清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g       <span class="regexp">//</span> 生成静态网页</span><br><span class="line">hexo d       <span class="regexp">//</span> 开始部署</span><br><span class="line"></span><br><span class="line">也可以简化成 </span><br><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 
-<h1 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h1><p>主题选的是NexT，我安装的时候还是16年，现在最新更新的Github网址为<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>首先将NexT的主题源文件下载到本地，使用Git克隆指令如下：</p>
+<h1 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h1><p>主题选的是NexT，我安装的时候还是16年，现在最新更新的Github网址为<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">https://github.com/theme-next/hexo-theme-next<i class="fa fa-external-link-alt"></i></span><br>首先将NexT的主题源文件下载到本地，使用Git克隆指令如下：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/theme-next/</span>hexo-theme-<span class="keyword">next</span>.git</span><br></pre></td></tr></table></figure>
 
 <p>下载后，将压缩包解压缩(文件位于指令运行的当前目录)，复制其中名称为hexo-theme-next的文件夹到Hexo的主题目录下，主题目录的路径为：<code>Hexo博客根目录/themes/</code></p>
@@ -373,7 +373,8 @@
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="selector-attr">[你想输入的替代文字]</span>(图片名.jpg)</span><br></pre></td></tr></table></figure>
 
 <div class="note warning"><p> 注意： <code>xxxx</code>是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
-<p>现在只需要直接在括号里写上你的图片名称就行，不用加博客文件名，我看了官方文档才知道。所以多看一眼官方文档才是正经事儿。 </p></div>
+<p>现在只需要直接在括号里写上你的图片名称就行，不用加博客文件名，我看了官方文档才知道。所以多看一眼官方文档才是正经事儿。 </p>
+</div>
 
 <ol start="5">
 <li><p><code>hexo s</code>，运行本地服务器，打开<code>http://localhost:4000/</code>可实时查看修改情况。</p>
@@ -396,7 +397,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> </span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">copyright:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">description:</span> </span><br><span class="line"><span class="attr">date:</span> <span class="number">2017-11-09 14:33:32</span></span><br><span class="line"><span class="attr">top:</span></span><br><span class="line"><span class="attr">photos:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;http://oz2tkq0zj.bkt.clouddn.com/17-11-9/52323298.jpg&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="添加评论功能"><a href="#添加评论功能" class="headerlink" title="添加评论功能"></a>添加评论功能</h1><p>之前我用的友言，结果特别不好用，才发现原来是挂了，<br>目前的评论系统，友言，网易云跟帖都挂了。所以，我最终采用的是来必力。</p>
-<p>参考：<a target="_blank" rel="noopener" href="http://wangwlj.com/2017/12/18/blog_comment/">Hexo博客优化之实现来必力评论功能</a></p>
+<p>参考：<span class="exturl" data-url="aHR0cDovL3dhbmd3bGouY29tLzIwMTcvMTIvMTgvYmxvZ19jb21tZW50Lw==">Hexo博客优化之实现来必力评论功能<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="添加菜单选项"><a href="#添加菜单选项" class="headerlink" title="添加菜单选项"></a>添加菜单选项</h1><p>默认情况下，菜单导航栏有首页、归档、关于三个选项，除此之外笔者还添加了分类、标签和关于。在<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>中，找到menu属性，并去掉categories、 tags、about的的注释，如下图所示：</p>
 <p>然后在Hexo根目录执行指令如下：</p>
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加分类页面</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;categories&quot;</span></span><br><span class="line"><span class="comment">// 添加标签页面</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;tags&quot;</span></span><br><span class="line"><span class="comment">// 添加关于页面</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;about&quot;</span></span><br></pre></td></tr></table></figure>
@@ -406,7 +407,7 @@
 <h1 id="显示每篇文章字数"><a href="#显示每篇文章字数" class="headerlink" title="显示每篇文章字数"></a>显示每篇文章字数</h1><p><strong>实现方法</strong></p>
 <p>首先安装插件，执行以下命令：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-<span class="built_in">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-<p>具体的方法都可以看官方教程：<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-symbols-count-time">https://github.com/theme-next/hexo-symbols-count-time</a></p>
+<p>具体的方法都可以看官方教程：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by1zeW1ib2xzLWNvdW50LXRpbWU=">https://github.com/theme-next/hexo-symbols-count-time<i class="fa fa-external-link-alt"></i></span></p>
 <p>然后修改<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>，</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">symbols_count_time:</span></span><br><span class="line"><span class="symbol">  separated_meta:</span> true</span><br><span class="line"><span class="symbol">  item_text_post:</span> true  <span class="comment">// 单篇文章字数统计</span></span><br><span class="line"><span class="symbol">  item_text_total:</span> true  <span class="comment">//  全站文章字数统计</span></span><br><span class="line"><span class="symbol">  awl:</span> <span class="number">2</span>   <span class="comment">//中文改成这个参数，博客如果都用英文，就是4</span></span><br><span class="line"><span class="symbol">  wpm:</span> <span class="number">300</span>  <span class="comment">//中文改成这个参数，博客如果都用英文，就是275</span></span><br></pre></td></tr></table></figure>
 
@@ -421,7 +422,7 @@
 <p>找到<code>copyrightYear</code>那里，直接修改成下面的样子：</p>
 <figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">itemprop</span>=<span class="string">&quot;copyrightYear&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">current</span> &#125;&#125;</span><span class="language-xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;with-love&quot;</span> <span class="attr">id</span>=<span class="string">&quot;animate&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-heart&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>   //这里我改了系统默认的用户图标，改成小心心了</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span> <span class="attr">itemprop</span>=<span class="string">&quot;copyrightHolder&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">theme.footer.copyright</span> | default(<span class="name">author</span>) &#125;&#125;</span><span class="language-xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  &#123;% if config.symbols_count_time.total_symbols %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-divider&quot;</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-icon&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-area-chart&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% if theme.symbols_count_time.item_text_total %&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-text&quot;</span>&gt;</span>Dannii在这里一共写了<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% endif %&#125;  // 这里把默认的英文文案改成中文</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">title</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;symbols_count_time.count_total&#x27;</span>) &#125;&#125;</span><span class="language-xml"><span class="tag"><span class="string">&quot;</span>&gt;</span>&#123;#</span></span><br><span class="line"><span class="language-xml">    #&#125;</span><span class="template-variable">&#123;&#123; <span class="name">symbolsCountTotal</span>(<span class="name">site</span>) &#125;&#125;</span><span class="language-xml">字&#123;#   // 这里加一个“字”，显示出来就是XX字</span></span><br><span class="line"><span class="language-xml">  #&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  &#123;% if config.symbols_count_time.total_time %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-divider&quot;</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-icon&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-coffee&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% if theme.symbols_count_time.item_text_total %&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-text&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;symbols_count_time.time_total&#x27;</span>)&#125;&#125;</span><span class="language-xml"> <span class="symbol">&amp;asymp;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">title</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;symbols_count_time.time_total&#x27;</span>) &#125;&#125;</span><span class="language-xml"><span class="tag"><span class="string">&quot;</span>&gt;</span>&#123;#</span></span><br><span class="line"><span class="language-xml">    #&#125;</span><span class="template-variable">&#123;&#123; <span class="name">symbolsTimeTotal</span>(<span class="name">site</span>, theme.symbols_count_time.awl, theme.symbols_count_time.wpm, __(<span class="name">&#x27;symbols_count_time.time_minutes&#x27;</span>)) &#125;&#125;</span><span class="language-xml">&#123;#</span></span><br><span class="line"><span class="language-xml">  #&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p>里面的 <code>&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;  </code>，版权信息博主名字前面，我改了系统默认的用户图标，改成小心心了。因为hexo支持FontAwesome（就是一个全是icon的网站：<a target="_blank" rel="noopener" href="https://fontawesome.com/">https://fontawesome.com/</a> ）<br>，只要在里面写网站所支持的icon名称hexo就能自动加载，所以我找了个<code>heart</code>代表小心心的icon。</p>
+<p>里面的 <code>&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;  </code>，版权信息博主名字前面，我改了系统默认的用户图标，改成小心心了。因为hexo支持FontAwesome（就是一个全是icon的网站：<span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20v">https://fontawesome.com/<i class="fa fa-external-link-alt"></i></span> ）<br>，只要在里面写网站所支持的icon名称hexo就能自动加载，所以我找了个<code>heart</code>代表小心心的icon。</p>
 <p><strong>实现效果图</strong></p>
 <p>在页面最底部会有如下效果：</p>
 <p><img src="/2018/07/23/28blog/tongjizishu.jpg" alt="统计字数"></p>
@@ -457,7 +458,7 @@
 <p>然后打开<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>，在menu字段下，添加如下字段：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="keyword">/archives/</span> || archive</span><br><span class="line">  留言板: /guestbook || heart <span class="meta">#自己添加的字段，我是有多种小心心</span></span><br></pre></td></tr></table></figure>
 
-<p><code>heart</code>是留言板的图标，可以在<a target="_blank" rel="noopener" href="https://fontawesome.com/">这里</a>（就是之前说的那个图标网站）找到自己喜欢的图标。</p>
+<p><code>heart</code>是留言板的图标，可以在<span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20v">这里<i class="fa fa-external-link-alt"></i></span>（就是之前说的那个图标网站）找到自己喜欢的图标。</p>
 <p>我用的是来必力评论系统，默认在新建页面上会产生评论板块。</p>
 <h1 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h1><p><strong>实现方法</strong></p>
 <p>打开浏览器，输入如下网址</p>
@@ -485,7 +486,7 @@
 <figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    (<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span>(<span class="string">&#x27;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">page.password</span> &#125;&#125;</span><span class="language-xml">&#x27;)&#123;</span></span><br><span class="line"><span class="language-xml">            if (prompt(&#x27;请输入文章密码&#x27;) !== &#x27;</span><span class="template-variable">&#123;&#123; <span class="name">page.password</span> &#125;&#125;</span><span class="language-xml">&#x27;)&#123;</span></span><br><span class="line"><span class="language-xml">                alert(&#x27;密码错误！&#x27;);</span></span><br><span class="line"><span class="language-xml">                history.back();</span></span><br><span class="line"><span class="language-xml">            &#125;</span></span><br><span class="line"><span class="language-xml">        &#125;</span></span><br><span class="line"><span class="language-xml">    &#125;)();</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>然后在文章里，头部多加一个<code>password:xxxxx</code>就行了。</p>
 <p><strong>方法二：</strong></p>
-<p>参考：<a target="_blank" rel="noopener" href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md">https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md</a></p>
+<p>参考：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01pa2VDb2Rlci9oZXhvLWJsb2ctZW5jcnlwdC9ibG9iL21hc3Rlci9SZWFkTWUuemgubWQ=">https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md<i class="fa fa-external-link-alt"></i></span></p>
 <p>输入：</p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install <span class="comment">--save hexo-blog-encrypt</span></span><br></pre></td></tr></table></figure>
 
@@ -546,7 +547,7 @@
 <p>编辑<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>（主题目录下），启用本地搜索功能：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>之后部署到远程即可。</p>
-<h1 id="Hexo博客提交百度和Google收录"><a href="#Hexo博客提交百度和Google收录" class="headerlink" title="Hexo博客提交百度和Google收录"></a>Hexo博客提交百度和Google收录</h1><p>这篇文章写得很详细，我就不详细说了：<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8c0707ce5da4">Hexo博客收录百度和谷歌-基于Next主题</a>或者<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收</a></p>
+<h1 id="Hexo博客提交百度和Google收录"><a href="#Hexo博客提交百度和Google收录" class="headerlink" title="Hexo博客提交百度和Google收录"></a>Hexo博客提交百度和Google收录</h1><p>这篇文章写得很详细，我就不详细说了：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC84YzA3MDdjZTVkYTQ=">Hexo博客收录百度和谷歌-基于Next主题<i class="fa fa-external-link-alt"></i></span>或者<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="添加打赏功能"><a href="#添加打赏功能" class="headerlink" title="添加打赏功能"></a>添加打赏功能</h1><p>首先，准备支付宝和微信二维码，怎么生成就不多说，百度。</p>
 <p>然后在<code>_config.yml</code>中配置图片:</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">reward_comment:</span> 坚持原创技术分享，您的支持将鼓励我继续创作！</span><br><span class="line"><span class="symbol">wechatpay:</span> <span class="keyword">/images/</span>wechat.jpg</span><br><span class="line"><span class="symbol">alipay:</span> <span class="keyword">/images/</span>aipay.png</span><br></pre></td></tr></table></figure>
@@ -586,9 +587,9 @@
 添加之后再执行<code>hexo d -g</code>，然后再刷新页面就能看到效果</li>
 </ol>
 <h1 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h1><p>太复杂了，直接参考:</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2c6ad12791c6">Hexo博客添加SEO-评论系统-阅读统计-站长统计</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8yYzZhZDEyNzkxYzY=">Hexo博客添加SEO-评论系统-阅读统计-站长统计<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="百度谷歌收录"><a href="#百度谷歌收录" class="headerlink" title="百度谷歌收录"></a>百度谷歌收录</h1><p>同样有很详细的教程，这里不多说：</p>
-<p>收录<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收录</a></p>
+<p>收录<br><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收录<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="添加阅读次数统计"><a href="#添加阅读次数统计" class="headerlink" title="添加阅读次数统计"></a>添加阅读次数统计</h1><p><strong>2023-04-18 更新</strong>：<br>现在可以直接在主题配置文件里，找<code>valine</code>这个，将leancloud里的appid和appkey直接填上，就可以代替使用<code>leancloud_visitors</code>。</p>
 <p>（以下是更新前的，除了主题配置文件都可以用）<br>注册LeanCloud账号，完成激活；点击左上角的”应用”-“创建新应用”-点击“数据”右边的齿轮–点击创建类class，类名字叫做Counter。<br><img src="/2018/07/23/28blog/leancloud1.jpg" alt="配置leancloud数据"></p>
 <p>然后，修改<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>，找到<code>leancloud_visitors</code>，添加修改：</p>
@@ -636,24 +637,35 @@
 <li><code>danger</code></li>
 </ul>
 <p>然后看到其他人可以给这个文本框改颜色，所以，可以在<code>主题配置文件</code>里找到的<code>Note tag</code>就行了。</p>
-<div class="note bs-callout"><h1 id="H1标题测试"><a href="#H1标题测试" class="headerlink" title="H1标题测试"></a>H1标题测试</h1><p>这个是bs-callout </p></div>
+<details class="note "><summary><p>bs-callout</p>
+</summary>
+<h1 id="H1标题测试"><a href="#H1标题测试" class="headerlink" title="H1标题测试"></a>H1标题测试</h1><p>这个是bs-callout </p>
 
-<div class="note default"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是default </p></div>
+</details>
 
-<div class="note primary"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是 primary </p></div>
+<div class="note default"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是default </p>
+</div>
 
-<div class="note success"><p>测试，这个是 success </p></div>
+<div class="note primary"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是 primary </p>
+</div>
 
-<div class="note info"><p>测试，这个是 info </p></div>
+<div class="note success"><p>测试，这个是 success </p>
+</div>
 
-<div class="note warning"><p>测试，这个是 warning </p></div>
+<div class="note info"><p>测试，这个是 info </p>
+</div>
 
-<div class="note danger"><p>测试，这个是 danger </p></div>
+<div class="note warning"><p>测试，这个是 warning </p>
+</div>
 
-<div class="note info"><p>这个其实也是我在<a target="_blank" rel="noopener" href="https://blog.dongleizhang.com/posts/32005d86/">一个很好看的博客</a>通过F12看到他的设置发找到的文件地方。学习使用HEXO的内置标签 </p></div>
+<div class="note danger"><p>测试，这个是 danger </p>
+</div>
 
-<h1 id="hexo新增的看板娘功能"><a href="#hexo新增的看板娘功能" class="headerlink" title="hexo新增的看板娘功能"></a>hexo新增的看板娘功能</h1><p>先mark一下，方法如<a target="_blank" rel="noopener" href="https://blog.csdn.net/Mculover666/article/details/99696919?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_utm_term~default-16-99696919-blog-129943166.235%5Ev29%5Epc_relevant_default_base&spm=1001.2101.3001.4242.9&utm_relevant_index=19">链接</a>，有空再优化下。</p>
-<h1 id="在本地建立分支"><a href="#在本地建立分支" class="headerlink" title="在本地建立分支"></a>在本地建立分支</h1><p>这个分支保存最全：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/white_idiot/article/details/80685990">https://blog.csdn.net/white_idiot/article/details/80685990</a><br>这个补充讲分支：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/shile/article/details/78714189">https://blog.csdn.net/shile/article/details/78714189</a></p>
+<div class="note info"><p>这个其实也是我在<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmRvbmdsZWl6aGFuZy5jb20vcG9zdHMvMzIwMDVkODYv">一个很好看的博客<i class="fa fa-external-link-alt"></i></span>通过F12看到他的设置发找到的文件地方。学习使用HEXO的内置标签 </p>
+</div>
+
+<h1 id="hexo新增的看板娘功能"><a href="#hexo新增的看板娘功能" class="headerlink" title="hexo新增的看板娘功能"></a>hexo新增的看板娘功能</h1><p>先mark一下，方法如<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01jdWxvdmVyNjY2L2FydGljbGUvZGV0YWlscy85OTY5NjkxOT91dG1fbWVkaXVtPWRpc3RyaWJ1dGUucGNfcmVsZXZhbnQubm9uZS10YXNrLWJsb2ctMn5kZWZhdWx0fmJhaWR1anNfdXRtX3Rlcm1+ZGVmYXVsdC0xNi05OTY5NjkxOS1ibG9nLTEyOTk0MzE2Ni4yMzUlNUV2MjklNUVwY19yZWxldmFudF9kZWZhdWx0X2Jhc2Umc3BtPTEwMDEuMjEwMS4zMDAxLjQyNDIuOSZ1dG1fcmVsZXZhbnRfaW5kZXg9MTk=">链接<i class="fa fa-external-link-alt"></i></span>，有空再优化下。</p>
+<h1 id="在本地建立分支"><a href="#在本地建立分支" class="headerlink" title="在本地建立分支"></a>在本地建立分支</h1><p>这个分支保存最全：<br><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3doaXRlX2lkaW90L2FydGljbGUvZGV0YWlscy84MDY4NTk5MA==">https://blog.csdn.net/white_idiot/article/details/80685990<i class="fa fa-external-link-alt"></i></span><br>这个补充讲分支：<br><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoaWxlL2FydGljbGUvZGV0YWlscy83ODcxNDE4OQ==">https://blog.csdn.net/shile/article/details/78714189<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">进入user.github.io文件夹,应是hexo分支</span><br><span class="line">git pull <span class="built_in">origin</span> hexo ——本地和远端的融合</span><br><span class="line">hexo <span class="built_in">new</span> post <span class="string">&quot;new post name&quot;</span>  ——写新文章</span><br><span class="line">git add source</span><br><span class="line">git commit -m <span class="string">&quot;xxx&quot;</span></span><br><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> hexo  ——备份</span><br><span class="line">hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)</span><br></pre></td></tr></table></figure>
 <p>用vscode 在苹果电脑上是默认安装xcode就有git（当git不存在时重新安装xcode即可。<br><img src="/2018/07/23/28blog/blog1.png"></p>
 <img src="/2018/07/23/28blog/blog1.png" class="" title="这是图片">
@@ -662,7 +674,7 @@
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>安装</span><br><span class="line">npm install -g npm-check-updates</span><br><span class="line"><span class="regexp">//</span>查看要更新依赖</span><br><span class="line">ncu</span><br><span class="line"><span class="regexp">//</span>更新依赖 这里只更新package.json文件至最新版本</span><br><span class="line">ncu -u</span><br><span class="line"><span class="regexp">//</span>安装依赖</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
 <p>不清除旧版本主题的办法：使用备用主题config.next.yml</p>
-<p>更新next的办法：<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/third-party-services/%E5%AE%98%E6%96%B9%E6%8C%87%E5%8D%97%E9%9A%8F%E6%97%B6%E6%9B%B4%E6%96%B0%E3%80%82">https://theme-next.js.org/docs/third-party-services/官方指南随时更新。</a><br>更新hexo的办法：</p>
+<p>更新next的办法：<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoaXJkLXBhcnR5LXNlcnZpY2VzLyVFNSVBRSU5OCVFNiU5NiVCOSVFNiU4QyU4NyVFNSU4RCU5NyVFOSU5QSU4RiVFNiU5NyVCNiVFNiU5QiVCNCVFNiU5NiVCMCVFMyU4MCU4Mg==">https://theme-next.js.org/docs/third-party-services/官方指南随时更新。<i class="fa fa-external-link-alt"></i></span><br>更新hexo的办法：</p>
 <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> i hexo-cli -g</span><br><span class="line"><span class="built_in">npm</span> update</span><br></pre></td></tr></table></figure>
 
 
@@ -678,7 +690,7 @@
 <h2 id="localhost-4000-cannot-get"><a href="#localhost-4000-cannot-get" class="headerlink" title="localhost:4000 cannot get"></a>localhost:4000 cannot get</h2><p>第一种可能是没安装插件，输入指令：</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-<span class="keyword">server</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 
-<p>安装完成后，输入以下命令以启动服务器，您的网站会在 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 下启动。在服务器启动期间，Hexo会监视文件变动并自动更新，您无须重启服务器。</p>
+<p>安装完成后，输入以下命令以启动服务器，您的网站会在 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwLw==">http://localhost:4000<i class="fa fa-external-link-alt"></i></span> 下启动。在服务器启动期间，Hexo会监视文件变动并自动更新，您无须重启服务器。</p>
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
 <p>如果您想要更改端口，或是在执行时遇到了 EADDRINUSE 错误，可以在执行时使用 -p 选项指定其他端口，如下：</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> server -p <span class="number">5000</span></span><br></pre></td></tr></table></figure>
@@ -692,22 +704,22 @@
 <p>最后一种，直接<code>hexo g</code>部署一下，出现所有文件generated后就可以了</p>
 <h2 id="hexo-d的时候提示错误"><a href="#hexo-d的时候提示错误" class="headerlink" title="hexo d的时候提示错误"></a>hexo d的时候提示错误</h2><p>提示下面错误</p>
 <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ERROR </span>Deployer not found : github</span><br></pre></td></tr></table></figure>
-<p>先看<font color="#FFFFFF"><span style="background-color: #68228B;">主页配置文件</span></font>中<code>_config.yml</code>里<code>deploy</code>要是<code>type: git</code>，<code>repo</code>这个字段填&#96;<a target="_blank" rel="noopener" href="https://github.com/yourgit/yourgit.github.io.git">https://github.com/yourgit/yourgit.github.io.git</a></p>
+<p>先看<font color="#FFFFFF"><span style="background-color: #68228B;">主页配置文件</span></font>中<code>_config.yml</code>里<code>deploy</code>要是<code>type: git</code>，<code>repo</code>这个字段填&#96;<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJnaXQveW91cmdpdC5naXRodWIuaW8uZ2l0">https://github.com/yourgit/yourgit.github.io.git<i class="fa fa-external-link-alt"></i></span></p>
 <p><strong>(安装豆瓣插件之后必须是全的hexo deploy)</strong></p>
-<h2 id="其他坑"><a href="#其他坑" class="headerlink" title="其他坑"></a>其他坑</h2><p>目前大多都在这里，其他的可以参考网上百度，比如<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a2fe56d11c4f">搭建Hexo博客中碰到的坑</a>。</p>
+<h2 id="其他坑"><a href="#其他坑" class="headerlink" title="其他坑"></a>其他坑</h2><p>目前大多都在这里，其他的可以参考网上百度，比如<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9hMmZlNTZkMTFjNGY=">搭建Hexo博客中碰到的坑<i class="fa fa-external-link-alt"></i></span>。</p>
 <hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lvonve/article/details/79587321">换了电脑如何使用hexo继续写博</a></p>
-<p><a target="_blank" rel="noopener" href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/">Hexo博客彻底解决置顶问题</a></p>
-<p><a target="_blank" rel="noopener" href="http://wangwlj.com/2017/12/18/blog_comment/">Hexo博客优化之实现来必力评论功能</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ace_15/article/details/79255203">使用Hexo搭建个人博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8c0707ce5da4">Hexo博客收录百度和谷歌-基于Next主题</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lcyaiym/article/details/76796545">hexo的next主题打赏</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/com_ma/article/details/76039859">hexo博客的背景设置</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2c6ad12791c6">Hexo博客添加SEO-评论系统-阅读统计-站长统计</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收录</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a2fe56d11c4f">搭建Hexo博客中碰到的坑</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qw8880000/article/details/80235648">更改链接颜色</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x2b252ZS9hcnRpY2xlL2RldGFpbHMvNzk1ODczMjE=">换了电脑如何使用hexo继续写博<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5uZXRjYW42NjYuY29tLzIwMTUvMTEvMjIvJUU4JUE3JUEzJUU1JTg2JUIzSGV4byVFNyVCRCVBRSVFOSVBMSVCNiVFOSU5NyVBRSVFOSVBMiU5OC8=">Hexo博客彻底解决置顶问题<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3dhbmd3bGouY29tLzIwMTcvMTIvMTgvYmxvZ19jb21tZW50Lw==">Hexo博客优化之实现来必力评论功能<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FjZV8xNS9hcnRpY2xlL2RldGFpbHMvNzkyNTUyMDM=">使用Hexo搭建个人博客<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC84YzA3MDdjZTVkYTQ=">Hexo博客收录百度和谷歌-基于Next主题<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xjeWFpeW0vYXJ0aWNsZS9kZXRhaWxzLzc2Nzk2NTQ1">hexo的next主题打赏<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvbV9tYS9hcnRpY2xlL2RldGFpbHMvNzYwMzk4NTk=">hexo博客的背景设置<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8yYzZhZDEyNzkxYzY=">Hexo博客添加SEO-评论系统-阅读统计-站长统计<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收录<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9hMmZlNTZkMTFjNGY=">搭建Hexo博客中碰到的坑<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ODg4MDAwMC9hcnRpY2xlL2RldGFpbHMvODAyMzU2NDg=">更改链接颜色<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -803,8 +815,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2018/06/24/16%E4%B8%89%E6%AD%A5%E6%95%99%E4%BD%A0%E5%81%9A%E6%B1%89%E6%9C%8D%E8%A4%B6%E8%A3%99/" rel="prev" title="三步教你做汉服褶裙（超简单！）">
-                  <i class="fa fa-angle-left"></i> 三步教你做汉服褶裙（超简单！）
+                <a href="/2018/06/24/15%E6%88%90%E4%B8%BA%E5%88%86%E6%AD%A7%E8%80%85-%E5%B9%B6%E9%9D%9E%E4%BA%BA%E4%BA%BA%E9%83%BD%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%91%BD%E4%B8%AD%E6%B3%A8%E5%AE%9A%E7%9A%84%E4%BD%BF%E5%91%BD/" rel="prev" title="成为分歧者-并非人人都只有一个命中注定的使命">
+                  <i class="fa fa-angle-left"></i> 成为分歧者-并非人人都只有一个命中注定的使命
                 </a>
             </div>
             <div class="post-nav-item">

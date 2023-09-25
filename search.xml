@@ -7,8 +7,8 @@
 <p>至于为什么要用git和hexo，而不是傻瓜式用博客网站？可能应为我内心有个geek怪兽吧！</p>
 <p>16年的时候，无意中看到一个RD同事的博客，才了解到Hexo是一个快速、简洁且高效的博客框架，又有搭建个人博客的想法，便动手尝试了。</p>
 <p>因为因为我之前就已经配置过所有的设置，只是这次换电脑，所以需要在新电脑上做迁移，以及做一些优化工作。</p>
-<p>至于如何新建结合git和hexo新建博客的话，可以看这个<a href="http://wangwlj.com/2017/09/08/blog_setup/">《Hexo+GitHub博客搭建实战》</a>。</p>
-<p>也可以参考我最开始学习的陈素封的教程：<a href="https://www.jianshu.com/p/05289a4bc8b2">《如何搭建一个独立博客——简明Github Pages与Hexo教程》</a>。</p>
+<p>至于如何新建结合git和hexo新建博客的话，可以看这个<span class="exturl" data-url="aHR0cDovL3dhbmd3bGouY29tLzIwMTcvMDkvMDgvYmxvZ19zZXR1cC8=">《Hexo+GitHub博客搭建实战》<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>也可以参考我最开始学习的陈素封的教程：<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8wNTI4OWE0YmM4YjI=">《如何搭建一个独立博客——简明Github Pages与Hexo教程》<i class="fa fa-external-link-alt"></i></span>。</p>
 <h1 id="迁移开始"><a href="#迁移开始" class="headerlink" title="迁移开始"></a>迁移开始</h1><h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>去Node.js官网下载相应的安装包，一路安装即可。</p>
 <h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Mac下安装Xcode就自带Git。（Windows可以去官网）</p>
 <h2 id="添加SSH-Keys"><a href="#添加SSH-Keys" class="headerlink" title="添加SSH Keys"></a>添加SSH Keys</h2><p>Github 添加 SSH Keys<br>首先在本地创建 SSH Keys，（直接用Mac的终端，或者Windows的找到git-git bash）</p>
@@ -36,7 +36,7 @@
 <p>关于hexo的测试连接localhost:4000有时候出现看不了的情况，可参考最后面的错误解决方案。</p>
 <h2 id="部署发布文章"><a href="#部署发布文章" class="headerlink" title="部署发布文章"></a>部署发布文章</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">hexo clean   <span class="regexp">//</span> 清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g       <span class="regexp">//</span> 生成静态网页</span><br><span class="line">hexo d       <span class="regexp">//</span> 开始部署</span><br><span class="line"></span><br><span class="line">也可以简化成 </span><br><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 
-<h1 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h1><p>主题选的是NexT，我安装的时候还是16年，现在最新更新的Github网址为<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>首先将NexT的主题源文件下载到本地，使用Git克隆指令如下：</p>
+<h1 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h1><p>主题选的是NexT，我安装的时候还是16年，现在最新更新的Github网址为<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">https://github.com/theme-next/hexo-theme-next<i class="fa fa-external-link-alt"></i></span><br>首先将NexT的主题源文件下载到本地，使用Git克隆指令如下：</p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/theme-next/</span>hexo-theme-<span class="keyword">next</span>.git</span><br></pre></td></tr></table></figure>
 
 <p>下载后，将压缩包解压缩(文件位于指令运行的当前目录)，复制其中名称为hexo-theme-next的文件夹到Hexo的主题目录下，主题目录的路径为：<code>Hexo博客根目录/themes/</code></p>
@@ -65,7 +65,8 @@
 <figure class="highlight scss"><table><tr><td class="code"><pre><span class="line">!<span class="selector-attr">[你想输入的替代文字]</span>(图片名.jpg)</span><br></pre></td></tr></table></figure>
 
 <div class="note warning"><p> 注意： <code>xxxx</code>是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
-<p>现在只需要直接在括号里写上你的图片名称就行，不用加博客文件名，我看了官方文档才知道。所以多看一眼官方文档才是正经事儿。 </p></div>
+<p>现在只需要直接在括号里写上你的图片名称就行，不用加博客文件名，我看了官方文档才知道。所以多看一眼官方文档才是正经事儿。 </p>
+</div>
 
 <ol start="5">
 <li><p><code>hexo s</code>，运行本地服务器，打开<code>http://localhost:4000/</code>可实时查看修改情况。</p>
@@ -88,7 +89,7 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> </span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">copyright:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">description:</span> </span><br><span class="line"><span class="attr">date:</span> <span class="number">2017-11-09 14:33:32</span></span><br><span class="line"><span class="attr">top:</span></span><br><span class="line"><span class="attr">photos:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;http://oz2tkq0zj.bkt.clouddn.com/17-11-9/52323298.jpg&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="添加评论功能"><a href="#添加评论功能" class="headerlink" title="添加评论功能"></a>添加评论功能</h1><p>之前我用的友言，结果特别不好用，才发现原来是挂了，<br>目前的评论系统，友言，网易云跟帖都挂了。所以，我最终采用的是来必力。</p>
-<p>参考：<a href="http://wangwlj.com/2017/12/18/blog_comment/">Hexo博客优化之实现来必力评论功能</a></p>
+<p>参考：<span class="exturl" data-url="aHR0cDovL3dhbmd3bGouY29tLzIwMTcvMTIvMTgvYmxvZ19jb21tZW50Lw==">Hexo博客优化之实现来必力评论功能<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="添加菜单选项"><a href="#添加菜单选项" class="headerlink" title="添加菜单选项"></a>添加菜单选项</h1><p>默认情况下，菜单导航栏有首页、归档、关于三个选项，除此之外笔者还添加了分类、标签和关于。在<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>中，找到menu属性，并去掉categories、 tags、about的的注释，如下图所示：</p>
 <p>然后在Hexo根目录执行指令如下：</p>
 <figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 添加分类页面</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;categories&quot;</span></span><br><span class="line"><span class="comment">// 添加标签页面</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;tags&quot;</span></span><br><span class="line"><span class="comment">// 添加关于页面</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;about&quot;</span></span><br></pre></td></tr></table></figure>
@@ -98,7 +99,7 @@
 <h1 id="显示每篇文章字数"><a href="#显示每篇文章字数" class="headerlink" title="显示每篇文章字数"></a>显示每篇文章字数</h1><p><strong>实现方法</strong></p>
 <p>首先安装插件，执行以下命令：</p>
 <figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-<span class="built_in">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-<p>具体的方法都可以看官方教程：<a href="https://github.com/theme-next/hexo-symbols-count-time">https://github.com/theme-next/hexo-symbols-count-time</a></p>
+<p>具体的方法都可以看官方教程：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by1zeW1ib2xzLWNvdW50LXRpbWU=">https://github.com/theme-next/hexo-symbols-count-time<i class="fa fa-external-link-alt"></i></span></p>
 <p>然后修改<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>，</p>
 <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">symbols_count_time:</span></span><br><span class="line"><span class="symbol">  separated_meta:</span> true</span><br><span class="line"><span class="symbol">  item_text_post:</span> true  <span class="comment">// 单篇文章字数统计</span></span><br><span class="line"><span class="symbol">  item_text_total:</span> true  <span class="comment">//  全站文章字数统计</span></span><br><span class="line"><span class="symbol">  awl:</span> <span class="number">2</span>   <span class="comment">//中文改成这个参数，博客如果都用英文，就是4</span></span><br><span class="line"><span class="symbol">  wpm:</span> <span class="number">300</span>  <span class="comment">//中文改成这个参数，博客如果都用英文，就是275</span></span><br></pre></td></tr></table></figure>
 
@@ -113,7 +114,7 @@
 <p>找到<code>copyrightYear</code>那里，直接修改成下面的样子：</p>
 <figure class="highlight handlebars"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">itemprop</span>=<span class="string">&quot;copyrightYear&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">current</span> &#125;&#125;</span><span class="language-xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;with-love&quot;</span> <span class="attr">id</span>=<span class="string">&quot;animate&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-heart&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>   //这里我改了系统默认的用户图标，改成小心心了</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span> <span class="attr">itemprop</span>=<span class="string">&quot;copyrightHolder&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">theme.footer.copyright</span> | default(<span class="name">author</span>) &#125;&#125;</span><span class="language-xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  &#123;% if config.symbols_count_time.total_symbols %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-divider&quot;</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-icon&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-area-chart&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% if theme.symbols_count_time.item_text_total %&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-text&quot;</span>&gt;</span>Dannii在这里一共写了<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% endif %&#125;  // 这里把默认的英文文案改成中文</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">title</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;symbols_count_time.count_total&#x27;</span>) &#125;&#125;</span><span class="language-xml"><span class="tag"><span class="string">&quot;</span>&gt;</span>&#123;#</span></span><br><span class="line"><span class="language-xml">    #&#125;</span><span class="template-variable">&#123;&#123; <span class="name">symbolsCountTotal</span>(<span class="name">site</span>) &#125;&#125;</span><span class="language-xml">字&#123;#   // 这里加一个“字”，显示出来就是XX字</span></span><br><span class="line"><span class="language-xml">  #&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  &#123;% if config.symbols_count_time.total_time %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-divider&quot;</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-icon&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-coffee&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% if theme.symbols_count_time.item_text_total %&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-text&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;symbols_count_time.time_total&#x27;</span>)&#125;&#125;</span><span class="language-xml"> <span class="symbol">&amp;asymp;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">title</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;symbols_count_time.time_total&#x27;</span>) &#125;&#125;</span><span class="language-xml"><span class="tag"><span class="string">&quot;</span>&gt;</span>&#123;#</span></span><br><span class="line"><span class="language-xml">    #&#125;</span><span class="template-variable">&#123;&#123; <span class="name">symbolsTimeTotal</span>(<span class="name">site</span>, theme.symbols_count_time.awl, theme.symbols_count_time.wpm, __(<span class="name">&#x27;symbols_count_time.time_minutes&#x27;</span>)) &#125;&#125;</span><span class="language-xml">&#123;#</span></span><br><span class="line"><span class="language-xml">  #&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p>里面的 <code>&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;  </code>，版权信息博主名字前面，我改了系统默认的用户图标，改成小心心了。因为hexo支持FontAwesome（就是一个全是icon的网站：<a href="https://fontawesome.com/">https://fontawesome.com/</a> ）<br>，只要在里面写网站所支持的icon名称hexo就能自动加载，所以我找了个<code>heart</code>代表小心心的icon。</p>
+<p>里面的 <code>&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;  </code>，版权信息博主名字前面，我改了系统默认的用户图标，改成小心心了。因为hexo支持FontAwesome（就是一个全是icon的网站：<span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20v">https://fontawesome.com/<i class="fa fa-external-link-alt"></i></span> ）<br>，只要在里面写网站所支持的icon名称hexo就能自动加载，所以我找了个<code>heart</code>代表小心心的icon。</p>
 <p><strong>实现效果图</strong></p>
 <p>在页面最底部会有如下效果：</p>
 <p><img src="/2018/07/23/28blog/tongjizishu.jpg" alt="统计字数"></p>
@@ -149,7 +150,7 @@
 <p>然后打开<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>，在menu字段下，添加如下字段：</p>
 <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="keyword">/archives/</span> || archive</span><br><span class="line">  留言板: /guestbook || heart <span class="meta">#自己添加的字段，我是有多种小心心</span></span><br></pre></td></tr></table></figure>
 
-<p><code>heart</code>是留言板的图标，可以在<a href="https://fontawesome.com/">这里</a>（就是之前说的那个图标网站）找到自己喜欢的图标。</p>
+<p><code>heart</code>是留言板的图标，可以在<span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20v">这里<i class="fa fa-external-link-alt"></i></span>（就是之前说的那个图标网站）找到自己喜欢的图标。</p>
 <p>我用的是来必力评论系统，默认在新建页面上会产生评论板块。</p>
 <h1 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h1><p><strong>实现方法</strong></p>
 <p>打开浏览器，输入如下网址</p>
@@ -177,7 +178,7 @@
 <figure class="highlight handlebars"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    (<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span>(<span class="string">&#x27;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">page.password</span> &#125;&#125;</span><span class="language-xml">&#x27;)&#123;</span></span><br><span class="line"><span class="language-xml">            if (prompt(&#x27;请输入文章密码&#x27;) !== &#x27;</span><span class="template-variable">&#123;&#123; <span class="name">page.password</span> &#125;&#125;</span><span class="language-xml">&#x27;)&#123;</span></span><br><span class="line"><span class="language-xml">                alert(&#x27;密码错误！&#x27;);</span></span><br><span class="line"><span class="language-xml">                history.back();</span></span><br><span class="line"><span class="language-xml">            &#125;</span></span><br><span class="line"><span class="language-xml">        &#125;</span></span><br><span class="line"><span class="language-xml">    &#125;)();</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>然后在文章里，头部多加一个<code>password:xxxxx</code>就行了。</p>
 <p><strong>方法二：</strong></p>
-<p>参考：<a href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md">https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md</a></p>
+<p>参考：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01pa2VDb2Rlci9oZXhvLWJsb2ctZW5jcnlwdC9ibG9iL21hc3Rlci9SZWFkTWUuemgubWQ=">https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md<i class="fa fa-external-link-alt"></i></span></p>
 <p>输入：</p>
 <figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment">--save hexo-blog-encrypt</span></span><br></pre></td></tr></table></figure>
 
@@ -238,7 +239,7 @@
 <p>编辑<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>（主题目录下），启用本地搜索功能：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>之后部署到远程即可。</p>
-<h1 id="Hexo博客提交百度和Google收录"><a href="#Hexo博客提交百度和Google收录" class="headerlink" title="Hexo博客提交百度和Google收录"></a>Hexo博客提交百度和Google收录</h1><p>这篇文章写得很详细，我就不详细说了：<br><a href="https://www.jianshu.com/p/8c0707ce5da4">Hexo博客收录百度和谷歌-基于Next主题</a>或者<a href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收</a></p>
+<h1 id="Hexo博客提交百度和Google收录"><a href="#Hexo博客提交百度和Google收录" class="headerlink" title="Hexo博客提交百度和Google收录"></a>Hexo博客提交百度和Google收录</h1><p>这篇文章写得很详细，我就不详细说了：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC84YzA3MDdjZTVkYTQ=">Hexo博客收录百度和谷歌-基于Next主题<i class="fa fa-external-link-alt"></i></span>或者<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="添加打赏功能"><a href="#添加打赏功能" class="headerlink" title="添加打赏功能"></a>添加打赏功能</h1><p>首先，准备支付宝和微信二维码，怎么生成就不多说，百度。</p>
 <p>然后在<code>_config.yml</code>中配置图片:</p>
 <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">reward_comment:</span> 坚持原创技术分享，您的支持将鼓励我继续创作！</span><br><span class="line"><span class="symbol">wechatpay:</span> <span class="keyword">/images/</span>wechat.jpg</span><br><span class="line"><span class="symbol">alipay:</span> <span class="keyword">/images/</span>aipay.png</span><br></pre></td></tr></table></figure>
@@ -278,9 +279,9 @@
 添加之后再执行<code>hexo d -g</code>，然后再刷新页面就能看到效果</li>
 </ol>
 <h1 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h1><p>太复杂了，直接参考:</p>
-<p><a href="https://www.jianshu.com/p/2c6ad12791c6">Hexo博客添加SEO-评论系统-阅读统计-站长统计</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8yYzZhZDEyNzkxYzY=">Hexo博客添加SEO-评论系统-阅读统计-站长统计<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="百度谷歌收录"><a href="#百度谷歌收录" class="headerlink" title="百度谷歌收录"></a>百度谷歌收录</h1><p>同样有很详细的教程，这里不多说：</p>
-<p>收录<br><a href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收录</a></p>
+<p>收录<br><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收录<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="添加阅读次数统计"><a href="#添加阅读次数统计" class="headerlink" title="添加阅读次数统计"></a>添加阅读次数统计</h1><p><strong>2023-04-18 更新</strong>：<br>现在可以直接在主题配置文件里，找<code>valine</code>这个，将leancloud里的appid和appkey直接填上，就可以代替使用<code>leancloud_visitors</code>。</p>
 <p>（以下是更新前的，除了主题配置文件都可以用）<br>注册LeanCloud账号，完成激活；点击左上角的”应用”-“创建新应用”-点击“数据”右边的齿轮–点击创建类class，类名字叫做Counter。<br><img src="/2018/07/23/28blog/leancloud1.jpg" alt="配置leancloud数据"></p>
 <p>然后，修改<font color="#FFFFFF"><span style="background-color: #68228B;">主题配置文件</span></font>，找到<code>leancloud_visitors</code>，添加修改：</p>
@@ -328,24 +329,35 @@
 <li><code>danger</code></li>
 </ul>
 <p>然后看到其他人可以给这个文本框改颜色，所以，可以在<code>主题配置文件</code>里找到的<code>Note tag</code>就行了。</p>
-<div class="note bs-callout"><h1 id="H1标题测试"><a href="#H1标题测试" class="headerlink" title="H1标题测试"></a>H1标题测试</h1><p>这个是bs-callout </p></div>
+<details class="note "><summary><p>bs-callout</p>
+</summary>
+<h1 id="H1标题测试"><a href="#H1标题测试" class="headerlink" title="H1标题测试"></a>H1标题测试</h1><p>这个是bs-callout </p>
 
-<div class="note default"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是default </p></div>
+</details>
 
-<div class="note primary"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是 primary </p></div>
+<div class="note default"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是default </p>
+</div>
 
-<div class="note success"><p>测试，这个是 success </p></div>
+<div class="note primary"><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这个是 primary </p>
+</div>
 
-<div class="note info"><p>测试，这个是 info </p></div>
+<div class="note success"><p>测试，这个是 success </p>
+</div>
 
-<div class="note warning"><p>测试，这个是 warning </p></div>
+<div class="note info"><p>测试，这个是 info </p>
+</div>
 
-<div class="note danger"><p>测试，这个是 danger </p></div>
+<div class="note warning"><p>测试，这个是 warning </p>
+</div>
 
-<div class="note info"><p>这个其实也是我在<a href="https://blog.dongleizhang.com/posts/32005d86/">一个很好看的博客</a>通过F12看到他的设置发找到的文件地方。学习使用HEXO的内置标签 </p></div>
+<div class="note danger"><p>测试，这个是 danger </p>
+</div>
 
-<h1 id="hexo新增的看板娘功能"><a href="#hexo新增的看板娘功能" class="headerlink" title="hexo新增的看板娘功能"></a>hexo新增的看板娘功能</h1><p>先mark一下，方法如<a href="https://blog.csdn.net/Mculover666/article/details/99696919?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_utm_term~default-16-99696919-blog-129943166.235%5Ev29%5Epc_relevant_default_base&spm=1001.2101.3001.4242.9&utm_relevant_index=19">链接</a>，有空再优化下。</p>
-<h1 id="在本地建立分支"><a href="#在本地建立分支" class="headerlink" title="在本地建立分支"></a>在本地建立分支</h1><p>这个分支保存最全：<br><a href="https://blog.csdn.net/white_idiot/article/details/80685990">https://blog.csdn.net/white_idiot/article/details/80685990</a><br>这个补充讲分支：<br><a href="https://blog.csdn.net/shile/article/details/78714189">https://blog.csdn.net/shile/article/details/78714189</a></p>
+<div class="note info"><p>这个其实也是我在<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmRvbmdsZWl6aGFuZy5jb20vcG9zdHMvMzIwMDVkODYv">一个很好看的博客<i class="fa fa-external-link-alt"></i></span>通过F12看到他的设置发找到的文件地方。学习使用HEXO的内置标签 </p>
+</div>
+
+<h1 id="hexo新增的看板娘功能"><a href="#hexo新增的看板娘功能" class="headerlink" title="hexo新增的看板娘功能"></a>hexo新增的看板娘功能</h1><p>先mark一下，方法如<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01jdWxvdmVyNjY2L2FydGljbGUvZGV0YWlscy85OTY5NjkxOT91dG1fbWVkaXVtPWRpc3RyaWJ1dGUucGNfcmVsZXZhbnQubm9uZS10YXNrLWJsb2ctMn5kZWZhdWx0fmJhaWR1anNfdXRtX3Rlcm1+ZGVmYXVsdC0xNi05OTY5NjkxOS1ibG9nLTEyOTk0MzE2Ni4yMzUlNUV2MjklNUVwY19yZWxldmFudF9kZWZhdWx0X2Jhc2Umc3BtPTEwMDEuMjEwMS4zMDAxLjQyNDIuOSZ1dG1fcmVsZXZhbnRfaW5kZXg9MTk=">链接<i class="fa fa-external-link-alt"></i></span>，有空再优化下。</p>
+<h1 id="在本地建立分支"><a href="#在本地建立分支" class="headerlink" title="在本地建立分支"></a>在本地建立分支</h1><p>这个分支保存最全：<br><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3doaXRlX2lkaW90L2FydGljbGUvZGV0YWlscy84MDY4NTk5MA==">https://blog.csdn.net/white_idiot/article/details/80685990<i class="fa fa-external-link-alt"></i></span><br>这个补充讲分支：<br><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoaWxlL2FydGljbGUvZGV0YWlscy83ODcxNDE4OQ==">https://blog.csdn.net/shile/article/details/78714189<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">进入user.github.io文件夹,应是hexo分支</span><br><span class="line">git pull <span class="built_in">origin</span> hexo ——本地和远端的融合</span><br><span class="line">hexo <span class="built_in">new</span> post <span class="string">&quot;new post name&quot;</span>  ——写新文章</span><br><span class="line">git add source</span><br><span class="line">git commit -m <span class="string">&quot;xxx&quot;</span></span><br><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> hexo  ——备份</span><br><span class="line">hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)</span><br></pre></td></tr></table></figure>
 <p>用vscode 在苹果电脑上是默认安装xcode就有git（当git不存在时重新安装xcode即可。<br><img src="/2018/07/23/28blog/blog1.png"></p>
 <img src="/2018/07/23/28blog/blog1.png" class="" title="这是图片">
@@ -354,7 +366,7 @@
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">//</span>安装</span><br><span class="line">npm install -g npm-check-updates</span><br><span class="line"><span class="regexp">//</span>查看要更新依赖</span><br><span class="line">ncu</span><br><span class="line"><span class="regexp">//</span>更新依赖 这里只更新package.json文件至最新版本</span><br><span class="line">ncu -u</span><br><span class="line"><span class="regexp">//</span>安装依赖</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
 <p>不清除旧版本主题的办法：使用备用主题config.next.yml</p>
-<p>更新next的办法：<a href="https://theme-next.js.org/docs/third-party-services/%E5%AE%98%E6%96%B9%E6%8C%87%E5%8D%97%E9%9A%8F%E6%97%B6%E6%9B%B4%E6%96%B0%E3%80%82">https://theme-next.js.org/docs/third-party-services/官方指南随时更新。</a><br>更新hexo的办法：</p>
+<p>更新next的办法：<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoaXJkLXBhcnR5LXNlcnZpY2VzLyVFNSVBRSU5OCVFNiU5NiVCOSVFNiU4QyU4NyVFNSU4RCU5NyVFOSU5QSU4RiVFNiU5NyVCNiVFNiU5QiVCNCVFNiU5NiVCMCVFMyU4MCU4Mg==">https://theme-next.js.org/docs/third-party-services/官方指南随时更新。<i class="fa fa-external-link-alt"></i></span><br>更新hexo的办法：</p>
 <figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> i hexo-cli -g</span><br><span class="line"><span class="built_in">npm</span> update</span><br></pre></td></tr></table></figure>
 
 
@@ -370,7 +382,7 @@
 <h2 id="localhost-4000-cannot-get"><a href="#localhost-4000-cannot-get" class="headerlink" title="localhost:4000 cannot get"></a>localhost:4000 cannot get</h2><p>第一种可能是没安装插件，输入指令：</p>
 <figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-<span class="keyword">server</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 
-<p>安装完成后，输入以下命令以启动服务器，您的网站会在 <a href="http://localhost:4000/">http://localhost:4000</a> 下启动。在服务器启动期间，Hexo会监视文件变动并自动更新，您无须重启服务器。</p>
+<p>安装完成后，输入以下命令以启动服务器，您的网站会在 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwLw==">http://localhost:4000<i class="fa fa-external-link-alt"></i></span> 下启动。在服务器启动期间，Hexo会监视文件变动并自动更新，您无须重启服务器。</p>
 <figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
 <p>如果您想要更改端口，或是在执行时遇到了 EADDRINUSE 错误，可以在执行时使用 -p 选项指定其他端口，如下：</p>
 <figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span> server -p <span class="number">5000</span></span><br></pre></td></tr></table></figure>
@@ -384,22 +396,22 @@
 <p>最后一种，直接<code>hexo g</code>部署一下，出现所有文件generated后就可以了</p>
 <h2 id="hexo-d的时候提示错误"><a href="#hexo-d的时候提示错误" class="headerlink" title="hexo d的时候提示错误"></a>hexo d的时候提示错误</h2><p>提示下面错误</p>
 <figure class="highlight subunit"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ERROR </span>Deployer not found : github</span><br></pre></td></tr></table></figure>
-<p>先看<font color="#FFFFFF"><span style="background-color: #68228B;">主页配置文件</span></font>中<code>_config.yml</code>里<code>deploy</code>要是<code>type: git</code>，<code>repo</code>这个字段填&#96;<a href="https://github.com/yourgit/yourgit.github.io.git">https://github.com/yourgit/yourgit.github.io.git</a></p>
+<p>先看<font color="#FFFFFF"><span style="background-color: #68228B;">主页配置文件</span></font>中<code>_config.yml</code>里<code>deploy</code>要是<code>type: git</code>，<code>repo</code>这个字段填&#96;<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJnaXQveW91cmdpdC5naXRodWIuaW8uZ2l0">https://github.com/yourgit/yourgit.github.io.git<i class="fa fa-external-link-alt"></i></span></p>
 <p><strong>(安装豆瓣插件之后必须是全的hexo deploy)</strong></p>
-<h2 id="其他坑"><a href="#其他坑" class="headerlink" title="其他坑"></a>其他坑</h2><p>目前大多都在这里，其他的可以参考网上百度，比如<a href="https://www.jianshu.com/p/a2fe56d11c4f">搭建Hexo博客中碰到的坑</a>。</p>
+<h2 id="其他坑"><a href="#其他坑" class="headerlink" title="其他坑"></a>其他坑</h2><p>目前大多都在这里，其他的可以参考网上百度，比如<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9hMmZlNTZkMTFjNGY=">搭建Hexo博客中碰到的坑<i class="fa fa-external-link-alt"></i></span>。</p>
 <hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/lvonve/article/details/79587321">换了电脑如何使用hexo继续写博</a></p>
-<p><a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/">Hexo博客彻底解决置顶问题</a></p>
-<p><a href="http://wangwlj.com/2017/12/18/blog_comment/">Hexo博客优化之实现来必力评论功能</a></p>
-<p><a href="https://blog.csdn.net/ace_15/article/details/79255203">使用Hexo搭建个人博客</a></p>
-<p><a href="https://www.jianshu.com/p/8c0707ce5da4">Hexo博客收录百度和谷歌-基于Next主题</a></p>
-<p><a href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收</a></p>
-<p><a href="https://blog.csdn.net/lcyaiym/article/details/76796545">hexo的next主题打赏</a></p>
-<p><a href="https://blog.csdn.net/com_ma/article/details/76039859">hexo博客的背景设置</a></p>
-<p><a href="https://www.jianshu.com/p/2c6ad12791c6">Hexo博客添加SEO-评论系统-阅读统计-站长统计</a></p>
-<p><a href="https://blog.csdn.net/qq_32454537/article/details/79482914">Hexo个人博客站点被百度谷歌收录</a></p>
-<p><a href="https://www.jianshu.com/p/a2fe56d11c4f">搭建Hexo博客中碰到的坑</a></p>
-<p><a href="https://blog.csdn.net/qw8880000/article/details/80235648">更改链接颜色</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x2b252ZS9hcnRpY2xlL2RldGFpbHMvNzk1ODczMjE=">换了电脑如何使用hexo继续写博<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5uZXRjYW42NjYuY29tLzIwMTUvMTEvMjIvJUU4JUE3JUEzJUU1JTg2JUIzSGV4byVFNyVCRCVBRSVFOSVBMSVCNiVFOSU5NyVBRSVFOSVBMiU5OC8=">Hexo博客彻底解决置顶问题<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3dhbmd3bGouY29tLzIwMTcvMTIvMTgvYmxvZ19jb21tZW50Lw==">Hexo博客优化之实现来必力评论功能<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FjZV8xNS9hcnRpY2xlL2RldGFpbHMvNzkyNTUyMDM=">使用Hexo搭建个人博客<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC84YzA3MDdjZTVkYTQ=">Hexo博客收录百度和谷歌-基于Next主题<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xjeWFpeW0vYXJ0aWNsZS9kZXRhaWxzLzc2Nzk2NTQ1">hexo的next主题打赏<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvbV9tYS9hcnRpY2xlL2RldGFpbHMvNzYwMzk4NTk=">hexo博客的背景设置<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8yYzZhZDEyNzkxYzY=">Hexo博客添加SEO-评论系统-阅读统计-站长统计<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDU0NTM3L2FydGljbGUvZGV0YWlscy83OTQ4MjkxNA==">Hexo个人博客站点被百度谷歌收录<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9hMmZlNTZkMTFjNGY=">搭建Hexo博客中碰到的坑<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ODg4MDAwMC9hcnRpY2xlL2RldGFpbHMvODAyMzU2NDg=">更改链接颜色<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>「get新技能」</category>
@@ -465,7 +477,7 @@
 <p><strong>人们的烦恼大多数来自遗憾过去，和担忧未来。</strong></p>
 <p>想到《反脆弱》中提到斯多葛学派抵抗脆弱性的方式就是：利用心理练习弱化这些东西在心目中的地位，也就是——如果我“一无所失”，那我获得的只有利益，那么我就是具有反脆弱性的。</p>
 <p>一念之转，让自己在遇到看似痛苦和困难时，通过调整自己的心理和态度，获得面对客观挑战的能力。</p>
-<h1 id="利用熵增定律，随机性混乱让我们无需自律去做事"><a href="#利用熵增定律，随机性混乱让我们无需自律去做事" class="headerlink" title="利用熵增定律，随机性混乱让我们无需自律去做事"></a>利用熵增定律，随机性混乱让我们无需自律去做事</h1><p>来自一个B站up主的<a href="https://b23.tv/kbFhqgM">经验总结</a>，但也是很符合《反脆弱》里的理论，大致做法就是：</p>
+<h1 id="利用熵增定律，随机性混乱让我们无需自律去做事"><a href="#利用熵增定律，随机性混乱让我们无需自律去做事" class="headerlink" title="利用熵增定律，随机性混乱让我们无需自律去做事"></a>利用熵增定律，随机性混乱让我们无需自律去做事</h1><p>来自一个B站up主的<span class="exturl" data-url="aHR0cHM6Ly9iMjMudHYva2JGaHFnTQ==">经验总结<i class="fa fa-external-link-alt"></i></span>，但也是很符合《反脆弱》里的理论，大致做法就是：</p>
 <p>1、<strong>尊重量大宇宙定律：</strong><br>  （1）熵增定律（混乱），和谐的事物会被忽略，只有混乱才能引人注意<br>  （2）自律是“要”做，人性是“不要”做，遵循人性</p>
 <p>2、<strong>当有某个目的时</strong>，不强求理性和有序，利用混乱和顺从人性来实现目的。比如想锻炼但坚持不了，不用刻意固定时间和地点去健身，只需要将哑铃、跳绳、篮球等放在生活正常动线上，造成混乱（或者说制造提示注意点），阻碍了行走动线，让自己注意到了这个器材，就顺便去做一做。这就是利用“不刻意、顺便看到了这个东西就顺其自然地完成”的心态，达成自己想做的事情。</p>
 <p>3、<strong>不要做会引发失败的事情，你就成功了</strong>。正如查理芒格一直说的是“如果想永远不死，那就不要去会死的地方”，利用反向思维。从失败范例上找到引发失败的几个关键性行为，避免即可。</p>
@@ -550,7 +562,7 @@
 <p>简单理解，在工作中一个人需要付出情绪上的努力，这部分也是我们为了赚钱达到公司或者老板的要求（或者潜在要求）而做的。</p>
 </blockquote>
 <p>很多时候我们无意中付出了很多的情绪劳动，就出现精神内耗。</p>
-<h1 id="二、精神辞职"><a href="#二、精神辞职" class="headerlink" title="二、精神辞职"></a>二、精神辞职</h1><p>于是又出现一个新概念，<a href="https://mp.weixin.qq.com/s/Hdmo0sAO8KhEbc55baF2LQ">精神辞职</a>，大意就是：</p>
+<h1 id="二、精神辞职"><a href="#二、精神辞职" class="headerlink" title="二、精神辞职"></a>二、精神辞职</h1><p>于是又出现一个新概念，<span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvSGRtbzBzQU84S2hFYmM1NWJhRjJMUQ==">精神辞职<i class="fa fa-external-link-alt"></i></span>，大意就是：</p>
 <blockquote>
 <p>不追求领导的认可和升职加薪，以最小限度的自我消耗完成工作。<br>听起来有点消极，但它背后其实是一种反抗和自我保护：我不是为了完成 KPI 的「工具人」，我的情绪需要得到回应。</p>
 </blockquote>
@@ -568,7 +580,7 @@
 </blockquote>
 <p>才恍然大悟，跳出舒适圈前提是你已在能力圈里做到很好，并找到自己的能力边界。知道边界才有资格说“跨出”。</p>
 <p>这也是“斜杠”的前提：<strong>需要在之前自己一直深耕的领域有一定的地位和积累，至少自己有一项特别精专的技能。</strong></p>
-<h1 id="四、方励：人生里的战术和战略"><a href="#四、方励：人生里的战术和战略" class="headerlink" title="四、方励：人生里的战术和战略"></a>四、方励：人生里的战术和战略</h1><p>之前看<a href="https://view.inews.qq.com/a/20221225A06HOP00?refer=wx_hot">方励的演讲</a>，里面有一句话很打动我：</p>
+<h1 id="四、方励：人生里的战术和战略"><a href="#四、方励：人生里的战术和战略" class="headerlink" title="四、方励：人生里的战术和战略"></a>四、方励：人生里的战术和战略</h1><p>之前看<span class="exturl" data-url="aHR0cHM6Ly92aWV3LmluZXdzLnFxLmNvbS9hLzIwMjIxMjI1QTA2SE9QMDA/cmVmZXI9d3hfaG90">方励的演讲<i class="fa fa-external-link-alt"></i></span>，里面有一句话很打动我：</p>
 <blockquote>
 <p>把生命消耗在自己的兴趣爱好里面，这样你永远是一个有故事、有阅历的人。<br>……<br>如何去做事，怎么把一个事做好，是战术行为；但是想做什么，最希望做什么，从心里出来的东西才是你一生中最重要的东西，是战略。<br>把赚钱当做第一位，你就赚不到钱，你应该把赚钱当做顺带的事情，是战术手段；赚钱不能够动情、不能伤心，赚钱可以脑袋去算计，胳膊腿去跑。</p>
 </blockquote>
@@ -592,7 +604,7 @@
   <entry>
     <title>《TED：如何学会和压力做朋友？》</title>
     <url>/2019/05/08/99ted8/</url>
-    <content><![CDATA[<p>TED:<a href="http://t.cn/EoNbIbo">《TED：如何学会和压力做朋友？》</a></p>
+    <content><![CDATA[<p>TED:<span class="exturl" data-url="aHR0cDovL3QuY24vRW9OYklibw==">《TED：如何学会和压力做朋友？》<i class="fa fa-external-link-alt"></i></span></p>
 <ol>
 <li>改变对压力的看法，压力使你心跳加速，不是紧张焦虑，而是身体告诉你正充满力量 </li>
 <li>关心别人，进行人际交往。面对他人时产生的压力反而是减压的方法去。感到压力时就和别人聊天吧，如果没有人可聊，就去跟自己聊，或者就去做好事做义工咯。</li>
@@ -609,7 +621,7 @@
   <entry>
     <title>《你真正需要和谁结婚》</title>
     <url>/2019/05/07/98ted7/</url>
-    <content><![CDATA[<p>TED:<a href="http://t.cn/R5dOIlS">《你真正需要和谁结婚》</a></p>
+    <content><![CDATA[<p>TED:<span class="exturl" data-url="aHR0cDovL3QuY24vUjVkT0lsUw==">《你真正需要和谁结婚》<i class="fa fa-external-link-alt"></i></span></p>
 <p>有那么一个人，无论你现在是什么状态，胖还是瘦，好还是坏，生病或者健康，富裕或者贫穷，都会跟你在一起；有那么一个人，与你相爱终身直到死亡才能将你们分开；</p>
 <p>那个人，就是你自己。</p>
 <p>先让自己“完整”。这个完整并不是靠别人对你说“嫁给我吧”“我保护你”等等上获得，而要自己给足自己，成为一个完整的人，让自己处于“丰裕”的状态。</p>
@@ -644,7 +656,7 @@
   <entry>
     <title>《你该认清你的恐惧而不是目标》</title>
     <url>/2019/05/07/97ted6/</url>
-    <content><![CDATA[<p>TED:<a href="http://t.cn/RCvBe7F">《你该认清你的恐惧而不是目标》</a></p>
+    <content><![CDATA[<p>TED:<span class="exturl" data-url="aHR0cDovL3QuY24vUkN2QmU3Rg==">《你该认清你的恐惧而不是目标》<i class="fa fa-external-link-alt"></i></span></p>
 <p>折磨我们的往往是想象，而非真相。</p>
 <p>我被很多恐惧折磨过，所以可以尝试斯多葛学派的“恐惧设定”（fear setting）</p>
 <ol>
@@ -672,7 +684,7 @@
   <entry>
     <title>《只需20个小时，你就能学会任何事情》</title>
     <url>/2019/05/06/96ted5/</url>
-    <content><![CDATA[<p>TED:<a href="http://t.cn/RkFIeqG">《【TED】只需20个小时，你就能学会任何事情》</a></p>
+    <content><![CDATA[<p>TED:<span class="exturl" data-url="aHR0cDovL3QuY24vUmtGSWVxRw==">《【TED】只需20个小时，你就能学会任何事情》<i class="fa fa-external-link-alt"></i></span></p>
 <p>让自己从零到入门只需要20个小时。</p>
 <ol>
 <li>任务分解</li>
@@ -692,7 +704,7 @@
   <entry>
     <title>《别再抱怨 学会挤时间 拓宽生命宽度》</title>
     <url>/2019/05/06/95ted4/</url>
-    <content><![CDATA[<p>TED:<a href="http://t.cn/RJ7isWA">《【TED】别再抱怨 学会挤时间 拓宽生命宽度》</a></p>
+    <content><![CDATA[<p>TED:<span class="exturl" data-url="aHR0cDovL3QuY24vUko3aXNXQQ==">《【TED】别再抱怨 学会挤时间 拓宽生命宽度》<i class="fa fa-external-link-alt"></i></span></p>
 <ol>
 <li>没有时间&#x3D;没有那么重要</li>
 <li>时间不是挤出来的，先构建你想要的生活，然后再去计划时间</li>
@@ -710,7 +722,7 @@
   <entry>
     <title>《如何找到你喜欢的工作》</title>
     <url>/2019/05/06/94ted3/</url>
-    <content><![CDATA[<p>TED:[《如何找到你喜欢的工作》] (<a href="http://t.cn/R5IKWp0">http://t.cn/R5IKWp0</a>)</p>
+    <content><![CDATA[<p>TED:[《如何找到你喜欢的工作》] (<span class="exturl" data-url="aHR0cDovL3QuY24vUjVJS1dwMA==">http://t.cn/R5IKWp0<i class="fa fa-external-link-alt"></i></span>)</p>
 <ol>
 <li>找到自己的优势，然后找出你做这些事情的原因&#x2F;你的价值观，最后结合自己的经历，为什么这样选择，为什么仰慕那些人，他们有什么闪光点。这就是你为之努力的着手点</li>
 <li>挑战不可能</li>
@@ -728,7 +740,7 @@
   <entry>
     <title>《20岁到30岁，是你最不可挥霍的光阴》</title>
     <url>/2019/05/06/93ted2/</url>
-    <content><![CDATA[<p>TED:<a href="http://t.cn/RnCLfRz">《20岁到30岁，是你最不可挥霍的光阴》</a></p>
+    <content><![CDATA[<p>TED:<span class="exturl" data-url="aHR0cDovL3QuY24vUm5DTGZSeg==">《20岁到30岁，是你最不可挥霍的光阴》<i class="fa fa-external-link-alt"></i></span></p>
 <ol>
 <li>改变从现在开始，必定一个计划，设定deadline</li>
 <li>忘记身份危机，有目的地积累身份资本，对自己投资，去学习，别做毫无意义的探索</li>
@@ -747,7 +759,7 @@
   <entry>
     <title>《怎样才能“不畏将来”》</title>
     <url>/2019/05/06/92ted1/</url>
-    <content><![CDATA[<p>TED:<a href="http://t.cn/RQsr1vT">《怎样才能“不畏将来”》</a></p>
+    <content><![CDATA[<p>TED:<span class="exturl" data-url="aHR0cDovL3QuY24vUlFzcjF2VA==">《怎样才能“不畏将来”》<i class="fa fa-external-link-alt"></i></span></p>
 <p>三个方式：</p>
 <ol>
 <li><p>我们的关系-接触不同的人，跟我们一点也不像的人，才能帮我们成长</p>
@@ -1189,7 +1201,7 @@
     <url>/2019/01/26/75sq3r/</url>
     <content><![CDATA[<p>去年是半年看完了31本书，今年目标是50本，并写笔记或书评。</p>
 <p>相当于每周一本，不过分追求数量，但阅读的质量跟阅读方式也有关系。</p>
-<p>之前写过<a href="https://www.jianshu.com/p/60169f84dcfe">《2018年阅读&amp;写作总结-半年完成31本书》</a>和<a href="https://www.jianshu.com/p/ea3261ad68b9">《仅适合上班族的阅读写作指南》</a>，简单记录了自己阅读的方式。</p>
+<p>之前写过<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC82MDE2OWY4NGRjZmU=">《2018年阅读&amp;写作总结-半年完成31本书》<i class="fa fa-external-link-alt"></i></span>和<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9lYTMyNjFhZDY4Yjk=">《仅适合上班族的阅读写作指南》<i class="fa fa-external-link-alt"></i></span>，简单记录了自己阅读的方式。</p>
 <p>这几天也在整理之前的阅读技巧。</p>
 <p>之前学习了SQ3R阅读法，放出导图：</p>
 <p><img src="/2019/01/26/75sq3r/75.png"></p>
@@ -1231,7 +1243,7 @@
 </li>
 <li><p>“我”到底是谁：<a href="#3">自省笔记</a> <a href="#4">九个问题</a></p>
 </li>
-<li><p>人生成就九宫格，或者角色身份：各个领域想要实现什么，每个身份下，想要达成什么样的自己  具体改进方法看<a href="https://www.jianshu.com/p/a4bd8b3de77b">用错的时间管理方法</a></p>
+<li><p>人生成就九宫格，或者角色身份：各个领域想要实现什么，每个身份下，想要达成什么样的自己  具体改进方法看<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9hNGJkOGIzZGU3N2I=">用错的时间管理方法<i class="fa fa-external-link-alt"></i></span></p>
 </li>
 <li><p>给未来每一年直到80岁，写下每一年的目标（大致）——使用改良版的人生阶段角色，与上面合在一起（参考《人生的八个角色》，以及《富爸爸》里提到把自己当做一个公司，<a href="#2">人生角色</a></p>
 </li>
@@ -1241,7 +1253,7 @@
 </li>
 <li><p>写下所有的愿望，并分类</p>
 </li>
-<li><p>目标策略：赋能（意义和价值）、OKR（关键结果是什么）、下一步行动是什么、WOOP（风险，如果没完成，planb是什么）<a href="#1">迪尼斯策略</a>、<a href="https://mp.weixin.qq.com/s/P4MeY98743Z9N2H__ejbTQ">每天五件事</a></p>
+<li><p>目标策略：赋能（意义和价值）、OKR（关键结果是什么）、下一步行动是什么、WOOP（风险，如果没完成，planb是什么）<a href="#1">迪尼斯策略</a>、<span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUDRNZVk5ODc0M1o5TjJIX19lamJUUQ==">每天五件事<i class="fa fa-external-link-alt"></i></span></p>
 </li>
 </ol>
 <hr>
@@ -1297,7 +1309,7 @@
 <li>如果出现了这种障碍，应该怎么做</li>
 </ul>
 <hr>
-<h3 id="九个问题"><a href="#九个问题" class="headerlink" title="九个问题"></a><span id = "4">九个问题</span></h3><p>陈素封的<a href="http://www.xuzizi.cn/2016/04/18/why-write-blog/">博客写作九问</a>，是写作来源灵感。以上的这九个问题摘自《很少人能顺畅回答这9个问题——心理治疗刚开始医生常常会先问你的 》by 李孟潮。</p>
+<h3 id="九个问题"><a href="#九个问题" class="headerlink" title="九个问题"></a><span id = "4">九个问题</span></h3><p>陈素封的<span class="exturl" data-url="aHR0cDovL3d3dy54dXppemkuY24vMjAxNi8wNC8xOC93aHktd3JpdGUtYmxvZy8=">博客写作九问<i class="fa fa-external-link-alt"></i></span>，是写作来源灵感。以上的这九个问题摘自《很少人能顺畅回答这9个问题——心理治疗刚开始医生常常会先问你的 》by 李孟潮。</p>
 <p>1、请你介绍一下你自己，你是个什么样的人？<br>2、你有什么理想吗？这个理想是怎么形成的？<br>3、你理想的伴侣关系是什么样的？你自己在这个伴侣关系中扮演什么样的角色？要承担什么样的责任？<br>4、你理想的事业是什么，你正在做的工作符合你的事业理想吗？这份工作对你的意义是什么？<br>5、你对亲子关系怎么看？对你来说，什么是一个理想的父亲（母亲），你期望自己成为这样一个理想父亲（母亲）吗？<br>6、你对钱怎么看，你认为赚到多少钱是足够的？如果你明天一早醒来，已经有足够的钱，你将会如何继续安排自己的生活？<br>7、对你来说，什么是理想的性生活？什么是理想的性道德，在你的性道德观中，什么样的性生活是禁忌的，需要避免的，什么样的性生活是美好的，需要得到鼓励和发展的?<br>8、你的择友标准是什么？什么样的人你会愿意交往，什么样的人你会拒绝和他交往？<br>9、你对死亡怎么看？你希望自己活到多少岁，你准备怎么度过从现在到死亡的这段时间？如果你要立遗嘱，这份遗嘱会怎么写？</p>
 ]]></content>
       <categories>
@@ -1313,17 +1325,17 @@
     <url>/2019/01/23/72dreammanage/</url>
     <content><![CDATA[<p>看了秋叶大叔的几篇微信文，感觉对做新年计划有很大启发。</p>
 <hr>
-<h1 id="一、梦想清单"><a href="#一、梦想清单" class="headerlink" title="一、梦想清单"></a>一、梦想清单</h1><p><a href="https://mp.weixin.qq.com/s/QR4O_IwpnGsj6QrfwKxrxg">文章来源</a></p>
+<h1 id="一、梦想清单"><a href="#一、梦想清单" class="headerlink" title="一、梦想清单"></a>一、梦想清单</h1><p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUVI0T19Jd3BuR3NqNlFyZndLeHJ4Zw==">文章来源<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>人的注意力带宽是有限的，当你关注越多，必然伴随效率下降。<br>如果每个人给自己写下100个梦想，并随时提醒自己要去完成梦想，对很多人而言反而会陷入——我先做什么好的陷阱。<br>写完100项梦想清单，马上要做重要度排序的，你只能把有限的注意力，放在最需要完成的事情上。<br>不只是一次写出100个梦想，更要是一次只想着搞定一个目标。<br>完成一项，再看其它的目标，看着目标被一项项完成的过程，才能给人前进的激励感。<br>年轻人要少做梦想清单，多做能力清单，有了能力赚钱才能支撑梦想。<br>写下你想提升的50项能力，然后规定自己完成一个能力提升，奖赏自己一个合理的享受，这样做100项梦想清单，才能叫收支平衡，因为你提升了能力，有潜力赚到你想要的享受。<br>先做能力清单，一样一样提升能力，再做责任清单，一项一项完成责任，最后才是梦想清单，一件一件享受体验，这才是真实的人生啊。</p>
 </blockquote>
 <p>列出自己最想要的能力，完成行动，然后梦想才是奖赏。</p>
-<h1 id="二、时间记录"><a href="#二、时间记录" class="headerlink" title="二、时间记录"></a>二、时间记录</h1><p><a href="https://mp.weixin.qq.com/s/JHS_EExpPByNccSGVYPxyg">文章来源</a></p>
+<h1 id="二、时间记录"><a href="#二、时间记录" class="headerlink" title="二、时间记录"></a>二、时间记录</h1><p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvSkhTX0VFeHBQQnlOY2NTR1ZZUHh5Zw==">文章来源<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>今天用时间使用清单记录法，适合安排专人记录，而不是你自己记录。<br>本来时间就是碎片化的，还分心做时间使用清单记录，那么整个人都不好了。</p>
 </blockquote>
 <p>记录这件事情，记录大块时间就行了。</p>
-<h1 id="三、每天5件事"><a href="#三、每天5件事" class="headerlink" title="三、每天5件事"></a>三、每天5件事</h1><p><a href="https://mp.weixin.qq.com/s/P4MeY98743Z9N2H__ejbTQ">文章来源</a></p>
+<h1 id="三、每天5件事"><a href="#三、每天5件事" class="headerlink" title="三、每天5件事"></a>三、每天5件事</h1><p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUDRNZVk5ODc0M1o5TjJIX19lamJUUQ==">文章来源<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>还有一点，其实人在刚开始工作的时候，每天最重要的事情只有1件就够了，那个时候你并没有那么多重要的事情要响应。<br>为了5点重要的事情，凑5点内容，反而是给不重要的事情过多的注意力。人家企业高管每天需要响应的事情太多了，所以必须做减法到6点，我们普通人能响应的重要工作太少了，要努力做加法，从1点开始，慢慢到3点，到5点。<br>其实六点优先工作制，最重要的思想不是5件事，而是三个逻辑：要事第一、目标管理、优先原则。</p>
 <ul>
@@ -1332,7 +1344,7 @@
 <li>优先原则：在任何时候，如果你有闲暇，如果你想做事，请把时间优先用于你认为重要的事情上，必要时牺牲一些不重要的活动</li>
 </ul>
 </blockquote>
-<h1 id="四、九宫格"><a href="#四、九宫格" class="headerlink" title="四、九宫格"></a>四、九宫格</h1><p><a href="https://mp.weixin.qq.com/s/PEYhOiZrFl-P647AoL70mQ">文章来源</a></p>
+<h1 id="四、九宫格"><a href="#四、九宫格" class="headerlink" title="四、九宫格"></a>四、九宫格</h1><p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUEVZaE9pWnJGbC1QNjQ3QW9MNzBtUQ==">文章来源<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>人生就是经常处于各种不平衡的状态，不是这里要多付出，就是那里要让出，一辈子走下来，平衡的时候少，不平衡的时候多，只能说到了晚年，总体上，人生九宫格，该填的内容你都有了，这辈子也就知足了。<br>与其羡慕别人的九宫格，不如想想自己是哪个阶段，过好自己的几个格就够了。<br>有没有想过即便有了九宫格，真正要做的决策不是平衡，而是牺牲哪一个或哪几个格子，换取某一个格子的内容快速突破呢？</p>
 </blockquote>
@@ -1351,7 +1363,7 @@
   <entry>
     <title>大多数人都处于愚昧之巅</title>
     <url>/2019/01/22/71wanghuiwen/</url>
-    <content><![CDATA[<p>今天看的一篇文章，<a href="https://baijiahao.baidu.com/s?id=1623167676272983465&wfr=spider&for=pc">美团王慧文在2019极客创新大会上的分享</a>。</p>
+    <content><![CDATA[<p>今天看的一篇文章，<span class="exturl" data-url="aHR0cHM6Ly9iYWlqaWFoYW8uYmFpZHUuY29tL3M/aWQ9MTYyMzE2NzY3NjI3Mjk4MzQ2NSZ3ZnI9c3BpZGVyJmZvcj1wYw==">美团王慧文在2019极客创新大会上的分享<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>讲了几个有意思的东西，记录一下。</p>
 <h1 id="一、公司与资本的关系"><a href="#一、公司与资本的关系" class="headerlink" title="一、公司与资本的关系"></a>一、公司与资本的关系</h1><blockquote>
 <p>一个公司和资本市场的关系应该是彼此需求，不是单方的关系，不是我收割你，或者你敲诈我的关系，是我先提我需求的，而你有资源，给了我之后，我给你带来增长。<br>如果战场都清扫完了，我为什么还需要融资呢？正是因为我还需要资源才来融资，你才对我有价值，我们才彼此需要，这个钱我拿完了之后，我还有增长空间。</p>
@@ -1489,7 +1501,7 @@
     <title>记忆呵，青春</title>
     <url>/2019/01/16/66memory/</url>
     <content><![CDATA[<p>今天看到关于走饭已经去世7年的消息。</p>
-<p>才想起来，5年前给走饭录过<a href="https://www.lizhi.fm/34881/9066049971814534">一期节目</a>，还有<a href="https://www.lizhi.fm/34881/16212263848086406">致曾某某</a>。都是受抑郁症折磨的少年少女。</p>
+<p>才想起来，5年前给走饭录过<span class="exturl" data-url="aHR0cHM6Ly93d3cubGl6aGkuZm0vMzQ4ODEvOTA2NjA0OTk3MTgxNDUzNA==">一期节目<i class="fa fa-external-link-alt"></i></span>，还有<span class="exturl" data-url="aHR0cHM6Ly93d3cubGl6aGkuZm0vMzQ4ODEvMTYyMTIyNjM4NDgwODY0MDY=">致曾某某<i class="fa fa-external-link-alt"></i></span>。都是受抑郁症折磨的少年少女。</p>
 <p>进而想起了自己荔枝FM的节目，打开久违的荔枝FM，早就不是当年的样子，现在也没有邮箱登录的地方，下载完APP，却忘记了密码。</p>
 <p>找回密码需要用Gmail，哦，但是gmail已经不能在墙内登录。</p>
 <p>一时难受极了。</p>
@@ -1518,7 +1530,7 @@
   <entry>
     <title>乌合之众，一群人的狂欢？</title>
     <url>/2019/01/15/65ananswer/</url>
-    <content><![CDATA[<p>回@<a href="https://www.jianshu.com/u/deed645f1abf">August_煜</a><br>](<a href="https://www.jianshu.com/u/deed645f1abf)%E7%9A%84%E6%96%87%E7%AB%A0[%E3%80%8A%E4%B8%80%E5%8F%AA%E8%9B%8B%E3%80%8B](https://www.jianshu.com/p/6f718639434a)">https://www.jianshu.com/u/deed645f1abf)的文章[《一只蛋》](https://www.jianshu.com/p/6f718639434a)</a></p>
+    <content><![CDATA[<p>回@<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vdS9kZWVkNjQ1ZjFhYmY=">August_煜<i class="fa fa-external-link-alt"></i></span><br>](<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vdS9kZWVkNjQ1ZjFhYmYpJUU3JTlBJTg0JUU2JTk2JTg3JUU3JUFCJUEwWyVFMyU4MCU4QSVFNCVCOCU4MCVFNSU4RiVBQSVFOCU5QiU4QiVFMyU4MCU4Ql0oaHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC82ZjcxODYzOTQzNGEp">https://www.jianshu.com/u/deed645f1abf)的文章[《一只蛋》](https://www.jianshu.com/p/6f718639434a)<i class="fa fa-external-link-alt"></i></span></p>
 <p>对于传播和大众心理学，我也是半吊子水，称不上教，谈谈自己浅薄的想法吧~~</p>
 <p>关于大众心理学，有一个疑问：</p>
 <p>多数人支持的就是正确的吗？</p>
@@ -1719,7 +1731,7 @@
 <p>实验证明，每天都写作，的确能让自己的“笔杆”顺滑不少，每天过的新鲜无比。</p>
 <p>没有记录和写作的时候，日复一日，工作到晚上9点，回到家刷刷手机，看看书，就过去了。一周、一月之后，突然反应过来，诶？这一周&#x2F;一月就这么过去了啊？我做了什么？</p>
 <p>这种感觉尤为强烈。</p>
-<p>从去年5月开始，制定<a href="https://www.jianshu.com/p/ea3261ad68b9">规律性的阅读输出计划</a>，完成了<a href="https://www.jianshu.com/p/60169f84dcfe">年目标</a>，已经习惯了在工作强度较大的时候，维持定量的输出。</p>
+<p>从去年5月开始，制定<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9lYTMyNjFhZDY4Yjk=">规律性的阅读输出计划<i class="fa fa-external-link-alt"></i></span>，完成了<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC82MDE2OWY4NGRjZmU=">年目标<i class="fa fa-external-link-alt"></i></span>，已经习惯了在工作强度较大的时候，维持定量的输出。</p>
 <p>得到的效果就是：</p>
 <blockquote>
 <p>如果每天就这么浑浑噩噩过去了，一天也就这么没了；但给自己下个命令，每天要写点什么东西，那立马就调动起了大脑的活跃度，看过的文章，会下意识记下当时的想法，联想到的事情，会架构起模块，如果当下拿起手机，说不定一篇简短的记录就完成了（比如【灵感储藏室190110】话风很清奇的一个讲书，就是中午突然有感而发写下来的）。</p>
@@ -1845,24 +1857,27 @@
 <div class="note success"><ul>
 <li>写作主题阅读进度：2&#x2F;6</li>
 <li>职场技能拓展主题阅读进度：6&#x2F;4</li>
-</ul></div>
+</ul>
+</div>
 
 <p>职场技能因为实际工作需要，完成的很快，甚至超额完成；但写作主题是属于梦想序列的规划，没在现实需求里那么紧迫，于是没有给自己设立截止期，很快被后面不断产生的新欲念和实际需求给挤到一边。本来最先进行的主题，到年末却都没有完成。</p>
 <h2 id="1-3-反思总结"><a href="#1-3-反思总结" class="headerlink" title="1.3. 反思总结"></a>1.3. 反思总结</h2><p>有两点：</p>
 <div class="note warning"><ul>
 <li>第一，工具型、技能型书籍，如今年看的职场主题以及时间管理类书籍，这类书籍需要的只是核心论点和信息，借助听书或精读的方式，更能高效完成知识汲取，节省时间。</li>
 <li>第二，如果有主题阅读，一定要给自己一个规定时间，不然就会被后续的其他主题彻底耽误掉。</li>
-</ul></div>
+</ul>
+</div>
 
 <h2 id="1-4-引发的思考"><a href="#1-4-引发的思考" class="headerlink" title="1.4. 引发的思考"></a>1.4. 引发的思考</h2><p>从我的阅读主题的事情上，又发现自己陷入了“到底先专注完成一件事再做其他的”还是“时间来不及还是并行吧”这个问题里。</p>
 <p>如写作主题，是属于自己的梦想序列里的一部分，可突然必须给自己开辟一个职场技能主题的时候，就没有精力顾上，当职场技能主题完结时，关于理财的主题又出来。所以那些对我现实生活有更快速有利的事情出现时，“梦想序列”这个时候就容易被束之高阁。</p>
 <p>以上二选一的情境，不只是这种情况，生活中可能经常会遇到。我被“成为专家级”还是“多相潜能者”（全面发展但都不精通）两个概念搞的头疼脑涨。</p>
 <p>现在终于是明确了：</p>
-<div class="note info"><p>哪怕目的不是为了成为“专家”，既然定了一个目标，就一定要完成，哪怕中途因为其他事情分散了注意力，也要记得回头继续结束掉；或者为了正常进入下一个项目，就加快自己完成当前目标的进度，提高效率吧。</p></div>
+<div class="note info"><p>哪怕目的不是为了成为“专家”，既然定了一个目标，就一定要完成，哪怕中途因为其他事情分散了注意力，也要记得回头继续结束掉；或者为了正常进入下一个项目，就加快自己完成当前目标的进度，提高效率吧。</p>
+</div>
 
 <h1 id="二、写作总结"><a href="#二、写作总结" class="headerlink" title="二、写作总结"></a>二、写作总结</h1><h2 id="2-1-完成情况"><a href="#2-1-完成情况" class="headerlink" title="2.1. 完成情况"></a>2.1. 完成情况</h2><p><img src="/2018/12/23/58-2018readandwriting/2018%E5%B9%B4%E5%86%99%E4%BD%9C%E6%B8%85%E5%8D%95.png" alt="2018年写作"></p>
 <h3 id="书评——10篇，完成"><a href="#书评——10篇，完成" class="headerlink" title="书评——10篇，完成"></a>书评——10篇，完成</h3><a href="/2018/08/04/35McKinsey-The-method-of-thinking/" title="一本被书名耽误的问题解决宝典——《麦肯锡笔记思考法》">一本被书名耽误的问题解决宝典——《麦肯锡笔记思考法》</a>
-<p><a href="https://www.jianshu.com/p/f1ed502d5760">普通员工如何拥有决断力</a><br><a href="https://www.jianshu.com/p/da8665a12c59">知识体系届的“新华字典”</a><br><a href="https://www.jianshu.com/p/a2343329a2af">遇到这三种奇葩同事，如何攻略？</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9mMWVkNTAyZDU3NjA=">普通员工如何拥有决断力<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9kYTg2NjVhMTJjNTk=">知识体系届的“新华字典”<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9hMjM0MzMyOWEyYWY=">遇到这三种奇葩同事，如何攻略？<i class="fa fa-external-link-alt"></i></span></p>
 <a href="/2018/09/05/37liyuan-K-tree/" title="学了那么教人如何建立知识体系的付费课程，就这个我服气！">学了那么教人如何建立知识体系的付费课程，就这个我服气！</a>
 <a href="/2018/07/28/23mindset/" title="你可以自由地选择要怎样的未来-《终身成长》">你可以自由地选择要怎样的未来-《终身成长》</a>
 <a href="/2018/08/19/33Grain-Brain/" title="天哪，吃了这么多年主食，这本书却告诉我都是错的？">天哪，吃了这么多年主食，这本书却告诉我都是错的？</a>
@@ -1870,10 +1885,10 @@
 <a href="/2018/10/09/39-34-gold-coin-new/" title="34枚金币和鸡汤书写作方法">34枚金币和鸡汤书写作方法</a>
 <a href="/2018/12/10/48fivehundredthousand/" title="毕业五年攒五十万你也可以">毕业五年攒五十万你也可以</a>
 
-<h3 id="职场——6篇，原计划10篇"><a href="#职场——6篇，原计划10篇" class="headerlink" title="职场——6篇，原计划10篇"></a>职场——6篇，原计划10篇</h3><p><a href="https://www.zhihu.com/question/265997871/answer/302900464">给产品新人度过迷茫期的建议</a><br><a href="https://www.zhihu.com/question/278083198/answer/399359890">不是产品经理，也没有产品经验，Design Workshop 该怎么用？</a><br>[对自己不感兴趣的东西如何提高兴趣？](<a href="https://www.zhihu.com/question/287763069/answer/462971785%EF%BC%89">https://www.zhihu.com/question/287763069/answer/462971785）</a><br><a href="https://www.jianshu.com/p/a2343329a2af">遇到这三种奇葩同事，如何攻略？</a><br>状态不好，碰到这样的同事你会怎么样</p>
+<h3 id="职场——6篇，原计划10篇"><a href="#职场——6篇，原计划10篇" class="headerlink" title="职场——6篇，原计划10篇"></a>职场——6篇，原计划10篇</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI2NTk5Nzg3MS9hbnN3ZXIvMzAyOTAwNDY0">给产品新人度过迷茫期的建议<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI3ODA4MzE5OC9hbnN3ZXIvMzk5MzU5ODkw">不是产品经理，也没有产品经验，Design Workshop 该怎么用？<i class="fa fa-external-link-alt"></i></span><br>[对自己不感兴趣的东西如何提高兴趣？](<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI4Nzc2MzA2OS9hbnN3ZXIvNDYyOTcxNzg1JUVGJUJDJTg5">https://www.zhihu.com/question/287763069/answer/462971785）<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9hMjM0MzMyOWEyYWY=">遇到这三种奇葩同事，如何攻略？<i class="fa fa-external-link-alt"></i></span><br>状态不好，碰到这样的同事你会怎么样</p>
 <a href="/2018/11/24/49owreadandwrite/" title="仅适合上班族的阅读写作指南">仅适合上班族的阅读写作指南</a>
 
-<h2 id="笔记——19篇"><a href="#笔记——19篇" class="headerlink" title="笔记——19篇"></a>笔记——19篇</h2><p><a href="https://www.jianshu.com/p/f992133ffba1">「创意写作」1 影响的书籍</a><br><a href="https://www.jianshu.com/p/4c6ec7c3e5cb">「创意写作」2 人生转折点</a></p>
+<h2 id="笔记——19篇"><a href="#笔记——19篇" class="headerlink" title="笔记——19篇"></a>笔记——19篇</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9mOTkyMTMzZmZiYTE=">「创意写作」1 影响的书籍<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80YzZlYzdjM2U1Y2I=">「创意写作」2 人生转折点<i class="fa fa-external-link-alt"></i></span></p>
 <a href="/2018/08/01/31creating-unforgettable-characters/" title="“更无用”的写作课11-塑造难忘的人物">“更无用”的写作课11-塑造难忘的人物</a>
 <a href="/2018/08/03/32flow-notes/" title="《心流》笔记——在工作中的运用">《心流》笔记——在工作中的运用</a>
 <a href="/2018/08/05/36OM-methodology/" title="PM是这样理解运营的“基本方法论”——《运营之光2.0》笔记（上）">PM是这样理解运营的“基本方法论”——《运营之光2.0》笔记（上）</a>
@@ -2053,7 +2068,8 @@
 <p>投资一定要向牛人学习，比如巴菲特的老师，格雷厄姆先生有两部著作，《证券分析》（Security Analysis）和《聪明的投资者》（The Intelligent Investor），可以延伸阅读。</p>
 <p>另外，还有约翰·涅夫、约翰·博格等各位大师的思路。约翰·涅夫是指数基金的发明者，看他对指数基金投资的理解非常重要。</p>
 <h1 id="二、什么是价值投资"><a href="#二、什么是价值投资" class="headerlink" title="二、什么是价值投资"></a>二、什么是价值投资</h1><p>简单来说就是</p>
-<div class="note success"><p>会判断出一个东西的价值大概是多少，然后以最低的价格买到高价值的东西，根据这个思路投资。</p></div>
+<div class="note success"><p>会判断出一个东西的价值大概是多少，然后以最低的价格买到高价值的东西，根据这个思路投资。</p>
+</div>
 
 <p>格雷厄姆曾说过：</p>
 <blockquote>
@@ -2089,7 +2105,8 @@
 <p>股价越低，股息率就越高。</p>
 <p>股息率＝股息&#x2F;市值，而盈利收益率＝盈利&#x2F;市值，分红率＝股息&#x2F;盈利，所以股息率＝盈利收益率＊分红率。</p>
 <p>你无须出售手里的股权，就可以获取不断增长的现金流。</p>
-<p>股息是一个既能长期持有股权资产，又能同时享受现金流收益的好方法。</p></div>
+<p>股息是一个既能长期持有股权资产，又能同时享受现金流收益的好方法。</p>
+</div>
 
 <h1 id="四、挑选指数基金的策略"><a href="#四、挑选指数基金的策略" class="headerlink" title="四、挑选指数基金的策略"></a>四、挑选指数基金的策略</h1><p>介绍两个大师们使用的估值策略，一个是格雷厄姆使用的盈利收益率法，另一个是博格使用的博格公式法。</p>
 <p>实际运用方面，盈利稳定的价值指数可以采用<font color="#FF9966">盈利收益率法</font>来投资；成长指数可以使用<font color="#FF9966">博格公式法</font>进行投资；周期指数可以使用<font color="#FF9966">博格公式的变种</font>来投资；困境指数建议直接放弃。</p>
@@ -2376,7 +2393,8 @@
 <p>那接下的，就从这两条逻辑线讲起，吹响驶向名为财务自由的船只号角吧！</p>
 <hr>
 <h1 id="三、主线：理财的阶段"><a href="#三、主线：理财的阶段" class="headerlink" title="三、主线：理财的阶段"></a>三、主线：理财的阶段</h1><h2 id="3-1-存钱-记账"><a href="#3-1-存钱-记账" class="headerlink" title="3.1. 存钱&amp;记账"></a>3.1. 存钱&amp;记账</h2><p>记住一句话：</p>
-<div class="note primary"><p>财务自由的第一步是尽快拥有你的第一桶金。</p></div>
+<div class="note primary"><p>财务自由的第一步是尽快拥有你的第一桶金。</p>
+</div>
 
 <p>别再拿“钱那么少怎么理”这句话做借口，理财的第一步就是存钱，就这么简单。</p>
 <p>再进一步来说，就是改变自己的消费习惯，按照这个公式：</p>
@@ -2414,7 +2432,8 @@
 <li>白领在初期应该以提升自我能力为主，增长收入唯一来源工资，再根据情况开源节流</li>
 <li>主动学习了解投资渠道与工具</li>
 <li>只要你相信，就“低吸高放”定投指数基金，坚持不懈</li>
-</ul></div>
+</ul>
+</div>
 
 <p>当然，每个人的理财体系都应该不断优化，通过不懈地学习，来完善最适合自己的理财体系。</p>
 <hr>
@@ -2425,7 +2444,8 @@
 <p>从理财意识萌发，尝试网上所谓的“一周只花一百元”“省钱打卡”这些方法，即使最后发现并不管用，起码三公子想到就去做到了。理财的决心也足够坚定，没有被一两次的失败打击，以至于她这种行动力让她在接下来终于接触到正确的存钱方式，从而开启了理财的大门。</p>
 <p>我想了很久，到底什么是行动力，超强的行动力靠什么来支撑？</p>
 <p>后来想通了，</p>
-<div class="note primary"><p>超强行动力来自一个人的底气。</p></div>
+<div class="note primary"><p>超强行动力来自一个人的底气。</p>
+</div>
 
 <p>三公子一直在说她很幸运，说幸好有一个富足的家庭，没有房子房租的压力去攒钱，第一次投资就幸运地赚到钱，这些东西是上天给她创造的好运。再加上她自己经过之前的努力积累的好运，这些都是支撑她继续研究和挑战下一个阶段的底气。</p>
 <p>而我们，普通人，不一定就恰好能拥有这些巧合的好运，我们每一次面对困难就退缩，也许就是缺那一点点“底气”。</p>
@@ -2441,7 +2461,8 @@
 <li>第一，知道自己为什么要做这件事，要一直记得自己做这件事的初衷，并且时刻提醒自己；</li>
 <li>第二，你知道自己接下来该如何去做这件事；</li>
 <li>第三，如果遇到问题，知道要去反思和总结</li>
-</ul></div>
+</ul>
+</div>
 
 <p>在书中第一部分我感触很深的是，三公子在记账的阶段，就体现出来了心中清明。特别用心地研究每一个方式并实践，然后去分析、改善，有意识地去优化自己的消费结构，真正是<font color="#FF9966">“知道”并“做到”</font>。反观我自己，记账了好几年，但可能只是记着而已，根本没有对自己的生活习惯和消费结构产生什么影响。</p>
 <p>三公子在这点上很棒，不急不躁，在什么阶段做什么事，她是真的在一个阶段就专心研究一个东西，直到把这个东西搞透，再进行下一项。</p>
@@ -2466,7 +2487,8 @@
 <p>成为一个终身学习者，并不难，难的是愿不愿意每天花点时间，真的在学习。</p>
 <hr>
 <h1 id="五、总之"><a href="#五、总之" class="headerlink" title="五、总之"></a>五、总之</h1><p>想要实现财务自由，真的很难，需要本金、时间、以及投资技巧。本身赚钱生存就很难了，还要腾出精力去管理这些资金，所以很难；但另一方面，也正是因为生存和赚钱很难了，我们就不能干等着通货膨胀让本来就不多的钱贬值，反正现在不改变，未来也不会好到哪儿去。</p>
-<div class="note primary"><p>“实现财务自由”不是一个愿望，而是一种态度——掌控自己生活的态度。</p></div>
+<div class="note primary"><p>“实现财务自由”不是一个愿望，而是一种态度——掌控自己生活的态度。</p>
+</div>
 
 <p>只有会管理自己的钱，才能成为我们自由去做想做的事的底气和资本。</p>
 <p>然而，想要实现财务自由，真的很简单，只需要本金、时间以及投资技巧。</p>
@@ -2559,12 +2581,16 @@
 <p>所以，人们举起旗帜，大声讨伐，宣称鸡汤有毒，任何人禁止饮用。</p>
 <p>可是，真的是这样吗？那种让人身心畅快的乐观幻想真的不需要吗？</p>
 <p>真相往往更加复杂，其实它是这样的：</p>
-<div class="note bs-callout"><ol>
+<details class="note "><summary><p>bs-callout</p>
+</summary>
+<ol>
 <li>乐观的想象是有好处的，帮助我们对真正想要的东西投入注意力，从而发现相关的解决因素；应对压力，度过难关；能让我们在无形中探索让我们对未来进行预演，发现更深层的渴望——我们真正想要的是什么，真正属于我们的是什么，我们的归属是什么， 并且探索一下可能的选择，从而在未来的日子里做出正确的决定。</li>
 <li>然而，对于需要付出努力、精力、承诺的事儿上，沉迷于乐观想象，让大脑以为已经达成，就会懈怠，减少行动动力，而且对现实中可能出现的困难视而不见。</li>
 <li>鸡汤并非有毒，只怪写鸡汤的人故弄玄虚，说一半藏一半，只一味在证明乐观想象的好处，却没给我们如何运用它的办法。要想鸡汤里的积极想象帮助我们，“心理对比”是一种正确饮用方式。这种方法就是，要求你照常对自己的愿望进行积极想象，然后思考达成目标的障碍，之后制定行动方案。</li>
 <li>将“心理比对”与“执行意图”相结合，将会得到更好的效果。“执行意图”指的是，事先考虑好可能遇到障碍的情况，提醒自己“如果遇到情况 X，那么就采取行动 Y”。</li>
-</ol></div>
+</ol>
+
+</details>
 
 <p>以上，都是提出并论证了“积极乐观的心理期待对成功有害”观点的心理学家加布里埃尔•厄廷根（Gabriele Oettingen）的研究成果。被她总结在《WOOP思维心理学》这本书里。</p>
 <p>那到底什么是WOOP呢？其实它的意思是 Wish（愿望）, Outcome（结果）, Obstacle（障碍）, Plan（计划）；代表了实施“心理比对”的四个步骤。</p>
@@ -2782,7 +2808,8 @@
 <hr>
 <h1 id="二、阅读"><a href="#二、阅读" class="headerlink" title="二、阅读"></a>二、阅读</h1><h2 id="2-1-本月阅读"><a href="#2-1-本月阅读" class="headerlink" title="2.1. 本月阅读"></a>2.1. 本月阅读</h2><div class="note primary"><h3 id="进行中"><a href="#进行中" class="headerlink" title="| 进行中 |"></a>| 进行中 |</h3><ul>
 <li>《财务自由之路》 45%</li>
-</ul></div>
+</ul>
+</div>
 
 <h2 id="2-2-总结"><a href="#2-2-总结" class="headerlink" title="2.2. 总结"></a>2.2. 总结</h2><p>这个月阅读实在是少，一是工作太忙，二是因为懒……QAQ……</p>
 <p>看《财务自由之路》还是因为小她上有人组织共读书籍，发现每天发一点点这本书一章节的笔记，这样的方式会比较能督促自己读书，另外也是年底为明年的理财规划做打算。虽然这个月的阅读记录不堪入目，但总比零蛋好，嗯。</p>
@@ -2793,8 +2820,9 @@
 <li><a href="/2018/11/13/43TYWTFF-2/" title="《财务自由之路》02:掌控自己的财务状况">《财务自由之路》02:掌控自己的财务状况</a></li>
 <li><a href="/2018/11/24/50readskill/" title="这些读书技巧能让我受用终生">这些读书技巧能让我受用终生</a></li>
 <li><a href="/2018/11/24/49owreadandwrite/" title="仅适合上班族的阅读写作指南">仅适合上班族的阅读写作指南</a></li>
-<li><a href="https://www.talicai.com/post/711993">关于家暴的看法</a></li>
-</ul></div>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cudGFsaWNhaS5jb20vcG9zdC83MTE5OTM=">关于家暴的看法<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+</div>
 
 <div class="note primary"><h3 id="计划中"><a href="#计划中" class="headerlink" title="| 计划中 |"></a>| 计划中 |</h3><ul>
 <li>阅读套路：提高阅读效率的技法总结——SQ3R法</li>
@@ -2802,7 +2830,8 @@
 <li>连载计划1：简书的写作课，一边做写作课的笔记，一边整理连载发布手把手教写小说创作《dannii的菜鸟小说创作指南手册》；</li>
 <li>连载计划2：另一个是看了《运营之光2.0》，发布了运营方法论上部的文章，下部分关于具体运营和产品策略的实战打法，我准备用一种更新的形式写出来，就不是读书笔记或者书评了。</li>
 <li>学习搭配美妆的心得分享</li>
-</ul></div>
+</ul>
+</div>
 
 <p>PS：两个连载计划，简直是我自己给自己挖的坑……QAQ</p>
 <p><img src="/2018/11/25/51review-2018-11/%E5%93%AD%E5%94%A7%E5%94%A7.gif" alt="哭唧唧"></p>
@@ -2844,8 +2873,12 @@
     <title>仅适合上班族的阅读写作指南</title>
     <url>/2018/11/24/49owreadandwrite/</url>
     <content><![CDATA[<h1 id="写在前面的懒人目录"><a href="#写在前面的懒人目录" class="headerlink" title="写在前面的懒人目录"></a>写在前面的懒人目录</h1><p><a href="#%E4%B8%80%E3%80%81%E9%98%85%E5%89%8D%E5%AF%B9%E5%8F%B7%E5%85%A5%E5%BA%A7">一、阅前对号入座</a><br><a href="#%E4%BA%8C%E3%80%81%E4%B8%8A%E7%8F%AD%E6%97%8F%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7">二、上班族阅读技巧</a><br><a href="#%E4%B8%89%E3%80%81%E4%B8%8A%E7%8F%AD%E6%97%8F%E5%86%99%E4%BD%9C%E8%BE%93%E5%87%BA%E6%8A%80%E5%B7%A7">三、上班族写作输出技巧</a><br><a href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E8%BD%AF%E4%BB%B6">四、参考软件</a><br><a href="#%E4%BA%94%E3%80%81%E6%87%92%E4%BA%BA%E6%80%BB%E7%BB%93">五、懒人总结</a></p>
-<div class="note bs-callout"><p>别再说上班族很忙，没时间看书和写作了。</p>
-<p>今天我要公布一个方法，简单实用，没有夸张和水分，能让忙碌的上班族至少一周看完一本书，并输出一篇笔记或书评，一个月就能看4本，一年48本，输出48篇笔记或书评，你如果感兴趣请继续看下去。</p></div>
+<details class="note "><summary><p>bs-callout</p>
+</summary>
+<p>别再说上班族很忙，没时间看书和写作了。</p>
+<p>今天我要公布一个方法，简单实用，没有夸张和水分，能让忙碌的上班族至少一周看完一本书，并输出一篇笔记或书评，一个月就能看4本，一年48本，输出48篇笔记或书评，你如果感兴趣请继续看下去。</p>
+
+</details>
 
 <p>8月份做博客，极其高产地发布文章，我的目标是把家里现存的书籍都进行电子化知识管理，建立自己的知识库，纸质书尽量卖掉或处理。<font color =#FF9966>花了3、4个月的时间不段尝试和优化，用琢磨出来的这套方法，平均一周看3本书，输出3篇笔记或书评</font>，被公司读书打卡群的同事看到了，好奇问我怎么做到的。</p>
 <p>于是就想到借此机会，把我的方法总结一下。</p>
@@ -2856,7 +2889,8 @@
 <h2 id="1-2-针对人群"><a href="#1-2-针对人群" class="headerlink" title="1.2. 针对人群"></a>1.2. 针对人群</h2><p><font color="#FF9966">自愿、主动、喜欢阅读</font>且希望找到方法高效读书输出的人，不是这一类的，请看到这儿为止吧，本文不是为了引发读书兴趣，不然后面的内容你也会嫌麻烦。</p>
 <p>特别适用于普通朝九晚六（或者像我一样朝十晚九）的上班族，平时没时间摸鱼，上下班都坐地铁（或班车&#x2F;顺风车&#x2F;公交等），中午能抽出半小时，周六日至少有半天空闲。</p>
 <p>建议习惯笔记电子化，我下面所讲全程都是电子化管理。（纸质笔记管理其实也同理）</p>
-<h2 id="1-3-本指南备注"><a href="#1-3-本指南备注" class="headerlink" title="1.3. 本指南备注"></a>1.3. 本指南备注</h2><p>这套方法分为上班族阅读技巧和上班族写作输出技巧，按需使用。</p></div>
+<h2 id="1-3-本指南备注"><a href="#1-3-本指南备注" class="headerlink" title="1.3. 本指南备注"></a>1.3. 本指南备注</h2><p>这套方法分为上班族阅读技巧和上班族写作输出技巧，按需使用。</p>
+</div>
 
 <hr>
 <p>如果以上你都确认ok，欢迎享用本指南。</p>
@@ -2906,7 +2940,8 @@
 <p>这类软件的好处是能对纸质书进行电子化摘抄及笔记。</p>
 <h2 id="4-3-导图app："><a href="#4-3-导图app：" class="headerlink" title="4.3. 导图app："></a>4.3. 导图app：</h2><p><strong>mindnode</strong>——思维导图软件，略读的时候做全书大纲导读。可导出png，多端可同步，不用会员也可以使用，方法就是手机上写完导出mindnode文稿，在电脑上可以继续编辑。以前用xmind，结果发现图一大打开太卡了。</p>
 <h2 id="4-4-输出写作软件："><a href="#4-4-输出写作软件：" class="headerlink" title="4.4. 输出写作软件："></a>4.4. 输出写作软件：</h2><p><strong>scrivener</strong>——专业的写作软件，多数作家用来写小说或论文。特色在于其活页本模式，可以收集零散的信息，不按顺序写，然后再组合梳理起来变成一篇完整的作品。适用于主题比较广，所需资料信息偏多的，比如大型论文、短长篇小说。</p>
-<p><strong>印象笔记&#x2F;有道云笔记&#x2F;简书</strong>——一般主题范围小、论点少、字数较短的文，我是直接使用这类笔记软件就写了，多端同步，几乎免费。简书除了是写作软件，也是一个公开的社区和平台，适合输出的同时愿意慢慢积累影响力的小伙伴。</p></div>
+<p><strong>印象笔记&#x2F;有道云笔记&#x2F;简书</strong>——一般主题范围小、论点少、字数较短的文，我是直接使用这类笔记软件就写了，多端同步，几乎免费。简书除了是写作软件，也是一个公开的社区和平台，适合输出的同时愿意慢慢积累影响力的小伙伴。</p>
+</div>
 
 <hr>
 <h1 id="五、懒人总结"><a href="#五、懒人总结" class="headerlink" title="五、懒人总结"></a>五、懒人总结</h1><p>最后做个懒人总结，方法很简单，还是老话，谁用谁知道：</p>
@@ -3014,14 +3049,18 @@
 <h2 id="2-问题"><a href="#2-问题" class="headerlink" title="2. 问题"></a>2. 问题</h2><p>作者认为我们遇到的问题和困难都是为我们带来成长的机会。我也是这样认为，如果把生活中遇到的每一个问题都当做一次经验，人生就像是进行一个通关游戏，打的boss越多，经验越多。</p>
 <h2 id="3-提出正确的问题"><a href="#3-提出正确的问题" class="headerlink" title="3. 提出正确的问题"></a>3. 提出正确的问题</h2><p>在遇到困难的时候，你是否遇到过犹豫不决的情况？不知所措的情况？这时候，正确的提问方式可以帮助你拓宽可控领域，</p>
 <p>正确的决策顺序是：</p>
-<div class="note bs-callout"><ul>
+<details class="note "><summary><p>bs-callout</p>
+</summary>
+<ul>
 <li><p>在做一个决定的时候，用“是否”代替“怎么做”，搞清这件事背后的“为什么”之后，怎么做就自然而然地出现；</p>
 </li>
 <li><p>做完决定之后，不用去关注“是否”，而要用“我如何做成这件事情呢？”代替“我能做到吗”；</p>
 </li>
 <li><p>在不知道做什么的时候，不要过多关注自己不会和不知道的事情，应该问“我会做什么？我知道什么？我有哪些机会”；</p>
 </li>
-</ul></div>
+</ul>
+
+</details>
 
 <h2 id="4-扩大你的个人范畴"><a href="#4-扩大你的个人范畴" class="headerlink" title="4. 扩大你的个人范畴"></a>4. 扩大你的个人范畴</h2><p>想朝某件对你而言很重要的事情施加影响，可以扩大你的个人范畴。说的最多的应该是职场上的例子，比如想要获得更好的发展、更高的职位，就不能只关注自己职责之内的事情而已，那些想要提升自己影响力的人，都会主动对超出自己职责范围的事情负责，记住那句话“把责任推给了谁，也就给了他权利”。</p>
 <p>所以，我们能如何掌控自己的财务状况呢？</p>
@@ -3064,7 +3103,11 @@
 <p>一个人有自信，就会具有战胜事物黑暗面的信心，知道他遇事可以依靠自己，一定会破除万难达成目标。自信的建立没有那么简单，你想建立足够的自信，就必须管理你的财务状况，你的财务状况应该成为一个你不惧怕任何阻碍的证明。</p>
 <p>很多人会说自己现在过的很困难，生活太难了事情太难了，实际上，生活中遇到的很多困难，是可以由金钱解决的，贫穷不仅限制了我们的想象力，也限制了我们的行动力。因为觉得现在没有钱，所以不能做自己喜欢的事情，不能做着自己喜欢的事情，这不叫生活叫生存，当没有钱支撑你的生活的时候，你就会妥协，选择继续待在不喜欢的工作岗位上，然后也赚不到钱，如此恶性循环。<font color="#FF9966"><strong>“你的财务状况应该成为一个你不惧怕任何阻碍的证明”</strong></font>这句话揭示了很多我们痛苦的真相。破除这个恶性循环的最好方法是：将你的事业建立在你最大的爱好之上。花点时间问问自己，你对什么感兴趣？</p>
 <p>这就会讨论到另一个话题：</p>
-<div class="note bs-callout"><p>你擅长什么？不擅长什么？ </p></div>
+<details class="note "><summary><p>bs-callout</p>
+</summary>
+<p>你擅长什么？不擅长什么？ </p>
+
+</details>
 
 <p>其实探究我们最大的爱好时，就是找出一些让自己充满热情和力量的事，这些事通常是我们非常擅长的，处于最好的状态，才能使金钱滚滚而来。如何优化自己呢？可以学习书中所说的“以最佳的方式来运用时间、方式、才能、金钱以及与他人合作，其目的是达到最优结果”，最佳的方式便是“你的行动准则应该以梦想、目标、价值和策略这4根支柱为基础，你的财富也应建立在你的行动准则之上”。</p>
 <hr>
@@ -3194,7 +3237,8 @@
 <p>这个月也不是没有收获。</p>
 <p>完成听书：李源的《受益终生的15堂经典名著课》</p>
 <div class="note success"><p>写作主题阅读进度：2&#x2F;6</p>
-<p>职场技能拓展主题阅读进度：3&#x2F;4</p></div>
+<p>职场技能拓展主题阅读进度：3&#x2F;4</p>
+</div>
 
 <p>由于工作原因，一直没有形成书面的记录，在这里就简单记录下。</p>
 <h2 id="2-2-阅读记录"><a href="#2-2-阅读记录" class="headerlink" title="2.2. 阅读记录"></a>2.2. 阅读记录</h2><p>其实是李源的一档音频节目，解读24个名人和影响他的书籍，普京与《卡拉夫佐夫兄弟》，乔布斯与《一个瑜伽行者的自述》，扎克伯格与《埃涅阿斯纪》，拿破仑与《君主论》，这是我最受启发几课。一方面感叹李源吸取书籍信息的精准性，另一边学习他这种读书的方式。</p>
@@ -3208,7 +3252,8 @@
 <h2 id="2-3-回顾总结"><a href="#2-3-回顾总结" class="headerlink" title="2.3. 回顾总结"></a>2.3. 回顾总结</h2><p>之前总结的方法依然可用：</p>
 <div class="note primary"><p>切记不要有完美主义。</p>
 <p>利用中午或其他整理笔记的时间，顺手按照自己的阅读进度做脑图，提前整理好书评或笔记的框架，功夫在平日。然后固定周五周六，整理本周读书的笔记，可以允许未完成的笔记发布到网上，因为发到网上，自己会督促自己不留未完成的作品给别人看，所以一定会找时间补充完全。</p>
-<p>学习英国作家毛姆，随手记下自己各种各样的看法和感受，哪怕一句话也行。他说<strong>“看到让你眼前一亮的东西，你就把它记录下来……我们都有过不错的想法，有过真切的感受，本觉得将来应该能用得上，但我们太懒了，不做记录，最终把它们忘了个精光”</strong></p></div>
+<p>学习英国作家毛姆，随手记下自己各种各样的看法和感受，哪怕一句话也行。他说<strong>“看到让你眼前一亮的东西，你就把它记录下来……我们都有过不错的想法，有过真切的感受，本觉得将来应该能用得上，但我们太懒了，不做记录，最终把它们忘了个精光”</strong></p>
+</div>
 
 <p>所以针对“忙时”的记录，也不能懈怠哦：</p>
 <ul>
@@ -3245,7 +3290,7 @@
 <p>在这里把核心的内容记录一下，顺便分享下我get到写这类书的写作结构方法。</p>
 <h1 id="一、书中几个硬核概念"><a href="#一、书中几个硬核概念" class="headerlink" title="一、书中几个硬核概念"></a>一、书中几个硬核概念</h1><p><img src="/2018/10/09/39-34-gold-coin-new/%E9%87%91%E5%B8%81.png" alt="本书涉及的几个硬核概念"></p>
 <p>书中除了以上几个概念跟时间管理有关，其余的，就当做艾力的自传了，淡淡的鸡汤味，不排斥，毕竟每个自律到极致的人，心里没点自熬鸡汤的本事，也坚持不到最后。<strong>鸡汤可以适当喝一喝，让自己度过最煎熬的那一刻就行。</strong></p>
-<p>PS：附赠“盖普洛优势识别器”测试题：<a href="https://github.com/hormoyo/hormoyo.github.io/blob/hexo/source/_posts/39-34-gold-coin-new/%E5%8F%91%E7%8E%B0%E4%BD%A0%E7%9A%84%E4%BC%98%E5%8A%BF.xls?raw=true">点这里下载</a></p>
+<p>PS：附赠“盖普洛优势识别器”测试题：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hvcm1veW8vaG9ybW95by5naXRodWIuaW8vYmxvYi9oZXhvL3NvdXJjZS9fcG9zdHMvMzktMzQtZ29sZC1jb2luLW5ldy8lRTUlOEYlOTElRTclOEUlQjAlRTQlQkQlQTAlRTclOUElODQlRTQlQkMlOTglRTUlOEElQkYueGxzP3Jhdz10cnVl">点这里下载<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="二、34枚金币"><a href="#二、34枚金币" class="headerlink" title="二、34枚金币"></a>二、34枚金币</h1><p>这里主要介绍下艾力这本书的主要主题：34枚金币时间管理法。</p>
 <p>这本书最重要的这个主题概念，用我自己的话来概括就是：</p>
 <blockquote>
@@ -3572,7 +3617,7 @@
 <p>综上呢，书中的信息，不一定就是对的，所谓“尽信书不如无书”，多去获取多方面的信息，重点在弥补自己对于世界和自身的认知缺失，至于是否采用，就根据个人具体情况去抉择。</p>
 <p>对于接收网络上的信息，亦如上。</p>
 <h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ul>
-<li><a href="http://blog.sciencenet.cn/blog-41174-645105.html">http://blog.sciencenet.cn/blog-41174-645105.html</a></li>
+<li><span class="exturl" data-url="aHR0cDovL2Jsb2cuc2NpZW5jZW5ldC5jbi9ibG9nLTQxMTc0LTY0NTEwNS5odG1s">http://blog.sciencenet.cn/blog-41174-645105.html<i class="fa fa-external-link-alt"></i></span></li>
 <li>杨宇等. “生物合成材料聚β-羟基丁酸(PHB)的研究进展.” 生命科学研究 S3(2006):61-67.</li>
 <li>付守鹏等. “β-羟丁酸对LPS诱发的帕金森病(PD)模型的神经保护作用及其机制.” 中国生理学会张锡钧基金全国青年优秀生理学学术论文综合 2015.</li>
 </ul>
@@ -3589,8 +3634,8 @@
   <entry>
     <title>陆奇+YC中国，是坑还是美好新世界？</title>
     <url>/2018/08/16/34luqi/</url>
-    <content><![CDATA[<p>今天看到了关于陆奇新动向的新闻。一篇是36氪的独家新闻<a href="https://mp.weixin.qq.com/s/uQHYrdp3BHu8aNcu9YuqdQ">《陆奇，YC 中国的 01 号员工 | 36氪独家》</a>，宣布陆奇真正的“下家”——全球负有盛名的创业加速器 Y Combinator，以及陆奇成为YC中国001号员工对未来的规划和愿景；</p>
-<p>另一篇是发布在虎嗅网上的文章<a href="https://mp.weixin.qq.com/s/LETnZaJH86Vx3eCURNDUxQ">《单枪匹马，陆奇正勇猛地跳向下一个坑》</a>，主旨就是质疑陆奇的YC中国是否能在中国站好脚跟和发展，甚至指明陆奇是跳入另一个“坑”。</p>
+    <content><![CDATA[<p>今天看到了关于陆奇新动向的新闻。一篇是36氪的独家新闻<span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvdVFIWXJkcDNCSHU4YU5jdTlZdXFkUQ==">《陆奇，YC 中国的 01 号员工 | 36氪独家》<i class="fa fa-external-link-alt"></i></span>，宣布陆奇真正的“下家”——全球负有盛名的创业加速器 Y Combinator，以及陆奇成为YC中国001号员工对未来的规划和愿景；</p>
+<p>另一篇是发布在虎嗅网上的文章<span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvTEVUblphSkg4NlZ4M2VDVVJORFV4UQ==">《单枪匹马，陆奇正勇猛地跳向下一个坑》<i class="fa fa-external-link-alt"></i></span>，主旨就是质疑陆奇的YC中国是否能在中国站好脚跟和发展，甚至指明陆奇是跳入另一个“坑”。</p>
 <p>一件事，两个完全相反看法的新闻，很有意思，所以记录一下。</p>
 <hr>
 <p>对陆奇的了解，仅限于之前离职百度，造成100亿市值蒸发，以及与百度高层那些微妙而不可说的八卦。</p>
@@ -3636,7 +3681,7 @@
     <title>中国自此再无“贵族”</title>
     <url>/2018/08/11/30big-familly/</url>
     <content><![CDATA[<blockquote>
-<p>书籍：<a href="https://book.douban.com/subject/27006609/">《中古中国门阀大族的消亡》</a></p>
+<p>书籍：<span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNzAwNjYwOS8=">《中古中国门阀大族的消亡》<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <h1 id="一-门阀大族"><a href="#一-门阀大族" class="headerlink" title="一 门阀大族"></a>一 门阀大族</h1><p>“我是谁？”“我从哪儿来？”</p>
 <p>面对两个终极哲学问题，现在好多中国人在寻根，找族谱，期望将历史中散落各处的旁支关系尽数整理起来，重新梳理出自家族系脉络样貌，实行起来就会发现异常困难，追寻到一定程度，再往前看，就变得支离破碎。</p>
@@ -3888,8 +3933,8 @@
       <tags>
         <tag>职场</tag>
         <tag>读书笔记</tag>
-        <tag>日更</tag>
         <tag>2018年书单</tag>
+        <tag>日更</tag>
       </tags>
   </entry>
   <entry>
@@ -3981,7 +4026,7 @@
     <title>《心流》笔记——在工作中的运用</title>
     <url>/2018/08/03/32flow-notes/</url>
     <content><![CDATA[<blockquote>
-<p><a href="https://book.douban.com/subject/27186106/">《心流：最优体验心理学》</a> </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNzE4NjEwNi8=">《心流：最优体验心理学》<i class="fa fa-external-link-alt"></i></span> </p>
 </blockquote>
 <hr>
 <h1 id="全书核心内容："><a href="#全书核心内容：" class="headerlink" title="全书核心内容："></a>全书核心内容：</h1><p>“心流”是指人们在做某些事情时，那种全神贯注、投入忘我的状态。在这种状态下，人们甚至杆感觉不到时间的存在，当完成这件事之后，会从内心涌现出一种充满能量并且非常满足的感受。</p>
@@ -4008,7 +4053,7 @@
 <h2 id="第二步，就是将自己的环境刻意布置充满跟这项目标有关的事物。"><a href="#第二步，就是将自己的环境刻意布置充满跟这项目标有关的事物。" class="headerlink" title="第二步，就是将自己的环境刻意布置充满跟这项目标有关的事物。"></a>第二步，就是将自己的环境刻意布置充满跟这项目标有关的事物。</h2><p>比如最近要完成一个有关用户体验的功能优化，那就在工位上刻意放几本用户体验、用户心理的书籍，主动报名参加用户调研的会议，饭间讨论话题往用户上扯，关注几个这方面行业顶尖的公众号微博知乎大v等等，让自己有意识无意识都在这样的环境中。你的潜意识会帮助自己形成一个产生心流需要的内在条件。</p>
 <h2 id="第三步，就是在营造的环境中沉浸，抽出一丝心神反观自己。"><a href="#第三步，就是在营造的环境中沉浸，抽出一丝心神反观自己。" class="headerlink" title="第三步，就是在营造的环境中沉浸，抽出一丝心神反观自己。"></a>第三步，就是在营造的环境中沉浸，抽出一丝心神反观自己。</h2><p>需要偶尔定时抽出心神，看看自己现在的进度，离目标多远，是否要加快或减缓速度，在充沛的信息中，得到了什么感悟和经验等等，随时对自己当前的行动做反馈，让自己在行动-反馈-收货中进行良好的激励循环，进一步更好地促进自己继续进入心流。</p>
 <hr>
-<h1 id="知识充电："><a href="#知识充电：" class="headerlink" title="知识充电："></a>知识充电：</h1><p>另外增加一个信息就是，马丁•塞利格曼（《活出更乐观的自己》，《真实的幸福》的作者）的<a href="http://www.ted.com/talks/lang/en/martin_seligman_on_the_state_of_psychology.html">这个TED视频</a>。</p>
+<h1 id="知识充电："><a href="#知识充电：" class="headerlink" title="知识充电："></a>知识充电：</h1><p>另外增加一个信息就是，马丁•塞利格曼（《活出更乐观的自己》，《真实的幸福》的作者）的<span class="exturl" data-url="aHR0cDovL3d3dy50ZWQuY29tL3RhbGtzL2xhbmcvZW4vbWFydGluX3NlbGlnbWFuX29uX3RoZV9zdGF0ZV9vZl9wc3ljaG9sb2d5Lmh0bWw=">这个TED视频<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>心流在马丁•塞利格曼看来，属于人生的第二种幸福。他提到应该把“幸福”的体验分为三种，第一种叫“快乐的人生”，第二种叫“积极参与的人生”，第三种叫“有意义的人生”。</p>
 <ul>
 <li><p>第一种就是传统意义的快乐情绪，比如吃到什么好吃的啦，收到心仪的礼物，涨工资了，收到表扬了等等，但这些快乐转瞬即逝，不能持久，在积极心理学家的眼里，他们认为是属于一种最低层次的幸福感，而且经过多年的科学统计，他们发现无论你用何种方法提升这种积极情绪，你的幸福感也只能提高15%到20%。</p>
@@ -4025,8 +4070,8 @@
       <tags>
         <tag>职场</tag>
         <tag>读书笔记</tag>
-        <tag>日更</tag>
         <tag>2018年书单</tag>
+        <tag>日更</tag>
       </tags>
   </entry>
   <entry>
@@ -4099,15 +4144,15 @@
 </ul>
 <h2 id="书籍阅读："><a href="#书籍阅读：" class="headerlink" title="书籍阅读："></a>书籍阅读：</h2><p><strong>已完成：</strong></p>
 <ul>
-<li><a href="https://book.douban.com/subject/1035362/">《神的孩子全跳舞》</a></li>
-<li><a href="https://book.douban.com/subject/27154533/">《终身成长》</a></li>
-<li><a href="https://book.douban.com/subject/27219756/">《小说创作的基本技巧》</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8xMDM1MzYyLw==">《神的孩子全跳舞》<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNzE1NDUzMy8=">《终身成长》<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNzIxOTc1Ni8=">《小说创作的基本技巧》<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p><strong>进行中：</strong></p>
 <ul>
-<li><a href="https://book.douban.com/subject/27020287/">《运营之光2.0》</a></li>
-<li><a href="https://book.douban.com/subject/26747250/">《开发故事创意》</a></li>
-<li><a href="https://book.douban.com/subject/6082808/">《百年孤独》</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNzAyMDI4Ny8=">《运营之光2.0》<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNjc0NzI1MC8=">《开发故事创意》<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC82MDgyODA4Lw==">《百年孤独》<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p><strong>写作主题阅读进度：</strong>2&#x2F;6</p>
 <p><strong>职场技能拓展主题阅读进度：</strong>2&#x2F;4</p>
@@ -4406,6 +4451,56 @@
       </tags>
   </entry>
   <entry>
+    <title>成为分歧者-并非人人都只有一个命中注定的使命</title>
+    <url>/2018/06/24/15%E6%88%90%E4%B8%BA%E5%88%86%E6%AD%A7%E8%80%85-%E5%B9%B6%E9%9D%9E%E4%BA%BA%E4%BA%BA%E9%83%BD%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%91%BD%E4%B8%AD%E6%B3%A8%E5%AE%9A%E7%9A%84%E4%BD%BF%E5%91%BD/</url>
+    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>有多少人小时候被问过“长大后想成为什么样的人“这个问题？<br>有多少人在心中默默向自己承诺要找到“一生最重要的使命”？</p>
+<p>为什么我们只能选择一个选项，而压抑住无限的想象？</p>
+<p>我从小就知道自己并不是只专注于喜欢一件事的孩子，当别人家的小孩一心一意练小提琴、考级的时候，我已经尝试过了跳舞、画画、书法、篮球、打鼓、骑自行车、溜冰、写小说、播音、做电子杂志等等。</p>
+<p>开始时对每一样都充满兴趣，全力以赴、尽力研究，无论是什么东西，我都能变得熟练和擅长，但过不久就开始觉得无聊，没有挑战性，没有新鲜感，就算继续坚持，那种无聊感还是越来越强，直到我遇见下一个感兴趣的东西……</p>
+<p>但那个“长大后成为什么样的人”问题越来越让我焦虑。开始怀疑我的行为模式是否正确。</p>
+<p>担心我真是一个三分钟热情的孩子，像人们说的，其实无法坚持任何事情，容易分心、害怕责任和承诺、害怕成功。而这样的人没法成就伟大的事业、拥有理想的生活，只能怨念而无能为力地看着自己走向平庸。</p>
+<p>同时又不确认如何将爱好变成职业，以为最终必须从中选择一个，否认我花在其他选项上的所有热情、金钱和时间。</p>
+<p>可是，谁告诉我只能选择一样选项作为自己的人生目标呢？</p>
+<p>是这个社会。</p>
+<p>因为社会上都在说，成功的人，从小就有明确的目标，他们朝着那个目标一直一直坚持了好久，他们在目标上投入了超过1W小时的时间，他们精通并且是专家，他们是领域的顶尖者。只有这样的人，才被社会所推崇和认可。</p>
+<p>而这样的我，被周围的人称之为“三分钟热情”，他们给我分析，就是坚持不了任何事情。</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>现在我看到越来越多像我这样拥有多个爱好的人，她们生活过得丰富多彩。成为了会写诗的插画家、会做美食的摄影师、会写童话的文案等等。</p>
+<p>也许他们不是最专业最出色的摄影师，但却是摄影师里最会写诗的，写诗里最会拍照的。他们的天赋在于找出了跨界里最美妙的交集点，形成了巧妙的组合，摆出了自己的特色拼图。</p>
+<p>他们被称作“SLASH”斜杠青年。</p>
+<p>而去年12月份看的一个TED演讲，来自多才多艺的Emilie Wapnick，她告诉了我，世界上并不是所有人都相信一个人只能有一个职业一个爱好。我们有着众多的同类，他们可能是制琴师和心理学家，是作家、编辑、插画家和企业家。但是大多数我们却都不知道有这样的存在。</p>
+<p>这个世界告诉我们必须选择一样，并把这种狭隘的生活观念高度美化，极度崇尚单一的“命中注定的伟大事业”。如果我们对多个领域怀有好奇、想做不同的事情，现在社会好像并没有空间容纳我们这样的人。</p>
+<p>孤独、彷徨、迷茫着。</p>
+<p>但是，我们是正常的，她称我们这类人叫做“多相潜能者”。这跟最近大火的“SLASH”斜杠人才概念不谋而合。</p>
+<p>成为“多相潜能者”有一些巨大的优势，更多体现在比如跨界、快速学习以及适应能力等等上。</p>
+<p>这让我想起《分歧者》系列电影，看电影时对主角所扮演的分歧者角色总有一种莫名的共鸣，心中有股兴奋蠢蠢而动，却不知为何。</p>
+<p>看到电影里人们被分为4种不同角色派系，根据个性，每人成年只能选择一种派系加入，终生按照那个派系的规定生活，而主角却是综合所有派系角色的特征，被四大派系所不容。最终带领分歧者们走出那个封闭的城市，寻找和平的未来。</p>
+<p>这不就是现在的世界吗？在这个正在经历巨大变革的世界，多元的观点、多种发展形态的出现，分歧者开始觉醒，而世界也开始承认这些分歧者的存在是有意义的。</p>
+<p>我们，也是这样的分歧者。</p>
+<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>这样的我们，并不是错误和异常的。</p>
+<p>区分每个人的不同，是之所以存在的意义，世界有只对一件事精通的专家级人才，也有涉猎广泛、好奇心旺盛的分歧者（或者叫多相潜能者）。</p>
+<p>作为分歧者，从接受自己的不同开始，接受自己内心真实的想法，不要否认自己任何一点特质，这些特质正是你区别于别人的特色，这些就是我们一直寻找的“差异化能力”。</p>
+<p>作为分歧者，我们要善用优点。</p>
+<ul>
+<li><p>比如，特定领域的新知识增加的如此之快，以至于你的知识可能随时在变得陈旧。解决的唯一办法是尽可能的吸收新知识。正因为我们爱好广泛，所以更容易具备跨界的能力、激发更多跨界里的创意交叉点， 跟专家类人合作的时候，可以提供多方面更丰富的信息。</p>
+</li>
+<li><p>比如，我们的快速学习能力。正因为对某样东西感兴趣时，我们全力以赴、非常努力，寻找一切有关的信息、学习拿到手的相关资料，习惯于成为初学者，一次次敢于走出舒服去，去探索新事物。有着丰富而熟练的入门技巧，能够提供各领域入门者提供充足的入门方法，并且我们带着所学的一切去学习全新的事物，交叉融合，并不是真正意义上的从头开始。</p>
+</li>
+<li><p>比如，强大的适应能力。不停地尝试新事物，不停地走出自己的舒服去，不停地在陌生的领域穿梭，寻找一切进入的大门，意味着我们能在任何一个情境下、快速适应任何一个角色。适应任何角色带来的好处是，我们可以快速转换角色，而不需“倒时差”，这是在21世界生存发展的重要能力。</p>
+</li>
+</ul>
+<p>用一个朋友文章里的一句话结尾：接受最真实的自己，看看自己与自己的合作是否协调，是否能全然的把自己置身于当下，去享受，去感觉，去努力，去争取。如果我们可以做到内外在的合作协调，那么梦想的脚步就会越来越接近。</p>
+<p>不要急着否定自己的特质， 而去想想它能给你带来怎么样神奇美好的变化，接受它，并转换为正面奇妙的能力。</p>
+<p>世界，正在变革，世界需要我们。</p>
+]]></content>
+      <categories>
+        <category>「进化之路」</category>
+      </categories>
+      <tags>
+        <tag>感悟</tag>
+        <tag>多相潜能者</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三步教你做汉服褶裙（超简单！）</title>
     <url>/2018/06/24/16%E4%B8%89%E6%AD%A5%E6%95%99%E4%BD%A0%E5%81%9A%E6%B1%89%E6%9C%8D%E8%A4%B6%E8%A3%99/</url>
     <content><![CDATA[<blockquote>
@@ -4472,56 +4567,6 @@
       </tags>
   </entry>
   <entry>
-    <title>成为分歧者-并非人人都只有一个命中注定的使命</title>
-    <url>/2018/06/24/15%E6%88%90%E4%B8%BA%E5%88%86%E6%AD%A7%E8%80%85-%E5%B9%B6%E9%9D%9E%E4%BA%BA%E4%BA%BA%E9%83%BD%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%91%BD%E4%B8%AD%E6%B3%A8%E5%AE%9A%E7%9A%84%E4%BD%BF%E5%91%BD/</url>
-    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>有多少人小时候被问过“长大后想成为什么样的人“这个问题？<br>有多少人在心中默默向自己承诺要找到“一生最重要的使命”？</p>
-<p>为什么我们只能选择一个选项，而压抑住无限的想象？</p>
-<p>我从小就知道自己并不是只专注于喜欢一件事的孩子，当别人家的小孩一心一意练小提琴、考级的时候，我已经尝试过了跳舞、画画、书法、篮球、打鼓、骑自行车、溜冰、写小说、播音、做电子杂志等等。</p>
-<p>开始时对每一样都充满兴趣，全力以赴、尽力研究，无论是什么东西，我都能变得熟练和擅长，但过不久就开始觉得无聊，没有挑战性，没有新鲜感，就算继续坚持，那种无聊感还是越来越强，直到我遇见下一个感兴趣的东西……</p>
-<p>但那个“长大后成为什么样的人”问题越来越让我焦虑。开始怀疑我的行为模式是否正确。</p>
-<p>担心我真是一个三分钟热情的孩子，像人们说的，其实无法坚持任何事情，容易分心、害怕责任和承诺、害怕成功。而这样的人没法成就伟大的事业、拥有理想的生活，只能怨念而无能为力地看着自己走向平庸。</p>
-<p>同时又不确认如何将爱好变成职业，以为最终必须从中选择一个，否认我花在其他选项上的所有热情、金钱和时间。</p>
-<p>可是，谁告诉我只能选择一样选项作为自己的人生目标呢？</p>
-<p>是这个社会。</p>
-<p>因为社会上都在说，成功的人，从小就有明确的目标，他们朝着那个目标一直一直坚持了好久，他们在目标上投入了超过1W小时的时间，他们精通并且是专家，他们是领域的顶尖者。只有这样的人，才被社会所推崇和认可。</p>
-<p>而这样的我，被周围的人称之为“三分钟热情”，他们给我分析，就是坚持不了任何事情。</p>
-<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>现在我看到越来越多像我这样拥有多个爱好的人，她们生活过得丰富多彩。成为了会写诗的插画家、会做美食的摄影师、会写童话的文案等等。</p>
-<p>也许他们不是最专业最出色的摄影师，但却是摄影师里最会写诗的，写诗里最会拍照的。他们的天赋在于找出了跨界里最美妙的交集点，形成了巧妙的组合，摆出了自己的特色拼图。</p>
-<p>他们被称作“SLASH”斜杠青年。</p>
-<p>而去年12月份看的一个TED演讲，来自多才多艺的Emilie Wapnick，她告诉了我，世界上并不是所有人都相信一个人只能有一个职业一个爱好。我们有着众多的同类，他们可能是制琴师和心理学家，是作家、编辑、插画家和企业家。但是大多数我们却都不知道有这样的存在。</p>
-<p>这个世界告诉我们必须选择一样，并把这种狭隘的生活观念高度美化，极度崇尚单一的“命中注定的伟大事业”。如果我们对多个领域怀有好奇、想做不同的事情，现在社会好像并没有空间容纳我们这样的人。</p>
-<p>孤独、彷徨、迷茫着。</p>
-<p>但是，我们是正常的，她称我们这类人叫做“多相潜能者”。这跟最近大火的“SLASH”斜杠人才概念不谋而合。</p>
-<p>成为“多相潜能者”有一些巨大的优势，更多体现在比如跨界、快速学习以及适应能力等等上。</p>
-<p>这让我想起《分歧者》系列电影，看电影时对主角所扮演的分歧者角色总有一种莫名的共鸣，心中有股兴奋蠢蠢而动，却不知为何。</p>
-<p>看到电影里人们被分为4种不同角色派系，根据个性，每人成年只能选择一种派系加入，终生按照那个派系的规定生活，而主角却是综合所有派系角色的特征，被四大派系所不容。最终带领分歧者们走出那个封闭的城市，寻找和平的未来。</p>
-<p>这不就是现在的世界吗？在这个正在经历巨大变革的世界，多元的观点、多种发展形态的出现，分歧者开始觉醒，而世界也开始承认这些分歧者的存在是有意义的。</p>
-<p>我们，也是这样的分歧者。</p>
-<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>这样的我们，并不是错误和异常的。</p>
-<p>区分每个人的不同，是之所以存在的意义，世界有只对一件事精通的专家级人才，也有涉猎广泛、好奇心旺盛的分歧者（或者叫多相潜能者）。</p>
-<p>作为分歧者，从接受自己的不同开始，接受自己内心真实的想法，不要否认自己任何一点特质，这些特质正是你区别于别人的特色，这些就是我们一直寻找的“差异化能力”。</p>
-<p>作为分歧者，我们要善用优点。</p>
-<ul>
-<li><p>比如，特定领域的新知识增加的如此之快，以至于你的知识可能随时在变得陈旧。解决的唯一办法是尽可能的吸收新知识。正因为我们爱好广泛，所以更容易具备跨界的能力、激发更多跨界里的创意交叉点， 跟专家类人合作的时候，可以提供多方面更丰富的信息。</p>
-</li>
-<li><p>比如，我们的快速学习能力。正因为对某样东西感兴趣时，我们全力以赴、非常努力，寻找一切有关的信息、学习拿到手的相关资料，习惯于成为初学者，一次次敢于走出舒服去，去探索新事物。有着丰富而熟练的入门技巧，能够提供各领域入门者提供充足的入门方法，并且我们带着所学的一切去学习全新的事物，交叉融合，并不是真正意义上的从头开始。</p>
-</li>
-<li><p>比如，强大的适应能力。不停地尝试新事物，不停地走出自己的舒服去，不停地在陌生的领域穿梭，寻找一切进入的大门，意味着我们能在任何一个情境下、快速适应任何一个角色。适应任何角色带来的好处是，我们可以快速转换角色，而不需“倒时差”，这是在21世界生存发展的重要能力。</p>
-</li>
-</ul>
-<p>用一个朋友文章里的一句话结尾：接受最真实的自己，看看自己与自己的合作是否协调，是否能全然的把自己置身于当下，去享受，去感觉，去努力，去争取。如果我们可以做到内外在的合作协调，那么梦想的脚步就会越来越接近。</p>
-<p>不要急着否定自己的特质， 而去想想它能给你带来怎么样神奇美好的变化，接受它，并转换为正面奇妙的能力。</p>
-<p>世界，正在变革，世界需要我们。</p>
-]]></content>
-      <categories>
-        <category>「进化之路」</category>
-      </categories>
-      <tags>
-        <tag>感悟</tag>
-        <tag>多相潜能者</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>想做好一件事，别怕让人知道</title>
     <url>/2018/06/24/17%E6%83%B3%E5%81%9A%E5%A5%BD%E4%B8%80%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%88%AB%E6%80%95%E8%AE%A9%E4%BA%BA%E7%9F%A5%E9%81%93/</url>
     <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>最近我只在做一件事。</p>
@@ -4562,6 +4607,32 @@
       </categories>
       <tags>
         <tag>感悟</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们心里都住着另一个自己</title>
+    <url>/2018/06/24/18another-me/</url>
+    <content><![CDATA[<p>这是我的第4个手作故事</p>
+<p>面对世界，我们都是双子座。外面一个我，里面一个我。</p>
+<p>有的外表是个汉子，内心住着一个穿蕾丝蓬蓬裙的小公举；</p>
+<p>有的长相凶神恶煞，内心却是个温柔细腻的憨厚大白；</p>
+<p>有的瘦骨嶙峋，内心如饕餮降世，牛肠马肚；</p>
+<p>有时候，人到底是什么样，不能从外表看出。</p>
+<p>我们做的娃娃，一窥内心。</p>
+<p><img src="/2018/06/24/18another-me/1.jpg"><br><img src="/2018/06/24/18another-me/2.jpg"></p>
+<p>▲活在中国的宫廷风（一个蒙古妹子做的）</p>
+<p><img src="/2018/06/24/18another-me/3.jpg"><br><img src="/2018/06/24/18another-me/4.jpg"></p>
+<p>▲内心住着的是二次元布偶人物（另一个妹纸做的）</p>
+<p><img src="/2018/06/24/18another-me/5.jpg"><br><img src="/2018/06/24/18another-me/6.jpg"></p>
+<p>▲活在现代的仙风道骨（我做哒）</p>
+<p>那你呢？心里住着什么样的你？</p>
+]]></content>
+      <categories>
+        <category>「你好，手工艺」</category>
+      </categories>
+      <tags>
+        <tag>想做衣服系列</tag>
+        <tag>娃衣</tag>
       </tags>
   </entry>
   <entry>
@@ -4643,29 +4714,76 @@
       </tags>
   </entry>
   <entry>
-    <title>我们心里都住着另一个自己</title>
-    <url>/2018/06/24/18another-me/</url>
-    <content><![CDATA[<p>这是我的第4个手作故事</p>
-<p>面对世界，我们都是双子座。外面一个我，里面一个我。</p>
-<p>有的外表是个汉子，内心住着一个穿蕾丝蓬蓬裙的小公举；</p>
-<p>有的长相凶神恶煞，内心却是个温柔细腻的憨厚大白；</p>
-<p>有的瘦骨嶙峋，内心如饕餮降世，牛肠马肚；</p>
-<p>有时候，人到底是什么样，不能从外表看出。</p>
-<p>我们做的娃娃，一窥内心。</p>
-<p><img src="/2018/06/24/18another-me/1.jpg"><br><img src="/2018/06/24/18another-me/2.jpg"></p>
-<p>▲活在中国的宫廷风（一个蒙古妹子做的）</p>
-<p><img src="/2018/06/24/18another-me/3.jpg"><br><img src="/2018/06/24/18another-me/4.jpg"></p>
-<p>▲内心住着的是二次元布偶人物（另一个妹纸做的）</p>
-<p><img src="/2018/06/24/18another-me/5.jpg"><br><img src="/2018/06/24/18another-me/6.jpg"></p>
-<p>▲活在现代的仙风道骨（我做哒）</p>
-<p>那你呢？心里住着什么样的你？</p>
+    <title>“想到就去做到”-战胜拖延症的力量你也可以拥有</title>
+    <url>/2018/06/24/21do%20it%20now/</url>
+    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>拖延症，这个恶毒的妖怪，让人一空下来，空虚感就如同潮水般涌来，填满整个身体，全身就像被灌了铅似的，黏在椅子上不想起来，不想做任何事情，虽然明明知道有好多重要的事要做，却总打不起精神。曾美名其曰，没有动力。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-d83d40a23dfd8268.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>可是，这么逃避，依然会有不同的事情向自己奔来，继续压得人喘不过气。</p>
+<p>此刻想到就去做到，是个特别强大的力量。</p>
+<p>如果觉得自己有顽固的拖延症，那说明你还未开发出自己“想到就去做到”的潜能。</p>
+<p>怎么开发这种力量？请好好看看命运安排在你身边的人。所有遇到的人都不是偶然，自己带着课题来到这个世界上，从生到死都是一种学习，那么身边的人，就是学习的一部分，无论好于坏。</p>
+<p>我拖延症晚期这么久，才突然发现自己身边居然有这么多行动力超强的人！他们有的在事业上风生水起，有的在生活中情调满满，有的活出了自己想要的样子，每一个我都好喜欢。</p>
+<p>#2<br>第一个是在李欣频课程上认识的笑笑生，同时也是我服装设计课的同班同学。</p>
+<p>之前一次聊天，得知她今年的主题是分享，分享一切美好的事物。</p>
+<p>结果不出几天，就看到她开启了简书，打理起了公众号，在群里活跃分享。几乎每隔一天就会产出高质量的文章，并且真的一步步分享着她所认为有趣的东西。<br><img src="http://upload-images.jianshu.io/upload_images/48414-661d2e0a1d708dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>小小的身体，蕴含巨大能量，居然能轻松跑完半马，所以她分享了好些健身方法；</p>
+<p>想要减肥，那就号召大家一起进群打卡，推荐各类健身软件；</p>
+<p>喜欢画画，就跟大家一起每天打卡画一幅小画，每天几分钟，一年积攒下来画工也会长进一大步。</p>
+<p>短短一段时间，就能看见她勤奋又活跃地做了好多事情，在工作之余，每天都在运营维系着微信群，跟各种人互动，汇报自己的梦想进程。这种力量，让我深为感动。</p>
+<p>她曾是一只产品汪，也做过新媒体，深知大众兴趣G点与如何将自己的兴趣与他人需求完美结合，创造出爆款信息。她的身上，除了“想到就去做到”这种能力，还有创建自我品牌的潜在力量。</p>
+<p>我将她当作学习的对象，总结方法如下：</p>
+<blockquote>
+<ol>
+<li>快速执行，想到就立马去做，宇宙汇给你意想不到的回报。</li>
+<li>占据一个自己所在领域最专业的平台，比如写作在简书，不用担心初期很粗糙，去做，不要害怕。</li>
+<li>内容很重要，第一当然要从自己喜爱的方面着手，第二不要愁每天都没有新的原创感悟，不是说分享就必须写长篇大论的心得，也可以通过各种整理进行分享，比如参加完秋叶老师的课，整理出PPT精华笔记，也是一种利人利己的事情。</li>
+<li>多写大家都在关注和热衷的事情，在热点中随时建立自己的思考，并且阐述出来。</li>
+<li>标题很重要，作为运营，深知一篇文章内容优秀的同时，一个吸睛的标题必不可少。要让人好奇、关键主题词要突出（比如健身、PPT等）、有一定悬念让你想要点进去的欲望。</li>
+<li>宣传、分享，不能自己一个人自嗨，自己有任何目标，一定在主页、微信、群里跟朋友们汇报，将每一次的文章分享到同频率的地方，让更多人了解和理解自己，收获鼓励，作为自己继续的动力。</li>
+<li>跟不同领域、不同年龄层次的人多交流，会收获到更多不一样的视野。</li>
+</ol>
+</blockquote>
+<p>#3</p>
+<p>第二个是通过学长认识的妹子小懒。流浪画家，现在建立了自己的画室，每周2天通过教授油画来获取收入，同时通过青旅轻松回收画室成本。不得不说，她是我见过艺术与商业结合的很不错的女生。</p>
+<p>初见小懒，瘦瘦弱弱，穿着波西米亚民族风格的衣裙，不拘小节地直接圈坐在画室地上，画室到处都是完成的画板、颜料、笔刷。她不是那种一见人就爽朗开怀大笑似的自来熟女汉子，而是有点慢热，做起事来看似漫不经心，时间长了，才会暴露本性跟你说点重口味、小段子。</p>
+<p>其实才是个刚毕业差不多一年的女生，这也是我佩服的地方。</p>
+<p>生活与经历可谓丰富多彩。因为大学专业是设计，所以大二就开始各种兼职、揽私活赚钱，还给儿童刊物画了插画，一有了钱就全国各地到处旅游，潇洒的不能再让人羡慕了！我真是大呼，谁说艺术生就是费钱，看这专业学的，就是快速来钱的本事啊。</p>
+<p>喜欢倒卖小玩意儿，她曾调侃自己从小特别抠，特喜欢倒卖些小东西赚钱，这份率真和小机灵简直就是萌的不行。</p>
+<p>后来毕业觉得上学时工作的够多了，而且发现自由职业也能养活自己，索性就当起了流浪画家。教油画、毕加索抽象画、书签包包手绘，还有印度海娜纹身！丰富多彩，有滋有味。</p>
+<p>起初辗转在三个地方，一周不同时候去授课教人油画，后来还经历了租四合院办艺栈却被合伙人坑惨的事，一路说来尽是跌宕起伏。还好，现在终于有了自己的画室，每天过着玩着两只小猫，和着恋人琴声画画的日子。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-2c0fc5e1c2606928.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>不过别以为别人表面上的惬意和轻松就是一切，她从来都是时时刻刻想着如何开拓新的课程、找到新的收入渠道，从来就不会认为艺术只是曲高和寡。那小心思细到一瞧见市面上新的课程就在想自己能不能开发，天天琢磨着去学点新的东西。对任何事情都怀有强烈的好奇心和求知欲望，像所有创业者一样，她看任何事情都能与自己的事业联系到一起。</p>
+<p>在她身上，我学到的是有关金钱的课题。一直以来都认为艺术谈到钱就是俗，正如大家一提到艺术家就联想到吃糠喝粥一贫如洗的形象，国内不像国外有很多机会去通过艺术赚钱，但也不是我们想象的那样清苦。艺术自然是要成为一种生活方式，无关名利，可每一次创作都有明确的目的，西方艺术家之所以摆脱匠人身份，就是将创作变成研究，并不是每一次都是凭灵感，而是靠思维。创作可以是冲动的，但思维一定是清晰的，每一步都知道自己在做什么。创作之后，如何推广，也是有明确的目的和步骤。</p>
+<p>这菇凉给我最大的力量就是，遵从自己的内心，接受自己本来的样子，想到就去做，艺术是有价的，曲高和寡才是阳春白雪，而且原来艺术可以这样玩。</p>
+<p>在她这里，我看到了很多对在校大学生或自由职业者有启发的点：</p>
+<blockquote>
+<ol>
+<li>如果你是大学生，请彻底利用好四年大学时光。我一直倡导大学生多体验、多尝试。无论你是什么专业，务必在大学四年里，将自己的一两个兴趣变成技能，如果你不是生活无忧钱财充足的人，请一定要尝试着将技能变现，各种办法进行尝试，找到你的主专长，另外也可以作为第二专长副业。</li>
+<li>既然是金钱课题，那就要重新定义一下有关金钱的观念，无论是大学生还是自由职业者，金钱对于每个人都很重要，这无需置疑，金钱不是邪恶也不是善良的，它没有属性。不要耻于承认自己对于金钱的向往，它是人在肉身世界里维持存活的一个手段，就像为了活下去，要吃东西要睡觉一样，这是一件很正常的追求。</li>
+<li>如果你是自由职业者，对于自由的概念，请改成：能够自由地拒绝自己不喜欢做的事情。首先，自由的前提是，要锻炼强大的自制力，才能让自己从早上温暖的被窝里醒来，开始一天的工作；需要学会适合自己的时间管理，才不会天天一事无成或忙的跟狗似的穷忙；还要逼迫自己去花时间冥想，清晰自己到底想要成为的样子和拥有的生活，只有心中有用清晰的画面或者感觉，你就可以安心地去做事情，所有需要的资源、人、机会，宇宙会为你准备好。真的，可以试一试。</li>
+<li>生活中会突然遇到很多意想不到的事情，请以开放的心态去迎接。就像你突然被毫无所知的专业录取，你突然1、2个月没有了收入，请相信，这自有安排。你需要做的只是，继续做你计划好的事情，不要因此而焦虑、烦躁、拖延。生命还有那么长，想一想10年20年以后的自己，会因为现在的这点问题收到多大的影响吗？如果能解决，那还愁什么；如果不能解决，更不用愁——反正愁了也没用。</li>
+</ol>
+</blockquote>
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>虽然我还在学习中，“想到就去做到”的力量也影响着我。</p>
+<p>在笑笑生的身上学到的，我开始摆脱自嗨的状态，重新开始每天写日记，记录每一天的心情感悟；重新开启去年的每日千字文项目，立志要将自己2016年的计划都一一达成。</p>
+<p>写自己刚兴趣的东西，并且能给大家带去美好的感受，所以写了《凭什么一个70岁老女人都能撩动小鲜肉》，介绍一个美的女人和电影里搭配棒棒的衣服，很开心被推荐上首页；</p>
+<p>关照内心，写《原力觉醒的心路历程——2016年半年复盘》，收获了一大堆同频率的朋友；</p>
+<p>专注热点，刚好看了大鱼，在里面感受到了来自灵性的力量，写了《大鱼海棠 我为这份幼稚买单》；</p>
+<p>关于事业，自己决定做手作工坊，晒出的很多手作作品，收到朋友们的支持和赞赏，也成为了自己继续的动力。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/48414-bbbdfdef2c64024c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在小懒身上学到的，我因此完成了2016年其中一个目标：做一次公开分享会。在上周日，举办了一场关于草木扎染的分享体验课，在与陌生朋友的互动中，有一次体验到了中国传统文化的魅力，那种与自然和天地融合的感觉，通过一次次布于染料的结合，创造出了一系列随机又美妙的图案。</p>
+<p>紧接着，开通了微店，我想要更多人了解和认同手作的意义，绘画和陶艺是艺术品，手作也是。它并不是单纯的裁缝工艺，而是身与心的冥想，就像音乐治疗一样，手作也有治愈的作用。在那个完成作品的时空里，没有别人，只有自己，这个时候，你有时间去想自己是什么人，想做什么，去思考那些跟世俗无关的，更接近生命本源的东西，或者只是纯粹感受那当下的宁静。</p>
+<p>一种动手去创作的事，都是在这个躁动的社会中，一点属于自己的时间。手作创造美，因创造而遇见温暖的你。</p>
+<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>“想到就去做到”，力量并不神秘，立马去做，之后的事情就交给宇宙帮你处理。而你只需要去做，并且关照内心就好。</p>
+<p>我都能办到，你也行！希望看这篇文章的你，停下手中的事，想想身边的人，他们身上有什么是你值得学习的力量吧。</p>
+<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>这篇文章也是我2016年计划，<strong>「写100个令我感动的故事」</strong> 和 <strong>【在身边的人身上挖掘365件有趣的事情】</strong>进度之一。<br>到目前为止：<br>写了2个令我感动的故事，剩余98个。<br>写了10件有趣的事情，剩余355件。</p>
 ]]></content>
       <categories>
-        <category>「你好，手工艺」</category>
+        <category>「进化之路」</category>
       </categories>
       <tags>
-        <tag>想做衣服系列</tag>
-        <tag>娃衣</tag>
+        <tag>感悟</tag>
+        <tag>拖延症</tag>
       </tags>
   </entry>
   <entry>
@@ -4774,79 +4892,6 @@
       <tags>
         <tag>电影这样看</tag>
         <tag>影评</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>“想到就去做到”-战胜拖延症的力量你也可以拥有</title>
-    <url>/2018/06/24/21do%20it%20now/</url>
-    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>拖延症，这个恶毒的妖怪，让人一空下来，空虚感就如同潮水般涌来，填满整个身体，全身就像被灌了铅似的，黏在椅子上不想起来，不想做任何事情，虽然明明知道有好多重要的事要做，却总打不起精神。曾美名其曰，没有动力。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-d83d40a23dfd8268.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>可是，这么逃避，依然会有不同的事情向自己奔来，继续压得人喘不过气。</p>
-<p>此刻想到就去做到，是个特别强大的力量。</p>
-<p>如果觉得自己有顽固的拖延症，那说明你还未开发出自己“想到就去做到”的潜能。</p>
-<p>怎么开发这种力量？请好好看看命运安排在你身边的人。所有遇到的人都不是偶然，自己带着课题来到这个世界上，从生到死都是一种学习，那么身边的人，就是学习的一部分，无论好于坏。</p>
-<p>我拖延症晚期这么久，才突然发现自己身边居然有这么多行动力超强的人！他们有的在事业上风生水起，有的在生活中情调满满，有的活出了自己想要的样子，每一个我都好喜欢。</p>
-<p>#2<br>第一个是在李欣频课程上认识的笑笑生，同时也是我服装设计课的同班同学。</p>
-<p>之前一次聊天，得知她今年的主题是分享，分享一切美好的事物。</p>
-<p>结果不出几天，就看到她开启了简书，打理起了公众号，在群里活跃分享。几乎每隔一天就会产出高质量的文章，并且真的一步步分享着她所认为有趣的东西。<br><img src="http://upload-images.jianshu.io/upload_images/48414-661d2e0a1d708dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>小小的身体，蕴含巨大能量，居然能轻松跑完半马，所以她分享了好些健身方法；</p>
-<p>想要减肥，那就号召大家一起进群打卡，推荐各类健身软件；</p>
-<p>喜欢画画，就跟大家一起每天打卡画一幅小画，每天几分钟，一年积攒下来画工也会长进一大步。</p>
-<p>短短一段时间，就能看见她勤奋又活跃地做了好多事情，在工作之余，每天都在运营维系着微信群，跟各种人互动，汇报自己的梦想进程。这种力量，让我深为感动。</p>
-<p>她曾是一只产品汪，也做过新媒体，深知大众兴趣G点与如何将自己的兴趣与他人需求完美结合，创造出爆款信息。她的身上，除了“想到就去做到”这种能力，还有创建自我品牌的潜在力量。</p>
-<p>我将她当作学习的对象，总结方法如下：</p>
-<blockquote>
-<ol>
-<li>快速执行，想到就立马去做，宇宙汇给你意想不到的回报。</li>
-<li>占据一个自己所在领域最专业的平台，比如写作在简书，不用担心初期很粗糙，去做，不要害怕。</li>
-<li>内容很重要，第一当然要从自己喜爱的方面着手，第二不要愁每天都没有新的原创感悟，不是说分享就必须写长篇大论的心得，也可以通过各种整理进行分享，比如参加完秋叶老师的课，整理出PPT精华笔记，也是一种利人利己的事情。</li>
-<li>多写大家都在关注和热衷的事情，在热点中随时建立自己的思考，并且阐述出来。</li>
-<li>标题很重要，作为运营，深知一篇文章内容优秀的同时，一个吸睛的标题必不可少。要让人好奇、关键主题词要突出（比如健身、PPT等）、有一定悬念让你想要点进去的欲望。</li>
-<li>宣传、分享，不能自己一个人自嗨，自己有任何目标，一定在主页、微信、群里跟朋友们汇报，将每一次的文章分享到同频率的地方，让更多人了解和理解自己，收获鼓励，作为自己继续的动力。</li>
-<li>跟不同领域、不同年龄层次的人多交流，会收获到更多不一样的视野。</li>
-</ol>
-</blockquote>
-<p>#3</p>
-<p>第二个是通过学长认识的妹子小懒。流浪画家，现在建立了自己的画室，每周2天通过教授油画来获取收入，同时通过青旅轻松回收画室成本。不得不说，她是我见过艺术与商业结合的很不错的女生。</p>
-<p>初见小懒，瘦瘦弱弱，穿着波西米亚民族风格的衣裙，不拘小节地直接圈坐在画室地上，画室到处都是完成的画板、颜料、笔刷。她不是那种一见人就爽朗开怀大笑似的自来熟女汉子，而是有点慢热，做起事来看似漫不经心，时间长了，才会暴露本性跟你说点重口味、小段子。</p>
-<p>其实才是个刚毕业差不多一年的女生，这也是我佩服的地方。</p>
-<p>生活与经历可谓丰富多彩。因为大学专业是设计，所以大二就开始各种兼职、揽私活赚钱，还给儿童刊物画了插画，一有了钱就全国各地到处旅游，潇洒的不能再让人羡慕了！我真是大呼，谁说艺术生就是费钱，看这专业学的，就是快速来钱的本事啊。</p>
-<p>喜欢倒卖小玩意儿，她曾调侃自己从小特别抠，特喜欢倒卖些小东西赚钱，这份率真和小机灵简直就是萌的不行。</p>
-<p>后来毕业觉得上学时工作的够多了，而且发现自由职业也能养活自己，索性就当起了流浪画家。教油画、毕加索抽象画、书签包包手绘，还有印度海娜纹身！丰富多彩，有滋有味。</p>
-<p>起初辗转在三个地方，一周不同时候去授课教人油画，后来还经历了租四合院办艺栈却被合伙人坑惨的事，一路说来尽是跌宕起伏。还好，现在终于有了自己的画室，每天过着玩着两只小猫，和着恋人琴声画画的日子。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-2c0fc5e1c2606928.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>不过别以为别人表面上的惬意和轻松就是一切，她从来都是时时刻刻想着如何开拓新的课程、找到新的收入渠道，从来就不会认为艺术只是曲高和寡。那小心思细到一瞧见市面上新的课程就在想自己能不能开发，天天琢磨着去学点新的东西。对任何事情都怀有强烈的好奇心和求知欲望，像所有创业者一样，她看任何事情都能与自己的事业联系到一起。</p>
-<p>在她身上，我学到的是有关金钱的课题。一直以来都认为艺术谈到钱就是俗，正如大家一提到艺术家就联想到吃糠喝粥一贫如洗的形象，国内不像国外有很多机会去通过艺术赚钱，但也不是我们想象的那样清苦。艺术自然是要成为一种生活方式，无关名利，可每一次创作都有明确的目的，西方艺术家之所以摆脱匠人身份，就是将创作变成研究，并不是每一次都是凭灵感，而是靠思维。创作可以是冲动的，但思维一定是清晰的，每一步都知道自己在做什么。创作之后，如何推广，也是有明确的目的和步骤。</p>
-<p>这菇凉给我最大的力量就是，遵从自己的内心，接受自己本来的样子，想到就去做，艺术是有价的，曲高和寡才是阳春白雪，而且原来艺术可以这样玩。</p>
-<p>在她这里，我看到了很多对在校大学生或自由职业者有启发的点：</p>
-<blockquote>
-<ol>
-<li>如果你是大学生，请彻底利用好四年大学时光。我一直倡导大学生多体验、多尝试。无论你是什么专业，务必在大学四年里，将自己的一两个兴趣变成技能，如果你不是生活无忧钱财充足的人，请一定要尝试着将技能变现，各种办法进行尝试，找到你的主专长，另外也可以作为第二专长副业。</li>
-<li>既然是金钱课题，那就要重新定义一下有关金钱的观念，无论是大学生还是自由职业者，金钱对于每个人都很重要，这无需置疑，金钱不是邪恶也不是善良的，它没有属性。不要耻于承认自己对于金钱的向往，它是人在肉身世界里维持存活的一个手段，就像为了活下去，要吃东西要睡觉一样，这是一件很正常的追求。</li>
-<li>如果你是自由职业者，对于自由的概念，请改成：能够自由地拒绝自己不喜欢做的事情。首先，自由的前提是，要锻炼强大的自制力，才能让自己从早上温暖的被窝里醒来，开始一天的工作；需要学会适合自己的时间管理，才不会天天一事无成或忙的跟狗似的穷忙；还要逼迫自己去花时间冥想，清晰自己到底想要成为的样子和拥有的生活，只有心中有用清晰的画面或者感觉，你就可以安心地去做事情，所有需要的资源、人、机会，宇宙会为你准备好。真的，可以试一试。</li>
-<li>生活中会突然遇到很多意想不到的事情，请以开放的心态去迎接。就像你突然被毫无所知的专业录取，你突然1、2个月没有了收入，请相信，这自有安排。你需要做的只是，继续做你计划好的事情，不要因此而焦虑、烦躁、拖延。生命还有那么长，想一想10年20年以后的自己，会因为现在的这点问题收到多大的影响吗？如果能解决，那还愁什么；如果不能解决，更不用愁——反正愁了也没用。</li>
-</ol>
-</blockquote>
-<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>虽然我还在学习中，“想到就去做到”的力量也影响着我。</p>
-<p>在笑笑生的身上学到的，我开始摆脱自嗨的状态，重新开始每天写日记，记录每一天的心情感悟；重新开启去年的每日千字文项目，立志要将自己2016年的计划都一一达成。</p>
-<p>写自己刚兴趣的东西，并且能给大家带去美好的感受，所以写了《凭什么一个70岁老女人都能撩动小鲜肉》，介绍一个美的女人和电影里搭配棒棒的衣服，很开心被推荐上首页；</p>
-<p>关照内心，写《原力觉醒的心路历程——2016年半年复盘》，收获了一大堆同频率的朋友；</p>
-<p>专注热点，刚好看了大鱼，在里面感受到了来自灵性的力量，写了《大鱼海棠 我为这份幼稚买单》；</p>
-<p>关于事业，自己决定做手作工坊，晒出的很多手作作品，收到朋友们的支持和赞赏，也成为了自己继续的动力。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/48414-bbbdfdef2c64024c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>在小懒身上学到的，我因此完成了2016年其中一个目标：做一次公开分享会。在上周日，举办了一场关于草木扎染的分享体验课，在与陌生朋友的互动中，有一次体验到了中国传统文化的魅力，那种与自然和天地融合的感觉，通过一次次布于染料的结合，创造出了一系列随机又美妙的图案。</p>
-<p>紧接着，开通了微店，我想要更多人了解和认同手作的意义，绘画和陶艺是艺术品，手作也是。它并不是单纯的裁缝工艺，而是身与心的冥想，就像音乐治疗一样，手作也有治愈的作用。在那个完成作品的时空里，没有别人，只有自己，这个时候，你有时间去想自己是什么人，想做什么，去思考那些跟世俗无关的，更接近生命本源的东西，或者只是纯粹感受那当下的宁静。</p>
-<p>一种动手去创作的事，都是在这个躁动的社会中，一点属于自己的时间。手作创造美，因创造而遇见温暖的你。</p>
-<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>“想到就去做到”，力量并不神秘，立马去做，之后的事情就交给宇宙帮你处理。而你只需要去做，并且关照内心就好。</p>
-<p>我都能办到，你也行！希望看这篇文章的你，停下手中的事，想想身边的人，他们身上有什么是你值得学习的力量吧。</p>
-<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>这篇文章也是我2016年计划，<strong>「写100个令我感动的故事」</strong> 和 <strong>【在身边的人身上挖掘365件有趣的事情】</strong>进度之一。<br>到目前为止：<br>写了2个令我感动的故事，剩余98个。<br>写了10件有趣的事情，剩余355件。</p>
-]]></content>
-      <categories>
-        <category>「进化之路」</category>
-      </categories>
-      <tags>
-        <tag>感悟</tag>
-        <tag>拖延症</tag>
       </tags>
   </entry>
   <entry>
