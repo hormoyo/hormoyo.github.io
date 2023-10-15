@@ -992,8 +992,8 @@ npm i
 npm i hexo-cli -g
 npm update
 ```
-
-
+# 修改加粗字体颜色
+在themes/next/source/css/_common/scaffolding/normalize.styl中，找到```font-weight: bolder```;添加color即可。
 
 # 错误解决方案
 
