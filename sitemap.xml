@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://dannii.cc/2023/10/11/106-WangDeFeng-philosophy/</loc>
+    <loc>http://dannii.cc/2023/10/15/107-2023W41/</loc>
     
     <lastmod>2023-10-15</lastmod>
     
@@ -11,7 +11,16 @@
   </url>
   
   <url>
-    <loc>http://dannii.cc/2023/10/15/107-2023W41/</loc>
+    <loc>http://dannii.cc/2023/08/13/102_2023W32/</loc>
+    
+    <lastmod>2023-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://dannii.cc/2023/10/11/106-WangDeFeng-philosophy/</loc>
     
     <lastmod>2023-10-15</lastmod>
     
@@ -77,15 +86,6 @@
     <loc>http://dannii.cc/2019/02/24/88pinyin/</loc>
     
     <lastmod>2023-08-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://dannii.cc/2023/08/13/102_2023W32/</loc>
-    
-    <lastmod>2023-08-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
