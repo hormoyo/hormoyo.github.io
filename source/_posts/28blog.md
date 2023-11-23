@@ -967,11 +967,19 @@ hexo d -g  ——部署(安装豆瓣插件之后必须是全的hexo deploy)
 用vscode 在苹果电脑上是默认安装xcode就有git（当git不存在时重新安装xcode即可。
 ![](blog1.png)
 {% asset_img blog1.png 这是图片 %}
-![](./28blog/blog2.png)
+![](28blog/blog2.png)
 
 # 升级HEXO和next
-查看hexo的依赖：npm outdated
+查看hexo当前版本：hexo -v
+更新hexo的办法：
+```
+npm i hexo-cli -g
+npm update
+hexo -v
+```
+查看hexo的依赖：npm outdate
 使用指令更新npm update，将更新wanted与current不一致的依赖
+
 也可以使用npm-check-updates更新所有依赖
 ```
 //安装
@@ -986,12 +994,26 @@ npm i
 
 不清除旧版本主题的办法：使用备用主题config.next.yml
 
-更新next的办法：https://theme-next.js.org/docs/third-party-services/官方指南随时更新。
-更新hexo的办法：
-```
-npm i hexo-cli -g
-npm update
-```
+查看next版本：打开next主题目录下的package.json
+更新next的办法：npm install hexo-theme-next@latest
+https://theme-next.js.org/docs/third-party-services 官方指南随时更新。
+
+
+# 关于npm、node版本更新与查看
+npm -v 查看版本
+node -v 查看版本
+npm install -g npm 更新至最新npm版本
+## 如何安装指定版本的npm包：
+在官网查到某个node版本对应的npm包以后
+在项目目录下，使用以下命令切换项目的npm版本：npm install npm@<版本号>
+切换全局的npm版本，使用以下命令：npm install -g npm@<版本号>
+## 查询npm、node稳定版本
+nvm list
+![](nvm.png)
+使用其中某个版本：nvm use xxx
+## 查看所有hexo插件
+`npm ls --depth 0`
+
 # 修改加粗字体颜色
 在themes/next/source/css/_common/scaffolding/normalize.styl中，找到```font-weight: bolder```;添加color即可。
 
@@ -1014,10 +1036,6 @@ npm update
 `npm i hexo-renderer-swig`
 
 安装完后，再hexo g，接着hexo s即可。
-
-## 查看所有hexo插件
-
-`npm ls --depth 0`
 
 ## localhost:4000 cannot get
 
