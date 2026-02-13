@@ -27,7 +27,7 @@ permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
-source_dir: source
+source_dir: /Users/hormoyo/Library/Mobile Documents/iCloud~md~obsidian/Documents/obsidian-note/06 post
 public_dir: public
 tag_dir: tags
 archive_dir: archives
