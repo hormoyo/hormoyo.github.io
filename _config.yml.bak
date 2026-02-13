@@ -46,14 +46,9 @@ external_link:
   exclude: []
 filename_case: 0
 render_drafts: false
-# Markdown 渲染器配置（让图片路径自动补全）
 marked:
-  prependRoot: true    # 自动给图片路径加根目录
-  postAsset: true      # 识别文章同级的图片（关键中的关键）
-  breaks: true
-  gfm: true
-  smartLists: true
-  smartypants: true
+  prependRoot: true
+  postAsset: true
 post_asset_folder: true
 relative_link: false
 future: true
@@ -62,13 +57,6 @@ highlight:
   line_number: true
   auto_detect: true
   tab_replace:
-# 静态资源文件夹（Hexo 会自动复制这个文件夹里的所有文件到 public）
-# 如果你的图片不在 source_dir 里，需要额外配置
-include:
-  - "**/*.png"         # 包含所有 .png 图片
-  - "**/*.jpg"
-  - "**/*.jpeg"
-  - "**/*.gif"
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -118,7 +106,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repository: git@github.com:hormoyo/hormoyo.github.io.git
+  repository: https://github.com/hormoyo/hormoyo.github.io.git
   branch: master
 
 #统计字数
@@ -176,9 +164,3 @@ douban:
 # id获取的一个已知的办法是：访问“我的豆瓣“时，点击用户头像另存为时，会显示默认文件名如ul2374908-5。中间数字2374908即为豆瓣数字ID。
 # builtin为true则hexo d和hexos的时候内嵌了生成页面功能，否则使用hexo douban指令
 # option: 该页面额外的 Front-matter 配置，参考Hexo 文档。无特别需要，留空即可。
-
-#中文生成链接自动使用拼音
-permalink_pinyin:
-  enable: true
-  separator: '-'
-  lowercase: true
