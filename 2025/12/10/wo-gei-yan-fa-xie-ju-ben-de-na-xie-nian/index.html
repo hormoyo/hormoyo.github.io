@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://github.com/lxgw/LxgwWenKai" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-16x16-fan.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-16x16-fan.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-fan.jpg">
+  <link rel="mask-icon" href="/images/favicon-16x16-fan.jpg" color="#222">
+  <link rel="manifest" href="/images/favicon-16x16-fan.jpg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://github.com/lxgw/LxgwWenKai/css?family=LXGW+WenKai:300,300italic,400,400italic,700,700italic%7CPT+Serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dannii.cc","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.0","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"Muse | Mist":320},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":"fadeInDown","transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="最近报了个编剧课，上周老师在群里@我，甩了张我剧本的截图，紧跟一句语音：&quot;你这不是剧本，是产品需求文档吧？&quot;下面瞬间炸了。">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="我给研发写剧本的那些年">
+<meta property="og:url" content="http://dannii.cc/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/index.html">
+<meta property="og:site_name" content="Divergent">
+<meta property="og:description" content="最近报了个编剧课，上周老师在群里@我，甩了张我剧本的截图，紧跟一句语音：&quot;你这不是剧本，是产品需求文档吧？&quot;下面瞬间炸了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-10T08:38:00.000Z">
+<meta property="article:modified_time" content="2026-02-13T14:28:46.944Z">
+<meta property="article:author" content="Dannii">
+<meta property="article:tag" content="文章&#x2F;职场">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://dannii.cc/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://dannii.cc/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/","path":"2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/","title":"我给研发写剧本的那些年"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>我给研发写剧本的那些年 | Divergent</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss2.xml" title="Divergent" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Divergent</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">分歧者，拥有强烈好奇心的异类</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li><li class="menu-item menu-item-books"><a href="/books" rel="section"><i class="fa fa-book fa-fw"></i>书破万卷</a></li><li class="menu-item menu-item-movies"><a href="/movies" rel="section"><i class="fa fa-film fa-fw"></i>观世间相</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B8%AA%E8%A2%AB%E9%AA%82%E5%93%AD%E7%9A%84%E4%B8%8B%E5%8D%88"><span class="nav-text">那个被骂哭的下午</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E5%86%99%E2%80%9D%E4%BB%96%E5%BE%88%E7%94%9F%E6%B0%94%E2%80%9D"><span class="nav-text">别写”他很生气”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E5%AF%BC%E6%BC%94%E7%95%99%E6%9D%A1%E6%B4%BB%E8%B7%AF"><span class="nav-text">给导演留条活路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E6%AC%A1%E6%88%91%E4%BB%AC%E6%90%9E%E7%A0%B8%E4%BA%86"><span class="nav-text">那次我们搞砸了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%9C%BA%E6%88%8F%EF%BC%8C%E4%B8%80%E4%B8%AA%E5%8A%9F%E8%83%BD"><span class="nav-text">一场戏，一个功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-text">写在最后</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dannii"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Dannii</p>
+  <div class="site-description" itemprop="description">今天，终会成为过去，唯一能留住的就是未来</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">136</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cDovL3dlaWJvLmNvbS9ub3RzaHV0dXA=" title="微博 → http:&#x2F;&#x2F;weibo.com&#x2F;notshutup"><i class="weibo fa-fw"></i>微博</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9tdWppbmd5aQ==" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;mujingyi"><i class="gratipay fa-fw"></i>知乎</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cDovL3d3dy5qaWFuc2h1LmNvbS91c2Vycy9mNmFkMjI3N2IyYzAvbGF0ZXN0X2FydGljbGVz" title="简书 → http:&#x2F;&#x2F;www.jianshu.com&#x2F;users&#x2F;f6ad2277b2c0&#x2F;latest_articles"><i class="copyright fa-fw"></i>简书</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhvcm1veW9Ab3V0bG9vay5jb20=" title="E_Mail → mailto:hormoyo@outlook.com"><i class="envelope fa-fw"></i>E_Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://dannii.cc/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Dannii">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Divergent">
+      <meta itemprop="description" content="今天，终会成为过去，唯一能留住的就是未来">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="我给研发写剧本的那些年 | Divergent">
+      <meta itemprop="description" content="最近报了个编剧课，上周老师在群里@我，甩了张我剧本的截图，紧跟一句语音："你这不是剧本，是产品需求文档吧？"下面瞬间炸了。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我给研发写剧本的那些年
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-10 16:38:00" itemprop="dateCreated datePublished" datetime="2025-12-10T16:38:00+08:00">2025-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-02-13 22:28:46" itemprop="dateModified" datetime="2026-02-13T22:28:46+08:00">2026-02-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF-%E4%BA%BA%E5%9C%A8%E8%81%8C%E5%9C%BA/" itemprop="url" rel="index"><span itemprop="name">个人成长-人在职场</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/" class="post-meta-item leancloud_visitors" data-flag-title="我给研发写剧本的那些年" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="我给研发写剧本的那些年" href="/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::fbb508679ef83b95937e877e96f43da1" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">最近报了个编剧课，上周老师在群里@我，甩了张我剧本的截图，紧跟一句语音："你这不是剧本，是产品需求文档吧？"下面瞬间炸了。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近报了个编剧课，上周老师在群里@我，甩了张我剧本的截图，紧跟一句语音：”你这不是剧本，是产品需求文档吧？”</p>
+<p>下面瞬间炸了。</p>
+<p>一溜”哈哈哈”和捂脸表情，刷了我一屏幕。</p>
+<p>我脸红到耳根，但心里咯噔一下：<strong>等等，这不就是对产品经理的最高赞美吗？</strong></p>
+<hr>
+<h2 id="那个被骂哭的下午"><a href="#那个被骂哭的下午" class="headerlink" title="那个被骂哭的下午"></a>那个被骂哭的下午</h2><p>老师说，剧本是剧组的工作手册。</p>
+<p>你写一场戏，摄像小哥得知道机位架在哪。灯光师得知道打什么光。演员得知道台词背后藏着什么潜台词。服化道得知道准备什么衣服道具。</p>
+<p>每个人都拿着你的剧本，进行二次创作。</p>
+<p>导演会改分镜。演员会改台词。灯光师会跟导演说：”这场戏，咱们换个色调更有感觉。”</p>
+<p><strong>这不就是产品需求文档的命吗？</strong></p>
+<p>你写个需求，研发得知道技术方案。UI得知道页面布局。测试得知道边界情况。运营得知道卖点在哪。</p>
+<p>每个人都对着你的PRD，进行二次开发。</p>
+<p>架构师说：”这儿用微服务更合适。”UI设计师说：”这个按钮放左边更符合用户习惯。”测试工程师说：”你考虑过高并发下的极限情况吗？”</p>
+<p><strong>一度创作是你的，二度创作是大家的。</strong></p>
+<hr>
+<h2 id="别写”他很生气”"><a href="#别写”他很生气”" class="headerlink" title="别写”他很生气”"></a>别写”他很生气”</h2><p>老师说了个”四要三不要”。</p>
+<p>其中最扎心的，是这句：<strong>不要写拍不出来的东西。</strong></p>
+<p>比如，你写：”张师傅在厨房匆忙工作。他颠勺特别熟练，不愧是三十年老厨师啊！”</p>
+<p>导演看到这句，头都大了。</p>
+<p>“熟练”怎么拍？”三十年”怎么拍？你告诉我镜头往哪架？演员怎么演？</p>
+<p><strong>你得写动作。</strong></p>
+<p>“灶台火开到最大。张师傅右手抄起锅，左手抄勺。手腕一抖，菜飞起来半米高，划出一道弧线，又稳稳落回锅里。一滴都没洒。”</p>
+<p>“旁边的徒弟看傻了：’师父，您这手，三十年没白练啊。’”</p>
+<p>这样，摄像知道给手腕特写。演员知道怎么抖那一下。连道具都知道锅得用轻一点的，不然演员抖不动。</p>
+<p><strong>产品经理最常犯的错，跟这编剧新手一模一样。</strong></p>
+<p>你写：”优化登录页面，增加验证块，提升用户体验”。</p>
+<p>研发看到这句，头也大了。”优化哪块？体验怎么算好？顺畅是指加载快0.5秒，还是步骤少一步？”。</p>
+<p><strong>你得写行为。</strong></p>
+<p>“登录页增加短信验证码一键填充。”</p>
+<p>“输入错误时，实时显示‘手机号格式错误’（红色小字提示）”</p>
+<p>“点击‘获取验证码’后，按钮置灰60秒，倒计时实时更新。”</p>
+<p>研发立刻懂了：哦，要开发验证码功能，要边界场景异常提示，要设计交互展示。</p>
+<p><strong>动词是别人的行动指南。形容词是你的自嗨。</strong></p>
+<hr>
+<h2 id="给导演留条活路"><a href="#给导演留条活路" class="headerlink" title="给导演留条活路"></a>给导演留条活路</h2><p>但具体也有个度。</p>
+<p>老师警告我们：<strong>别写成分镜头脚本。</strong></p>
+<p>不要写：”这里用长镜头，35mm定焦，光圈2.8，给眼睛特写。灯光从左侧45度角打过来，加柔光箱。背景音乐起《月光奏鸣曲》第一乐章…”</p>
+<p>那是导演和摄影师的活。</p>
+<p><strong>你写戏，他们拍戏。</strong></p>
+<p>你要是真写这么细，导演会把你拉黑。灯光师会在背后骂你。演员会直接罢演。</p>
+<p><strong>活儿都被你干了，要我们干啥？</strong></p>
+<p>需求文档也一样。</p>
+<p>不要写：”这里用Redis缓存，设置过期时间60秒，采用LRU淘汰策略。接口用POST请求，参数用JSON格式，返回码200表示成功…”</p>
+<p>那是研发和技术架构师的活儿。</p>
+<p><strong>你写功能，他们写代码。</strong></p>
+<p>你要是真写这么细，研发会在心里翻白眼：”要不你来写？”</p>
+<p>架构师会说：”这方案不行，我们系统现状不支持。”</p>
+<p>然后你还得改。</p>
+<hr>
+<h2 id="那次我们搞砸了"><a href="#那次我们搞砸了" class="headerlink" title="那次我们搞砸了"></a>那次我们搞砸了</h2><p>刚做产品一年时，我写过一版需求文档。</p>
+<p>想显得专业，我特意查了很多技术名词。什么”异步队列”、”熔断机制”、”最终一致性”。</p>
+<p>写得特别具体。哪个表存什么字段，接口传什么参数，连SQL语句都快写出来了。</p>
+<p>研发老大看完，把我叫到会议室。</p>
+<p>“你这个方案，实现不了。”</p>
+<p>“为什么？我都写清楚了啊。”</p>
+<p>“因为咱们的数据库是MySQL，不是PostgreSQL。你写的那个语法，跑不通。”</p>
+<p>我当场石化。</p>
+<p><strong>我越俎代庖，结果班门弄斧。</strong></p>
+<p>后来我才明白：剧本里不写镜头语言，不是因为它不重要。而是因为这是导演的专业领域。</p>
+<p>需求文档里不写技术方案，不是因为它不重要。而是因为这是研发的专业领域。</p>
+<p><strong>你要相信专业的人。</strong></p>
+<p>你要做的，是把”要什么”写清楚。把”为什么”讲明白。</p>
+<p>至于”怎么实现”，那是研发的二度创作空间。</p>
+<hr>
+<h2 id="一场戏，一个功能"><a href="#一场戏，一个功能" class="headerlink" title="一场戏，一个功能"></a>一场戏，一个功能</h2><p>现在，我写需求文档，都带着剧本思维。</p>
+<p><strong>开场，先交代背景。</strong></p>
+<p>剧本写：夜。外。胡同。雨。</p>
+<p>需求文档写：用户场景。问题痛点。数据表现。</p>
+<p><strong>然后，写动作。</strong></p>
+<p>剧本写：他推开门，雨水混着泥水溅在裤腿上。他皱了皱眉，没管。</p>
+<p>需求文档写：用户点击按钮。页面加载。加载失败。显示错误提示。用户再次点击。</p>
+<p><strong>最后，留潜台词。</strong></p>
+<p>剧本写：他盯着那张照片，没说话。手指在桌上敲了三下。</p>
+<p>需求文档写：用户看到推荐内容。停留5秒。系统记录偏好标签。下次推荐同类内容。</p>
+<p><strong>动作是具体的。潜台词是开放的。</strong></p>
+<p>导演知道怎么拍。演员知道怎么演。但他们都有自己的发挥空间。</p>
+<p>研发知道怎么写代码。架构师知道怎么设计。但他们都有自己的专业判断。</p>
+<hr>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>编剧课老师说：</p>
+<p>“好剧本，是让每个人看到都想干活。摄像看到知道怎么架机位，演员看到知道怎么能演活。”</p>
+<p><strong>好需求文档也一样。</strong></p>
+<p>研发看到想立刻写代码。UI看到想马上画原型。测试看到能立刻写用例。</p>
+<p><strong>每个人都清楚自己要做什么，又有空间决定怎么做。</strong></p>
+<p>这不就是产品经理的最高境界吗？</p>
+<p>下次你的需求评审，如果研发面无表情，毫无激情。</p>
+<p>别急着怪他们。</p>
+<p>先看看你的文档里，是不是写了太多毫无细节的功能描述。</p>
+<p>是不是写了太多技术名词，抢了研发的戏。</p>
+<p><strong>记住，你是编剧，不是导演。</strong></p>
+<p><strong>写好每场戏，但别喊”Action”。</strong></p>
+<p>那声”开机”，得让研发自己喊。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    打赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Dannii 微信支付">
+        <span>微信支付</span>
+      </div>
+      <div>
+        <img src="/images/Alipay.jpg" alt="Dannii 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dannii
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://dannii.cc/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/" title="我给研发写剧本的那些年">http://dannii.cc/2025/12/10/wo-gei-yan-fa-xie-ju-ben-de-na-xie-nian/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/notshutup">
+            <span class="icon">
+              <i class="fab fa-weibo"></i>
+            </span>
+
+            <span class="label">微博</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.zhihu.com/people/mujingyi">
+            <span class="icon">
+              <i class="fab fa-zhihu"></i>
+            </span>
+
+            <span class="label">知乎</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="http://www.jianshu.com/users/f6ad2277b2c0/latest_articles">
+            <span class="icon">
+              <i class="fa fa-book"></i>
+            </span>
+
+            <span class="label">简书</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%96%87%E7%AB%A0-%E8%81%8C%E5%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 文章/职场</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/12/07/ai-ti-xiao-shi-zhan-gao-ding-cun-liang-yong-hu-xing-ye-fen-bu-fen-xi/" rel="prev" title="AI提效实战：搞定存量用户行业分布分析">
+                  <i class="fa fa-angle-left"></i> AI提效实战：搞定存量用户行业分布分析
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/12/14/shang-ban-zu-yue-du-xie-zuo-zhi-nan-2.0/" rel="next" title="我是如何用碎片时间一年输出十几万字的？上班族阅读写作指南2.0">
+                  我是如何用碎片时间一年输出十几万字的？上班族阅读写作指南2.0 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="SOHUCS" sid="fbb508679ef83b95937e877e96f43da1"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dannii</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">224k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">12:25</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9tdXNlLw==">NexT.Muse</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.19.1/algoliasearch-lite.umd.js" integrity="sha256-qzlNbRtZWHoUV5I2mI2t9QR7oYXlS9oNctX+0pECXI0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.56.8/instantsearch.production.min.js" integrity="sha256-xUys6KCuRGBxFaRaYZlWulRUjY48XFv6/Q2s0mb1dmc=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+
+
+
+
+
+  <script src="/js/third-party/addtoany.js"></script>
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"CN3rYnRBptO8quKX4O42PyJh-gzGzoHsz","app_key":"lvCfzqdKlX5mHzPNamk4Swqy","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cywPQm9L7","appkey":"prod_f4a04d51a3ba569e28a5b186b5c4e413","count":true}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+
+</body>
+</html>
